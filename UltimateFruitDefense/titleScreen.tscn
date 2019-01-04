@@ -1,16 +1,22 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sprites/Background.png" type="Texture" id=1]
-[ext_resource path="res://sprites/Car.png" type="Texture" id=2]
-[ext_resource path="res://sprites/Pineapple box.png" type="Texture" id=3]
-[ext_resource path="res://sprites/Banana box.png" type="Texture" id=4]
-[ext_resource path="res://sprites/Orange box.png" type="Texture" id=5]
-[ext_resource path="res://sprites/Apple box.png" type="Texture" id=6]
-[ext_resource path="res://sprites/Tomato box.png" type="Texture" id=7]
-[ext_resource path="res://sprites/Watermelon box.png" type="Texture" id=8]
-[ext_resource path="res://sprites/Pepper box.png" type="Texture" id=9]
-[ext_resource path="res://sprites/Cucumber box.png" type="Texture" id=10]
-[ext_resource path="res://sprites/Wheel.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Ultimate fruit defense.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Car.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Pineapple box.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Banana box.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Orange box.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Apple box.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Tomato box.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Watermelon box.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Pepper box.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Cucumber box.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Wheel.png" type="Texture" id=12]
+[ext_resource path="res://sprites/New game.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Load game.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Instructions.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Options.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Credits.png" type="Texture" id=17]
 
 [node name="MarginContainer" type="MarginContainer" index="0"]
 
@@ -40,10 +46,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 2.0
-margin_top = 1.0
-margin_right = 1023.0
-margin_bottom = 601.0
+margin_left = 1.0
+margin_right = 1022.0
+margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -54,10 +59,12 @@ alignment = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_right = 489.0
 margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -67,14 +74,21 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
+[node name="gameTitle" type="Sprite" parent="HBoxContainer/VBoxContainer" index="0"]
+
+position = Vector2( 251.889, 306.582 )
+scale = Vector2( 0.634919, 0.660274 )
+texture = ExtResource( 2 )
+
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 4.0
-margin_right = 4.0
+margin_left = -1.0
+margin_right = 1023.0
 margin_bottom = 600.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -86,62 +100,92 @@ use_top_left = false
 
 [node name="car" type="Sprite" parent="HBoxContainer/CenterContainer" index="0"]
 
-position = Vector2( 708.032, 302.905 )
+position = Vector2( 802.551, 300.899 )
 scale = Vector2( 0.292039, 0.355475 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="pineappleBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="1"]
 
-position = Vector2( 573.543, 382.713 )
+position = Vector2( 668.162, 380.608 )
 scale = Vector2( 0.321744, 0.358877 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="bananaBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="2"]
 
-position = Vector2( 805.871, 394.854 )
+position = Vector2( 900.49, 392.749 )
 scale = Vector2( 0.250728, 0.284355 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="orangeBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="3"]
 
-position = Vector2( 732.244, 399.428 )
+position = Vector2( 826.863, 397.323 )
 scale = Vector2( 0.270414, 0.346304 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="appleBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="4"]
 
-position = Vector2( 656.014, 392.463 )
+position = Vector2( 750.633, 390.358 )
 scale = Vector2( 0.34411, 0.354576 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="tomatoBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="5"]
 
-position = Vector2( 588.758, 502.336 )
+position = Vector2( 683.377, 500.231 )
 scale = Vector2( 0.317134, 0.330615 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="watermelonBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="6"]
 
-position = Vector2( 842.687, 497.764 )
+position = Vector2( 937.306, 495.659 )
 scale = Vector2( 0.289115, 0.342848 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="pepperBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="7"]
 
-position = Vector2( 759.708, 496.181 )
+position = Vector2( 854.327, 494.076 )
 scale = Vector2( 0.288339, 0.318828 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="cucumberBox" type="Sprite" parent="HBoxContainer/CenterContainer" index="8"]
 
-position = Vector2( 676.85, 497.087 )
+position = Vector2( 771.469, 494.982 )
 scale = Vector2( 0.301619, 0.262539 )
-texture = ExtResource( 10 )
-
-[node name="Sprite" type="Sprite" parent="HBoxContainer/CenterContainer" index="9"]
-
-position = Vector2( 855.848, 557.646 )
-scale = Vector2( 0.341309, 0.325934 )
 texture = ExtResource( 11 )
+
+[node name="wheel" type="Sprite" parent="HBoxContainer/CenterContainer" index="9"]
+
+position = Vector2( 950.467, 555.541 )
+scale = Vector2( 0.341309, 0.325934 )
+texture = ExtResource( 12 )
+
+[node name="newGame" type="Sprite" parent="HBoxContainer/CenterContainer" index="10"]
+
+position = Vector2( 665.475, 436.939 )
+scale = Vector2( 0.332852, 0.368829 )
+texture = ExtResource( 13 )
+
+[node name="loadGame" type="Sprite" parent="HBoxContainer/CenterContainer" index="11"]
+
+position = Vector2( 911.005, 436.541 )
+scale = Vector2( 0.342755, 0.388951 )
+texture = ExtResource( 14 )
+
+[node name="instructions" type="Sprite" parent="HBoxContainer/CenterContainer" index="12"]
+
+position = Vector2( 681.632, 526.817 )
+scale = Vector2( 0.3673, 0.401681 )
+texture = ExtResource( 15 )
+
+[node name="options" type="Sprite" parent="HBoxContainer/CenterContainer" index="13"]
+
+position = Vector2( 771.043, 531.734 )
+scale = Vector2( 0.387298, 0.372606 )
+texture = ExtResource( 16 )
+
+[node name="credits" type="Sprite" parent="HBoxContainer/CenterContainer" index="14"]
+
+position = Vector2( 855.357, 532.689 )
+scale = Vector2( 0.317262, 0.348775 )
+texture = ExtResource( 17 )
 
 
