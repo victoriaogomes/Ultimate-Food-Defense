@@ -9,16 +9,16 @@
 [ext_resource path="res://bananaStaticBody2D.gd" type="Script" id=7]
 [ext_resource path="res://sprites/Banana box.png" type="Texture" id=8]
 [ext_resource path="res://sprites/Load game.png" type="Texture" id=9]
-[ext_resource path="res://tomatoStaticBody2D.gd" type="Script" id=10]
-[ext_resource path="res://sprites/Tomato box.png" type="Texture" id=11]
-[ext_resource path="res://sprites/Instructions.png" type="Texture" id=12]
-[ext_resource path="res://cucumberStaticBody2D.gd" type="Script" id=13]
-[ext_resource path="res://sprites/Cucumber box.png" type="Texture" id=14]
-[ext_resource path="res://sprites/Options.png" type="Texture" id=15]
-[ext_resource path="res://pepperStaticBody2D.gd" type="Script" id=16]
-[ext_resource path="res://sprites/Pepper box.png" type="Texture" id=17]
-[ext_resource path="res://sprites/Credits.png" type="Texture" id=18]
-[ext_resource path="res://sprites/Orange box.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Orange box.png" type="Texture" id=10]
+[ext_resource path="res://tomatoStaticBody2D.gd" type="Script" id=11]
+[ext_resource path="res://sprites/Tomato box.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Instructions.png" type="Texture" id=13]
+[ext_resource path="res://pepperStaticBody2D.gd" type="Script" id=14]
+[ext_resource path="res://sprites/Pepper box.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Credits.png" type="Texture" id=16]
+[ext_resource path="res://cucumberStaticBody2D.gd" type="Script" id=17]
+[ext_resource path="res://sprites/Cucumber box.png" type="Texture" id=18]
+[ext_resource path="res://sprites/Options.png" type="Texture" id=19]
 [ext_resource path="res://sprites/Apple box.png" type="Texture" id=20]
 [ext_resource path="res://sprites/Watermelon box.png" type="Texture" id=21]
 [ext_resource path="res://sprites/Wheel.png" type="Texture" id=22]
@@ -114,7 +114,13 @@ position = Vector2( 22.3144, 14.2241 )
 scale = Vector2( 0.0228948, 0.0423534 )
 texture = ExtResource( 9 )
 
-[node name="tomatoStaticBody2D" type="StaticBody2D" parent="." index="5"]
+[node name="orangeBox" type="Sprite" parent="." index="5"]
+
+position = Vector2( 16.694, 9.95356 )
+scale = Vector2( 0.0180627, 0.0377096 )
+texture = ExtResource( 10 )
+
+[node name="tomatoStaticBody2D" type="StaticBody2D" parent="." index="6"]
 
 editor/display_folded = true
 scale = Vector2( 1, 1 )
@@ -125,27 +131,27 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 _sections_unfolded = [ "Pickable" ]
 
 [node name="tomatoBox" type="Sprite" parent="tomatoStaticBody2D" index="0"]
 
 position = Vector2( 7.10964, 21.1594 )
 scale = Vector2( 0.0211834, 0.0360012 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="instructions" type="Sprite" parent="tomatoStaticBody2D" index="1"]
 
 position = Vector2( 6.99313, 24.0544 )
 scale = Vector2( 0.0245343, 0.0437396 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tomatoStaticBody2D" index="2"]
 
 build_mode = 0
 polygon = PoolVector2Array( 9.99078, 25.5193, 7.76387, 25.5547, 6.98341, 25.4483, 4.27782, 25.4483, 3.94482, 25.4661, 3.86157, 25.4129, 3.94482, 25.1647, 3.9136, 21.5654, 3.86157, 21.3704, 4.4235, 20.2711, 4.4235, 20.0938, 4.55878, 20.1825, 4.65244, 19.8634, 4.91259, 19.5088, 5.09893, 19.5094, 5.16817, 19.5703, 5.17934, 19.5741, 5.17934, 19.4866, 5.0431, 19.3153, 5.04756, 19.2316, 5.09893, 19.2658, 5.17711, 19.3153, 5.25528, 19.4866, 5.25752, 19.4828, 5.27092, 19.3191, 5.29325, 19.1935, 5.33123, 19.0641, 5.34909, 19.0527, 5.3558, 19.243, 5.3558, 19.3077, 5.37143, 19.3876, 5.3759, 19.4485, 5.38706, 19.4409, 5.44291, 19.3191, 5.47194, 19.2392, 5.48534, 19.1897, 5.54118, 19.1745, 5.54565, 19.2202, 5.54118, 19.2658, 5.50768, 19.2887, 5.49874, 19.4219, 5.46747, 19.5741, 5.46301, 19.6388, 5.53225, 19.6198, 5.57692, 19.5627, 5.64392, 19.5322, 5.7355, 19.5627, 5.82708, 19.6121, 5.87175, 19.673, 5.90748, 19.7491, 5.94322, 19.8176, 5.99236, 19.7377, 6.06383, 19.6388, 6.22023, 19.4359, 6.45077, 19.4147, 6.51307, 19.4466, 6.51254, 19.3649, 6.43193, 19.2561, 6.37786, 19.2008, 6.36311, 19.1355, 6.37983, 19.1036, 6.41325, 19.1305, 6.46043, 19.164, 6.50467, 19.2075, 6.53908, 19.2728, 6.57053, 19.3247, 6.58921, 19.3532, 6.59904, 19.3616, 6.59904, 19.2293, 6.61871, 19.1204, 6.6305, 19.0333, 6.63935, 18.9697, 6.65999, 18.9496, 6.6826, 18.9579, 6.68998, 18.9899, 6.68013, 19.1717, 6.69393, 19.2999, 6.71643, 19.3326, 6.73604, 19.288, 6.75891, 19.2379, 6.7807, 19.186, 6.80248, 19.1303, 6.82209, 19.0913, 6.83298, 19.0709, 6.87219, 19.0709, 6.87982, 19.1173, 6.85477, 19.1563, 6.83516, 19.1618, 6.83843, 19.2175, 6.82644, 19.288, 6.81338, 19.327, 6.8112, 19.3771, 6.80793, 19.4217, 6.79921, 19.4736, 6.79813, 19.5089, 6.80466, 19.5219, 6.82209, 19.5015, 6.85258, 19.4848, 6.89833, 19.4643, 6.95389, 19.4217, 6.99528, 19.4105, 7.08569, 19.4384, 7.14777, 19.4681, 7.1859, 19.5126, 7.21313, 19.5627, 7.23383, 19.5868, 7.25126, 19.5423, 7.29264, 19.4254, 7.34384, 19.3511, 7.45768, 19.1605, 7.56605, 19.0458, 7.69677, 19.0055, 7.75079, 19.0122, 7.84307, 19.0692, 7.84975, 18.994, 7.81499, 18.9621, 7.78824, 18.9165, 7.74678, 18.8641, 7.70132, 18.8277, 7.69864, 18.7593, 7.74143, 18.7593, 7.7762, 18.7844, 7.80027, 18.7912, 7.84173, 18.8413, 7.90057, 18.9461, 7.91796, 18.9894, 7.92732, 18.9348, 7.92866, 18.8299, 7.95298, 18.6976, 7.97845, 18.6046, 7.98572, 18.5674, 8.01301, 18.5612, 8.02393, 18.5922, 8.02393, 18.741, 8.01847, 18.8185, 8.02938, 18.8743, 8.03666, 18.9301, 8.05304, 18.9611, 8.0967, 18.8464, 8.13308, 18.741, 8.14764, 18.6976, 8.21313, 18.6914, 8.20767, 18.7503, 8.17493, 18.7627, 8.16401, 18.8805, 8.14945, 18.9611, 8.14582, 19.0231, 8.12399, 19.0665, 8.12399, 19.1378, 8.17856, 19.1223, 8.24406, 19.0665, 8.28044, 19.0417, 8.36595, 19.0448, 8.40233, 19.0789, 8.45691, 19.082, 8.46419, 19.1068, 8.49693, 19.1099, 8.66009, 19.3945, 8.70711, 19.4619, 8.73026, 19.658, 8.77583, 19.5804, 8.80318, 19.5234, 8.8518, 19.5079, 8.90649, 19.4872, 8.96725, 19.4717, 9.02499, 19.4509, 9.04626, 19.4924, 9.07664, 19.5131, 9.12526, 19.5597, 9.15868, 19.5493, 9.14349, 19.3526, 9.11918, 19.2594, 9.1283, 19.2128, 9.07968, 19.1455, 9.12526, 19.1196, 9.15564, 19.1662, 9.18603, 19.2335, 9.20426, 19.3008, 9.23768, 19.3681, 9.26503, 19.3629, 9.28326, 19.1869, 9.28022, 19.0937, 9.27414, 19.0109, 9.27414, 18.9643, 9.3106, 18.9695, 9.33187, 19.073, 9.33795, 19.1507, 9.35618, 19.2128, 9.35618, 19.3163, 9.35314, 19.3888, 9.3896, 19.4095, 9.4443, 19.2801, 9.46253, 19.2283, 9.51114, 19.2076, 9.5476, 19.1921, 9.5834, 19.1699, 9.59953, 19.1768, 9.5834, 19.2798, 9.54107, 19.2798, 9.51083, 19.3313, 9.47253, 19.3726, 9.44835, 19.4206, 9.44835, 19.4756, 9.47052, 19.479, 9.50882, 19.4618, 9.51083, 19.4241, 9.64388, 19.4378, 9.70234, 19.4378, 9.72854, 19.4687, 9.76886, 19.4756, 9.85232, 19.5991, 9.87907, 19.6469, 9.92453, 19.7039, 9.97535, 19.7631, 10.0155, 19.8315, 10.0168, 19.8748, 10.0543, 20.0115, 10.0609, 20.0411, 10.075, 20.4937, 10.0404, 21.1524, 9.99211, 21.4935 )
 
-[node name="cucumberStaticBody2D" type="StaticBody2D" parent="." index="6"]
+[node name="pepperStaticBody2D" type="StaticBody2D" parent="." index="7"]
 
 editor/display_folded = true
 scale = Vector2( 1, 1 )
@@ -156,28 +162,29 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 _sections_unfolded = [ "Pickable" ]
 
-[node name="cucumberBox" type="Sprite" parent="cucumberStaticBody2D" index="0"]
+[node name="pepperBox" type="Sprite" parent="pepperStaticBody2D" index="0"]
 
-position = Vector2( 12.9939, 20.5878 )
-scale = Vector2( 0.0201471, 0.0285883 )
-texture = ExtResource( 14 )
-
-[node name="options" type="Sprite" parent="cucumberStaticBody2D" index="1"]
-
-position = Vector2( 12.9655, 24.5898 )
-scale = Vector2( 0.0258701, 0.0405736 )
+position = Vector2( 18.5285, 20.4891 )
+scale = Vector2( 0.01926, 0.0347177 )
 texture = ExtResource( 15 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cucumberStaticBody2D" index="2"]
+[node name="credits" type="Sprite" parent="pepperStaticBody2D" index="1"]
+
+position = Vector2( 18.5973, 24.6938 )
+scale = Vector2( 0.0211919, 0.0379786 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pepperStaticBody2D" index="2"]
 
 build_mode = 0
-polygon = PoolVector2Array( 15.6273, 25.9195, 12.3949, 25.7889, 10.0441, 25.593, 10.023, 24.405, 10.0315, 23.7263, 10.0654, 20.1015, 10.3197, 19.7405, 10.2828, 19.6067, 10.2491, 19.3658, 10.0841, 19.274, 10.074, 19.1879, 10.202, 19.2051, 10.2877, 19.2312, 10.4205, 19.0518, 10.6037, 19.0439, 10.6358, 19.0674, 10.8281, 19.0752, 10.819, 19.1454, 10.9564, 19.122, 11.0571, 19.1298, 11.4235, 19.3483, 11.3777, 19.1766, 11.1991, 19.1688, 11.1487, 19.0596, 11.3823, 19.0361, 11.4648, 18.802, 12.0281, 18.6148, 13.0723, 18.7474, 13.3197, 18.802, 13.9197, 18.1153, 14.1716, 17.9593, 14.3319, 18.0529, 14.4006, 18.0295, 14.4968, 17.889, 14.5471, 17.9046, 14.5059, 18.0763, 14.4372, 18.1778, 14.5013, 18.4197, 14.254, 19.0518, 14.3914, 19.0908, 14.5884, 19.1688, 14.7716, 19.2624, 14.9456, 19.3639, 14.9731, 19.4341, 15.2571, 19.278, 15.3349, 19.2156, 15.6006, 19.1766, 15.77, 19.3249, 15.8341, 19.3249, 15.9257, 19.2078, 15.9532, 19.2078, 15.9899, 19.2624, 15.8296, 19.4497, 15.825, 19.7619, 15.6372, 19.996, 15.7883, 20.2847, 15.8079, 22.2379, 15.7706, 22.3767, 15.7875, 25.1106, 15.7451, 25.4572 )
+polygon = PoolVector2Array( 21.2857, 25.9594, 21.1556, 25.9203, 20.0923, 25.9985, 19.0444, 26.0376, 17.7134, 26.0637, 16.9484, 26.0507, 16.0228, 25.9985, 15.6327, 25.8943, 15.7933, 25.2035, 15.7857, 22.3492, 16.4742, 20.556, 16.465, 20.119, 16.6437, 19.6898, 16.7215, 19.5571, 16.7169, 19.4713, 16.7994, 19.3152, 16.9505, 19.2294, 17.0192, 19.2294, 17.0009, 18.9172, 16.9505, 18.7924, 17.0421, 18.5427, 17.1429, 18.7534, 17.152, 19.2138, 17.1749, 19.2216, 17.2162, 19.1591, 17.4726, 19.1825, 17.5047, 19.284, 17.6742, 19.284, 17.7245, 19.4089, 17.7474, 19.4323, 17.9581, 18.9719, 18.1138, 18.9875, 18.1596, 18.8782, 18.3978, 18.8548, 18.4528, 18.9172, 18.4711, 18.9094, 18.4665, 18.488, 18.5902, 18.2695, 18.6818, 18.4646, 18.6131, 18.5973, 18.5856, 18.925, 18.666, 18.9214, 18.7846, 18.982, 18.8424, 19.0527, 18.8705, 19.1309, 18.8972, 19.2269, 19.0424, 19.2471, 19.0898, 19.1385, 19.318, 19.1208, 19.3387, 19.1335, 19.3773, 19.1486, 19.4069, 19.1814, 19.4128, 18.7219, 19.5388, 18.5048, 19.6307, 18.7447, 19.5729, 18.8557, 19.5462, 19.1739, 19.6396, 19.1851, 19.7021, 19.1988, 19.7424, 19.24, 19.7686, 19.2744, 19.8573, 19.4289, 19.8573, 19.5182, 19.8855, 19.5835, 19.9117, 19.6041, 19.9521, 19.5045, 20.0025, 19.4495, 20.0811, 19.4392, 20.0952, 19.4049, 20.1315, 19.4015, 20.1698, 19.4324, 20.1839, 19.4392, 20.1637, 19.3156, 20.1637, 19.2366, 20.1456, 19.1851, 20.1496, 19.0958, 20.1254, 19.0546, 20.0992, 19.003, 20.0891, 18.9687, 20.1274, 18.8622, 20.1758, 18.7661, 20.2585, 18.8657, 20.3008, 18.9447, 20.3008, 19.4118, 20.3613, 19.3705, 20.5407, 19.3465, 20.5991, 19.3465, 20.6475, 19.4186, 20.6515, 19.4701, 20.8027, 19.4564, 20.9338, 19.7346, 21.0708, 19.9888, 21.0969, 20.3917, 21.1161, 20.7, 21.171, 20.7047, 21.1833, 20.7047, 21.2765, 21.3822 )
 
-[node name="pepperStaticBody2D" type="StaticBody2D" parent="." index="7"]
+[node name="cucumberStaticBody2D" type="StaticBody2D" parent="." index="8"]
 
+editor/display_folded = true
 scale = Vector2( 1, 1 )
 input_pickable = true
 collision_layer = 1
@@ -186,31 +193,25 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 16 )
+script = ExtResource( 17 )
 _sections_unfolded = [ "Pickable" ]
 
-[node name="pepperBox" type="Sprite" parent="pepperStaticBody2D" index="0"]
+[node name="cucumberBox" type="Sprite" parent="cucumberStaticBody2D" index="0"]
 
-position = Vector2( 18.5285, 20.4891 )
-scale = Vector2( 0.01926, 0.0347177 )
-texture = ExtResource( 17 )
-
-[node name="credits" type="Sprite" parent="pepperStaticBody2D" index="1"]
-
-position = Vector2( 18.5973, 24.6938 )
-scale = Vector2( 0.0211919, 0.0379786 )
+position = Vector2( 12.9939, 20.5878 )
+scale = Vector2( 0.0201471, 0.0285883 )
 texture = ExtResource( 18 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pepperStaticBody2D" index="2"]
+[node name="options" type="Sprite" parent="cucumberStaticBody2D" index="1"]
+
+position = Vector2( 12.9655, 24.5898 )
+scale = Vector2( 0.0258701, 0.0405736 )
+texture = ExtResource( 19 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="cucumberStaticBody2D" index="2"]
 
 build_mode = 0
-polygon = PoolVector2Array( 21.2857, 25.9594, 21.1556, 25.9203, 20.0923, 25.9985, 19.0444, 26.0376, 17.7134, 26.0637, 16.9484, 26.0507, 16.0228, 25.9985, 15.6327, 25.8943, 15.7933, 25.2035, 15.7857, 22.3492, 16.4742, 20.556, 16.465, 20.119, 16.6437, 19.6898, 16.7215, 19.5571, 16.7169, 19.4713, 16.7994, 19.3152, 16.9505, 19.2294, 17.0192, 19.2294, 17.0009, 18.9172, 16.9505, 18.7924, 17.0421, 18.5427, 17.1429, 18.7534, 17.152, 19.2138, 17.1749, 19.2216, 17.2162, 19.1591, 17.4726, 19.1825, 17.5047, 19.284, 17.6742, 19.284, 17.7245, 19.4089, 17.7474, 19.4323, 17.9581, 18.9719, 18.1138, 18.9875, 18.1596, 18.8782, 18.3978, 18.8548, 18.4528, 18.9172, 18.4711, 18.9094, 18.4665, 18.488, 18.5902, 18.2695, 18.6818, 18.4646, 18.6131, 18.5973, 18.5856, 18.925, 18.666, 18.9214, 18.7846, 18.982, 18.8424, 19.0527, 18.8705, 19.1309, 18.8972, 19.2269, 19.0424, 19.2471, 19.0898, 19.1385, 19.318, 19.1208, 19.3387, 19.1335, 19.3773, 19.1486, 19.4069, 19.1814, 19.4128, 18.7219, 19.5388, 18.5048, 19.6307, 18.7447, 19.5729, 18.8557, 19.5462, 19.1739, 19.6396, 19.1851, 19.7021, 19.1988, 19.7424, 19.24, 19.7686, 19.2744, 19.8573, 19.4289, 19.8573, 19.5182, 19.8855, 19.5835, 19.9117, 19.6041, 19.9521, 19.5045, 20.0025, 19.4495, 20.0811, 19.4392, 20.0952, 19.4049, 20.1315, 19.4015, 20.1698, 19.4324, 20.1839, 19.4392, 20.1637, 19.3156, 20.1637, 19.2366, 20.1456, 19.1851, 20.1496, 19.0958, 20.1254, 19.0546, 20.0992, 19.003, 20.0891, 18.9687, 20.1274, 18.8622, 20.1758, 18.7661, 20.2585, 18.8657, 20.3008, 18.9447, 20.3008, 19.4118, 20.3613, 19.3705, 20.5407, 19.3465, 20.5991, 19.3465, 20.6475, 19.4186, 20.6515, 19.4701, 20.8027, 19.4564, 20.9338, 19.7346, 21.0708, 19.9888, 21.0969, 20.3917, 21.1161, 20.7, 21.171, 20.7047, 21.1833, 20.7047, 21.2765, 21.3822 )
-
-[node name="orangeBox" type="Sprite" parent="." index="8"]
-
-position = Vector2( 16.694, 9.95356 )
-scale = Vector2( 0.0180627, 0.0377096 )
-texture = ExtResource( 19 )
+polygon = PoolVector2Array( 15.6273, 25.9195, 12.3949, 25.7889, 10.0441, 25.593, 10.023, 24.405, 10.0315, 23.7263, 10.0654, 20.1015, 10.3197, 19.7405, 10.2828, 19.6067, 10.2491, 19.3658, 10.0841, 19.274, 10.074, 19.1879, 10.202, 19.2051, 10.2877, 19.2312, 10.4205, 19.0518, 10.6037, 19.0439, 10.6358, 19.0674, 10.8281, 19.0752, 10.819, 19.1454, 10.9564, 19.122, 11.0571, 19.1298, 11.4235, 19.3483, 11.3777, 19.1766, 11.1991, 19.1688, 11.1487, 19.0596, 11.3823, 19.0361, 11.4648, 18.802, 12.0281, 18.6148, 13.0723, 18.7474, 13.3197, 18.802, 13.9197, 18.1153, 14.1716, 17.9593, 14.3319, 18.0529, 14.4006, 18.0295, 14.4968, 17.889, 14.5471, 17.9046, 14.5059, 18.0763, 14.4372, 18.1778, 14.5013, 18.4197, 14.254, 19.0518, 14.3914, 19.0908, 14.5884, 19.1688, 14.7716, 19.2624, 14.9456, 19.3639, 14.9731, 19.4341, 15.2571, 19.278, 15.3349, 19.2156, 15.6006, 19.1766, 15.77, 19.3249, 15.8341, 19.3249, 15.9257, 19.2078, 15.9532, 19.2078, 15.9899, 19.2624, 15.8296, 19.4497, 15.825, 19.7619, 15.6372, 19.996, 15.7883, 20.2847, 15.8079, 22.2379, 15.7706, 22.3767, 15.7875, 25.1106, 15.7451, 25.4572 )
 
 [node name="appleBox" type="Sprite" parent="." index="9"]
 
@@ -242,12 +243,12 @@ texture = ExtResource( 22 )
 
 [connection signal="mouse_exited" from="tomatoStaticBody2D" to="tomatoStaticBody2D" method="_on_tomatoStaticBody2D_mouse_exited"]
 
-[connection signal="mouse_entered" from="cucumberStaticBody2D" to="cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_entered"]
-
-[connection signal="mouse_exited" from="cucumberStaticBody2D" to="cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_exited"]
-
 [connection signal="mouse_entered" from="pepperStaticBody2D" to="pepperStaticBody2D" method="_on_pepperStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="pepperStaticBody2D" to="pepperStaticBody2D" method="_on_pepperStaticBody2D_mouse_exited"]
+
+[connection signal="mouse_entered" from="cucumberStaticBody2D" to="cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="cucumberStaticBody2D" to="cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_exited"]
 
 
