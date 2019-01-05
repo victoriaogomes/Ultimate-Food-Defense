@@ -1,25 +1,30 @@
 extends StaticBody2D
 
-onready var body = get_node("bananaBox")
-var base_sprite = preload("res://sprites/Banana box.png")
-var hover_sprite = preload("res://sprites/Wheel.png")
+onready var text = get_node("loadGame")
+onready var sprite = get_node("bananaBox")
+var base_text = preload("res://sprites/Load game.png")
+var hover_text = preload("res://sprites/Load game(v2).png")
+var pos_origin_sprite
+var pos_new_sprite
+var pos_origin_text
+var pos_new_text
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+	pos_origin_sprite = sprite.get_position()
+	pos_origin_text = text.get_position()
+	pos_new_sprite = sprite.get_position()
+	pos_new_text = text.get_position()
+	pos_new_sprite.y = pos_new_sprite.y-1
+	pos_new_text.y = pos_new_text.y-1
 
 
 func _on_bananaStaticBody2D_mouse_entered():
-	print("enter")
-	body.set_texture(hover_sprite)
+	sprite.set_position(pos_new_sprite)
+	text.set_position(pos_new_text)
+	text.set_texture(hover_text)
 
 
 func _on_bananaStaticBody2D_mouse_exited():
-	print("exit")
-	body.set_texture(base_sprite)
+	sprite.set_position(pos_origin_sprite)
+	text.set_position(pos_origin_text)
+	text.set_texture(base_text)
