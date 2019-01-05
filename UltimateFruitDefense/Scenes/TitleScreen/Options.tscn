@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Português.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/English.png" type="Texture" id=5]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 512.01, 299.994 )
 scale = Vector2( 16.0001, 9.3747 )
