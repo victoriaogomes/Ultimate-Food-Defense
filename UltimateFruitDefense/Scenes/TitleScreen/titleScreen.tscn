@@ -26,7 +26,7 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=25]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
@@ -58,7 +58,6 @@ texture = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
 
@@ -284,6 +283,8 @@ texture = ExtResource( 25 )
 [connection signal="mouse_entered" from="Node2D/pepperStaticBody2D" to="Node2D/pepperStaticBody2D" method="_on_pepperStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="Node2D/pepperStaticBody2D" to="Node2D/pepperStaticBody2D" method="_on_pepperStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="Node2D/cucumberStaticBody2D" to="Node2D/cucumberStaticBody2D" method="_on_cucumberStaticBody2D_input_event"]
 
 [connection signal="mouse_entered" from="Node2D/cucumberStaticBody2D" to="Node2D/cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_entered"]
 

@@ -2,6 +2,7 @@ extends StaticBody2D
 
 onready var text = get_node("options")
 onready var sprite = get_node("cucumberBox")
+var next_scene = preload("res://Scenes/OptionsScreen/options.tscn")
 var base_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Options.png")
 var hover_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Options(v2).png")
 var pos_origin_sprite
@@ -28,3 +29,9 @@ func _on_cucumberStaticBody2D_mouse_exited():
 	sprite.set_position(pos_origin_sprite)
 	text.set_position(pos_origin_text)
 	text.set_texture(base_text)
+
+
+func _on_cucumberStaticBody2D_input_event(viewport, event, shape_idx):
+	if(event is InputEventMouseButton):
+		if(event.button_index == 1): 
+			get_tree().change_scene_to(next_scene)
