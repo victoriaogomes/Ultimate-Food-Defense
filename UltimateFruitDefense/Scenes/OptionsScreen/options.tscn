@@ -309,8 +309,8 @@ texture = ExtResource( 26 )
 
 [node name="wheel" type="Sprite" parent="Node2D" index="10"]
 
-position = Vector2( 20.5324, 27.4724 )
-scale = Vector2( 0.0487698, 0.0355473 )
+position = Vector2( 21.443, 27.3267 )
+scale = Vector2( 0.035547, 0.035547 )
 texture = ExtResource( 27 )
 _sections_unfolded = [ "Transform" ]
 
