@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Des.png-9d8ba3870a8f2fe38bed7b7001cfa0c2.stex"
+path="res://.import/Des.png-167758b191924996805c7d1421ac02d2.stex"
 
 [deps]
 
-source_file="res://assets/sprites/optionsScreen/texts/Pt-Br/Des.png"
-dest_files=[ "res://.import/Des.png-9d8ba3870a8f2fe38bed7b7001cfa0c2.stex" ]
+source_file="res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Des.png"
+dest_files=[ "res://.import/Des.png-167758b191924996805c7d1421ac02d2.stex" ]
 
 [params]
 

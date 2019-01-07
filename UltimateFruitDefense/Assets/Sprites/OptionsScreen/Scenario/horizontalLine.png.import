@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/horizontalLine.png-2d65a2b7e0aac3a837f6a8e6d9c78c74.stex"
+path="res://.import/horizontalLine.png-44814d2d6dc30534aecac5c5971d41dd.stex"
 
 [deps]
 
-source_file="res://assets/sprites/optionsScreen/scenario/horizontalLine.png"
-dest_files=[ "res://.import/horizontalLine.png-2d65a2b7e0aac3a837f6a8e6d9c78c74.stex" ]
+source_file="res://Assets/Sprites/OptionsScreen/Scenario/horizontalLine.png"
+dest_files=[ "res://.import/horizontalLine.png-44814d2d6dc30534aecac5c5971d41dd.stex" ]
 
 [params]
 

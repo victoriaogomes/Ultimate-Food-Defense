@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Credits(v2).png-7c0e4afbd9605623e57c7fab2c3f9ccf.stex"
+path="res://.import/Credits(v2).png-89f150eb2de543bc46b2a5d1e7046a86.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/texts/English/Credits(v2).png"
-dest_files=[ "res://.import/Credits(v2).png-7c0e4afbd9605623e57c7fab2c3f9ccf.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Texts/English/Credits(v2).png"
+dest_files=[ "res://.import/Credits(v2).png-89f150eb2de543bc46b2a5d1e7046a86.stex" ]
 
 [params]
 

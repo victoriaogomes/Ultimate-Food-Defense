@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/Sprites/TitleScreen/Background.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Ultimate fruit defense.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Options.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=26]
+<<<<<<< HEAD
 
 [sub_resource type="Animation" id=1]
 
@@ -57,6 +58,8 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 0.0, 360.0, 720.0, 1080.0, 1440.0 ]
 }
+=======
+>>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -308,6 +311,7 @@ scale = Vector2( 0.034996, 0.034996 )
 texture = ExtResource( 26 )
 _sections_unfolded = [ "Transform" ]
 
+<<<<<<< HEAD
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
@@ -318,6 +322,8 @@ playback_speed = 1.0
 anims/car_intro = SubResource( 1 )
 blend_times = [  ]
 
+=======
+>>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
 [connection signal="mouse_entered" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_exited"]

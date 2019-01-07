@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ultimate fruit defense.png-7c6b30745c0cadc5dd7c5b13c0fa5951.stex"
+path="res://.import/Ultimate fruit defense.png-c8166ac5eb4832e3023544a494845b43.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/texts/English/Ultimate fruit defense.png"
-dest_files=[ "res://.import/Ultimate fruit defense.png-7c6b30745c0cadc5dd7c5b13c0fa5951.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Texts/English/Ultimate fruit defense.png"
+dest_files=[ "res://.import/Ultimate fruit defense.png-c8166ac5eb4832e3023544a494845b43.stex" ]
 
 [params]
 

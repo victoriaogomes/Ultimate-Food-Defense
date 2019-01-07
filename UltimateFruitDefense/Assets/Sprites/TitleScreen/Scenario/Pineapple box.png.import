@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pineapple box.png-cc57ed352a607ec999ca7e0a42a1e555.stex"
+path="res://.import/Pineapple box.png-4e0215d0d4568ccf0e196d022f25dafe.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/scenario/Pineapple box.png"
-dest_files=[ "res://.import/Pineapple box.png-cc57ed352a607ec999ca7e0a42a1e555.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Scenario/Pineapple box.png"
+dest_files=[ "res://.import/Pineapple box.png-4e0215d0d4568ccf0e196d022f25dafe.stex" ]
 
 [params]
 
