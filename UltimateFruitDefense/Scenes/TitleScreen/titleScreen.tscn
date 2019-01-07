@@ -30,6 +30,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=1]
 
 resource_name = "car_intro"
@@ -63,6 +64,8 @@ tracks/1/keys = {
 =======
 >>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
 
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 =======
 >>>>>>> parent of 12073c8... aaaaaa
 =======
@@ -111,7 +114,10 @@ scale = Vector2( 0.110925, 0.0850863 )
 texture = ExtResource( 6 )
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 _sections_unfolded = [ "Pause", "Transform" ]
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 =======
 >>>>>>> parent of 12073c8... aaaaaa
 =======
@@ -323,6 +329,7 @@ _sections_unfolded = [ "Transform" ]
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
@@ -335,6 +342,8 @@ blend_times = [  ]
 
 =======
 >>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 =======
 >>>>>>> parent of 12073c8... aaaaaa
 =======
