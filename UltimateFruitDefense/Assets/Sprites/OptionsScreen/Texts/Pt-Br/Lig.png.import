@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lig.png-3195b9f5c63829587d90ed54857bea34.stex"
+path="res://.import/Lig.png-37b379f1a7c2b8eb4c5a135c018c1599.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Lig.png"
-dest_files=[ "res://.import/Lig.png-3195b9f5c63829587d90ed54857bea34.stex" ]
+source_file="res://assets/sprites/optionsScreen/texts/Pt-Br/Lig.png"
+dest_files=[ "res://.import/Lig.png-37b379f1a7c2b8eb4c5a135c018c1599.stex" ]
 
 [params]
 

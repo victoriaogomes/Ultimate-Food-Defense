@@ -26,7 +26,6 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Options.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=26]
-[ext_resource path="res://sounds/JeffSpeed68_-_Little_reindeer (online-audio-converter.com).ogg" type="AudioStream" id=27]
 
 [sub_resource type="Animation" id=1]
 
@@ -318,15 +317,6 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/car_intro = SubResource( 1 )
 blend_times = [  ]
-
-[node name="LittleReindeer" type="AudioStreamPlayer" parent="." index="4"]
-
-stream = ExtResource( 27 )
-volume_db = -30.0
-pitch_scale = 1.0
-autoplay = true
-mix_target = 0
-bus = "Master"
 
 [connection signal="mouse_entered" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_entered"]
 

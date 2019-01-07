@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Português.png-9fe34216512e09aeb19c93044a9bc5c3.stex"
+path="res://.import/Português.png-394cb5c54f236ce80b63e12b86c39b98.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Português.png"
-dest_files=[ "res://.import/Português.png-9fe34216512e09aeb19c93044a9bc5c3.stex" ]
+source_file="res://assets/sprites/titleScreen/texts/Pt-Br/Português.png"
+dest_files=[ "res://.import/Português.png-394cb5c54f236ce80b63e12b86c39b98.stex" ]
 
 [params]
 

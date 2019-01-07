@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Orange box.png-2f0c9cbbc9ff81f056e1165fbfa95ac4.stex"
+path="res://.import/Orange box.png-261913389a0435884c94ecbf060acc0f.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/Orange box.png"
-dest_files=[ "res://.import/Orange box.png-2f0c9cbbc9ff81f056e1165fbfa95ac4.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/Orange box.png"
+dest_files=[ "res://.import/Orange box.png-261913389a0435884c94ecbf060acc0f.stex" ]
 
 [params]
 

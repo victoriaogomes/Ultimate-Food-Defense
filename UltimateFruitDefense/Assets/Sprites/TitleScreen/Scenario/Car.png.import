@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Car.png-cd364ff11e66376eb759c92add1becd4.stex"
+path="res://.import/Car.png-61880de6e08cb427bf3f1d05d96a0f4e.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/Car.png"
-dest_files=[ "res://.import/Car.png-cd364ff11e66376eb759c92add1becd4.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/Car.png"
+dest_files=[ "res://.import/Car.png-61880de6e08cb427bf3f1d05d96a0f4e.stex" ]
 
 [params]
 
