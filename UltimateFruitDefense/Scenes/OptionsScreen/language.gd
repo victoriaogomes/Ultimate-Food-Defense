@@ -1,5 +1,11 @@
 extends Sprite
 
+onready var pineapple = get_node("/root/Node2D/Node2D/pineappleStaticBody2D")
+onready var tomato = get_node("/root/Node2D/Node2D/tomatoStaticBody2D")
+onready var pepper = get_node("/root/Node2D/Node2D/pepperStaticBody2D")
+onready var cucumber = get_node("/root/Node2D/Node2D/cucumberStaticBody2D")
+onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")
+
 onready var optionsText = get_node("/root/Node2D/optionsTitle")
 var options_english = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Options.png")
 var options_port = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Opcoes.png")
@@ -17,7 +23,6 @@ var base_english_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/Eng
 var base_english_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Ingles.png")
 var hover_english_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/English/English(v2).png")
 var hover_english_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Ingles(v2).png")
-var englishOn = true
 
 onready var portugueseText = get_node("/root/Node2D/portugueseStaticBody2D/portuguese")
 var base_portuguese_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Portugues.png")
@@ -78,12 +83,24 @@ func _ready():
 	options_english_position = optionsText.get_position()
 	options_portuguese_position = optionsText.get_position()
 	options_portuguese_position.y-=0.38
+	if(idioma.english == false):
+		optionsText.set_texture(options_port)
+		optionsText.set_position(options_portuguese_position)
+		languageText.set_texture(language_port)
+		languageText.set_position(language_portuguese_position)
+		englishText.set_texture(base_english_text_off)
+		portugueseText.set_texture(base_portuguese_text_on)
+		sound_effectsText.set_texture(sound_effects_port)
+		offText_sound_effects.set_texture(base_port_on_text_on)
+		onText_sound_effects.set_texture(base_port_off_text_off)
+		musicText.set_texture(music_port)
+		onText_music.set_texture(base_port_on_text_on)
+		offText_music.set_texture(base_port_off_text_off)
 
 #Clicando no idioma em inglês
 func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
 	if(event is InputEventMouseButton):
 		if(event.button_index == 1): 
-			englishOn = true
 			optionsText.set_texture(options_english)
 			optionsText.set_position(options_english_position)
 			languageText.set_texture(language_english)
@@ -93,6 +110,12 @@ func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
 			sound_effectsText.set_texture(sound_effects_english)
 			musicText.set_texture(music_english)
 			backText.set_texture(base_back_english)
+			idioma.engli()
+			pineapple.language()
+			tomato.language()
+			pepper.language()
+			cucumber.language()
+			banana.language()
 			if(sound_effectsOn == true):
 				onText_sound_effects.set_texture(base_english_on_text_on)
 				offText_sound_effects.set_texture(base_english_off_text_off)
@@ -109,7 +132,7 @@ func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no texto "inglês"/"english"
 func _on_englishStaticBody2D_mouse_entered():
-	if(englishOn == true):
+	if(idioma.english == true):
 		englishText.set_texture(hover_english_text_on)
 	else:
 		englishText.set_texture(hover_english_text_off)
@@ -117,7 +140,7 @@ func _on_englishStaticBody2D_mouse_entered():
 
 #Mouse saindo do texto "inglês"/"english"
 func _on_englishStaticBody2D_mouse_exited():
-	if(englishOn == true):
+	if(idioma.english == true):
 		englishText.set_texture(base_english_text_on)
 	else:
 		englishText.set_texture(base_english_text_off)
@@ -127,7 +150,6 @@ func _on_englishStaticBody2D_mouse_exited():
 func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
 	if(event is InputEventMouseButton):
 		if(event.button_index == 1): 
-			englishOn = false
 			optionsText.set_texture(options_port)
 			optionsText.set_position(options_portuguese_position)
 			languageText.set_texture(language_port)
@@ -137,6 +159,12 @@ func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
 			sound_effectsText.set_texture(sound_effects_port)
 			musicText.set_texture(music_port)
 			backText.set_texture(base_back_portuguese)
+			idioma.port()
+			pineapple.language()
+			tomato.language()
+			pepper.language()
+			cucumber.language()
+			banana.language()
 			if(sound_effectsOn == true):
 				onText_sound_effects.set_texture(base_port_on_text_on)
 				offText_sound_effects.set_texture(base_port_off_text_off)
@@ -153,7 +181,7 @@ func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no texto "portugues"/"portuguese"
 func _on_portugueseStaticBody2D_mouse_entered():
-	if(englishOn == false):
+	if(idioma.english == false):
 		portugueseText.set_texture(hover_portuguese_text_on)
 	else:
 		portugueseText.set_texture(hover_portuguese_text_off)
@@ -161,7 +189,7 @@ func _on_portugueseStaticBody2D_mouse_entered():
 
 #Mouse saindo do texto "portugues"/"portuguese"
 func _on_portugueseStaticBody2D_mouse_exited():
-	if(englishOn == false):
+	if(idioma.english == false):
 		portugueseText.set_texture(base_portuguese_text_on)
 	else:
 		portugueseText.set_texture(base_portuguese_text_off)
@@ -177,12 +205,12 @@ func _on_on1StaticBody2D_input_event(viewport, event, shape_idx):
 #Mouse entrando no "On"/"Lig" dos efeitos musicais
 func _on_on1StaticBody2D_mouse_entered():
 	if(sound_effectsOn == true):
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_sound_effects.set_texture(hover_english_on_text_on)
 		else:
 			onText_sound_effects.set_texture(hover_port_on_text_on)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_sound_effects.set_texture(hover_english_on_text_off)
 		else:
 			onText_sound_effects.set_texture(hover_port_on_text_off)
@@ -191,12 +219,12 @@ func _on_on1StaticBody2D_mouse_entered():
 #Mouse saindo do "On"/"Lig" dos efeitos musicais
 func _on_on1StaticBody2D_mouse_exited():
 	if(sound_effectsOn == true):
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_sound_effects.set_texture(base_english_on_text_on)
 		else:
 			onText_sound_effects.set_texture(base_port_on_text_on)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_sound_effects.set_texture(base_english_on_text_off)
 		else:
 			onText_sound_effects.set_texture(base_port_on_text_off)
@@ -212,12 +240,12 @@ func _on_off1StaticBody2D_input_event(viewport, event, shape_idx):
 #Mouse entrando no "Off"/"Deslig" dos efeitos musicais
 func _on_off1StaticBody2D_mouse_entered():
 	if(sound_effectsOn == false):
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_sound_effects.set_texture(hover_english_off_text_on)
 		else:
 			offText_sound_effects.set_texture(hover_port_off_text_on)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_sound_effects.set_texture(hover_english_off_text_off)
 		else:
 			offText_sound_effects.set_texture(hover_port_off_text_off)
@@ -226,12 +254,12 @@ func _on_off1StaticBody2D_mouse_entered():
 #Mouse saindo no "Off"/"Deslig" dos efeitos musicais
 func _on_off1StaticBody2D_mouse_exited():
 	if(sound_effectsOn == true):
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_sound_effects.set_texture(base_english_off_text_off)
 		else:
 			offText_sound_effects.set_texture(base_port_off_text_off)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_sound_effects.set_texture(base_english_off_text_on)
 		else:
 			offText_sound_effects.set_texture(base_port_off_text_on)
@@ -245,12 +273,12 @@ func _on_on2StaticBody2D2_input_event(viewport, event, shape_idx):
 #Mouse entrando no "On"/"Lig" das músicas
 func _on_on2StaticBody2D2_mouse_entered():
 	if(musicOn == true):
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_music.set_texture(hover_english_on_text_on)
 		else:
 			onText_music.set_texture(hover_port_on_text_on)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_music.set_texture(hover_english_on_text_off)
 		else:
 			onText_music.set_texture(hover_port_on_text_off)
@@ -259,12 +287,12 @@ func _on_on2StaticBody2D2_mouse_entered():
 #Mouse saindo do "On"/"Lig" das músicas
 func _on_on2StaticBody2D2_mouse_exited():
 	if(musicOn == true):
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_music.set_texture(base_english_on_text_on)
 		else:
 			onText_music.set_texture(base_port_on_text_on)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			onText_music.set_texture(base_english_on_text_off)
 		else:
 			onText_music.set_texture(base_port_on_text_off)
@@ -278,12 +306,12 @@ func _on_off2StaticBody2D2_input_event(viewport, event, shape_idx):
 #Mouse entrando no "Off"/"Deslig" das músicas
 func _on_off2StaticBody2D2_mouse_entered():
 	if(musicOn == false):
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_music.set_texture(hover_english_off_text_on)
 		else:
 			offText_music.set_texture(hover_port_off_text_on)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_music.set_texture(hover_english_off_text_off)
 		else:
 			offText_music.set_texture(hover_port_off_text_off)
@@ -292,12 +320,12 @@ func _on_off2StaticBody2D2_mouse_entered():
 #Mouse saindo do "Off"/"Deslig" das músicas
 func _on_off2StaticBody2D2_mouse_exited():
 	if(musicOn == true):
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_music.set_texture(base_english_off_text_off)
 		else:
 			offText_music.set_texture(base_port_off_text_off)
 	else:
-		if(englishOn == true):
+		if(idioma.english == true):
 			offText_music.set_texture(base_english_off_text_on)
 		else:
 			offText_music.set_texture(base_port_off_text_on)
@@ -312,7 +340,7 @@ func _on_backStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no botão "back"/"voltar"
 func _on_backStaticBody2D_mouse_entered():
-	if(englishOn==true):
+	if(idioma.english == true):
 		backText.set_texture(hover_back_english)
 	else:
 		backText.set_texture(hover_back_portuguese)
@@ -320,7 +348,7 @@ func _on_backStaticBody2D_mouse_entered():
 
 #Mouse saindo do botão "back"/"voltar"
 func _on_backStaticBody2D_mouse_exited():
-	if(englishOn == true):
+	if(idioma.english == true):
 		backText.set_texture(base_back_english)
 	else:
 		backText.set_texture(base_back_portuguese)

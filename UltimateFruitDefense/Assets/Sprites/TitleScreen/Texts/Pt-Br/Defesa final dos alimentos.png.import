@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Carregar jogo(v2).png-53910e4bb174cf688436cb0ae07f321b.stex"
+path="res://.import/Defesa final dos alimentos.png-38bfbb26f7b3c75591b914c940639cbe.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Carregar jogo(v2).png"
-dest_files=[ "res://.import/Carregar jogo(v2).png-53910e4bb174cf688436cb0ae07f321b.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Defesa final dos alimentos.png"
+dest_files=[ "res://.import/Defesa final dos alimentos.png-38bfbb26f7b3c75591b914c940639cbe.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Carregar jogo.png-2b2485281dd4e6b04cfa43a1aab0e01f.stex"
+path="res://.import/Jogos salvos(v2).png-e625470baa5c5860431f6884d113eef2.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Carregar jogo.png"
-dest_files=[ "res://.import/Carregar jogo.png-2b2485281dd4e6b04cfa43a1aab0e01f.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Jogos salvos(v2).png"
+dest_files=[ "res://.import/Jogos salvos(v2).png-e625470baa5c5860431f6884d113eef2.stex" ]
 
 [params]
 

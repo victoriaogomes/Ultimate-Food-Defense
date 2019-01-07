@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Defesa final das frutas.png-39d52517aa1eeaee81803378408505b2.stex"
+path="res://.import/Jogos salvos.png-133bcfa095b14daa31b42dddea39cbae.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Defesa final das frutas.png"
-dest_files=[ "res://.import/Defesa final das frutas.png-39d52517aa1eeaee81803378408505b2.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Jogos salvos.png"
+dest_files=[ "res://.import/Jogos salvos.png-133bcfa095b14daa31b42dddea39cbae.stex" ]
 
 [params]
 
