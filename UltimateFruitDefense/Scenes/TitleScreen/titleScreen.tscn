@@ -70,6 +70,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0.0, 1440.0 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("gameTitle:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1e-005, 1e-005 ) ]
+}
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -86,9 +98,10 @@ texture = ExtResource( 1 )
 [node name="gameTitle" type="Sprite" parent="." index="1"]
 
 position = Vector2( -15.1209, -9.27203 )
-scale = Vector2( 0.0323578, 0.0553083 )
+scale = Vector2( 0.032358, 0.055308 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
 
 [node name="road" type="Sprite" parent="." index="2"]
 
