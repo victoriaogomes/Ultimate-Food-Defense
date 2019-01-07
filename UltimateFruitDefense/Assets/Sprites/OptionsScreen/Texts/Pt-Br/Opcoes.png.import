@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Opcoes.png-6fee54244bed4d9eb1c302615203989d.stex"
+path="res://.import/Opcoes.png-f5ce748cb865fb9cf25504d5a2c653f6.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Opcoes.png"
-dest_files=[ "res://.import/Opcoes.png-6fee54244bed4d9eb1c302615203989d.stex" ]
+source_file="res://assets/sprites/optionsScreen/texts/Pt-Br/Opcoes.png"
+dest_files=[ "res://.import/Opcoes.png-f5ce748cb865fb9cf25504d5a2c653f6.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tomato box.png-f5202de9dd6e65a5fd7dea791a258870.stex"
+path="res://.import/Tomato box.png-0051bac98e11a403d9869dcf73e93e66.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/Tomato box.png"
-dest_files=[ "res://.import/Tomato box.png-f5202de9dd6e65a5fd7dea791a258870.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/Tomato box.png"
+dest_files=[ "res://.import/Tomato box.png-0051bac98e11a403d9869dcf73e93e66.stex" ]
 
 [params]
 

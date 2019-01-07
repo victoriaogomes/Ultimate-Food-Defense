@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/seller.png-def557f0b3018c45f07a33233d80a169.stex"
+path="res://.import/seller.png-63e89bff347580d3756c8b7fb35460a9.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/seller.png"
-dest_files=[ "res://.import/seller.png-def557f0b3018c45f07a33233d80a169.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/seller.png"
+dest_files=[ "res://.import/seller.png-63e89bff347580d3756c8b7fb35460a9.stex" ]
 
 [params]
 

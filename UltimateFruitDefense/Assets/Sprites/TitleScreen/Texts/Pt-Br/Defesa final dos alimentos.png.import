@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Defesa final dos alimentos.png-38bfbb26f7b3c75591b914c940639cbe.stex"
+path="res://.import/Defesa final dos alimentos.png-0c9b8a90d17ec2ea0edc5b5661f0b358.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Defesa final dos alimentos.png"
-dest_files=[ "res://.import/Defesa final dos alimentos.png-38bfbb26f7b3c75591b914c940639cbe.stex" ]
+source_file="res://assets/sprites/titleScreen/texts/Pt-Br/Defesa final dos alimentos.png"
+dest_files=[ "res://.import/Defesa final dos alimentos.png-0c9b8a90d17ec2ea0edc5b5661f0b358.stex" ]
 
 [params]
 

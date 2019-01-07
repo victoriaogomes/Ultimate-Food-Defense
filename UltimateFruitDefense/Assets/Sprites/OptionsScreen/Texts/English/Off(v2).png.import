@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Off(v2).png-1b0aa40f03cf8f2de2f7ccb69dbe2c00.stex"
+path="res://.import/Off(v2).png-96c17ae63dcbb1cdf45cd0880173ef87.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/OptionsScreen/Texts/English/Off(v2).png"
-dest_files=[ "res://.import/Off(v2).png-1b0aa40f03cf8f2de2f7ccb69dbe2c00.stex" ]
+source_file="res://assets/sprites/optionsScreen/texts/English/Off(v2).png"
+dest_files=[ "res://.import/Off(v2).png-96c17ae63dcbb1cdf45cd0880173ef87.stex" ]
 
 [params]
 

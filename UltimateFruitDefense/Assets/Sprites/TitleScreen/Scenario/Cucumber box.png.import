@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cucumber box.png-a07569c4c3840550957c5e09fb37acf8.stex"
+path="res://.import/Cucumber box.png-ec4fc47a8f43ad1a41997dfd03bf898c.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/Cucumber box.png"
-dest_files=[ "res://.import/Cucumber box.png-a07569c4c3840550957c5e09fb37acf8.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/Cucumber box.png"
+dest_files=[ "res://.import/Cucumber box.png-ec4fc47a8f43ad1a41997dfd03bf898c.stex" ]
 
 [params]
 

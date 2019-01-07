@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Musica.png-906da39a6e8cc4797b993ba7ddbe1991.stex"
+path="res://.import/Musica.png-e6ed84f2695fb0888766cd04128ef10a.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Musica.png"
-dest_files=[ "res://.import/Musica.png-906da39a6e8cc4797b993ba7ddbe1991.stex" ]
+source_file="res://assets/sprites/optionsScreen/texts/Pt-Br/Musica.png"
+dest_files=[ "res://.import/Musica.png-e6ed84f2695fb0888766cd04128ef10a.stex" ]
 
 [params]
 

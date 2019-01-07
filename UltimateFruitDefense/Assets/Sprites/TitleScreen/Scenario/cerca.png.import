@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cerca.png-7efbff1e5f4eb3048af73d2e4b9b067a.stex"
+path="res://.import/cerca.png-f20e7a95e8a66c7dba5d8579fb81592f.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/cerca.png"
-dest_files=[ "res://.import/cerca.png-7efbff1e5f4eb3048af73d2e4b9b067a.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/cerca.png"
+dest_files=[ "res://.import/cerca.png-f20e7a95e8a66c7dba5d8579fb81592f.stex" ]
 
 [params]
 

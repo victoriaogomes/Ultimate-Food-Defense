@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Watermelon box.png-dccb659e9e5ad44571b1ae8132dfeb87.stex"
+path="res://.import/Watermelon box.png-fd94137bb37c3aab89b593841da83561.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png"
-dest_files=[ "res://.import/Watermelon box.png-dccb659e9e5ad44571b1ae8132dfeb87.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/Watermelon box.png"
+dest_files=[ "res://.import/Watermelon box.png-fd94137bb37c3aab89b593841da83561.stex" ]
 
 [params]
 
