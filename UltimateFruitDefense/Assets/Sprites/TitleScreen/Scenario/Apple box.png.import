@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Apple box.png-c496c6822a3841522e6328eb84608e76.stex"
+path="res://.import/Apple box.png-aeda2155d839e84cb854cd134cbe56b0.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/scenario/Apple box.png"
-dest_files=[ "res://.import/Apple box.png-c496c6822a3841522e6328eb84608e76.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Scenario/Apple box.png"
+dest_files=[ "res://.import/Apple box.png-aeda2155d839e84cb854cd134cbe56b0.stex" ]
 
 [params]
 
