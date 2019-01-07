@@ -28,6 +28,7 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=26]
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=1]
 
 resource_name = "car_intro"
@@ -61,6 +62,8 @@ tracks/1/keys = {
 =======
 >>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
 
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 [node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.129 )
@@ -86,7 +89,6 @@ editor/display_folded = true
 position = Vector2( 11.0793, 24.5396 )
 scale = Vector2( 0.0374752, 0.0739871 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Animation" ]
 
 [node name="Sprite" type="Sprite" parent="road" index="0"]
 
@@ -98,14 +100,16 @@ texture = ExtResource( 5 )
 editor/display_folded = true
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="seller" type="Sprite" parent="Node2D" index="0"]
 
 position = Vector2( -2.82765, 4.04061 )
 scale = Vector2( 0.110925, 0.0850863 )
 texture = ExtResource( 6 )
+<<<<<<< HEAD
 _sections_unfolded = [ "Pause", "Transform" ]
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 
 [node name="car" type="Sprite" parent="Node2D" index="1"]
 
@@ -133,7 +137,6 @@ _sections_unfolded = [ "Material", "Pickable", "Visibility", "Z Index" ]
 position = Vector2( -3.58496, -2.336 )
 scale = Vector2( 0.224094, 0.161037 )
 texture = ExtResource( 9 )
-_sections_unfolded = [ "Animation" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pineappleStaticBody2D" index="1"]
 
@@ -312,6 +315,7 @@ texture = ExtResource( 26 )
 _sections_unfolded = [ "Transform" ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
@@ -324,6 +328,8 @@ blend_times = [  ]
 
 =======
 >>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 [connection signal="mouse_entered" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_exited"]

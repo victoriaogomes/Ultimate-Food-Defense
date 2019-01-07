@@ -104,7 +104,6 @@ texture = ExtResource( 6 )
 
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
-_sections_unfolded = [ "Transform" ]
 
 [node name="seller" type="Sprite" parent="Node2D" index="0"]
 
@@ -384,6 +383,7 @@ script = ExtResource( 33 )
 
 editor/display_folded = true
 position = Vector2( 229.079, -2.76959 )
+scale = Vector2( 1, 1 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
@@ -407,6 +407,7 @@ polygon = PoolVector2Array( -2.37125, 11.6885, -6.96927, 13.3213, -11.7031, 13.8
 
 editor/display_folded = true
 position = Vector2( 444.285, -4.81104 )
+scale = Vector2( 1, 1 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
@@ -439,6 +440,7 @@ script = ExtResource( 37 )
 
 editor/display_folded = true
 position = Vector2( 159.766, -2.18127 )
+scale = Vector2( 1, 1 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
@@ -462,6 +464,7 @@ polygon = PoolVector2Array( -2.37125, 11.6885, -6.96927, 13.3213, -11.7031, 13.8
 
 editor/display_folded = true
 position = Vector2( 374.972, -4.2226 )
+scale = Vector2( 1, 1 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
