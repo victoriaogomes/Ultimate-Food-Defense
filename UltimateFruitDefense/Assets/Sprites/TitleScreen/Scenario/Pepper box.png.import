@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pepper box.png-2df26102644a0bf6a395a9b7d0411d7e.stex"
+path="res://.import/Pepper box.png-be861e9d35d2c5bba43ebd60162b687b.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/scenario/Pepper box.png"
-dest_files=[ "res://.import/Pepper box.png-2df26102644a0bf6a395a9b7d0411d7e.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Scenario/Pepper box.png"
+dest_files=[ "res://.import/Pepper box.png-be861e9d35d2c5bba43ebd60162b687b.stex" ]
 
 [params]
 

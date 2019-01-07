@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Banana box.png-b15eb5bff5b81e9265c5b65032229b7b.stex"
+path="res://.import/Banana box.png-5e2c27ad93e6b0709f7d9155936378a8.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/scenario/Banana box.png"
-dest_files=[ "res://.import/Banana box.png-b15eb5bff5b81e9265c5b65032229b7b.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Scenario/Banana box.png"
+dest_files=[ "res://.import/Banana box.png-5e2c27ad93e6b0709f7d9155936378a8.stex" ]
 
 [params]
 
