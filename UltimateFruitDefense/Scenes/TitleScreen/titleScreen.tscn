@@ -29,6 +29,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=1]
 
 resource_name = "car_intro"
@@ -62,6 +63,8 @@ tracks/1/keys = {
 =======
 >>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
 
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 =======
 >>>>>>> parent of 12073c8... aaaaaa
 [node name="Node2D" type="Node2D" index="0"]
@@ -107,7 +110,10 @@ position = Vector2( -2.82765, 4.04061 )
 scale = Vector2( 0.110925, 0.0850863 )
 texture = ExtResource( 6 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 _sections_unfolded = [ "Pause", "Transform" ]
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 =======
 >>>>>>> parent of 12073c8... aaaaaa
 
@@ -316,6 +322,7 @@ _sections_unfolded = [ "Transform" ]
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
@@ -328,6 +335,8 @@ blend_times = [  ]
 
 =======
 >>>>>>> parent of 3cf57b3... adicionado musica de fundo para a tela inicial do godot
+=======
+>>>>>>> parent of 12073c8... aaaaaa
 =======
 >>>>>>> parent of 12073c8... aaaaaa
 [connection signal="mouse_entered" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_entered"]
