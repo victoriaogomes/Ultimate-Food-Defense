@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Novo jogo(v2).png-396704ff3f0d26af5878ad267b285912.stex"
+path="res://.import/Novo jogo(v2).png-5b0e547332cf250b8f2ebc58f115be86.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/texts/Pt-Br/Novo jogo(v2).png"
-dest_files=[ "res://.import/Novo jogo(v2).png-396704ff3f0d26af5878ad267b285912.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Novo jogo(v2).png"
+dest_files=[ "res://.import/Novo jogo(v2).png-5b0e547332cf250b8f2ebc58f115be86.stex" ]
 
 [params]
 

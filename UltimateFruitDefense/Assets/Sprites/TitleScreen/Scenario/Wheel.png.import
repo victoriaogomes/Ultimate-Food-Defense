@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wheel.png-8f0364e54fca93c98ee5d2fb8ee20e2c.stex"
+path="res://.import/Wheel.png-99ded256e67d86e6abad6aba4321addd.stex"
 
 [deps]
 
-source_file="res://assets/sprites/titleScreen/scenario/Wheel.png"
-dest_files=[ "res://.import/Wheel.png-8f0364e54fca93c98ee5d2fb8ee20e2c.stex" ]
+source_file="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png"
+dest_files=[ "res://.import/Wheel.png-99ded256e67d86e6abad6aba4321addd.stex" ]
 
 [params]
 

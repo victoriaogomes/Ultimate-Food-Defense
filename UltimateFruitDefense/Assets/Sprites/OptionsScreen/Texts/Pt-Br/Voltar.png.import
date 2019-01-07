@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Voltar.png-71e689d2214a68fa4be395daf044d908.stex"
+path="res://.import/Voltar.png-3d04a93223d104ba9e104f5a1140ee01.stex"
 
 [deps]
 
-source_file="res://assets/sprites/optionsScreen/texts/Pt-Br/Voltar.png"
-dest_files=[ "res://.import/Voltar.png-71e689d2214a68fa4be395daf044d908.stex" ]
+source_file="res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar.png"
+dest_files=[ "res://.import/Voltar.png-3d04a93223d104ba9e104f5a1140ee01.stex" ]
 
 [params]
 
