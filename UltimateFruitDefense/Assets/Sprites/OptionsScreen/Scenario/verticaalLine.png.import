@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/verticaalLine.png-68052ada14cdf9cd7d6543d7490e9bba.stex"
+path="res://.import/verticaalLine.png-7c8562758b077e3637517a920d882d3b.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/OptionsScreen/Scenario/verticaalLine.png"
-dest_files=[ "res://.import/verticaalLine.png-68052ada14cdf9cd7d6543d7490e9bba.stex" ]
+source_file="res://assets/sprites/optionsScreen/scenario/verticaalLine.png"
+dest_files=[ "res://.import/verticaalLine.png-7c8562758b077e3637517a920d882d3b.stex" ]
 
 [params]
 

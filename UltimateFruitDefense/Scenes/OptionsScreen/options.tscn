@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Assets/Sprites/TitleScreen/Background.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Options.png" type="Texture" id=2]
@@ -32,12 +32,15 @@
 [ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/English.png" type="Texture" id=30]
 [ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Portuguese.png" type="Texture" id=31]
 [ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Sound effects.png" type="Texture" id=32]
-[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/On.png" type="Texture" id=33]
-[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Off(v3).png" type="Texture" id=34]
-[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Music.png" type="Texture" id=35]
-[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Back.png" type="Texture" id=36]
+[ext_resource path="res://scenes/OptionsScreen/soundEffects.gd" type="Script" id=33]
+[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/On.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Off(v3).png" type="Texture" id=35]
+[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Music.png" type="Texture" id=36]
+[ext_resource path="res://scenes/OptionsScreen/music.gd" type="Script" id=37]
+[ext_resource path="res://scenes/OptionsScreen/backStaticBody2D.gd" type="Script" id=38]
+[ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Back.png" type="Texture" id=39]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
@@ -370,15 +373,17 @@ polygon = PoolVector2Array( -25.9703, 11.9768, -27.8289, 11.8905, -27.9501, -24.
 
 [node name="soundEffects" type="Sprite" parent="." index="12"]
 
+editor/display_folded = true
 position = Vector2( -23.4558, -8.60425 )
 scale = Vector2( 0.0411465, 0.0791453 )
 texture = ExtResource( 32 )
+script = ExtResource( 33 )
 
-[node name="on1StaticBody2D" type="StaticBody2D" parent="." index="13"]
+[node name="soundEffects_onStaticBody2D" type="StaticBody2D" parent="soundEffects" index="0"]
 
 editor/display_folded = true
-position = Vector2( -14.03, -8.82345 )
-scale = Vector2( 0.0411465, 0.0791453 )
+position = Vector2( 229.079, -2.76959 )
+scale = Vector2( 1, 1 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
@@ -388,21 +393,21 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable" ]
 
-[node name="on" type="Sprite" parent="on1StaticBody2D" index="0"]
+[node name="on" type="Sprite" parent="soundEffects/soundEffects_onStaticBody2D" index="0"]
 
 position = Vector2( 0.733093, 0.747864 )
-texture = ExtResource( 33 )
+texture = ExtResource( 34 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="on1StaticBody2D" index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="soundEffects/soundEffects_onStaticBody2D" index="1"]
 
 build_mode = 0
 polygon = PoolVector2Array( -2.37125, 11.6885, -6.96927, 13.3213, -11.7031, 13.8286, -14.8861, 13.1039, -19.2935, 11.5094, -23.467, 7.25162, -24.1414, 5.21021, -24.6288, 2.22906, -25.0215, -2.21365, -24.7994, -6.05896, -22.3567, -9.90424, -19.5384, -12.4083, -16.4721, -13.7495, -12.1419, -14.2425, -8.03384, -14.2425, -4.14774, -13.0593, -2.07217, -11.8285, 0.40448, -9.50983, 1.8479, -6.94632, 2.29202, -5.07297, 2.73615, -3.69263, 4.29053, -3.7912, 5.28983, -3.59402, 5.1788, -7.93228, 8.95386, -8.03088, 11.0634, -8.03088, 11.6186, -6.74911, 12.5068, -8.22809, 14.5054, -8.32669, 16.948, -8.32669, 19.7238, -8.32669, 22.2775, -6.94632, 23.943, -4.87576, 24.2761, -2.11508, 24.2761, 0.842834, 24.1728, 5.85449, 24.1728, 10.9089, 24.3319, 13.878, 20.8341, 14.0548, 18.0583, 13.9562, 17.5032, 13.5618, 17.6142, 1.9274, 17.3922, 0.744232, 16.2819, -1.12909, 15.3936, -1.7207, 13.173, -1.32629, 11.7296, 1.33582, 11.7296, 14.252, 5.1788, 13.759, 5.28983, 10.8997, 0.0714111, 10.4067 )
 
-[node name="off1StaticBody2D" type="StaticBody2D" parent="." index="14"]
+[node name="soundEffects_offStaticBody2D" type="StaticBody2D" parent="soundEffects" index="1"]
 
 editor/display_folded = true
-position = Vector2( -5.17503, -8.98502 )
-scale = Vector2( 0.0411465, 0.0791453 )
+position = Vector2( 444.285, -4.81104 )
+scale = Vector2( 1, 1 )
 input_pickable = true
 collision_layer = 1
 collision_mask = 1
@@ -412,74 +417,77 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Pickable" ]
 
-[node name="off" type="Sprite" parent="off1StaticBody2D" index="0"]
+[node name="off" type="Sprite" parent="soundEffects/soundEffects_offStaticBody2D" index="0"]
 
 position = Vector2( -2.27608, 2.11326 )
-texture = ExtResource( 34 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="off1StaticBody2D" index="1"]
-
-position = Vector2( -7.62939e-006, 0 )
-build_mode = 0
-polygon = PoolVector2Array( -15.9102, 14.7432, -21.0176, 13.9544, -24.1264, 12.6727, -26.6801, 10.7993, -28.7897, 8.63019, -30.3441, 6.16528, -31.0103, 1.92563, -31.6765, -1.91965, -29.6779, -7.2439, -27.6794, -9.7088, -25.0147, -11.7793, -21.1286, -13.6527, -17.4646, -14.1457, -12.2462, -13.7513, -10.3586, -12.4695, -8.69318, -11.0892, -7.47186, -9.61023, -5.58435, -7.73688, -2.03137, -6.45511, 1.41058, -6.65231, 0.966492, -11.2864, 1.74371, -13.0611, 2.63196, -14.1457, 6.9621, -14.5401, 9.51581, -14.6386, 11.7364, -13.9485, 13.5129, -13.0611, 11.9585, -9.01862, 17.3989, -11.4836, 18.6203, -12.8639, 19.6196, -13.9485, 22.5064, -14.6386, 25.0601, -14.4414, 27.0586, -14.0471, 29.3903, -13.2583, 29.7234, -12.6667, 28.0579, -8.72284, 25.8373, -8.32846, 23.5056, -7.53967, 24.2828, -7.44107, 25.7263, -7.2439, 27.3958, -6.79517, 27.2807, -1.42667, 25.3932, -0.736481, 25.1711, 14.3488, 22.8394, 15.2362, 17.3989, 15.039, 9.07172, 14.8418, 5.85181, 14.9404, 1.52161, 14.9404, 1.29956, 10.8979, -6.91669, 9.61618, -9.02631, 12.0811, -12.1351, 13.7572 )
-
-[node name="on2StaticBody2D2" type="StaticBody2D" parent="." index="15"]
-
-editor/display_folded = true
-position = Vector2( -14.03, -1.45741 )
-scale = Vector2( 0.0411465, 0.0791453 )
-input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Pickable" ]
-
-[node name="on" type="Sprite" parent="on2StaticBody2D2" index="0"]
-
-position = Vector2( 0.733093, 0.747864 )
-texture = ExtResource( 33 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="on2StaticBody2D2" index="1"]
-
-build_mode = 0
-polygon = PoolVector2Array( -2.37125, 11.6885, -6.96927, 13.3213, -11.7031, 13.8286, -14.8861, 13.1039, -19.2935, 11.5094, -23.467, 7.25162, -24.1414, 5.21021, -24.6288, 2.22906, -25.0215, -2.21365, -24.7994, -6.05896, -22.3567, -9.90424, -19.5384, -12.4083, -16.4721, -13.7495, -12.1419, -14.2425, -8.03384, -14.2425, -4.14774, -13.0593, -2.07217, -11.8285, 0.40448, -9.50983, 1.8479, -6.94632, 2.29202, -5.07297, 2.73615, -3.69263, 4.29053, -3.7912, 5.28983, -3.59402, 5.1788, -7.93228, 8.95386, -8.03088, 11.0634, -8.03088, 11.6186, -6.74911, 12.5068, -8.22809, 14.5054, -8.32669, 16.948, -8.32669, 19.7238, -8.32669, 22.2775, -6.94632, 23.943, -4.87576, 24.2761, -2.11508, 24.2761, 0.842834, 24.1728, 5.85449, 24.1728, 10.9089, 24.3319, 13.878, 20.8341, 14.0548, 18.0583, 13.9562, 17.5032, 13.5618, 17.6142, 1.9274, 17.3922, 0.744232, 16.2819, -1.12909, 15.3936, -1.7207, 13.173, -1.32629, 11.7296, 1.33582, 11.7296, 14.252, 5.1788, 13.759, 5.28983, 10.8997, 0.0714111, 10.4067 )
-
-[node name="off2StaticBody2D2" type="StaticBody2D" parent="." index="16"]
-
-editor/display_folded = true
-position = Vector2( -5.17502, -1.61897 )
-scale = Vector2( 0.0411465, 0.0791453 )
-input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Pickable" ]
-
-[node name="off" type="Sprite" parent="off2StaticBody2D2" index="0"]
-
-position = Vector2( -2.27608, 2.11326 )
-texture = ExtResource( 34 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="off2StaticBody2D2" index="1"]
-
-position = Vector2( -7.62939e-006, 0 )
-build_mode = 0
-polygon = PoolVector2Array( -15.9102, 14.7432, -21.0176, 13.9544, -24.1264, 12.6727, -26.6801, 10.7993, -28.7897, 8.63019, -30.3441, 6.16528, -31.0103, 1.92563, -31.6765, -1.91965, -29.6779, -7.2439, -27.6794, -9.7088, -25.0147, -11.7793, -21.1286, -13.6527, -17.4646, -14.1457, -12.2462, -13.7513, -10.3586, -12.4695, -8.69318, -11.0892, -7.47186, -9.61023, -5.58435, -7.73688, -2.03137, -6.45511, 1.41058, -6.65231, 0.966492, -11.2864, 1.74371, -13.0611, 2.63196, -14.1457, 6.9621, -14.5401, 9.51581, -14.6386, 11.7364, -13.9485, 13.5129, -13.0611, 11.9585, -9.01862, 17.3989, -11.4836, 18.6203, -12.8639, 19.6196, -13.9485, 22.5064, -14.6386, 25.0601, -14.4414, 27.0586, -14.0471, 29.3903, -13.2583, 29.7234, -12.6667, 28.0579, -8.72284, 25.8373, -8.32846, 23.5056, -7.53967, 24.2828, -7.44107, 25.7263, -7.2439, 27.3958, -6.79517, 27.2807, -1.42667, 25.3932, -0.736481, 25.1711, 14.3488, 22.8394, 15.2362, 17.3989, 15.039, 9.07172, 14.8418, 5.85181, 14.9404, 1.52161, 14.9404, 1.29956, 10.8979, -6.91669, 9.61618, -9.02631, 12.0811, -12.1351, 13.7572 )
-
-[node name="music" type="Sprite" parent="." index="17"]
-
-position = Vector2( -20.6038, -1.28477 )
-scale = Vector2( 0.0411465, 0.0791453 )
 texture = ExtResource( 35 )
 
-[node name="backStaticBody2D" type="StaticBody2D" parent="." index="18"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="soundEffects/soundEffects_offStaticBody2D" index="1"]
 
+position = Vector2( -7.62939e-006, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -15.9102, 14.7432, -21.0176, 13.9544, -24.1264, 12.6727, -26.6801, 10.7993, -28.7897, 8.63019, -30.3441, 6.16528, -31.0103, 1.92563, -31.6765, -1.91965, -29.6779, -7.2439, -27.6794, -9.7088, -25.0147, -11.7793, -21.1286, -13.6527, -17.4646, -14.1457, -12.2462, -13.7513, -10.3586, -12.4695, -8.69318, -11.0892, -7.47186, -9.61023, -5.58435, -7.73688, -2.03137, -6.45511, 1.41058, -6.65231, 0.966492, -11.2864, 1.74371, -13.0611, 2.63196, -14.1457, 6.9621, -14.5401, 9.51581, -14.6386, 11.7364, -13.9485, 13.5129, -13.0611, 11.9585, -9.01862, 17.3989, -11.4836, 18.6203, -12.8639, 19.6196, -13.9485, 22.5064, -14.6386, 25.0601, -14.4414, 27.0586, -14.0471, 29.3903, -13.2583, 29.7234, -12.6667, 28.0579, -8.72284, 25.8373, -8.32846, 23.5056, -7.53967, 24.2828, -7.44107, 25.7263, -7.2439, 27.3958, -6.79517, 27.2807, -1.42667, 25.3932, -0.736481, 25.1711, 14.3488, 22.8394, 15.2362, 17.3989, 15.039, 9.07172, 14.8418, 5.85181, 14.9404, 1.52161, 14.9404, 1.29956, 10.8979, -6.91669, 9.61618, -9.02631, 12.0811, -12.1351, 13.7572 )
+
+[node name="music" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( -20.6038, -1.28477 )
+scale = Vector2( 0.0411465, 0.0791453 )
+texture = ExtResource( 36 )
+script = ExtResource( 37 )
+
+[node name="on_musicStaticBody2D2" type="StaticBody2D" parent="music" index="0"]
+
+editor/display_folded = true
+position = Vector2( 159.766, -2.18127 )
+scale = Vector2( 1, 1 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="on" type="Sprite" parent="music/on_musicStaticBody2D2" index="0"]
+
+position = Vector2( 0.733093, 0.747864 )
+texture = ExtResource( 34 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="music/on_musicStaticBody2D2" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -2.37125, 11.6885, -6.96927, 13.3213, -11.7031, 13.8286, -14.8861, 13.1039, -19.2935, 11.5094, -23.467, 7.25162, -24.1414, 5.21021, -24.6288, 2.22906, -25.0215, -2.21365, -24.7994, -6.05896, -22.3567, -9.90424, -19.5384, -12.4083, -16.4721, -13.7495, -12.1419, -14.2425, -8.03384, -14.2425, -4.14774, -13.0593, -2.07217, -11.8285, 0.40448, -9.50983, 1.8479, -6.94632, 2.29202, -5.07297, 2.73615, -3.69263, 4.29053, -3.7912, 5.28983, -3.59402, 5.1788, -7.93228, 8.95386, -8.03088, 11.0634, -8.03088, 11.6186, -6.74911, 12.5068, -8.22809, 14.5054, -8.32669, 16.948, -8.32669, 19.7238, -8.32669, 22.2775, -6.94632, 23.943, -4.87576, 24.2761, -2.11508, 24.2761, 0.842834, 24.1728, 5.85449, 24.1728, 10.9089, 24.3319, 13.878, 20.8341, 14.0548, 18.0583, 13.9562, 17.5032, 13.5618, 17.6142, 1.9274, 17.3922, 0.744232, 16.2819, -1.12909, 15.3936, -1.7207, 13.173, -1.32629, 11.7296, 1.33582, 11.7296, 14.252, 5.1788, 13.759, 5.28983, 10.8997, 0.0714111, 10.4067 )
+
+[node name="off_musicStaticBody2D2" type="StaticBody2D" parent="music" index="1"]
+
+editor/display_folded = true
+position = Vector2( 374.972, -4.2226 )
+scale = Vector2( 1, 1 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="off" type="Sprite" parent="music/off_musicStaticBody2D2" index="0"]
+
+position = Vector2( -2.27608, 2.11326 )
+texture = ExtResource( 35 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="music/off_musicStaticBody2D2" index="1"]
+
+position = Vector2( -7.62939e-006, 0 )
+build_mode = 0
+polygon = PoolVector2Array( -15.9102, 14.7432, -21.0176, 13.9544, -24.1264, 12.6727, -26.6801, 10.7993, -28.7897, 8.63019, -30.3441, 6.16528, -31.0103, 1.92563, -31.6765, -1.91965, -29.6779, -7.2439, -27.6794, -9.7088, -25.0147, -11.7793, -21.1286, -13.6527, -17.4646, -14.1457, -12.2462, -13.7513, -10.3586, -12.4695, -8.69318, -11.0892, -7.47186, -9.61023, -5.58435, -7.73688, -2.03137, -6.45511, 1.41058, -6.65231, 0.966492, -11.2864, 1.74371, -13.0611, 2.63196, -14.1457, 6.9621, -14.5401, 9.51581, -14.6386, 11.7364, -13.9485, 13.5129, -13.0611, 11.9585, -9.01862, 17.3989, -11.4836, 18.6203, -12.8639, 19.6196, -13.9485, 22.5064, -14.6386, 25.0601, -14.4414, 27.0586, -14.0471, 29.3903, -13.2583, 29.7234, -12.6667, 28.0579, -8.72284, 25.8373, -8.32846, 23.5056, -7.53967, 24.2828, -7.44107, 25.7263, -7.2439, 27.3958, -6.79517, 27.2807, -1.42667, 25.3932, -0.736481, 25.1711, 14.3488, 22.8394, 15.2362, 17.3989, 15.039, 9.07172, 14.8418, 5.85181, 14.9404, 1.52161, 14.9404, 1.29956, 10.8979, -6.91669, 9.61618, -9.02631, 12.0811, -12.1351, 13.7572 )
+
+[node name="backStaticBody2D" type="StaticBody2D" parent="." index="14"]
+
+editor/display_folded = true
 position = Vector2( -27.2219, 7.9799 )
 scale = Vector2( 0.0616003, 0.0453642 )
 input_pickable = true
@@ -489,30 +497,39 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+script = ExtResource( 38 )
 _sections_unfolded = [ "Pickable" ]
 
 [node name="back" type="Sprite" parent="backStaticBody2D" index="0"]
 
 position = Vector2( -0.0572205, -1.65076 )
 scale = Vector2( 0.527606, 1.30435 )
-texture = ExtResource( 36 )
+texture = ExtResource( 39 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="backStaticBody2D" index="1"]
 
 build_mode = 0
 polygon = PoolVector2Array( -23.6563, 16.0721, -23.7385, -20.3328, -16.8357, -20.3328, -15.7675, -18.2362, -14.9457, -15.949, -14.4527, -11.3745, -14.4527, -7.94373, -15.4388, -4.70343, -12.8091, -1.46326, -12.3983, -5.84711, -11.823, -8.89673, -10.8369, -11.5651, -8.8647, -13.0899, -6.48161, -13.4711, -5.24897, -11.7557, -4.92027, -11.1839, -4.67374, -13.0899, -3.68763, -13.0899, -2.1263, -12.8993, -0.893661, -12.1369, 4.03689, -12.1369, 7.89914, -13.6617, 9.13177, -13.8523, 9.78918, -12.7087, 12.5832, -14.6147, 12.6653, -20.9046, 16.5276, -20.9046, 16.9385, -5.65656, 19.5681, -13.4711, 23.6769, -10.6121, 19.4859, 0.252136, 24.1699, 14.7379, 20.2255, 17.9781, 17.0206, 7.30438, 17.185, 17.2156, 12.8297, 16.4532, 11.4327, 12.4507, 9.87136, 14.7379, 8.06349, 16.6439, 5.92693, 16.6439, 4.11906, 14.5472, 2.22902, 13.0225, 1.32509, 10.9258, -1.30453, 15.5002, -4.67374, 16.4532, -4.75592, 13.5942, -6.48161, 14.9285, -9.93298, 16.0721, -10.3439, 15.6909, -10.8369, 13.9755, -12.2339, 10.354, -13.1378, 8.63861, -14.2883, 9.21039, -14.3705, 13.0225, -15.3566, 14.7379, -16.5892, 14.9285, -18.1506, 15.6909, -20.4515, 15.6909, -21.5198, 15.6909 )
 
+[connection signal="input_event" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_input_event"]
+
 [connection signal="mouse_entered" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="Node2D/bananaStaticBody2D" to="Node2D/bananaStaticBody2D" method="_on_bananaStaticBody2D_input_event"]
 
 [connection signal="mouse_entered" from="Node2D/bananaStaticBody2D" to="Node2D/bananaStaticBody2D" method="_on_bananaStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="Node2D/bananaStaticBody2D" to="Node2D/bananaStaticBody2D" method="_on_bananaStaticBody2D_mouse_exited"]
 
+[connection signal="input_event" from="Node2D/tomatoStaticBody2D" to="Node2D/tomatoStaticBody2D" method="_on_tomatoStaticBody2D_input_event"]
+
 [connection signal="mouse_entered" from="Node2D/tomatoStaticBody2D" to="Node2D/tomatoStaticBody2D" method="_on_tomatoStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="Node2D/tomatoStaticBody2D" to="Node2D/tomatoStaticBody2D" method="_on_tomatoStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="Node2D/pepperStaticBody2D" to="Node2D/pepperStaticBody2D" method="_on_pepperStaticBody2D_input_event"]
 
 [connection signal="mouse_entered" from="Node2D/pepperStaticBody2D" to="Node2D/pepperStaticBody2D" method="_on_pepperStaticBody2D_mouse_entered"]
 
@@ -536,34 +553,34 @@ polygon = PoolVector2Array( -23.6563, 16.0721, -23.7385, -20.3328, -16.8357, -20
 
 [connection signal="mouse_exited" from="portugueseStaticBody2D" to="language" method="_on_portugueseStaticBody2D_mouse_exited"]
 
-[connection signal="input_event" from="on1StaticBody2D" to="language" method="_on_on1StaticBody2D_input_event"]
+[connection signal="input_event" from="soundEffects/soundEffects_onStaticBody2D" to="soundEffects" method="_on_soundEffects_onStaticBody2D_input_event"]
 
-[connection signal="mouse_entered" from="on1StaticBody2D" to="language" method="_on_on1StaticBody2D_mouse_entered"]
+[connection signal="mouse_entered" from="soundEffects/soundEffects_onStaticBody2D" to="soundEffects" method="_on_soundEffects_onStaticBody2D_mouse_entered"]
 
-[connection signal="mouse_exited" from="on1StaticBody2D" to="language" method="_on_on1StaticBody2D_mouse_exited"]
+[connection signal="mouse_exited" from="soundEffects/soundEffects_onStaticBody2D" to="soundEffects" method="_on_soundEffects_onStaticBody2D_mouse_exited"]
 
-[connection signal="input_event" from="off1StaticBody2D" to="language" method="_on_off1StaticBody2D_input_event"]
+[connection signal="input_event" from="soundEffects/soundEffects_offStaticBody2D" to="soundEffects" method="_on_soundEffects_offStaticBody2D_input_event"]
 
-[connection signal="mouse_entered" from="off1StaticBody2D" to="language" method="_on_off1StaticBody2D_mouse_entered"]
+[connection signal="mouse_entered" from="soundEffects/soundEffects_offStaticBody2D" to="soundEffects" method="_on_soundEffects_offStaticBody2D_mouse_entered"]
 
-[connection signal="mouse_exited" from="off1StaticBody2D" to="language" method="_on_off1StaticBody2D_mouse_exited"]
+[connection signal="mouse_exited" from="soundEffects/soundEffects_offStaticBody2D" to="soundEffects" method="_on_soundEffects_offStaticBody2D_mouse_exited"]
 
-[connection signal="input_event" from="on2StaticBody2D2" to="language" method="_on_on2StaticBody2D2_input_event"]
+[connection signal="input_event" from="music/on_musicStaticBody2D2" to="music" method="_on_on_musicStaticBody2D2_input_event"]
 
-[connection signal="mouse_entered" from="on2StaticBody2D2" to="language" method="_on_on2StaticBody2D2_mouse_entered"]
+[connection signal="mouse_entered" from="music/on_musicStaticBody2D2" to="music" method="_on_on_musicStaticBody2D2_mouse_entered"]
 
-[connection signal="mouse_exited" from="on2StaticBody2D2" to="language" method="_on_on2StaticBody2D2_mouse_exited"]
+[connection signal="mouse_exited" from="music/on_musicStaticBody2D2" to="music" method="_on_on_musicStaticBody2D2_mouse_exited"]
 
-[connection signal="input_event" from="off2StaticBody2D2" to="language" method="_on_off2StaticBody2D2_input_event"]
+[connection signal="input_event" from="music/off_musicStaticBody2D2" to="music" method="_on_off_musicStaticBody2D2_input_event"]
 
-[connection signal="mouse_entered" from="off2StaticBody2D2" to="language" method="_on_off2StaticBody2D2_mouse_entered"]
+[connection signal="mouse_entered" from="music/off_musicStaticBody2D2" to="music" method="_on_off_musicStaticBody2D2_mouse_entered"]
 
-[connection signal="mouse_exited" from="off2StaticBody2D2" to="language" method="_on_off2StaticBody2D2_mouse_exited"]
+[connection signal="mouse_exited" from="music/off_musicStaticBody2D2" to="music" method="_on_off_musicStaticBody2D2_mouse_exited"]
 
-[connection signal="input_event" from="backStaticBody2D" to="language" method="_on_backStaticBody2D_input_event"]
+[connection signal="input_event" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_input_event"]
 
-[connection signal="mouse_entered" from="backStaticBody2D" to="language" method="_on_backStaticBody2D_mouse_entered"]
+[connection signal="mouse_entered" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_mouse_entered"]
 
-[connection signal="mouse_exited" from="backStaticBody2D" to="language" method="_on_backStaticBody2D_mouse_exited"]
+[connection signal="mouse_exited" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_mouse_exited"]
 
 

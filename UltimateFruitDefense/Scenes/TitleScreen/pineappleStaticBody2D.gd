@@ -1,20 +1,23 @@
 extends StaticBody2D
 
+#Carregando nodes e assets para mexer no sprites "newGame" e "pineappleBox"
 onready var text = get_node("newGame")
 onready var sprite = get_node("pineappleBox")
-
 var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/New game.png")
 var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/New game(v2).png")
 var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Novo jogo.png")
 var hover_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Novo jogo(v2).png")
 
+#Variáveis para controlar a posição do texto "New game"/"Novo jogo" e do sprite "pineappleBox"
 var pos_origin_sprite
 var pos_new_sprite
 var pos_origin_text
 var pos_new_text
 
+
+#Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
-	if(idioma.english == false):
+	if(configuration.language_english == false):
 		text.set_texture(base_portuguese_text)
 	pos_origin_sprite = sprite.get_position()
 	pos_origin_text = text.get_position()
@@ -24,26 +27,34 @@ func _ready():
 	pos_new_text.y = pos_new_text.y-3
 
 
+#Alterando o idioma do label "New game"/"Novo jogo" com base nas configurações definidas
 func language():
-	if(idioma.english == false):
+	if(configuration.language_english == false):
 		text.set_texture(base_portuguese_text)
 	else:
 		text.set_texture(base_english_text)
 
 
+#Mouse clicando no sprite "pineappleBox"
+func _on_pineappleStaticBody2D_input_event(viewport, event, shape_idx):
+	pass # replace with function body
+
+
+#Mouse entrando no sprite "pineappleBox"
 func _on_pineappleStaticBody2D_mouse_entered():
 	sprite.set_position(pos_new_sprite)
 	text.set_position(pos_new_text)
-	if(idioma.english == true):
+	if(configuration.language_english == true):
 		text.set_texture(hover_english_text)
 	else:
 		text.set_texture(hover_portuguese_text)
 
 
+#Mouse saindo do sprite "pineappleBox"
 func _on_pineappleStaticBody2D_mouse_exited():
 	sprite.set_position(pos_origin_sprite)
 	text.set_position(pos_origin_text)
-	if(idioma.english == true):
+	if(configuration.language_english == true):
 		text.set_texture(base_english_text)
 	else:
 		text.set_texture(base_portuguese_text)

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Load game(v2).png-cccafe2306447995715cf70c6b6561b0.stex"
+path="res://.import/Load game(v2).png-d1a9bb5bf396c2e20ee706341bee550a.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Texts/English/Load game(v2).png"
-dest_files=[ "res://.import/Load game(v2).png-cccafe2306447995715cf70c6b6561b0.stex" ]
+source_file="res://assets/sprites/titleScreen/texts/English/Load game(v2).png"
+dest_files=[ "res://.import/Load game(v2).png-d1a9bb5bf396c2e20ee706341bee550a.stex" ]
 
 [params]
 

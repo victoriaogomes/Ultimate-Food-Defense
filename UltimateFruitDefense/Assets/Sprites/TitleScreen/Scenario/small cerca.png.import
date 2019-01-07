@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/small cerca.png-ef39048a7ccb6385e578cf7ba5e783a8.stex"
+path="res://.import/small cerca.png-cfb9864dc10f6cfd3ed2c2e78e88a26b.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Scenario/small cerca.png"
-dest_files=[ "res://.import/small cerca.png-ef39048a7ccb6385e578cf7ba5e783a8.stex" ]
+source_file="res://assets/sprites/titleScreen/scenario/small cerca.png"
+dest_files=[ "res://.import/small cerca.png-cfb9864dc10f6cfd3ed2c2e78e88a26b.stex" ]
 
 [params]
 

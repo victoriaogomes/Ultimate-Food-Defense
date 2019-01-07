@@ -16,7 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-idioma="*res://Scenes/OptionsScreen/idioma.gd"
+configuration="*res://scenes/configuration.gd"
 
 [display]
 

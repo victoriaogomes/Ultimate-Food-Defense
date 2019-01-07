@@ -60,6 +60,7 @@ texture = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
 

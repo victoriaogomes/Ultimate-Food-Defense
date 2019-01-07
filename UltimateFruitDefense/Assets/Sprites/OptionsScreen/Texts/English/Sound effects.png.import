@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sound effects.png-7c76446c899deebf82b21a9e29e3fdda.stex"
+path="res://.import/Sound effects.png-a34dd43b42c784b8dbeff2ce12bde994.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/OptionsScreen/Texts/English/Sound effects.png"
-dest_files=[ "res://.import/Sound effects.png-7c76446c899deebf82b21a9e29e3fdda.stex" ]
+source_file="res://assets/sprites/optionsScreen/texts/English/Sound effects.png"
+dest_files=[ "res://.import/Sound effects.png-a34dd43b42c784b8dbeff2ce12bde994.stex" ]
 
 [params]
 

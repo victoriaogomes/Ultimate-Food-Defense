@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/New game.png-5f27976fbef9f25e6c3ef35737f86a7e.stex"
+path="res://.import/New game.png-29a7f06020029ff8ae090706d9075359.stex"
 
 [deps]
 
-source_file="res://Assets/Sprites/TitleScreen/Texts/English/New game.png"
-dest_files=[ "res://.import/New game.png-5f27976fbef9f25e6c3ef35737f86a7e.stex" ]
+source_file="res://assets/sprites/titleScreen/texts/English/New game.png"
+dest_files=[ "res://.import/New game.png-29a7f06020029ff8ae090706d9075359.stex" ]
 
 [params]
 
