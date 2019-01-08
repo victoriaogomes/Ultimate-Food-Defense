@@ -59,7 +59,7 @@ func language():
 func _on_on_musicStaticBody2D2_input_event(viewport, event, shape_idx):
 	if(event is InputEventMouseButton):
 		if(event.button_index == 1): 
-			configuration.music = true
+			configuration.music_on()
 			if(configuration.language_english == true):
 				onText_music.set_texture(hover_english_on_text_on)
 				offText_music.set_texture(base_english_off_text_off)

@@ -41,7 +41,6 @@ func sound_effects_off():
 func music_on():
 	music = true
 	player.play()
-	player.play()
 
 
 #Desliga a música do jogo
