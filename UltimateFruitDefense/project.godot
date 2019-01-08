@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 configuration="*res://scenes/configuration.gd"
+animationControl="*res://scenes/animationControl.gd"
 
 [display]
 

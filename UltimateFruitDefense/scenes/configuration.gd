@@ -8,6 +8,7 @@ var sound_effects
 var music
 var player = AudioStreamPlayer.new()
 
+
 #Por default, coloca o idioma em português e os efeitos sonoros e a música ligados
 func _ready():
 	language_english = true
@@ -44,11 +45,10 @@ func music_on():
 #Desliga a música do jogo
 func music_off():
 	music = false
-	
 
+
+#Função que seta as configurações da música que deve ser tocada na abertura do jogo
 func playSong():
 	self.add_child(player)
 	player.stream = load("res://Assets/Sounds/JeffSpeed68_-_Little_reindeer (online-audio-converter.com).ogg")
 	player.volume_db = -20
-	#player.play()
-	

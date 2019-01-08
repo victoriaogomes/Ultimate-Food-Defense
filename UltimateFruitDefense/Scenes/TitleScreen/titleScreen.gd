@@ -1,16 +1,11 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+onready var animation = get_node("/root/Node2D/AnimationPlayer")
 
 func _ready():
+	if(animationControl.firstTitleScreen_run == true):
+		animation.play("car_intro", -1, 1.0, false)
+	animationControl.firstTitleScreen_run = false
 	if(configuration.music):
 		if(!configuration.player.playing):
 			configuration.player.play()
-	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
