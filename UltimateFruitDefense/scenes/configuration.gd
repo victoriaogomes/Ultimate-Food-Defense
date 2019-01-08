@@ -49,5 +49,6 @@ func music_off():
 func playSong():
 	self.add_child(player)
 	player.stream = load("res://Assets/Sounds/JeffSpeed68_-_Little_reindeer (online-audio-converter.com).ogg")
-	player.volume_db = -30
+	player.volume_db = -20
 	#player.play()
+	

@@ -5,9 +5,9 @@ extends Node2D
 # var b = "textvar"
 
 func _ready():
-	#if(configuration.music == true):
-	configuration.player.play()
-	
+	if(configuration.music):
+		if(!configuration.player.playing):
+			configuration.player.play()
 	pass
 
 #func _process(delta):
