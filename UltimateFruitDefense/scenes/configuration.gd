@@ -6,6 +6,7 @@ extends Node2D
 var language_english
 var sound_effects
 var music
+var player = AudioStreamPlayer.new()
 
 #Por default, coloca o idioma em português e os efeitos sonoros e a música ligados
 func _ready():
@@ -46,8 +47,7 @@ func music_off():
 	
 
 func playSong():
-	var player = AudioStreamPlayer.new()
 	self.add_child(player)
 	player.stream = load("res://Assets/Sounds/JeffSpeed68_-_Little_reindeer (online-audio-converter.com).ogg")
 	player.volume_db = -30
-	player.play()
+	#player.play()
