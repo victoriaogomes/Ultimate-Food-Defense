@@ -44,11 +44,7 @@ onready var music = get_node("/root/Node2D/music")
 #Chama função para ver em qual idioma os sprites devem ser exibido
 func _ready():
 	language()
-	#language_english_position = languageText.get_position()
-	#language_portuguese_position = languageText.get_position()
 	language_portuguese_position.x +=1.6
-	#options_english_position = optionsText.get_position()
-	#options_portuguese_position = optionsText.get_position()
 	options_portuguese_position.y-=0.38
 
 
