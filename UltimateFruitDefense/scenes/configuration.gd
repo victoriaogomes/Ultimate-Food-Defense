@@ -40,11 +40,14 @@ func sound_effects_off():
 #Liga a música do jogo
 func music_on():
 	music = true
+	player.play()
+	player.play()
 
 
 #Desliga a música do jogo
 func music_off():
 	music = false
+	player.stop()
 
 
 #Função que seta as configurações da música que deve ser tocada na abertura do jogo
