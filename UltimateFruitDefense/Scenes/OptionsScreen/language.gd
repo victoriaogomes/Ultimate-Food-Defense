@@ -83,6 +83,11 @@ func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no texto "inglês"/"english"
 func _on_englishStaticBody2D_mouse_entered():
+	var sEfect = AudioStreamPlayer.new()
+	self.add_child(sEfect)
+	sEfect.stream = load("res://Assets/Sounds/menuSelection.wav")
+	sEfect.volume_db = -25
+	sEfect.play()
 	if(configuration.language_english == true):
 		englishText.set_texture(hover_english_text_on)
 	else:
@@ -120,6 +125,11 @@ func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no texto "portugues"/"portuguese"
 func _on_portugueseStaticBody2D_mouse_entered():
+	var sEfect = AudioStreamPlayer.new()
+	self.add_child(sEfect)
+	sEfect.stream = load("res://Assets/Sounds/menuSelection.wav")
+	sEfect.volume_db = -25
+	sEfect.play()
 	if(configuration.language_english == false):
 		portugueseText.set_texture(hover_portuguese_text_on)
 	else:

@@ -37,6 +37,11 @@ func language():
 
 #Mouse clicando no sprite "cucumberBox"
 func _on_cucumberStaticBody2D_input_event(viewport, event, shape_idx):
+	var sEfect = AudioStreamPlayer.new()
+	self.add_child(sEfect)
+	sEfect.stream = load("res://Assets/Sounds/click.wav")
+	sEfect.volume_db = -25
+	sEfect.play()
 	if(event is InputEventMouseButton):
 		if(event.button_index == 1): 
 			get_tree().change_scene_to(next_scene)
@@ -44,6 +49,11 @@ func _on_cucumberStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no sprite "cucumberBox"
 func _on_cucumberStaticBody2D_mouse_entered():
+	var sEfect = AudioStreamPlayer.new()
+	self.add_child(sEfect)
+	sEfect.stream = load("res://Assets/Sounds/menuSelection.wav")
+	sEfect.volume_db = -25
+	sEfect.play()
 	sprite.set_position(pos_new_sprite)
 	text.set_position(pos_new_text)
 	if(configuration.language_english == true):
