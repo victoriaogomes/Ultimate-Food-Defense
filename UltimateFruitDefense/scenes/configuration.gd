@@ -4,9 +4,10 @@ extends Node2D
 
 #Variáveis para as configurações do jogo: idioma, efeitos sonoros, música
 var language_english
-var sound_effects
 var music
+var sound_effects
 var player = AudioStreamPlayer.new()
+var mouseHover_sound = AudioStreamPlayer.new()
 
 
 #Por default, coloca o idioma em português e os efeitos sonoros e a música ligados
@@ -15,6 +16,7 @@ func _ready():
 	sound_effects = true
 	music = true
 	playSong()
+	mouseHover_effect()
 
 
 #Altera o idioma do jogo para português
@@ -54,3 +56,10 @@ func playSong():
 	self.add_child(player)
 	player.stream = load("res://Assets/Sounds/JeffSpeed68_-_Little_reindeer (online-audio-converter.com).ogg")
 	player.volume_db = -20
+
+
+#Função que seta as configurações do som que deve ser tocado quando o mouse encosta em alguma opção de menus
+func mouseHover_effect():
+	self.add_child(mouseHover_sound)
+	mouseHover_sound.stream = load("res://Assets/Sounds/menuSelection.wav")
+	mouseHover_sound.volume_db = -25

@@ -70,6 +70,7 @@ func _on_soundEffects_onStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no "On"/"Lig" dos efeitos musicais
 func _on_soundEffects_onStaticBody2D_mouse_entered():
+	configuration.mouseHover_sound.play()
 	if(configuration.sound_effects == true):
 		if(configuration.language_english == true):
 			onText_sound_effects.set_texture(hover_english_on_text_on)
@@ -111,6 +112,7 @@ func _on_soundEffects_offStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no "Off"/"Deslig" dos efeitos musicais
 func _on_soundEffects_offStaticBody2D_mouse_entered():
+	configuration.mouseHover_sound.play()
 	if(configuration.sound_effects == false):
 		if(configuration.language_english == true):
 			offText_sound_effects.set_texture(hover_english_off_text_on)

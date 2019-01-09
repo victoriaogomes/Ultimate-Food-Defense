@@ -33,11 +33,7 @@ func _on_backStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no botão "back"/"voltar"
 func _on_backStaticBody2D_mouse_entered():
-	var sEfect = AudioStreamPlayer.new()
-	self.add_child(sEfect)
-	sEfect.stream = load("res://Assets/Sounds/menuSelection.wav")
-	sEfect.volume_db = -25
-	sEfect.play()
+	configuration.mouseHover_sound.play()
 	if(configuration.language_english == true):
 		backText.set_texture(hover_back_english)
 	else:
