@@ -33,7 +33,8 @@ func _on_backStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no botão "back"/"voltar"
 func _on_backStaticBody2D_mouse_entered():
-	configuration.mouseHover_sound.play()
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
 	if(configuration.language_english == true):
 		backText.set_texture(hover_back_english)
 	else:

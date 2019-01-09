@@ -41,7 +41,8 @@ func _on_bananaStaticBody2D_input_event(viewport, event, shape_idx):
 
 #Mouse entrando no sprite "bananaBox"
 func _on_bananaStaticBody2D_mouse_entered():
-	configuration.mouseHover_sound.play()
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
 	sprite.set_position(pos_new_sprite)
 	text.set_position(pos_new_text)
 	if(configuration.language_english == true):
