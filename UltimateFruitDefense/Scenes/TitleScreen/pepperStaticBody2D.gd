@@ -3,6 +3,7 @@ extends StaticBody2D
 #Carregando nodes e assets para mexer no sprites "credits" e "pepperBox"
 onready var text = get_node("credits")
 onready var sprite = get_node("pepperBox")
+var next_scene = preload("res://Scenes/CreditScreen/credit.tscn")
 var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Credits.png")
 var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Credits(v2).png")
 var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Créditos.png")
@@ -37,7 +38,9 @@ func language():
 
 #Mouse clicando no sprite "pepperBox"
 func _on_pepperStaticBody2D_input_event(viewport, event, shape_idx):
-	pass # replace with function body
+	if(event is InputEventMouseButton):
+		if(event.button_index == 1): 
+			get_tree().change_scene_to(next_scene)
 
 
 #Mouse entrando no sprite "pepperBox"
