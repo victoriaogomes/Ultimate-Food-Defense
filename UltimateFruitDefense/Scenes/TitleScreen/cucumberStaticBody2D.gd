@@ -39,9 +39,11 @@ func language():
 func _on_cucumberStaticBody2D_input_event(viewport, event, shape_idx):
 	var sEfect = AudioStreamPlayer.new()
 	self.add_child(sEfect)
+	#sEfect.stream = load("res://Assets/Sounds/biting.wav") #som fica bugado com touchpad
 	sEfect.stream = load("res://Assets/Sounds/click.wav")
-	sEfect.volume_db = -25
-	sEfect.play()
+	sEfect.volume_db = -35
+	if(!sEfect.playing):
+		sEfect.play()
 	if(event is InputEventMouseButton):
 		if(event.button_index == 1): 
 			get_tree().change_scene_to(next_scene)
