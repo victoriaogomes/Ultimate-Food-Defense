@@ -61,6 +61,6 @@ func playSong():
 #Função que seta as configurações do som que deve ser tocado quando o mouse encosta em alguma opção de menus
 func mouseHover_effect():
 	self.add_child(mouseHover_sound)
-	mouseHover_sound.stream = load("res://Assets/Sounds/biting.wav")
-	#mouseHover_sound.stream = load("res://Assets/Sounds/menuSelection.wav")
+	#mouseHover_sound.stream = load("res://Assets/Sounds/biting.wav")
+	mouseHover_sound.stream = load("res://Assets/Sounds/menuSelection.wav")
 	mouseHover_sound.volume_db = -25
