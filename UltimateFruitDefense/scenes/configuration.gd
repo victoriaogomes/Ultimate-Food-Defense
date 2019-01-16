@@ -9,6 +9,9 @@ var sound_effects
 var player = AudioStreamPlayer.new()
 var mouseHover_sound = AudioStreamPlayer.new()
 
+#Variável que representa o sexo do jogador. É "m" caso seja mulher e "h" caso seja homem
+var player_sex
+
 
 #Por default, coloca o idioma em português e os efeitos sonoros e a música ligados
 func _ready():

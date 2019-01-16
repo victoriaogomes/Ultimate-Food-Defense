@@ -3,10 +3,12 @@ extends StaticBody2D
 #Carregando nodes e assets para mexer no sprites "newGame" e "pineappleBox"
 onready var text = get_node("newGame")
 onready var sprite = get_node("pineappleBox")
-var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/New game.png")
-var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/New game(v2).png")
-var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Novo jogo.png")
-var hover_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Novo jogo(v2).png")
+var next_scene = preload("res://scenes/player_infoScreen/player_info.tscn")
+onready var animation = get_node("/root/Node2D/AnimationPlayer")
+var base_english_text = preload("res://assets/sprites/TitleScreen/Texts/English/New game.png")
+var hover_english_text = preload("res://assets/sprites/TitleScreen/Texts/English/New game(v2).png")
+var base_portuguese_text = preload("res://assets/sprites/TitleScreen/Texts/Pt-Br/Novo jogo.png")
+var hover_portuguese_text = preload("res://assets/sprites/TitleScreen/Texts/Pt-Br/Novo jogo(v2).png")
 
 #Variáveis para controlar a posição do texto "New game"/"Novo jogo" e do sprite "pineappleBox"
 var pos_origin_sprite
@@ -37,7 +39,11 @@ func language():
 
 #Mouse clicando no sprite "pineappleBox"
 func _on_pineappleStaticBody2D_input_event(viewport, event, shape_idx):
-	pass # replace with function body
+	if(event is InputEventMouseButton):
+		if(event.button_index == 1): 
+			animation.play("car_leaving", -1, 1.0, false)
+			yield(get_node("/root/Node2D/AnimationPlayer"), "animation_finished")
+			get_tree().change_scene_to(next_scene)
 
 
 #Mouse entrando no sprite "pineappleBox"

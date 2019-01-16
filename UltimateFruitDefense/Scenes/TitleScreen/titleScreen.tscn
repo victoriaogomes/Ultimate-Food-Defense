@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scenes/TitleScreen/titleScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Background.png" type="Texture" id=2]
@@ -32,7 +32,7 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "car_intro"
-length = 4.2
+length = 4.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -72,7 +72,7 @@ tracks/2/keys = {
 "values": [ 0.0, 1440.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("gameTitle:scale")
+tracks/3/path = NodePath("gameTitle:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -81,67 +81,122 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 2, 4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 1e-005, 1e-005 ), Vector2( 0.0361571, 0.0603706 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Node2D/pineappleStaticBody2D/newGame:visible")
+tracks/4/path = NodePath("Node2D/pineappleStaticBody2D/newGame:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 4, 4.2 ),
+"times": PoolRealArray( 0, 2, 4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, false, true ]
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Node2D/bananaStaticBody2D/loadGame:visible")
+tracks/5/path = NodePath("Node2D/bananaStaticBody2D/loadGame:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 4, 4.2 ),
+"times": PoolRealArray( 0, 2, 4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, false, true ]
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Node2D/tomatoStaticBody2D/instructions:visible")
+tracks/6/path = NodePath("Node2D/tomatoStaticBody2D/instructions:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 4, 4.2 ),
+"times": PoolRealArray( 0, 2, 4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, false, true ]
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Node2D/pepperStaticBody2D/credits:visible")
+tracks/7/path = NodePath("Node2D/cucumberStaticBody2D/options:self_modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 4, 4.2 ),
+"times": PoolRealArray( 0, 2, 4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, false, true ]
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Node2D/cucumberStaticBody2D/options:visible")
+tracks/8/path = NodePath("Node2D/pepperStaticBody2D/credits:self_modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 4, 4.2 ),
+"times": PoolRealArray( 0, 2, 4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, false, true ]
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "car_leaving"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 17.4824, -1.31449 ), Vector2( 47, -1.31449 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("gameTitle:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("road:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("road/Sprite:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="Node2D" type="Node2D" index="0"]
@@ -163,19 +218,20 @@ position = Vector2( -14.2857, -9.05413 )
 scale = Vector2( 0.0361571, 0.0603706 )
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="road" type="Sprite" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 11.0793, 24.5396 )
 scale = Vector2( 0.0374752, 0.0739871 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="road" index="0"]
 
-position = Vector2( -856.375, -0.0906982 )
+position = Vector2( -856.375, -0.090698 )
 texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
 
@@ -317,7 +373,6 @@ polygon = PoolVector2Array( 9.99078, 25.5193, 7.76387, 25.5547, 6.98341, 25.4483
 
 [node name="pepperStaticBody2D" type="StaticBody2D" parent="Node2D" index="7"]
 
-editor/display_folded = true
 position = Vector2( 4.30326, 0.247337 )
 scale = Vector2( 0.97843, 1.00158 )
 input_pickable = true
@@ -358,6 +413,7 @@ texture = ExtResource( 23 )
 
 [node name="cucumberStaticBody2D" type="StaticBody2D" parent="Node2D" index="9"]
 
+editor/display_folded = true
 position = Vector2( -0.0200202, 2.55449 )
 scale = Vector2( 0.868158, 0.929477 )
 input_pickable = true
@@ -412,7 +468,9 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/car_intro = SubResource( 1 )
+anims/car_leaving = SubResource( 2 )
 blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
 
 [connection signal="input_event" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_input_event"]
 
