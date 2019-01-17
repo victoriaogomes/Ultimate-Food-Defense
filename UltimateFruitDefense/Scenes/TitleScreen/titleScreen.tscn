@@ -155,7 +155,7 @@ tracks/0/path = NodePath("Node2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -179,7 +179,7 @@ tracks/2/path = NodePath("road:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/keys = {
 "times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
@@ -191,15 +191,51 @@ tracks/3/path = NodePath("road/Sprite:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
-tracks/3/enabled = true
+tracks/3/enabled = false
 tracks/3/keys = {
 "times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node2D/seller:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camera2D:zoom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ), Vector2( 0.1, 0.1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Camera2D:current")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
@@ -208,8 +244,8 @@ _sections_unfolded = [ "Theme" ]
 
 [node name="background" type="Sprite" parent="." index="0"]
 
-position = Vector2( 0.152288, -0.32571 )
-scale = Vector2( 0.033244, 0.0498973 )
+position = Vector2( 0.138177, -0.341943 )
+scale = Vector2( 0.0332293, 0.049872 )
 texture = ExtResource( 2 )
 
 [node name="gameTitle" type="Sprite" parent="." index="1"]
@@ -222,6 +258,7 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility
 
 [node name="road" type="Sprite" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 11.0793, 24.5396 )
 scale = Vector2( 0.0374752, 0.0739871 )
 texture = ExtResource( 5 )
@@ -235,6 +272,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
 _sections_unfolded = [ "Transform" ]
@@ -244,6 +282,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -2.82765, 4.04061 )
 scale = Vector2( 0.110925, 0.0850863 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="well2" type="Sprite" parent="Node2D" index="1"]
 
@@ -373,6 +412,7 @@ polygon = PoolVector2Array( 9.99078, 25.5193, 7.76387, 25.5547, 6.98341, 25.4483
 
 [node name="pepperStaticBody2D" type="StaticBody2D" parent="Node2D" index="7"]
 
+editor/display_folded = true
 position = Vector2( 4.30326, 0.247337 )
 scale = Vector2( 0.97843, 1.00158 )
 input_pickable = true
@@ -460,7 +500,35 @@ scale = Vector2( 0.035547, 0.035547 )
 texture = ExtResource( 28 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+
+position = Vector2( 0.139921, -0.345528 )
+scale = Vector2( 1.03522, 0.978345 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "Smoothing", "Transform", "Visibility", "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
 
 root_node = NodePath("..")
 autoplay = ""

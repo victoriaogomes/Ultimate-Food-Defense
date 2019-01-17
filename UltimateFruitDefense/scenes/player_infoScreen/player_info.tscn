@@ -1,13 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://assets/sprites/player_infoScreen/background.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Before we start.png" type="Texture" id=2]
-[ext_resource path="res://scenes/player_infoScreen/femaleStaticBody2D.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/girl.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/boy.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/optionsScreen/scenario/horizontalLine.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/My name is.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/I am a.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/titleScreen/Background.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/player_infoScreen/box2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/player_infoScreen/box.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Before we start.png" type="Texture" id=5]
+[ext_resource path="res://scenes/player_infoScreen/femaleStaticBody2D.gd" type="Script" id=6]
+[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/girl.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/boy.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/My name is.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/I am a.png" type="Texture" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -31,13 +33,35 @@ position = Vector2( 0.140717, -0.281078 )
 scale = Vector2( 0.0332286, 0.0498973 )
 texture = ExtResource( 1 )
 
-[node name="before we start" type="Sprite" parent="." index="1"]
+[node name="box1" type="Sprite" parent="." index="1"]
 
-position = Vector2( 1.07022, -28.6918 )
-scale = Vector2( 0.046374, 0.105882 )
+self_modulate = Color( 1, 1, 1, 0.734824 )
+position = Vector2( -0.277004, -1.53369 )
+scale = Vector2( 0.0410087, 0.0835506 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
-[node name="femaleStaticBody2D" type="StaticBody2D" parent="." index="2"]
+[node name="box2" type="Sprite" parent="." index="2"]
+
+position = Vector2( -0.277004, -1.53369 )
+scale = Vector2( 0.0410087, 0.0835506 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="box3" type="Sprite" parent="." index="3"]
+
+position = Vector2( -0.277004, -1.53369 )
+scale = Vector2( 0.0410087, 0.0835506 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="before we start" type="Sprite" parent="." index="4"]
+
+position = Vector2( 0.0201969, -24.001 )
+scale = Vector2( 0.046374, 0.105882 )
+texture = ExtResource( 5 )
+
+[node name="femaleStaticBody2D" type="StaticBody2D" parent="." index="5"]
 
 position = Vector2( -4.19841, -14.0546 )
 scale = Vector2( 0.135039, 0.228504 )
@@ -48,14 +72,14 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 3 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="female" type="Sprite" parent="femaleStaticBody2D" index="0"]
 
 position = Vector2( -0.882156, 0.150368 )
 scale = Vector2( 0.300926, 0.309537 )
-texture = ExtResource( 4 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="femaleStaticBody2D" index="1"]
@@ -64,8 +88,9 @@ position = Vector2( -0.890305, 0.129326 )
 scale = Vector2( 3.04294, 3.11775 )
 shape = SubResource( 1 )
 
-[node name="maleStaticBody2D" type="StaticBody2D" parent="." index="3"]
+[node name="maleStaticBody2D" type="StaticBody2D" parent="." index="6"]
 
+editor/display_folded = true
 position = Vector2( 6.72141, -14.0546 )
 scale = Vector2( 0.140087, 0.232815 )
 input_pickable = true
@@ -81,7 +106,7 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 position = Vector2( -0.819275, -0.445023 )
 scale = Vector2( 0.290082, 0.303805 )
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="maleStaticBody2D" index="1"]
@@ -90,31 +115,17 @@ position = Vector2( -1.13901, -0.701088 )
 scale = Vector2( 2.89804, 3.02381 )
 shape = SubResource( 2 )
 
-[node name="Sprite2" type="Sprite" parent="." index="4"]
-
-position = Vector2( -15.8784, -28.8077 )
-scale = Vector2( 0.0341116, 0.0974783 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Sprite3" type="Sprite" parent="." index="5"]
-
-position = Vector2( 18.4631, -28.8077 )
-scale = Vector2( 0.0341116, 0.0974783 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Sprite4" type="Sprite" parent="." index="6"]
+[node name="Sprite4" type="Sprite" parent="." index="7"]
 
 position = Vector2( -18.7642, -0.305614 )
 scale = Vector2( 0.0554678, 0.105235 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 
-[node name="Sprite" type="Sprite" parent="." index="7"]
+[node name="Sprite" type="Sprite" parent="." index="8"]
 
 position = Vector2( -16.1985, -14.1275 )
 scale = Vector2( 0.0554678, 0.105235 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 
 [connection signal="input_event" from="femaleStaticBody2D" to="femaleStaticBody2D" method="_on_femaleStaticBody2D_input_event"]
 
