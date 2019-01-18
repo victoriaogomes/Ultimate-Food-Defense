@@ -147,7 +147,7 @@ tracks/8/keys = {
 [sub_resource type="Animation" id=2]
 
 resource_name = "car_leaving"
-length = 2.0
+length = 3.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -211,31 +211,31 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Camera2D:zoom")
+tracks/5/path = NodePath("Camera2D:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ), Vector2( 0.1, 0.1 ) ]
+"values": [ Vector2( 0.13489, -0.0114831 ), Vector2( 14.0179, 13.8079 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Camera2D:current")
+tracks/6/path = NodePath("Camera2D:zoom")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 3 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.07, 0.1 ) ]
 }
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
@@ -329,6 +329,7 @@ _sections_unfolded = [ "Pause", "Transform", "Visibility" ]
 
 [node name="newGame" type="Sprite" parent="Node2D/pineappleStaticBody2D" index="2"]
 
+self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( -5.45602, 22.9412 )
 scale = Vector2( 0.231831, 0.165502 )
 texture = ExtResource( 12 )
@@ -364,6 +365,7 @@ polygon = PoolVector2Array( 24.9794, 15.7253, 24.3751, 15.9208, 22.0573, 15.6471
 
 [node name="loadGame" type="Sprite" parent="Node2D/bananaStaticBody2D" index="2"]
 
+self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( 12.1707, 14.2241 )
 scale = Vector2( 0.0468723, 0.0423534 )
 texture = ExtResource( 15 )
@@ -398,6 +400,7 @@ texture = ExtResource( 18 )
 
 [node name="instructions" type="Sprite" parent="Node2D/tomatoStaticBody2D" index="1"]
 
+self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( -20.9696, 24.0544 )
 scale = Vector2( 0.0519686, 0.0437396 )
 texture = ExtResource( 19 )
@@ -433,6 +436,7 @@ texture = ExtResource( 21 )
 
 [node name="credits" type="Sprite" parent="Node2D/pepperStaticBody2D" index="1"]
 
+self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( 2.69697, 24.6938 )
 scale = Vector2( 0.046333, 0.0379786 )
 texture = ExtResource( 22 )
@@ -474,6 +478,7 @@ texture = ExtResource( 25 )
 
 [node name="options" type="Sprite" parent="Node2D/cucumberStaticBody2D" index="1"]
 
+self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( -5.85773, 24.015 )
 scale = Vector2( 0.0637455, 0.0437209 )
 texture = ExtResource( 26 )
@@ -502,10 +507,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
 
-position = Vector2( 0.139921, -0.345528 )
-scale = Vector2( 1.03522, 0.978345 )
+position = Vector2( 0.13489, -0.0114831 )
+scale = Vector2( 0.470304, 0.442917 )
 anchor_mode = 1
-rotating = false
+rotating = true
 current = true
 zoom = Vector2( 1, 1 )
 limit_left = -10000000
@@ -526,7 +531,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "Smoothing", "Transform", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
 
