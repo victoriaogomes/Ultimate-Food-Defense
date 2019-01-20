@@ -3,8 +3,12 @@ extends StaticBody2D
 #Carregando nodes e assets para mexer no sprites "newGame" e "pineappleBox"
 onready var text = get_node("newGame")
 onready var sprite = get_node("pineappleBox")
-var next_scene = preload("res://scenes/player_infoScreen/player_info.tscn")
+onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")
+onready var tomato = get_node("/root/Node2D/Node2D/tomatoStaticBody2D")
+onready var pepper = get_node("/root/Node2D/Node2D/pepperStaticBody2D")
+onready var cucumber = get_node("/root/Node2D/Node2D/cucumberStaticBody2D")
 onready var animation = get_node("/root/Node2D/AnimationPlayer")
+onready var player_info = get_node("/root/Node2D/Node2D2")
 var base_english_text = preload("res://assets/sprites/TitleScreen/Texts/English/New game.png")
 var hover_english_text = preload("res://assets/sprites/TitleScreen/Texts/English/New game(v2).png")
 var base_portuguese_text = preload("res://assets/sprites/TitleScreen/Texts/Pt-Br/Novo jogo.png")
@@ -39,11 +43,16 @@ func language():
 
 #Mouse clicando no sprite "pineappleBox"
 func _on_pineappleStaticBody2D_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			animation.play("car_leaving", -1, 1.0, false)
-			yield(get_node("/root/Node2D/AnimationPlayer"), "animation_finished")
-			get_tree().change_scene_to(next_scene)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		self.set_pickable(false)
+		banana.set_pickable(false)
+		tomato.set_pickable(false)
+		pepper.set_pickable(false)
+		cucumber.set_pickable(false)
+		player_info.set_visible(true)
+		animation.play("info_player", -1, 1.0, false)
+		yield(animation, "animation_finished")
+		#get_tree().change_scene_to(next_scene)
 
 
 #Mouse entrando no sprite "pineappleBox"

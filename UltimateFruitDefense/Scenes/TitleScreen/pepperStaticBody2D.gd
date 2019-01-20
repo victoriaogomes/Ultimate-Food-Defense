@@ -38,9 +38,8 @@ func language():
 
 #Mouse clicando no sprite "pepperBox"
 func _on_pepperStaticBody2D_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			get_tree().change_scene_to(next_scene)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		get_tree().change_scene_to(next_scene)
 
 
 #Mouse entrando no sprite "pepperBox"

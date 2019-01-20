@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://scenes/TitleScreen/titleScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Background.png" type="Texture" id=2]
@@ -28,11 +28,32 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Options.png" type="Texture" id=26]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=27]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=28]
+[ext_resource path="res://scenes/TitleScreen/Node2D2.gd" type="Script" id=29]
+[ext_resource path="res://assets/sprites/player_infoScreen/box.png" type="Texture" id=30]
+[ext_resource path="res://assets/sprites/player_infoScreen/box2.png" type="Texture" id=31]
+[ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Before we start.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/My name is.png" type="Texture" id=34]
+[ext_resource path="res://scenes/player_infoScreen/startStaticBody2D.gd" type="Script" id=35]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start.png" type="Texture" id=36]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/I am a.png" type="Texture" id=37]
+[ext_resource path="res://scenes/player_infoScreen/femaleStaticBody2D.gd" type="Script" id=38]
+[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/girl.png" type="Texture" id=39]
+[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/boy.png" type="Texture" id=40]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="CircleShape2D" id=1]
 
-resource_name = "car_intro"
-length = 4.0
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="Animation" id=3]
+
+length = 3.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -78,7 +99,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
+"times": PoolRealArray( 0, 2, 3.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -90,7 +111,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
+"times": PoolRealArray( 0, 2, 3.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -102,7 +123,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
+"times": PoolRealArray( 0, 2, 3.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -114,7 +135,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
+"times": PoolRealArray( 0, 2, 3.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -126,7 +147,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
+"times": PoolRealArray( 0, 2, 3.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -138,16 +159,75 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
+"times": PoolRealArray( 0, 2, 3.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node2D/pineappleStaticBody2D:input_pickable")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Node2D/bananaStaticBody2D:input_pickable")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Node2D/tomatoStaticBody2D:input_pickable")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Node2D/pepperStaticBody2D:input_pickable")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Node2D/cucumberStaticBody2D:input_pickable")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=4]
 
-resource_name = "car_leaving"
-length = 3.0
+length = 2.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -181,7 +261,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = false
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
+"times": PoolRealArray( 0, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -193,7 +273,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = false
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
+"times": PoolRealArray( 0, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -217,7 +297,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.13489, -0.0114831 ), Vector2( 14.0179, 13.8079 ) ]
@@ -229,18 +309,205 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.07, 0.1 ) ]
 }
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="Animation" id=5]
+
+resource_name = "info_player"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D2/box3:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D2/box3/box2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D2/box3/box1:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.922667 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node2D2/box3/box1/before we start:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node2D2/box3/box1/my name is:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D2/box3/box1/i am a:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node2D2/box3/box1/i am a/femaleStaticBody2D/female:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node2D2/box3/box1/i am a/maleStaticBody2D/male:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Node2D2/box3/box1/startStaticBody2D/start:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node2D2/box3/box1/my name is/TextEdit:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Node2D/pineappleStaticBody2D/newGame:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Node2D/bananaStaticBody2D/loadGame:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.95 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Node2D/tomatoStaticBody2D/instructions:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.95 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Node2D/pepperStaticBody2D/credits:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.95 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Node2D/cucumberStaticBody2D/options:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.95 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Theme" ]
+_sections_unfolded = [ "Theme", "Transform" ]
 
 [node name="background" type="Sprite" parent="." index="0"]
 
@@ -297,6 +564,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -0.603302, 0.603747 )
 scale = Vector2( 0.0417297, 0.0376911 )
 texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="pineappleStaticBody2D" type="StaticBody2D" parent="Node2D" index="3"]
 
@@ -318,6 +586,7 @@ _sections_unfolded = [ "Material", "Pickable", "Visibility", "Z Index" ]
 position = Vector2( -3.58496, -2.336 )
 scale = Vector2( 0.224094, 0.161037 )
 texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pineappleStaticBody2D" index="1"]
 
@@ -329,7 +598,6 @@ _sections_unfolded = [ "Pause", "Transform", "Visibility" ]
 
 [node name="newGame" type="Sprite" parent="Node2D/pineappleStaticBody2D" index="2"]
 
-self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( -5.45602, 22.9412 )
 scale = Vector2( 0.231831, 0.165502 )
 texture = ExtResource( 12 )
@@ -355,6 +623,7 @@ _sections_unfolded = [ "Pickable" ]
 position = Vector2( 10.7327, 9.45549 )
 scale = Vector2( 0.0342874, 0.0309638 )
 texture = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/bananaStaticBody2D" index="1"]
 
@@ -365,7 +634,6 @@ polygon = PoolVector2Array( 24.9794, 15.7253, 24.3751, 15.9208, 22.0573, 15.6471
 
 [node name="loadGame" type="Sprite" parent="Node2D/bananaStaticBody2D" index="2"]
 
-self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( 12.1707, 14.2241 )
 scale = Vector2( 0.0468723, 0.0423534 )
 texture = ExtResource( 15 )
@@ -376,6 +644,7 @@ _sections_unfolded = [ "Visibility" ]
 position = Vector2( 3.54071, 10.2166 )
 scale = Vector2( 0.0386396, 0.037769 )
 texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="tomatoStaticBody2D" type="StaticBody2D" parent="Node2D" index="6"]
 
@@ -397,10 +666,10 @@ _sections_unfolded = [ "Pickable" ]
 position = Vector2( -20.7228, 21.1594 )
 scale = Vector2( 0.0448707, 0.0360012 )
 texture = ExtResource( 18 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="instructions" type="Sprite" parent="Node2D/tomatoStaticBody2D" index="1"]
 
-self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( -20.9696, 24.0544 )
 scale = Vector2( 0.0519686, 0.0437396 )
 texture = ExtResource( 19 )
@@ -433,10 +702,10 @@ _sections_unfolded = [ "Pickable" ]
 position = Vector2( 2.54655, 20.4891 )
 scale = Vector2( 0.0421092, 0.0347177 )
 texture = ExtResource( 21 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="credits" type="Sprite" parent="Node2D/pepperStaticBody2D" index="1"]
 
-self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( 2.69697, 24.6938 )
 scale = Vector2( 0.046333, 0.0379786 )
 texture = ExtResource( 22 )
@@ -478,7 +747,6 @@ texture = ExtResource( 25 )
 
 [node name="options" type="Sprite" parent="Node2D/cucumberStaticBody2D" index="1"]
 
-self_modulate = Color( 1, 1, 1, 0.95 )
 position = Vector2( -5.85773, 24.015 )
 scale = Vector2( 0.0637455, 0.0437209 )
 texture = ExtResource( 26 )
@@ -533,15 +801,183 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+[node name="Node2D2" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( -0.531195, -2.98683 )
+scale = Vector2( 0.672007, 0.768479 )
+script = ExtResource( 29 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="box3" type="Sprite" parent="Node2D2" index="0"]
+
+position = Vector2( 0.135406, -0.298512 )
+scale = Vector2( 0.0481245, 0.0894859 )
+texture = ExtResource( 30 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="box2" type="Sprite" parent="Node2D2/box3" index="0"]
+
+texture = ExtResource( 31 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="box1" type="Sprite" parent="Node2D2/box3" index="1"]
+
+self_modulate = Color( 1, 1, 1, 0.922667 )
+texture = ExtResource( 32 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="before we start" type="Sprite" parent="Node2D2/box3/box1" index="0"]
+
+position = Vector2( 28.8883, -258.051 )
+scale = Vector2( 1.26409, 1.24182 )
+texture = ExtResource( 33 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="my name is" type="Sprite" parent="Node2D2/box3/box1" index="1"]
+
+editor/display_folded = true
+position = Vector2( -326.528, -141.537 )
+scale = Vector2( 1.51292, 1.15919 )
+texture = ExtResource( 34 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="TextEdit" type="TextEdit" parent="Node2D2/box3/box1/my name is" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 249.0
+margin_top = -13.0
+margin_right = 490.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+text = ""
+readonly = false
+highlight_current_line = false
+syntax_highlighting = false
+show_line_numbers = false
+highlight_all_occurrences = false
+override_selected_font_color = false
+context_menu_enabled = true
+smooth_scrolling = false
+v_scroll_speed = 80.0
+hiding_enabled = 0
+wrap_lines = false
+caret_block_mode = false
+caret_blink = false
+caret_blink_speed = 0.65
+caret_moving_by_right_click = true
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="startStaticBody2D" type="StaticBody2D" parent="Node2D2/box3/box1" index="2"]
+
+editor/display_folded = true
+position = Vector2( 20.8731, 242.296 )
+scale = Vector2( 2.75411, 1.21497 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 35 )
+_sections_unfolded = [ "Pickable", "Transform" ]
+
+[node name="start" type="Sprite" parent="Node2D2/box3/box1/startStaticBody2D" index="0"]
+
+position = Vector2( 1.2804, 2.85785 )
+scale = Vector2( 0.522418, 0.962844 )
+texture = ExtResource( 36 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D2/box3/box1/startStaticBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -14.1046, 22.6852, -16.9455, 25.2717, -20.4321, 24.3312, -23.5312, 21.9799, -25.3391, 17.9826, -26.8886, 14.6907, -27.7925, 7.87189, -26.8886, 5.2854, -25.8556, 4.81519, -27.0177, -0.828003, -27.276, -7.41174, -26.243, -10.9387, -23.9186, -15.4063, -20.8195, -18.463, -18.7534, -18.2278, -15.5251, -17.5225, -14.8794, -15.8765, -13.3299, -17.2874, -11.7803, -17.9927, -10.1016, -18.2278, -8.03549, -18.2278, -6.09854, -15.6414, -5.32376, -13.5252, -4.54898, -10.4685, -3.7742, -12.1144, -0.158508, -13.2901, 2.81149, -13.2901, 5.26495, -13.0549, 7.8476, -11.6442, 10.172, -11.1739, 13.0128, -11.1739, 14.8207, -11.1739, 15.7245, -14.7009, 17.4033, -17.5225, 19.4694, -17.5225, 22.9559, -17.7576, 24.7637, -16.5819, 25.9259, -11.6442, 26.3133, -9.76306, 27.2172, -7.88202, 28.1211, -2.70905, 28.2503, 1.28821, 28.2503, 4.81519, 27.6046, 5.2854, 26.8298, 8.34216, 26.8298, 13.7502, 26.4424, 19.1583, 25.5385, 22.6852, 21.7937, 26.2123, 18.9529, 25.0366, 17.0159, 23.1555, 15.8537, 21.5096, 14.5624, 18.4529, 14.3041, 20.569, 12.4963, 23.6258, 9.39716, 23.6258, -2.35376, 23.861, -4.6781, 21.9799, -8.29376, 24.3312, -10.6181, 23.6258 )
+
+[node name="i am a" type="Sprite" parent="Node2D2/box3/box1" index="3"]
+
+editor/display_folded = true
+position = Vector2( -256.57, 2.62399 )
+scale = Vector2( 1.31718, 1.23656 )
+texture = ExtResource( 37 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="femaleStaticBody2D" type="StaticBody2D" parent="Node2D2/box3/box1/i am a" index="0"]
+
+editor/display_folded = true
+position = Vector2( 227.476, 16.8305 )
+scale = Vector2( 2.52062, 2.12201 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 38 )
+_sections_unfolded = [ "Pickable", "Transform" ]
+
+[node name="female" type="Sprite" parent="Node2D2/box3/box1/i am a/femaleStaticBody2D" index="0"]
+
+position = Vector2( -0.882156, 0.150368 )
+scale = Vector2( 0.300926, 0.309537 )
+texture = ExtResource( 39 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/box3/box1/i am a/femaleStaticBody2D" index="1"]
+
+position = Vector2( -0.797577, -0.0249951 )
+scale = Vector2( 3.0181, 3.10542 )
+shape = SubResource( 1 )
+
+[node name="maleStaticBody2D" type="StaticBody2D" parent="Node2D2/box3/box1/i am a" index="1"]
+
+editor/display_folded = true
+position = Vector2( 489.158, 16.8305 )
+scale = Vector2( 2.52063, 2.122 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable", "Transform" ]
+
+[node name="male" type="Sprite" parent="Node2D2/box3/box1/i am a/maleStaticBody2D" index="0"]
+
+position = Vector2( -0.819275, -0.445023 )
+scale = Vector2( 0.290082, 0.303805 )
+texture = ExtResource( 40 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/box3/box1/i am a/maleStaticBody2D" index="1"]
+
+position = Vector2( -0.765929, -0.104581 )
+scale = Vector2( 2.91752, 3.03528 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/car_intro = SubResource( 1 )
-anims/car_leaving = SubResource( 2 )
+anims/car_intro = SubResource( 3 )
+anims/car_leaving = SubResource( 4 )
+anims/info_player = SubResource( 5 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
@@ -574,5 +1010,23 @@ _sections_unfolded = [ "Playback Options" ]
 [connection signal="mouse_entered" from="Node2D/cucumberStaticBody2D" to="Node2D/cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_entered"]
 
 [connection signal="mouse_exited" from="Node2D/cucumberStaticBody2D" to="Node2D/cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="Node2D2/box3/box1/startStaticBody2D" to="Node2D2/box3/box1/startStaticBody2D" method="_on_startStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="Node2D2/box3/box1/startStaticBody2D" to="Node2D2/box3/box1/startStaticBody2D" method="_on_startStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="Node2D2/box3/box1/startStaticBody2D" to="Node2D2/box3/box1/startStaticBody2D" method="_on_startStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="Node2D2/box3/box1/i am a/femaleStaticBody2D" to="Node2D2/box3/box1/i am a/femaleStaticBody2D" method="_on_femaleStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="Node2D2/box3/box1/i am a/femaleStaticBody2D" to="Node2D2/box3/box1/i am a/femaleStaticBody2D" method="_on_femaleStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="Node2D2/box3/box1/i am a/femaleStaticBody2D" to="Node2D2/box3/box1/i am a/femaleStaticBody2D" method="_on_femaleStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="Node2D2/box3/box1/i am a/maleStaticBody2D" to="Node2D2/box3/box1/i am a/femaleStaticBody2D" method="_on_maleStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="Node2D2/box3/box1/i am a/maleStaticBody2D" to="Node2D2/box3/box1/i am a/femaleStaticBody2D" method="_on_maleStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="Node2D2/box3/box1/i am a/maleStaticBody2D" to="Node2D2/box3/box1/i am a/femaleStaticBody2D" method="_on_maleStaticBody2D_mouse_exited"]
 
 

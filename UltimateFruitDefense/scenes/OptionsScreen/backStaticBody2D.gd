@@ -18,7 +18,7 @@ func _ready():
 
 #Alterando o idioma do label "back"/"voltar" com base nas configurações definidas
 func language():
-	if(configuration.language_english == true):
+	if(configuration.language_english):
 		backText.set_texture(base_back_english)
 	else:
 		backText.set_texture(base_back_portuguese)
@@ -26,16 +26,15 @@ func language():
 
 #Mouse clicando no botão "back"/"voltar"
 func _on_backStaticBody2D_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			get_tree().change_scene_to(home_scene)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		get_tree().change_scene_to(home_scene)
 
 
 #Mouse entrando no botão "back"/"voltar"
 func _on_backStaticBody2D_mouse_entered():
 	if(configuration.sound_effects):
 		configuration.mouseHover_sound.play()
-	if(configuration.language_english == true):
+	if(configuration.language_english):
 		backText.set_texture(hover_back_english)
 	else:
 		backText.set_texture(hover_back_portuguese)
@@ -43,7 +42,7 @@ func _on_backStaticBody2D_mouse_entered():
 
 #Mouse saindo do botão "back"/"voltar"
 func _on_backStaticBody2D_mouse_exited():
-	if(configuration.language_english == true):
+	if(configuration.language_english):
 		backText.set_texture(base_back_english)
 	else:
 		backText.set_texture(base_back_portuguese)

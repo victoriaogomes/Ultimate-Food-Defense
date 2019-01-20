@@ -62,23 +62,22 @@ func language():
 
 #Mouse clicando no idioma em inglês
 func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			optionsText.set_texture(options_english)
-			optionsText.set_position(options_english_position)
-			languageText.set_texture(language_english)
-			languageText.set_position(language_english_position)
-			englishText.set_texture(hover_english_text_on)
-			portugueseText.set_texture(base_portuguese_text_off)
-			backText.language()
-			configuration.engli()
-			pineapple.language()
-			tomato.language()
-			pepper.language()
-			cucumber.language()
-			banana.language()
-			sound_effects.language()
-			music.language()
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		optionsText.set_texture(options_english)
+		optionsText.set_position(options_english_position)
+		languageText.set_texture(language_english)
+		languageText.set_position(language_english_position)
+		englishText.set_texture(hover_english_text_on)
+		portugueseText.set_texture(base_portuguese_text_off)
+		configuration.engli()
+		backText.language()
+		pineapple.language()
+		tomato.language()
+		pepper.language()
+		cucumber.language()
+		banana.language()
+		sound_effects.language()
+		music.language()
 
 
 #Mouse entrando no texto "inglês"/"english"
@@ -101,23 +100,22 @@ func _on_englishStaticBody2D_mouse_exited():
 
 #Mouse clicando no idioma em portugês
 func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			optionsText.set_texture(options_port)
-			optionsText.set_position(options_portuguese_position)
-			languageText.set_texture(language_port)
-			languageText.set_position(language_portuguese_position)
-			englishText.set_texture(base_english_text_off)
-			portugueseText.set_texture(hover_portuguese_text_on)
-			backText.language()
-			configuration.port()
-			pineapple.language()
-			tomato.language()
-			pepper.language()
-			cucumber.language()
-			banana.language()
-			sound_effects.language()
-			music.language()
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		optionsText.set_texture(options_port)
+		optionsText.set_position(options_portuguese_position)
+		languageText.set_texture(language_port)
+		languageText.set_position(language_portuguese_position)
+		englishText.set_texture(base_english_text_off)
+		portugueseText.set_texture(hover_portuguese_text_on)
+		configuration.port()
+		backText.language()
+		pineapple.language()
+		tomato.language()
+		pepper.language()
+		cucumber.language()
+		banana.language()
+		sound_effects.language()
+		music.language()
 
 
 #Mouse entrando no texto "portugues"/"portuguese"

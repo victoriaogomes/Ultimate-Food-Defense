@@ -41,7 +41,7 @@
 [ext_resource path="res://scenes/OptionsScreen/backStaticBody2D.gd" type="Script" id=39]
 [ext_resource path="res://Assets/Sprites/OptionsScreen/Texts/English/Back.png" type="Texture" id=40]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
@@ -49,8 +49,8 @@ _sections_unfolded = [ "Theme" ]
 
 [node name="background" type="Sprite" parent="." index="0"]
 
-position = Vector2( 0.140717, -0.281078 )
-scale = Vector2( 0.0332286, 0.0498973 )
+position = Vector2( 0.139543, -0.303368 )
+scale = Vector2( 0.0332298, 0.049932 )
 texture = ExtResource( 1 )
 
 [node name="optionsTitle" type="Sprite" parent="." index="1"]
@@ -335,6 +335,7 @@ _sections_unfolded = [ "Animation", "Offset", "Region" ]
 
 [node name="englishStaticBody2D" type="StaticBody2D" parent="." index="10"]
 
+editor/display_folded = true
 position = Vector2( -13.8115, -16.1912 )
 scale = Vector2( 0.0989174, 0.0791453 )
 input_pickable = true
@@ -519,6 +520,33 @@ texture = ExtResource( 40 )
 
 build_mode = 0
 polygon = PoolVector2Array( -23.6563, 16.0721, -23.7385, -20.3328, -16.8357, -20.3328, -15.7675, -18.2362, -14.9457, -15.949, -14.4527, -11.3745, -14.4527, -7.94373, -15.4388, -4.70343, -12.8091, -1.46326, -12.3983, -5.84711, -11.823, -8.89673, -10.8369, -11.5651, -8.8647, -13.0899, -6.48161, -13.4711, -5.24897, -11.7557, -4.92027, -11.1839, -4.67374, -13.0899, -3.68763, -13.0899, -2.1263, -12.8993, -0.893661, -12.1369, 4.03689, -12.1369, 7.89914, -13.6617, 9.13177, -13.8523, 9.78918, -12.7087, 12.5832, -14.6147, 12.6653, -20.9046, 16.5276, -20.9046, 16.9385, -5.65656, 19.5681, -13.4711, 23.6769, -10.6121, 19.4859, 0.252136, 24.1699, 14.7379, 20.2255, 17.9781, 17.0206, 7.30438, 17.185, 17.2156, 12.8297, 16.4532, 11.4327, 12.4507, 9.87136, 14.7379, 8.06349, 16.6439, 5.92693, 16.6439, 4.11906, 14.5472, 2.22902, 13.0225, 1.32509, 10.9258, -1.30453, 15.5002, -4.67374, 16.4532, -4.75592, 13.5942, -6.48161, 14.9285, -9.93298, 16.0721, -10.3439, 15.6909, -10.8369, 13.9755, -12.2339, 10.354, -13.1378, 8.63861, -14.2883, 9.21039, -14.3705, 13.0225, -15.3566, 14.7379, -16.5892, 14.9285, -18.1506, 15.6909, -20.4515, 15.6909, -21.5198, 15.6909 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="15"]
+
+position = Vector2( 0.138113, -0.0165707 )
+scale = Vector2( 1.00446, 1.0203 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
 
 [connection signal="input_event" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_input_event"]
 

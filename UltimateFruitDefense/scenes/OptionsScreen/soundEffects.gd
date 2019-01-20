@@ -57,15 +57,14 @@ func language():
 
 #Mouse clicando no "On"/"Lig" dos efeitos musicais
 func _on_soundEffects_onStaticBody2D_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			configuration.sound_effects_on()
-			if(configuration.language_english == true):
-				onText_sound_effects.set_texture(hover_english_on_text_on)
-				offText_sound_effects.set_texture(base_english_off_text_off)
-			else:
-				onText_sound_effects.set_texture(hover_port_on_text_on)
-				offText_sound_effects.set_texture(base_port_off_text_off)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		configuration.sound_effects_on()
+		if(configuration.language_english == true):
+			onText_sound_effects.set_texture(hover_english_on_text_on)
+			offText_sound_effects.set_texture(base_english_off_text_off)
+		else:
+			onText_sound_effects.set_texture(hover_port_on_text_on)
+			offText_sound_effects.set_texture(base_port_off_text_off)
 
 
 #Mouse entrando no "On"/"Lig" dos efeitos musicais
@@ -100,15 +99,14 @@ func _on_soundEffects_onStaticBody2D_mouse_exited():
 
 #Mouse clicando no "Off"/"Deslig" dos efeitos musicais
 func _on_soundEffects_offStaticBody2D_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			configuration.sound_effects_off()
-			if(configuration.language_english == true):
-				onText_sound_effects.set_texture(base_english_on_text_off)
-				offText_sound_effects.set_texture(hover_english_off_text_on)
-			else:
-				onText_sound_effects.set_texture(base_port_on_text_off)
-				offText_sound_effects.set_texture(hover_port_off_text_on)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		configuration.sound_effects_off()
+		if(configuration.language_english == true):
+			onText_sound_effects.set_texture(base_english_on_text_off)
+			offText_sound_effects.set_texture(hover_english_off_text_on)
+		else:
+			onText_sound_effects.set_texture(base_port_on_text_off)
+			offText_sound_effects.set_texture(hover_port_off_text_on)
 
 
 #Mouse entrando no "Off"/"Deslig" dos efeitos musicais

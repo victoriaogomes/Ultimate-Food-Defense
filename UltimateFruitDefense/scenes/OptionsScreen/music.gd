@@ -57,15 +57,14 @@ func language():
 
 #Mouse clicando no "On"/"Lig" das músicas
 func _on_on_musicStaticBody2D2_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			configuration.music_on()
-			if(configuration.language_english == true):
-				onText_music.set_texture(hover_english_on_text_on)
-				offText_music.set_texture(base_english_off_text_off)
-			else:
-				onText_music.set_texture(hover_port_on_text_on)
-				offText_music.set_texture(base_port_off_text_off)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		configuration.music_on()
+		if(configuration.language_english == true):
+			onText_music.set_texture(hover_english_on_text_on)
+			offText_music.set_texture(base_english_off_text_off)
+		else:
+			onText_music.set_texture(hover_port_on_text_on)
+			offText_music.set_texture(base_port_off_text_off)
 
 
 #Mouse entrando no "On"/"Lig" das músicas
@@ -100,15 +99,14 @@ func _on_on_musicStaticBody2D2_mouse_exited():
 
 #Mouse clicando no "Off"/"Deslig" das músicas
 func _on_off_musicStaticBody2D2_input_event(viewport, event, shape_idx):
-	if(event is InputEventMouseButton):
-		if(event.button_index == 1): 
-			configuration.music_off()
-			if(configuration.language_english == true):
-				onText_music.set_texture(base_english_on_text_off)
-				offText_music.set_texture(hover_english_off_text_on)
-			else:
-				onText_music.set_texture(base_port_on_text_off)
-				offText_music.set_texture(hover_port_off_text_on)
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		configuration.music_off()
+		if(configuration.language_english == true):
+			onText_music.set_texture(base_english_on_text_off)
+			offText_music.set_texture(hover_english_off_text_on)
+		else:
+			onText_music.set_texture(base_port_on_text_off)
+			offText_music.set_texture(hover_port_off_text_on)
 
 
 #Mouse entrando no "Off"/"Deslig" das músicas
