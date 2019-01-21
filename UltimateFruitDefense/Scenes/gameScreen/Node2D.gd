@@ -11,14 +11,14 @@ var score
 func _ready():
 	randomize()
 	$MobTimer.start()
-	on_Mob_TimeOut()
+	$MobTimer.connect("timeout", self, "on_Mob_TimeOut")
 	pass
 
 func on_Mob_TimeOut():
 	# choose a random location on Path2D
-    $MobPath/MobSpawnLocation.set_offset(randi())
+    #$MobPath/MobSpawnLocation.set_offset(randi())
     # create a Mob instance and add it to the scene
     var mob = Mob.instance()
     add_child(mob)
     # set the mob's position to a random location
-    mob.position = $MobPath/MobSpawnLocation.position
+    #mob.position = $MobPath/MobSpawnLocation.position
