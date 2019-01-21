@@ -29,7 +29,7 @@ func _ready():
 
 #Alterando o idioma do label "Options"/"Opções" com base nas configurações definidas
 func language():
-	if(configuration.language_english == false):
+	if(!configuration.language_english):
 		text.set_texture(base_portuguese_text)
 	else:
 		text.set_texture(base_english_text)

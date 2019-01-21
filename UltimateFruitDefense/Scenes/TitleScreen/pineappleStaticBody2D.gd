@@ -21,10 +21,9 @@ var pos_origin_text
 var pos_new_text
 
 
-#Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
+#Chama a função para colocar sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
-	if(configuration.language_english == false):
-		text.set_texture(base_portuguese_text)
+	language()
 	pos_origin_sprite = sprite.get_position()
 	pos_origin_text = text.get_position()
 	pos_new_sprite = sprite.get_position()
@@ -35,7 +34,7 @@ func _ready():
 
 #Alterando o idioma do label "New game"/"Novo jogo" com base nas configurações definidas
 func language():
-	if(configuration.language_english == false):
+	if(!configuration.language_english):
 		text.set_texture(base_portuguese_text)
 	else:
 		text.set_texture(base_english_text)

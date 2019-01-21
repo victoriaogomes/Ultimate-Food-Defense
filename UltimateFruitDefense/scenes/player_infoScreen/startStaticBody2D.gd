@@ -1,6 +1,7 @@
 extends StaticBody2D
 
-onready var sprite = get_node("/root/Node2D/Node2D2/box1/startStaticBody2D/start")
+onready var sprite = get_node("/root/Node2D/Node2D2/startStaticBody2D/start")
+onready var text = get_node("/root/Node2D/Node2D2/my name is/TextEdit")
 var base_english_sprite = preload("res://assets/sprites/player_infoScreen/Texts/English/Start.png")
 var hover_english_sprite = preload("res://assets/sprites/player_infoScreen/Texts/English/Start(v2).png")
 var base_port_sprite = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Iniciar.png")
@@ -19,6 +20,7 @@ func _on_startStaticBody2D_input_event(viewport, event, shape_idx):
 
 
 func _on_startStaticBody2D_mouse_entered():
+	text.set_bg_color(Color(0,0,0))
 	if(configuration.sound_effects):
 		configuration.mouseHover_sound.play()
 	if(configuration.language_english):
