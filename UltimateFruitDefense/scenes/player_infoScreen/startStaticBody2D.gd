@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-onready var sprite = get_node("/root/Node2D/Node2D2/box3/box1/startStaticBody2D/start")
+onready var sprite = get_node("/root/Node2D/Node2D2/box1/startStaticBody2D/start")
 var base_english_sprite = preload("res://assets/sprites/player_infoScreen/Texts/English/Start.png")
 var hover_english_sprite = preload("res://assets/sprites/player_infoScreen/Texts/English/Start(v2).png")
 var base_port_sprite = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Iniciar.png")
