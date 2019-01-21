@@ -41,7 +41,7 @@ position = Vector2( 0.960357, -1.77676 )
 scale = Vector2( 2.51438, 2.42915 )
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
+[node name="Visibility" type="VisibilityNotifier2D" parent="." index="2"]
 
 rect = Rect2( -10, -10, 20, 20 )
 
