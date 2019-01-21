@@ -1,45 +1,46 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://scenes/TitleScreen/titleScreen.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Background.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Ultimate fruit defense.png" type="Texture" id=3]
-[ext_resource path="res://scenes/TitleScreen/gameTitle.gd" type="Script" id=4]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/cerca.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/small cerca.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/seller.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/Wheel 2.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Car.png" type="Texture" id=9]
-[ext_resource path="res://scenes/TitleScreen/pineappleStaticBody2D.gd" type="Script" id=10]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Pineapple box.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/New game.png" type="Texture" id=12]
-[ext_resource path="res://scenes/TitleScreen/bananaStaticBody2D.gd" type="Script" id=13]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Banana box.png" type="Texture" id=14]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Load game.png" type="Texture" id=15]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Orange box.png" type="Texture" id=16]
-[ext_resource path="res://scenes/TitleScreen/tomatoStaticBody2D.gd" type="Script" id=17]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Tomato box.png" type="Texture" id=18]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Instructions.png" type="Texture" id=19]
-[ext_resource path="res://scenes/TitleScreen/pepperStaticBody2D.gd" type="Script" id=20]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Pepper box.png" type="Texture" id=21]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Credits.png" type="Texture" id=22]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Apple box.png" type="Texture" id=23]
-[ext_resource path="res://scenes/TitleScreen/cucumberStaticBody2D.gd" type="Script" id=24]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Cucumber box.png" type="Texture" id=25]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Options.png" type="Texture" id=26]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=27]
-[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=28]
-[ext_resource path="res://scenes/TitleScreen/Node2D2.gd" type="Script" id=29]
-[ext_resource path="res://assets/sprites/player_infoScreen/box.png" type="Texture" id=30]
-[ext_resource path="res://assets/sprites/player_infoScreen/box2.png" type="Texture" id=31]
-[ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=32]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Before we start.png" type="Texture" id=33]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/My name is.png" type="Texture" id=34]
-[ext_resource path="res://scenes/player_infoScreen/startStaticBody2D.gd" type="Script" id=35]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start.png" type="Texture" id=36]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/I am a.png" type="Texture" id=37]
-[ext_resource path="res://scenes/player_infoScreen/femaleStaticBody2D.gd" type="Script" id=38]
-[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/girl.png" type="Texture" id=39]
-[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/boy.png" type="Texture" id=40]
+[ext_resource path="res://assets/sprites/titleScreen/Background.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/titleScreen/clouds.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/titleScreen/texts/English/Ultimate fruit defense.png" type="Texture" id=4]
+[ext_resource path="res://scenes/TitleScreen/gameTitle.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/cerca.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/small cerca.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/seller.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/Wheel 2.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Car.png" type="Texture" id=10]
+[ext_resource path="res://scenes/TitleScreen/pineappleStaticBody2D.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Pineapple box.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/New game.png" type="Texture" id=13]
+[ext_resource path="res://scenes/TitleScreen/bananaStaticBody2D.gd" type="Script" id=14]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Banana box.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Load game.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Orange box.png" type="Texture" id=17]
+[ext_resource path="res://scenes/TitleScreen/tomatoStaticBody2D.gd" type="Script" id=18]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Tomato box.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Instructions.png" type="Texture" id=20]
+[ext_resource path="res://scenes/TitleScreen/pepperStaticBody2D.gd" type="Script" id=21]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Pepper box.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Credits.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Apple box.png" type="Texture" id=24]
+[ext_resource path="res://scenes/TitleScreen/cucumberStaticBody2D.gd" type="Script" id=25]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Cucumber box.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Options.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=29]
+[ext_resource path="res://scenes/TitleScreen/Node2D2.gd" type="Script" id=30]
+[ext_resource path="res://assets/sprites/player_infoScreen/box.png" type="Texture" id=31]
+[ext_resource path="res://assets/sprites/player_infoScreen/box2.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Before we start.png" type="Texture" id=34]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/My name is.png" type="Texture" id=35]
+[ext_resource path="res://scenes/player_infoScreen/startStaticBody2D.gd" type="Script" id=36]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start.png" type="Texture" id=37]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/I am a.png" type="Texture" id=38]
+[ext_resource path="res://scenes/player_infoScreen/femaleStaticBody2D.gd" type="Script" id=39]
+[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/girl.png" type="Texture" id=40]
+[ext_resource path="res://assets/sprites/player_infoScreen/player_sex/boy.png" type="Texture" id=41]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -502,6 +503,44 @@ tracks/14/keys = {
 "values": [ Color( 1, 1, 1, 0.95 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="Animation" id=7]
+
+resource_name = "clouds"
+length = 1.0
+loop = false
+step = 0.1
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "clouds_moving"
+length = 20.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("background/clouds:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1945.07, 0 ), Vector2( -5.94458, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("background/clouds2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.36102, 0 ), Vector2( 1932.9, 0 ) ]
+}
+
 [node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.129 )
@@ -511,16 +550,29 @@ _sections_unfolded = [ "Theme", "Transform" ]
 
 [node name="background" type="Sprite" parent="." index="0"]
 
+editor/display_folded = true
 position = Vector2( 0.138177, -0.341943 )
 scale = Vector2( 0.0332293, 0.049872 )
 texture = ExtResource( 2 )
+
+[node name="clouds" type="Sprite" parent="background" index="0"]
+
+position = Vector2( -1605.72, 0 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility" ]
+
+[node name="clouds2" type="Sprite" parent="background" index="1"]
+
+position = Vector2( 334.659, 0 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility" ]
 
 [node name="gameTitle" type="Sprite" parent="." index="1"]
 
 position = Vector2( -14.2857, -9.05413 )
 scale = Vector2( 0.0361571, 0.0603706 )
-texture = ExtResource( 3 )
-script = ExtResource( 4 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="road" type="Sprite" parent="." index="2"]
@@ -528,13 +580,13 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility
 editor/display_folded = true
 position = Vector2( 11.0793, 24.5396 )
 scale = Vector2( 0.0374752, 0.0739871 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="road" index="0"]
 
 position = Vector2( -856.375, -0.090698 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
@@ -548,7 +600,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -2.82765, 4.04061 )
 scale = Vector2( 0.110925, 0.0850863 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="well2" type="Sprite" parent="Node2D" index="1"]
@@ -556,14 +608,14 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform",
 position = Vector2( -23.4088, 30.0282 )
 rotation = 25.1327
 scale = Vector2( 0.035074, 0.035074 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="car" type="Sprite" parent="Node2D" index="2"]
 
 position = Vector2( -0.603302, 0.603747 )
 scale = Vector2( 0.0417297, 0.0376911 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="pineappleStaticBody2D" type="StaticBody2D" parent="Node2D" index="3"]
@@ -578,14 +630,14 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 _sections_unfolded = [ "Material", "Pickable", "Visibility", "Z Index" ]
 
 [node name="pineappleBox" type="Sprite" parent="Node2D/pineappleStaticBody2D" index="0"]
 
 position = Vector2( -3.58496, -2.336 )
 scale = Vector2( 0.224094, 0.161037 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pineappleStaticBody2D" index="1"]
@@ -600,7 +652,7 @@ _sections_unfolded = [ "Pause", "Transform", "Visibility" ]
 
 position = Vector2( -5.45602, 22.9412 )
 scale = Vector2( 0.231831, 0.165502 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="bananaStaticBody2D" type="StaticBody2D" parent="Node2D" index="4"]
@@ -615,14 +667,14 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 _sections_unfolded = [ "Pickable" ]
 
 [node name="bananaBox" type="Sprite" parent="Node2D/bananaStaticBody2D" index="0"]
 
 position = Vector2( 10.7327, 9.45549 )
 scale = Vector2( 0.0342874, 0.0309638 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/bananaStaticBody2D" index="1"]
@@ -636,14 +688,14 @@ polygon = PoolVector2Array( 24.9794, 15.7253, 24.3751, 15.9208, 22.0573, 15.6471
 
 position = Vector2( 12.1707, 14.2241 )
 scale = Vector2( 0.0468723, 0.0423534 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="orangeBox" type="Sprite" parent="Node2D" index="5"]
 
 position = Vector2( 3.54071, 10.2166 )
 scale = Vector2( 0.0386396, 0.037769 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="tomatoStaticBody2D" type="StaticBody2D" parent="Node2D" index="6"]
@@ -658,21 +710,21 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 _sections_unfolded = [ "Pickable" ]
 
 [node name="tomatoBox" type="Sprite" parent="Node2D/tomatoStaticBody2D" index="0"]
 
 position = Vector2( -20.7228, 21.1594 )
 scale = Vector2( 0.0448707, 0.0360012 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="instructions" type="Sprite" parent="Node2D/tomatoStaticBody2D" index="1"]
 
 position = Vector2( -20.9696, 24.0544 )
 scale = Vector2( 0.0519686, 0.0437396 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/tomatoStaticBody2D" index="2"]
@@ -694,21 +746,21 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 20 )
+script = ExtResource( 21 )
 _sections_unfolded = [ "Pickable" ]
 
 [node name="pepperBox" type="Sprite" parent="Node2D/pepperStaticBody2D" index="0"]
 
 position = Vector2( 2.54655, 20.4891 )
 scale = Vector2( 0.0421092, 0.0347177 )
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="credits" type="Sprite" parent="Node2D/pepperStaticBody2D" index="1"]
 
 position = Vector2( 2.69697, 24.6938 )
 scale = Vector2( 0.046333, 0.0379786 )
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pepperStaticBody2D" index="2"]
@@ -722,7 +774,7 @@ polygon = PoolVector2Array( 21.2857, 25.9594, 21.1556, 25.9203, 20.0923, 25.9985
 
 position = Vector2( -7.35186, 9.45695 )
 scale = Vector2( 0.04917, 0.0386711 )
-texture = ExtResource( 23 )
+texture = ExtResource( 24 )
 
 [node name="cucumberStaticBody2D" type="StaticBody2D" parent="Node2D" index="9"]
 
@@ -736,20 +788,20 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 24 )
+script = ExtResource( 25 )
 _sections_unfolded = [ "Pickable" ]
 
 [node name="cucumberBox" type="Sprite" parent="Node2D/cucumberStaticBody2D" index="0"]
 
 position = Vector2( -5.78775, 19.7026 )
 scale = Vector2( 0.0496437, 0.0308059 )
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 
 [node name="options" type="Sprite" parent="Node2D/cucumberStaticBody2D" index="1"]
 
 position = Vector2( -5.85773, 24.015 )
 scale = Vector2( 0.0637455, 0.0437209 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/cucumberStaticBody2D" index="2"]
@@ -763,14 +815,14 @@ polygon = PoolVector2Array( 15.6273, 25.9195, 12.3949, 25.7889, 10.0441, 25.593,
 
 position = Vector2( 18.6518, 20.9414 )
 scale = Vector2( 0.0413117, 0.037392 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 
 [node name="wheel" type="Sprite" parent="Node2D" index="11"]
 
 position = Vector2( 21.443, 27.3267 )
 rotation = 25.1327
 scale = Vector2( 0.035547, 0.035547 )
-texture = ExtResource( 28 )
+texture = ExtResource( 29 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
@@ -805,34 +857,39 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 editor/display_folded = true
 visible = false
-position = Vector2( -0.531195, -2.98683 )
+position = Vector2( -0.531193, -2.88541 )
 scale = Vector2( 0.672007, 0.768479 )
-script = ExtResource( 29 )
+script = ExtResource( 30 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="box3" type="Sprite" parent="Node2D2" index="0"]
 
-position = Vector2( 0.135406, -0.298512 )
-scale = Vector2( 0.0481245, 0.0894859 )
-texture = ExtResource( 30 )
+position = Vector2( 17.0048, 14.8953 )
+scale = Vector2( 0.0482171, 0.0444301 )
+texture = ExtResource( 31 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="box2" type="Sprite" parent="Node2D2/box3" index="0"]
 
-texture = ExtResource( 31 )
+position = Vector2( -349.863, -341.971 )
+scale = Vector2( 0.998079, 2.01408 )
+texture = ExtResource( 32 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="box1" type="Sprite" parent="Node2D2/box3" index="1"]
 
+editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.922667 )
-texture = ExtResource( 32 )
+position = Vector2( -349.863, -341.971 )
+scale = Vector2( 0.998079, 2.01408 )
+texture = ExtResource( 33 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="before we start" type="Sprite" parent="Node2D2/box3/box1" index="0"]
 
 position = Vector2( 28.8883, -258.051 )
 scale = Vector2( 1.26409, 1.24182 )
-texture = ExtResource( 33 )
+texture = ExtResource( 34 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="my name is" type="Sprite" parent="Node2D2/box3/box1" index="1"]
@@ -840,7 +897,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 editor/display_folded = true
 position = Vector2( -326.528, -141.537 )
 scale = Vector2( 1.51292, 1.15919 )
-texture = ExtResource( 34 )
+texture = ExtResource( 35 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="TextEdit" type="TextEdit" parent="Node2D2/box3/box1/my name is" index="0"]
@@ -890,14 +947,14 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 35 )
+script = ExtResource( 36 )
 _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="start" type="Sprite" parent="Node2D2/box3/box1/startStaticBody2D" index="0"]
 
 position = Vector2( 1.2804, 2.85785 )
 scale = Vector2( 0.522418, 0.962844 )
-texture = ExtResource( 36 )
+texture = ExtResource( 37 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D2/box3/box1/startStaticBody2D" index="1"]
@@ -907,10 +964,9 @@ polygon = PoolVector2Array( -14.1046, 22.6852, -16.9455, 25.2717, -20.4321, 24.3
 
 [node name="i am a" type="Sprite" parent="Node2D2/box3/box1" index="3"]
 
-editor/display_folded = true
 position = Vector2( -256.57, 2.62399 )
 scale = Vector2( 1.31718, 1.23656 )
-texture = ExtResource( 37 )
+texture = ExtResource( 38 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="femaleStaticBody2D" type="StaticBody2D" parent="Node2D2/box3/box1/i am a" index="0"]
@@ -925,14 +981,14 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 38 )
+script = ExtResource( 39 )
 _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="female" type="Sprite" parent="Node2D2/box3/box1/i am a/femaleStaticBody2D" index="0"]
 
 position = Vector2( -0.882156, 0.150368 )
 scale = Vector2( 0.300926, 0.309537 )
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/box3/box1/i am a/femaleStaticBody2D" index="1"]
@@ -959,7 +1015,7 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 position = Vector2( -0.819275, -0.445023 )
 scale = Vector2( 0.290082, 0.303805 )
-texture = ExtResource( 40 )
+texture = ExtResource( 41 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/box3/box1/i am a/maleStaticBody2D" index="1"]
@@ -980,6 +1036,17 @@ anims/car_leaving = SubResource( 4 )
 anims/info_player = SubResource( 5 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/clouds = SubResource( 7 )
+anims/clouds_moving = SubResource( 6 )
+blend_times = [  ]
 
 [connection signal="input_event" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_input_event"]
 
