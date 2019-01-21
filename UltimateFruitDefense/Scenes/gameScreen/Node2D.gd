@@ -3,8 +3,8 @@ extends Node2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+"res://Scenes/gameScreen/Mob.tscn"
 export (PackedScene) var Mob
-onready var Mob = load(Mob.get_path("res://Scenes/gameScreen/Mob.tscn"))
 var score
 
 
