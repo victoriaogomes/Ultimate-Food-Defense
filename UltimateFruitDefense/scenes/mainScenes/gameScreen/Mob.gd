@@ -22,7 +22,7 @@ func _ready():
 			var pos = Vector2(600, 288)
 			self.set_position(pos)
 		5:
-			var pos = Vector2(600, 150)
+			var pos = Vector2(600, 330)
 			self.set_position(pos)
 
 
