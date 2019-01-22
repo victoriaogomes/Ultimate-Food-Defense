@@ -121,7 +121,7 @@ func _on_soundEffects_offStaticBody2D_input_event(viewport, event, shape_idx):
 func _on_soundEffects_offStaticBody2D_mouse_entered():
 	if(configuration.sound_effects):
 		configuration.mouseHover_sound.play()
-	if(configuration.sound_effects):
+	if(!configuration.sound_effects):
 		if(configuration.language_english):
 			offText_sound_effects.set_texture(hover_english_off_text_on)
 		else:
