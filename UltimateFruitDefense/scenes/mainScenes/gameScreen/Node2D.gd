@@ -6,6 +6,7 @@ extends Node2D
 onready var Mob = preload("res://scenes/mainScenes/gameScreen/Mob.tscn")
 #export (PackedScene) var Mob
 var score
+var mob
 
 
 func _ready():
@@ -15,10 +16,12 @@ func _ready():
 	pass
 
 func on_Mob_TimeOut():
-	# choose a random location on Path2D
-    #$MobPath/MobSpawnLocation.set_offset(randi())
-    # create a Mob instance and add it to the scene
-    var mob = Mob.instance()
-    add_child(mob)
+# choose a random location on Path2D
+#$MobPath/MobSpawnLocation.set_offset(randi())
+# create a Mob instance and add it to the scene
+	while(true):
+		mob = Mob.instance()
+		add_child(mob)
+		yield(get_tree().create_timer(5.0), "timeout")
     # set the mob's position to a random location
     #mob.position = $MobPath/MobSpawnLocation.position
