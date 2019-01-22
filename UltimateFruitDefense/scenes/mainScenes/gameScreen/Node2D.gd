@@ -3,7 +3,7 @@ extends Node2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-onready var Mob = preload("res://scenes/mainScenes/gameScreen/Mob.tscn")
+onready var Mob = preload("res://scenes/mainScenes/gameScreen/Burguer.tscn")
 #export (PackedScene) var Mob
 var score
 var mob
