@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 var select
-var velocity = Vector2(-150, 0)
+var velocity = Vector2(-50, 0)
+var collision_info
 
 func _ready():
-	self.set_process(true)
 	self.set_physics_process(true)
 	select = randi()%5+1
 	#print(selec)
@@ -27,15 +27,6 @@ func _ready():
 
 
 func _physics_process(delta):
-	#var pos = self.get_position()
-	#pos.x -=1
-	#self.set_position(pos)
-	var collision_info = move_and_collide(velocity*delta)
+	collision_info = move_and_collide(velocity*delta)
 	if collision_info:
 		velocity = Vector2(0,0)
-
-
-#func _process(delta):
-	#var pos = self.get_position()
-	#pos.x -=1
-	#self.set_position(pos)
