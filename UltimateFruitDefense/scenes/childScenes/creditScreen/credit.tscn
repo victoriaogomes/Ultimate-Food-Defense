@@ -6,25 +6,30 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/seller.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/titleScreen/scenario/Wheel 2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Car.png" type="Texture" id=6]
-[ext_resource path="res://scenes/TitleScreen/pineappleStaticBody2D.gd" type="Script" id=7]
+[ext_resource path="res://scenes/mainScenes/titleScreen/pineappleStaticBody2D.gd" type="Script" id=7]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Pineapple box.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/New game.png" type="Texture" id=9]
-[ext_resource path="res://scenes/TitleScreen/bananaStaticBody2D.gd" type="Script" id=10]
+[ext_resource path="res://scenes/mainScenes/titleScreen/bananaStaticBody2D.gd" type="Script" id=10]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Banana box.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Load game.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Orange box.png" type="Texture" id=13]
-[ext_resource path="res://scenes/TitleScreen/tomatoStaticBody2D.gd" type="Script" id=14]
+[ext_resource path="res://scenes/mainScenes/titleScreen/tomatoStaticBody2D.gd" type="Script" id=14]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Tomato box.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Instructions.png" type="Texture" id=16]
-[ext_resource path="res://scenes/TitleScreen/pepperStaticBody2D.gd" type="Script" id=17]
+[ext_resource path="res://scenes/mainScenes/titleScreen/pepperStaticBody2D.gd" type="Script" id=17]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Pepper box.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Credits.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Apple box.png" type="Texture" id=20]
-[ext_resource path="res://scenes/TitleScreen/cucumberStaticBody2D.gd" type="Script" id=21]
+[ext_resource path="res://scenes/mainScenes/titleScreen/cucumberStaticBody2D.gd" type="Script" id=21]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Cucumber box.png" type="Texture" id=22]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Texts/English/Options.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=25]
+
+
+
+
+
 
 [sub_resource type="Animation" id=1]
 

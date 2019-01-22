@@ -8,7 +8,7 @@ var base_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-
 var hover_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar(v2).png")
 
 #Carregando a tela inicial do jogo
-var home_scene = preload("res://Scenes/TitleScreen/titleScreen.tscn")
+var home_scene = preload("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
 
 
 #Chama a função "language" para colocar o text do sprite no idioma correto

@@ -6,45 +6,45 @@ onready var tomato = get_node("/root/Node2D/Node2D/tomatoStaticBody2D")
 onready var pepper = get_node("/root/Node2D/Node2D/pepperStaticBody2D")
 onready var cucumber = get_node("/root/Node2D/Node2D/cucumberStaticBody2D")
 onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")
+onready var gameTitle = get_node("/root/Node2D/gameTitle")
 
 # Nodes e assets para mexer no texto "Options"/Opções"
-onready var optionsText = get_node("/root/Node2D/optionsTitle")
-var options_english = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Options.png")
-var options_port = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Opcoes.png")
+onready var optionsText = get_node("../optionsTitle")
+var options_english = preload("res://assets/sprites/optionsScreen/Texts/English/Options.png")
+var options_port = preload("res://assets/sprites/optionsScreen/Texts/Pt-Br/Opcoes.png")
 onready var options_english_position = optionsText.get_position()
 onready var options_portuguese_position = optionsText.get_position()
 
 # Nodes e assets para mexer no texto "Language"/"Idioma"
-onready var languageText = get_node("/root/Node2D/language")
 var language_english = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Language.png")
 var language_port = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Idioma.png")
-onready var language_english_position = languageText.get_position()
-onready var language_portuguese_position = languageText.get_position()
+onready var language_english_position = self.get_position()
+onready var language_portuguese_position = self.get_position()
 
 # Nodes e assets para mexer no texto "English"/"Inglês"
-onready var englishText = get_node("/root/Node2D/englishStaticBody2D/english")
+onready var englishText = get_node("../englishStaticBody2D/english")
 var base_english_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/English/English.png")
 var base_english_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Ingles.png")
 var hover_english_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/English/English(v2).png")
 var hover_english_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Ingles(v2).png")
 
 # Nodes e assets para mexer no texto "Portuguese"/"Português"
-onready var portugueseText = get_node("/root/Node2D/portugueseStaticBody2D/portuguese")
+onready var portugueseText = get_node("../portugueseStaticBody2D/portuguese")
 var base_portuguese_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Portugues.png")
 var base_portuguese_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Portuguese.png")
 var hover_portuguese_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Portugues(v2).png")
 var hover_portuguese_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Portuguese(v2).png")
 
 # Nodes para mexer nos textos "Sound Effects"/"Efeitos Sonoros", "Back/Voltar" e "Music"/"Música"
-onready var sound_effects = get_node("/root/Node2D/soundEffects")
-onready var backText = get_node("/root/Node2D/backStaticBody2D")
-onready var music = get_node("/root/Node2D/music")
+onready var sound_effects = get_node("../soundEffects")
+onready var backText = get_node("../backStaticBody2D")
+onready var music = get_node("../music")
 
 
 #Chama função para ver em qual idioma os sprites devem ser exibido
 func _ready():
 	language()
-	language_portuguese_position.x +=1.6
+	language_portuguese_position.x -=2
 	options_portuguese_position.y-=0.38
 
 
@@ -54,8 +54,8 @@ func language():
 	if(configuration.language_english == false):
 		optionsText.set_texture(options_port)
 		optionsText.set_position(options_portuguese_position)
-		languageText.set_texture(language_port)
-		languageText.set_position(language_portuguese_position)
+		self.set_texture(language_port)
+		self.set_position(language_portuguese_position)
 		englishText.set_texture(base_english_text_off)
 		portugueseText.set_texture(base_portuguese_text_on)
 
@@ -65,8 +65,8 @@ func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
 		optionsText.set_texture(options_english)
 		optionsText.set_position(options_english_position)
-		languageText.set_texture(language_english)
-		languageText.set_position(language_english_position)
+		self.set_texture(language_english)
+		self.set_position(language_english_position)
 		englishText.set_texture(hover_english_text_on)
 		portugueseText.set_texture(base_portuguese_text_off)
 		configuration.engli()
@@ -78,6 +78,7 @@ func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
 		banana.language()
 		sound_effects.language()
 		music.language()
+		gameTitle.language()
 
 
 #Mouse entrando no texto "inglês"/"english"
@@ -103,8 +104,8 @@ func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
 		optionsText.set_texture(options_port)
 		optionsText.set_position(options_portuguese_position)
-		languageText.set_texture(language_port)
-		languageText.set_position(language_portuguese_position)
+		self.set_texture(language_port)
+		self.set_position(language_portuguese_position)
 		englishText.set_texture(base_english_text_off)
 		portugueseText.set_texture(hover_portuguese_text_on)
 		configuration.port()
@@ -116,6 +117,7 @@ func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
 		banana.language()
 		sound_effects.language()
 		music.language()
+		gameTitle.language()
 
 
 #Mouse entrando no texto "portugues"/"portuguese"

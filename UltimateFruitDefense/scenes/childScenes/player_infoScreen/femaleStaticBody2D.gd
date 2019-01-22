@@ -1,7 +1,7 @@
 extends StaticBody2D
 
-onready var female_sprite = get_node("/root/Node2D/Node2D2/i am a/femaleStaticBody2D/female")
-onready var male_sprite = get_node("/root/Node2D/Node2D2/i am a/maleStaticBody2D/male")
+onready var female_sprite = get_node("female")
+onready var male_sprite = get_node("../maleStaticBody2D/male")
 var base_femaleActive_sprite = preload("res://assets/sprites/player_infoScreen/player_sex/girl(v3).png")
 var hover_femaleActive_sprite = preload("res://assets/sprites/player_infoScreen/player_sex/girl(v4).png")
 var base_femaleInative_sprite = preload("res://assets/sprites/player_infoScreen/player_sex/girl.png")

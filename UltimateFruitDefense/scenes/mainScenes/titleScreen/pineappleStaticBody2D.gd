@@ -8,11 +8,12 @@ onready var tomato = get_node("/root/Node2D/Node2D/tomatoStaticBody2D")
 onready var pepper = get_node("/root/Node2D/Node2D/pepperStaticBody2D")
 onready var cucumber = get_node("/root/Node2D/Node2D/cucumberStaticBody2D")
 onready var animation = get_node("/root/Node2D/AnimationPlayer")
-onready var player_info = get_node("/root/Node2D/Node2D2")
+onready var player_info = get_node("/root/Node2D/player_info")
 var base_english_text = preload("res://assets/sprites/TitleScreen/Texts/English/New game.png")
 var hover_english_text = preload("res://assets/sprites/TitleScreen/Texts/English/New game(v2).png")
 var base_portuguese_text = preload("res://assets/sprites/TitleScreen/Texts/Pt-Br/Novo jogo.png")
 var hover_portuguese_text = preload("res://assets/sprites/TitleScreen/Texts/Pt-Br/Novo jogo(v2).png")
+
 
 #Variáveis para controlar a posição do texto "New game"/"Novo jogo" e do sprite "pineappleBox"
 var pos_origin_sprite
@@ -49,9 +50,8 @@ func _on_pineappleStaticBody2D_input_event(viewport, event, shape_idx):
 		pepper.set_pickable(false)
 		cucumber.set_pickable(false)
 		player_info.set_visible(true)
-		animation.play("info_player", -1, 1.0, false)
-		yield(animation, "animation_finished")
-		#get_tree().change_scene_to(next_scene)
+		get_node("/root/Node2D/player_info/AnimationPlayer").play("info_player", -1, 1.0, false)
+		yield(get_node("/root/Node2D/player_info/AnimationPlayer"), "animation_finished")
 
 
 #Mouse entrando no sprite "pineappleBox"

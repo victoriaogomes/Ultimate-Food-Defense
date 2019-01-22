@@ -1,0 +1,499 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/sprites/player_infoScreen/shadow.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Options.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/optionsScreen/scenario/option-field.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Language.png" type="Texture" id=5]
+[ext_resource path="res://scenes/childScenes/optionsScreen/language.gd" type="Script" id=6]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/English.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Portuguese.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Sound effects.png" type="Texture" id=9]
+[ext_resource path="res://scenes/childScenes/optionsScreen/soundEffects.gd" type="Script" id=10]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/On.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Off(v3).png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Music.png" type="Texture" id=13]
+[ext_resource path="res://scenes/childScenes/optionsScreen/music.gd" type="Script" id=14]
+[ext_resource path="res://scenes/childScenes/optionsScreen/backStaticBody2D.gd" type="Script" id=15]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Back.png" type="Texture" id=16]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "options_configuration"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("white_background:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.259647 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("box1:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.922667 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("optionsTitle:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("language:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("soundEffects:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("backStaticBody2D/back:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("black_background:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.558 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("englishStaticBody2D/english:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("portugueseStaticBody2D/portuguese:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("soundEffects/soundEffects_onStaticBody2D/on:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("soundEffects/soundEffects_offStaticBody2D/off:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("music/on_musicStaticBody2D2/on:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("music:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("music/off_musicStaticBody2D2/off:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D2" type="Node2D"]
+
+position = Vector2( 498.284, 291.382 )
+scale = Vector2( 10.6808, 7.17136 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="black_background" type="Sprite" parent="." index="0"]
+
+self_modulate = Color( 1, 1, 1, 0.558 )
+position = Vector2( 0.992664, 0.749508 )
+scale = Vector2( 0.0789757, 0.140553 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="white_background" type="Sprite" parent="." index="1"]
+
+self_modulate = Color( 1, 1, 1, 0.259647 )
+position = Vector2( 1.3284, 1.07608 )
+scale = Vector2( 0.0795095, 0.141183 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="optionsTitle" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0.47197, -36.0233 )
+scale = Vector2( 0.0932625, 0.144711 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="box1" type="Sprite" parent="." index="3"]
+
+self_modulate = Color( 1, 1, 1, 0.922667 )
+position = Vector2( 0.986531, -1.41415 )
+scale = Vector2( 0.0238927, 0.0436606 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="language" type="Sprite" parent="." index="4"]
+
+position = Vector2( -7.00258, -16.1304 )
+scale = Vector2( 0.0728085, 0.103731 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="englishStaticBody2D" type="StaticBody2D" parent="." index="5"]
+
+editor/display_folded = true
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="english" type="Sprite" parent="englishStaticBody2D" index="0"]
+
+position = Vector2( -7.80515, -10.0556 )
+scale = Vector2( 0.0728085, 0.103731 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="englishStaticBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -12.757, -12.3595, -13.0103, -11.5652, -12.9703, -9.83773, -12.877, -8.72579, -12.677, -8.07054, -12.1304, -8.07054, -11.1171, -8.01097, -10.9172, -8.05068, -10.4772, -8.05068, -10.3439, -8.16982, -9.98393, -8.05068, -9.65063, -8.14996, -9.45065, -7.67341, -8.91737, -7.47485, -8.53075, -7.316, -7.95747, -7.37557, -7.63751, -7.71312, -7.3842, -8.1301, -6.77094, -8.1301, -6.70427, -8.22939, -6.53096, -8.09039, -6.03768, -8.11025, -5.93102, -8.30881, -5.69105, -8.14996, -5.39774, -7.9514, -5.2111, -7.99111, -4.95779, -8.07054, -4.71782, -8.09039, -4.59783, -7.97126, -4.29119, -7.9514, -3.99789, -8.18967, -3.67792, -8.07054, -3.39795, -8.03082, -3.02466, -8.11025, -2.69136, -8.48751, -2.58471, -9.42076, -2.6247, -10.5327, -2.99799, -11.5652, -3.53127, -11.8829, -3.78458, -12.3595, -4.2512, -12.6772, -4.69115, -12.5779, -5.2111, -12.1808, -5.30442, -12.0815, -5.61105, -12.0021, -5.75771, -12.28, -5.97102, -12.4985, -6.25099, -12.6375, -6.45097, -12.6375, -6.89092, -12.697, -7.22422, -12.6176, -7.55752, -12.5382, -7.81083, -12.419, -7.90415, -12.1808, -8.0108, -11.9226, -8.07746, -11.9028, -8.55741, -11.8432, -8.66407, -11.9028, -8.93071, -11.8432, -9.18401, -11.8035, -9.42399, -11.6645, -9.6773, -11.8432, -9.9306, -11.9028, -10.1306, -11.9623, -10.5839, -11.8432, -10.6772, -12.1212, -10.8238, -12.5382, -11.2638, -12.6772, -11.9571, -12.7169, -12.3837, -12.6176 )
+
+[node name="portugueseStaticBody2D" type="StaticBody2D" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 0.0147705, 0.0219994 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="portuguese" type="Sprite" parent="portugueseStaticBody2D" index="0"]
+
+position = Vector2( 7.68713, -10.0036 )
+scale = Vector2( 0.0728085, 0.103731 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="portugueseStaticBody2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -0.0362434, -11.8202, -0.0335045, -8.901, 0.477985, -8.92246, 2.42855, -8.87939, 2.9001, -8.63629, 3.19028, -8.82537, 3.38979, -8.82537, 3.73438, -8.82537, 5.14902, -8.87939, 6.49111, -8.79836, 7.14402, -8.87939, 7.28911, -8.55525, 7.63371, -8.23111, 8.05084, -8.09605, 8.48612, -8.23111, 8.75817, -8.71732, 8.86698, -9.17652, 9.13903, -9.28457, 9.5743, -8.85238, 10.1909, -9.01445, 10.8439, -9.14951, 11.0615, -8.96042, 11.3517, -8.74433, 11.6781, -8.85238, 12.0409, -9.04146, 12.7482, -8.9064, 13.2923, -8.9064, 13.4192, -9.17652, 14.054, -8.93342, 14.7795, -8.85238, 15.0515, -9.09549, 15.2691, -9.71675, 15.2873, -10.176, 15.1422, -10.9323, 14.852, -11.2294, 14.4711, -11.3645, 13.9452, -11.1214, 13.3648, -11.0944, 13.0746, -11.2834, 12.6394, -11.3375, 12.4399, -11.2024, 11.6237, -11.2294, 10.9345, -11.3375, 10.463, -11.2294, 8.95766, -11.2294, 8.74003, -11.2294, 8.3773, -11.2294, 8.30475, -11.0673, 8.05084, -11.2564, 7.85134, -11.3105, 7.41607, -11.3375, 6.61807, -11.3105, 5.56615, -11.2564, 5.2397, -11.2294, 5.2397, -11.8777, 4.69561, -11.9317, 4.69561, -11.1214, 3.91574, -11.2564, 3.60742, -11.1484, 3.44419, -11.1484, 3.20842, -11.2024, 2.71873, -11.2024, 2.04769, -11.3105, 1.53987, -11.0673, 1.34247, -11.1864, 1.14087, -11.6886, 0.83255, -11.8507, 0.433548, -11.8507 )
+
+[node name="soundEffects" type="Sprite" parent="." index="7"]
+
+position = Vector2( -5.6427, 2.66025 )
+scale = Vector2( 0.0633886, 0.110655 )
+texture = ExtResource( 9 )
+script = ExtResource( 10 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="soundEffects_onStaticBody2D" type="StaticBody2D" parent="soundEffects" index="0"]
+
+editor/display_folded = true
+position = Vector2( -35.449, 41.5854 )
+scale = Vector2( 1.29135, 1 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="on" type="Sprite" parent="soundEffects/soundEffects_onStaticBody2D" index="0"]
+
+position = Vector2( 1.0336, 3.52713 )
+scale = Vector2( 0.774383, 1 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="soundEffects/soundEffects_onStaticBody2D" index="1"]
+
+position = Vector2( 27.4511, -41.5854 )
+scale = Vector2( 0.774383, 1 )
+build_mode = 0
+polygon = PoolVector2Array( -30.668, 30.3569, -36.028, 25.9827, -41.621, 24.1933, -51.1758, 23.3979, -61.4296, 28.5675, -64.4592, 34.3335, -68.1879, 40.696, -67.0226, 48.2514, -64.6922, 58.1928, -55.1375, 64.5553, -46.0488, 66.9413, -40.9219, 66.9413, -35.3289, 63.76, -31.1342, 66.3448, -23.6768, 67.5378, -19.715, 65.5495, -15.2872, 67.3389, -6.19861, 65.5495, -2.00385, 56.9999, -2.46991, 43.4796, -6.89771, 33.737, -13.1898, 29.9593, -24.6089, 29.164 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="soundEffects_offStaticBody2D" type="StaticBody2D" parent="soundEffects" index="1"]
+
+editor/display_folded = true
+position = Vector2( 211.96, 37.8049 )
+scale = Vector2( 1.06899, 1 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="off" type="Sprite" parent="soundEffects/soundEffects_offStaticBody2D" index="0"]
+
+position = Vector2( -1.56409, 7.30762 )
+scale = Vector2( 0.935461, 1 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="soundEffects/soundEffects_offStaticBody2D" index="1"]
+
+position = Vector2( -198.28, -37.8049 )
+scale = Vector2( 0.935461, 1 )
+build_mode = 0
+polygon = PoolVector2Array( 205.956, 37.86, 202.187, 33.183, 197.377, 31.0453, 189.159, 31.4312, 181.468, 37.0277, 179.885, 45.2617, 181.288, 52.1834, 184.2, 58.322, 193.793, 60.5143, 203.107, 58.0628, 207.327, 59.4912, 219.832, 60.222, 236.62, 60.6605, 236.963, 44.1448, 238.676, 44.4371, 239.19, 39.0293, 241.759, 32.7445, 239.018, 30.2599, 234.051, 29.6753, 229.254, 32.0138, 224.629, 32.3061, 220.175, 29.9676, 215.721, 30.406, 212.466, 33.4753, 212.637, 38.0062 )
+
+[node name="music" type="Sprite" parent="." index="8"]
+
+position = Vector2( -9.84626, 19.5016 )
+scale = Vector2( 0.0633886, 0.110655 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="on_musicStaticBody2D2" type="StaticBody2D" parent="music" index="0"]
+
+editor/display_folded = true
+position = Vector2( 30.8651, 43.1282 )
+scale = Vector2( 1.29135, 1 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="on" type="Sprite" parent="music/on_musicStaticBody2D2" index="0"]
+
+position = Vector2( 1.0336, 3.52713 )
+scale = Vector2( 0.774383, 1 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="music/on_musicStaticBody2D2" index="1"]
+
+position = Vector2( 27.4511, -41.5854 )
+scale = Vector2( 0.774383, 1 )
+build_mode = 0
+polygon = PoolVector2Array( -30.668, 30.3569, -36.028, 25.9827, -41.621, 24.1933, -51.1758, 23.3979, -61.4296, 28.5675, -64.4592, 34.3335, -68.1879, 40.696, -67.0226, 48.2514, -64.6922, 58.1928, -55.1375, 64.5553, -46.0488, 66.9413, -40.9219, 66.9413, -35.3289, 63.76, -31.1342, 66.3448, -23.6768, 67.5378, -19.715, 65.5495, -15.2872, 67.3389, -6.19861, 65.5495, -2.00385, 56.9999, -2.46991, 43.4796, -6.89771, 33.737, -13.1898, 29.9593, -24.6089, 29.164 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="off_musicStaticBody2D2" type="StaticBody2D" parent="music" index="1"]
+
+editor/display_folded = true
+position = Vector2( 278.274, 39.3477 )
+scale = Vector2( 1.06899, 1 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Pickable" ]
+
+[node name="off" type="Sprite" parent="music/off_musicStaticBody2D2" index="0"]
+
+position = Vector2( -1.56409, 7.30762 )
+scale = Vector2( 0.935461, 1 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="music/off_musicStaticBody2D2" index="1"]
+
+position = Vector2( -198.28, -37.8049 )
+scale = Vector2( 0.935461, 1 )
+build_mode = 0
+polygon = PoolVector2Array( 205.956, 37.86, 202.187, 33.183, 197.377, 31.0453, 189.159, 31.4312, 181.468, 37.0277, 179.885, 45.2617, 181.288, 52.1834, 184.2, 58.322, 193.793, 60.5143, 203.107, 58.0628, 207.327, 59.4912, 219.832, 60.222, 236.62, 60.6605, 236.963, 44.1448, 238.676, 44.4371, 239.19, 39.0293, 241.759, 32.7445, 239.018, 30.2599, 234.051, 29.6753, 229.254, 32.0138, 224.629, 32.3061, 220.175, 29.9676, 215.721, 30.406, 212.466, 33.4753, 212.637, 38.0062 )
+
+[node name="backStaticBody2D" type="StaticBody2D" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 2.8113, 35.7347 )
+scale = Vector2( 0.13254, 0.108723 )
+input_pickable = true
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 15 )
+_sections_unfolded = [ "Pickable", "Transform" ]
+
+[node name="back" type="Sprite" parent="backStaticBody2D" index="0"]
+
+position = Vector2( 1.2804, 2.85785 )
+scale = Vector2( 0.522418, 0.962844 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="backStaticBody2D" index="1"]
+
+position = Vector2( 0, 0.224243 )
+build_mode = 0
+polygon = PoolVector2Array( -10.7836, 13.0407, -12.7061, 13.0407, -14.5546, 15.7258, -17.1425, 16.1285, -19.5826, 16.6655, -22.0227, 16.5313, -21.9487, 13.5777, -22.1706, 10.49, -22.1706, 5.65692, -22.0966, -3.60632, -22.1706, -11.6614, -19.065, -11.9299, -17.2165, -11.9299, -14.1849, -9.91608, -12.0406, -4.94885, -8.71323, -4.94885, -6.495, -5.75439, -5.01614, -5.62012, -2.87186, -4.81458, -2.42819, -6.55988, 0.381561, -5.21735, 3.04346, -2.93506, 3.78287, -4.54608, 4.892, -5.62012, 6.22296, -6.69415, 7.99756, -6.55988, 9.62427, -6.1571, 11.3249, -5.21735, 12.2862, -4.41187, 13.8389, -0.518616, 13.765, -3.87482, 13.4692, -6.1571, 13.3953, -8.70782, 13.8389, -10.5873, 14.9481, -11.9299, 15.6135, -11.1244, 16.7227, -11.3929, 17.462, -10.7216, 17.9796, -9.91608, 18.1275, -7.36542, 17.8318, -4.68036, 18.1275, -0.652893, 19.6064, -3.47211, 21.2331, -5.75439, 22.638, -6.02289, 23.5992, -5.48584, 25.078, -3.87482, 22.4901, 1.76367, 20.7155, 4.18024, 22.7119, 8.2077, 25.2259, 12.5037, 25.4477, 16.1285, 21.307, 17.4709, 20.4197, 13.712, 17.9796, 17.2025, 14.3565, 17.4709, 12.508, 13.9805, 10.8813, 16.6655, 5.77933, 16.5313, 3.11743, 16.397, -3.31552, 16.7997, -3.75916, 15.5915, -6.42105, 16.5313, -9.30475, 15.4572 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="10"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/options_configuration = SubResource( 1 )
+blend_times = [  ]
+
+[connection signal="input_event" from="englishStaticBody2D" to="language" method="_on_englishStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="englishStaticBody2D" to="language" method="_on_englishStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="englishStaticBody2D" to="language" method="_on_englishStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="portugueseStaticBody2D" to="language" method="_on_portugueseStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="portugueseStaticBody2D" to="language" method="_on_portugueseStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="portugueseStaticBody2D" to="language" method="_on_portugueseStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="soundEffects/soundEffects_onStaticBody2D" to="soundEffects" method="_on_soundEffects_onStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="soundEffects/soundEffects_onStaticBody2D" to="soundEffects" method="_on_soundEffects_onStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="soundEffects/soundEffects_onStaticBody2D" to="soundEffects" method="_on_soundEffects_onStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="soundEffects/soundEffects_offStaticBody2D" to="soundEffects" method="_on_soundEffects_offStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="soundEffects/soundEffects_offStaticBody2D" to="soundEffects" method="_on_soundEffects_offStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="soundEffects/soundEffects_offStaticBody2D" to="soundEffects" method="_on_soundEffects_offStaticBody2D_mouse_exited"]
+
+[connection signal="input_event" from="music/on_musicStaticBody2D2" to="music" method="_on_on_musicStaticBody2D2_input_event"]
+
+[connection signal="mouse_entered" from="music/on_musicStaticBody2D2" to="music" method="_on_on_musicStaticBody2D2_mouse_entered"]
+
+[connection signal="mouse_exited" from="music/on_musicStaticBody2D2" to="music" method="_on_on_musicStaticBody2D2_mouse_exited"]
+
+[connection signal="input_event" from="music/off_musicStaticBody2D2" to="music" method="_on_off_musicStaticBody2D2_input_event"]
+
+[connection signal="mouse_entered" from="music/off_musicStaticBody2D2" to="music" method="_on_off_musicStaticBody2D2_mouse_entered"]
+
+[connection signal="mouse_exited" from="music/off_musicStaticBody2D2" to="music" method="_on_off_musicStaticBody2D2_mouse_exited"]
+
+[connection signal="input_event" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_input_event"]
+
+[connection signal="mouse_entered" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_mouse_entered"]
+
+[connection signal="mouse_exited" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_mouse_exited"]
+
+

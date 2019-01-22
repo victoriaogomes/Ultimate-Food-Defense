@@ -3,7 +3,7 @@ extends StaticBody2D
 #Carregando nodes e assets para mexer no sprites "credits" e "pepperBox"
 onready var text = get_node("credits")
 onready var sprite = get_node("pepperBox")
-var next_scene = preload("res://Scenes/CreditScreen/credit.tscn")
+var next_scene = preload("res://scenes/childScenes/creditScreen/credit.tscn")
 var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Credits.png")
 var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Credits(v2).png")
 var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Créditos.png")
@@ -19,12 +19,17 @@ var pos_new_text
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
 	language()
+	self.set_process(true)
 	pos_origin_sprite = sprite.get_position()
 	pos_origin_text = text.get_position()
 	pos_new_sprite = sprite.get_position()
 	pos_new_text = text.get_position()
 	pos_new_sprite.y = pos_new_sprite.y-1
 	pos_new_text.y = pos_new_text.y-1
+
+
+func _process(delta):
+	language()
 
 
 #Alterando o idioma do label "Credits"/"Créditos" com base nas configurações definidas
