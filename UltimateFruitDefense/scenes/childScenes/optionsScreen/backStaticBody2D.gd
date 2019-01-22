@@ -6,9 +6,7 @@ var base_back_english = preload("res://Assets/Sprites/OptionsScreen/Texts/Englis
 var hover_back_english = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Back(v2).png")
 var base_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar.png")
 var hover_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar(v2).png")
-
-#Carregando a tela inicial do jogo
-var home_scene = preload("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
+onready var animation = get_node("../AnimationPlayer")
 
 
 #Chama a função "language" para colocar o text do sprite no idioma correto
@@ -27,7 +25,9 @@ func language():
 #Mouse clicando no botão "back"/"voltar"
 func _on_backStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
-		get_tree().change_scene_to(home_scene)
+		animation.play_backwards("options_configuration", -1)
+		yield(animation, "animation_finished")
+		get_node("/root/Node2D/options").set_visible(false)
 
 
 #Mouse entrando no botão "back"/"voltar"

@@ -26,11 +26,6 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Watermelon box.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=25]
 
-
-
-
-
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "car_intro"
@@ -160,6 +155,7 @@ texture = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
 _sections_unfolded = [ "Transform" ]
