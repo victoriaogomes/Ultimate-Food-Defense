@@ -22,6 +22,7 @@ func on_Mob_TimeOut():
 	while(true):
 		mob = Mob.instance()
 		add_child(mob)
-		yield(get_tree().create_timer(5.0), "timeout")
+		$MobTimer.start()
+		#yield(get_tree().create_timer(5.0), "timeout")
     # set the mob's position to a random location
     #mob.position = $MobPath/MobSpawnLocation.position
