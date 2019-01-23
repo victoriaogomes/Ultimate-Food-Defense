@@ -17,6 +17,7 @@ _sections_unfolded = [ "Animation", "Offset", "Region", "Visibility" ]
 
 [node name="Node2D" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( -2.93591, 1.87366 )
 script = ExtResource( 2 )
 
@@ -56,6 +57,6 @@ texture = ExtResource( 3 )
 
 [node name="Glob" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( -374.088, -171.296 )
+position = Vector2( -370.171, -158.119 )
 
 

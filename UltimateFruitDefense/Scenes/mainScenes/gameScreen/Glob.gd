@@ -7,8 +7,6 @@ extends Node2D
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization h
-	var position = Vector2(160,160)
-	self.set_position(position)
 	pass
 
 #func _process(delta):

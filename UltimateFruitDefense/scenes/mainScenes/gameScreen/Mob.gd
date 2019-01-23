@@ -5,6 +5,7 @@ var velocity = Vector2(-50, 0)
 var collision_info
 
 func _ready():
+	get_node("AnimationPlayer").play("walk")
 	self.set_physics_process(true)
 	select = randi()%5+1
 	#print(selec)

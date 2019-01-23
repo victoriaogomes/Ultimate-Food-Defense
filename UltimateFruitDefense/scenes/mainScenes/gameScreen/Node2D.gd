@@ -3,16 +3,14 @@ extends Node2D
 #onready var Mob = preload("res://scenes/mainScenes/gameScreen/Burguer.tscn")
 onready var enemies_types = [preload("res://scenes/mainScenes/gameScreen/burguer.tscn"), preload("res://scenes/mainScenes/gameScreen/pizza.tscn"), preload("res://scenes/mainScenes/gameScreen/soda.tscn")]
 onready var glob = preload("res://Scenes/mainScenes/gameScreen/Glob.tscn")
+onready var soldier = get_node("../Glob")
 
 var score
 var mob
 var waitTime
 var select
-var soldier
 
 func _ready():
-	soldier = glob.instance()
-	add_child(soldier)
 	waitTime = 1
 	randomize()
 	$MobTimer.start()
