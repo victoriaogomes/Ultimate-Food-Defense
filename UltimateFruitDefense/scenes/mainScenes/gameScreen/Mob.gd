@@ -30,3 +30,7 @@ func _physics_process(delta):
 	collision_info = move_and_collide(velocity*delta)
 	if collision_info:
 		velocity = Vector2(0,0)
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
