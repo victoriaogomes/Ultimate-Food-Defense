@@ -19,7 +19,7 @@
 
 [sub_resource type="Animation" id=1]
 
-resource_name = "options_configuration"
+resource_name = "showing_credits"
 length = 1.0
 loop = false
 step = 0.1
@@ -36,7 +36,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.259647 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("box1:self_modulate")
+tracks/1/path = NodePath("black_background:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -45,7 +45,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.922667 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.558 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("optionsTitle:self_modulate")
@@ -60,7 +60,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("language:self_modulate")
+tracks/3/path = NodePath("box1:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -69,10 +69,10 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.922667 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("soundEffects:self_modulate")
+tracks/4/path = NodePath("language:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -84,7 +84,7 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("backStaticBody2D/back:self_modulate")
+tracks/5/path = NodePath("englishStaticBody2D/english:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -96,7 +96,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("black_background:self_modulate")
+tracks/6/path = NodePath("portugueseStaticBody2D/portuguese:self_modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -105,10 +105,10 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.558 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("englishStaticBody2D/english:self_modulate")
+tracks/7/path = NodePath("soundEffects:self_modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -120,7 +120,7 @@ tracks/7/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("portugueseStaticBody2D/portuguese:self_modulate")
+tracks/8/path = NodePath("soundEffects/soundEffects_onStaticBody2D/on:self_modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -132,7 +132,7 @@ tracks/8/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("soundEffects/soundEffects_onStaticBody2D/on:self_modulate")
+tracks/9/path = NodePath("soundEffects/soundEffects_offStaticBody2D/off:self_modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -144,7 +144,7 @@ tracks/9/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("soundEffects/soundEffects_offStaticBody2D/off:self_modulate")
+tracks/10/path = NodePath("music:self_modulate")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -168,7 +168,7 @@ tracks/11/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("music:self_modulate")
+tracks/12/path = NodePath("music/off_musicStaticBody2D2/off:self_modulate")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -180,7 +180,7 @@ tracks/12/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("music/off_musicStaticBody2D2/off:self_modulate")
+tracks/13/path = NodePath("backStaticBody2D/back:self_modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -200,7 +200,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="black_background" type="Sprite" parent="." index="0"]
 
-self_modulate = Color( 1, 1, 1, 0.558 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.992664, 0.749508 )
 scale = Vector2( 0.0789757, 0.140553 )
 texture = ExtResource( 1 )
@@ -208,7 +208,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="white_background" type="Sprite" parent="." index="1"]
 
-self_modulate = Color( 1, 1, 1, 0.259647 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1.3284, 1.07608 )
 scale = Vector2( 0.0795095, 0.141183 )
 texture = ExtResource( 2 )
@@ -216,14 +216,15 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="optionsTitle" type="Sprite" parent="." index="2"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.47197, -36.0233 )
 scale = Vector2( 0.0932625, 0.144711 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Visibility" ]
 
 [node name="box1" type="Sprite" parent="." index="3"]
 
-self_modulate = Color( 1, 1, 1, 0.922667 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.986531, -1.41415 )
 scale = Vector2( 0.0238927, 0.0436606 )
 texture = ExtResource( 4 )
@@ -231,6 +232,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="language" type="Sprite" parent="." index="4"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -7.00258, -16.1304 )
 scale = Vector2( 0.0728085, 0.103731 )
 texture = ExtResource( 5 )
@@ -251,6 +253,7 @@ _sections_unfolded = [ "Pickable" ]
 
 [node name="english" type="Sprite" parent="englishStaticBody2D" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -7.80515, -10.0556 )
 scale = Vector2( 0.0728085, 0.103731 )
 texture = ExtResource( 7 )
@@ -276,6 +279,7 @@ _sections_unfolded = [ "Pickable" ]
 
 [node name="portuguese" type="Sprite" parent="portugueseStaticBody2D" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 7.68713, -10.0036 )
 scale = Vector2( 0.0728085, 0.103731 )
 texture = ExtResource( 8 )
@@ -289,6 +293,7 @@ polygon = PoolVector2Array( -0.0362434, -11.8202, -0.0335045, -8.901, 0.477985, 
 [node name="soundEffects" type="Sprite" parent="." index="7"]
 
 editor/display_folded = true
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -5.6427, 2.66025 )
 scale = Vector2( 0.0633886, 0.110655 )
 texture = ExtResource( 9 )
@@ -311,6 +316,7 @@ _sections_unfolded = [ "Pickable" ]
 
 [node name="on" type="Sprite" parent="soundEffects/soundEffects_onStaticBody2D" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1.0336, 3.52713 )
 scale = Vector2( 0.774383, 1 )
 texture = ExtResource( 11 )
@@ -340,6 +346,7 @@ _sections_unfolded = [ "Pickable" ]
 
 [node name="off" type="Sprite" parent="soundEffects/soundEffects_offStaticBody2D" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -1.56409, 7.30762 )
 scale = Vector2( 0.935461, 1 )
 texture = ExtResource( 12 )
@@ -354,6 +361,8 @@ polygon = PoolVector2Array( 205.956, 37.86, 202.187, 33.183, 197.377, 31.0453, 1
 
 [node name="music" type="Sprite" parent="." index="8"]
 
+editor/display_folded = true
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -9.84626, 19.5016 )
 scale = Vector2( 0.0633886, 0.110655 )
 texture = ExtResource( 13 )
@@ -362,7 +371,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="on_musicStaticBody2D2" type="StaticBody2D" parent="music" index="0"]
 
-editor/display_folded = true
 position = Vector2( 30.8651, 43.1282 )
 scale = Vector2( 1.29135, 1 )
 input_pickable = true
@@ -376,6 +384,7 @@ _sections_unfolded = [ "Pickable" ]
 
 [node name="on" type="Sprite" parent="music/on_musicStaticBody2D2" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1.0336, 3.52713 )
 scale = Vector2( 0.774383, 1 )
 texture = ExtResource( 11 )
@@ -391,7 +400,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="off_musicStaticBody2D2" type="StaticBody2D" parent="music" index="1"]
 
-editor/display_folded = true
 position = Vector2( 278.274, 39.3477 )
 scale = Vector2( 1.06899, 1 )
 input_pickable = true
@@ -405,6 +413,7 @@ _sections_unfolded = [ "Pickable" ]
 
 [node name="off" type="Sprite" parent="music/off_musicStaticBody2D2" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -1.56409, 7.30762 )
 scale = Vector2( 0.935461, 1 )
 texture = ExtResource( 12 )
@@ -419,7 +428,6 @@ polygon = PoolVector2Array( 205.956, 37.86, 202.187, 33.183, 197.377, 31.0453, 1
 
 [node name="backStaticBody2D" type="StaticBody2D" parent="." index="9"]
 
-editor/display_folded = true
 position = Vector2( 2.8113, 35.7347 )
 scale = Vector2( 0.13254, 0.108723 )
 input_pickable = true
@@ -434,6 +442,7 @@ _sections_unfolded = [ "Pickable", "Transform" ]
 
 [node name="back" type="Sprite" parent="backStaticBody2D" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1.2804, 2.85785 )
 scale = Vector2( 0.522418, 0.962844 )
 texture = ExtResource( 16 )

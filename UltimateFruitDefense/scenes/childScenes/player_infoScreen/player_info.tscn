@@ -14,7 +14,6 @@
 [ext_resource path="res://scenes/childScenes/player_infoScreen/startStaticBody2D.gd" type="Script" id=12]
 [ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start.png" type="Texture" id=13]
 
-
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -300,7 +299,6 @@ shape = SubResource( 2 )
 
 [node name="startStaticBody2D" type="StaticBody2D" parent="." index="6"]
 
-editor/display_folded = true
 position = Vector2( 1.21966, 30.5545 )
 scale = Vector2( 0.13254, 0.108723 )
 input_pickable = true

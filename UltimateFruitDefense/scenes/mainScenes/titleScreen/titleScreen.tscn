@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://scenes/mainScenes/titleScreen/titleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/titleScreen/Background.png" type="Texture" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://Assets/Sprites/TitleScreen/Scenario/Wheel.png" type="Texture" id=29]
 [ext_resource path="res://scenes/childScenes/player_infoScreen/player_info.tscn" type="PackedScene" id=30]
 [ext_resource path="res://scenes/childScenes/optionsScreen/options.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/childScenes/creditScreen/credit.tscn" type="PackedScene" id=32]
 
 [sub_resource type="Animation" id=1]
 
@@ -212,19 +213,19 @@ length = 2.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Node2D:position")
+tracks/0/path = NodePath("gameTitle:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 17.4824, -1.31449 ), Vector2( 47, -1.31449 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("gameTitle:self_modulate")
+tracks/1/path = NodePath("Node2D/seller:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -236,60 +237,24 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("road:self_modulate")
+tracks/2/path = NodePath("Camera2D:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("road/Sprite:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = false
-tracks/3/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Node2D/seller:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Camera2D:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.13489, -0.0114831 ), Vector2( 14.0179, 13.8079 ) ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("Camera2D:zoom")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camera2D:zoom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -383,7 +348,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
 _sections_unfolded = [ "Transform" ]
@@ -651,7 +615,20 @@ visible = false
 position = Vector2( -0.822302, -1.13641 )
 scale = Vector2( 0.677113, 0.771483 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+[node name="options" parent="." index="6" instance=ExtResource( 31 )]
+
+visible = false
+position = Vector2( -0.822302, -1.13641 )
+scale = Vector2( 0.677113, 0.771483 )
+
+[node name="credits" parent="." index="7" instance=ExtResource( 32 )]
+
+visible = false
+position = Vector2( 0.0786915, 0.16617 )
+scale = Vector2( 1.0001, 1.00523 )
+_sections_unfolded = [ "Pause", "Theme", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -663,7 +640,7 @@ anims/car_leaving = SubResource( 2 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="7"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="9"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -673,12 +650,6 @@ playback_speed = 1.0
 anims/clouds = SubResource( 3 )
 anims/clouds_moving = SubResource( 4 )
 blend_times = [  ]
-
-[node name="options" parent="." index="8" instance=ExtResource( 31 )]
-
-visible = false
-position = Vector2( -0.822302, -1.13641 )
-scale = Vector2( 0.677113, 0.771483 )
 
 [connection signal="input_event" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_input_event"]
 

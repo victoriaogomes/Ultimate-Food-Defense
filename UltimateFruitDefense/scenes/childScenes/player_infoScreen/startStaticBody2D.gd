@@ -25,7 +25,6 @@ func _on_startStaticBody2D_input_event(viewport, event, shape_idx):
 
 
 func _on_startStaticBody2D_mouse_entered():
-	#text.set_bg_color(Color(0,0,0))
 	if(configuration.sound_effects):
 		configuration.mouseHover_sound.play()
 	if(configuration.language_english):

@@ -1,8 +1,6 @@
 extends StaticBody2D
 
-#Carregando nodes e assets para mexer no sprites "instructions" e "tomatoBox"
-onready var text = get_node("instructions")
-onready var sprite = get_node("tomatoBox")
+#Carregando assets para mexer no sprites "instructions" e "tomatoBox"
 var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Instructions.png")
 var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Instructions(v2).png")
 var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Instruções.png")
@@ -17,20 +15,20 @@ var pos_new_text
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
 	language()
-	pos_origin_sprite = sprite.get_position()
-	pos_origin_text = text.get_position()
-	pos_new_sprite = sprite.get_position()
-	pos_new_text = text.get_position()
+	pos_origin_sprite = $tomatoBox.get_position()
+	pos_origin_text = $instructions.get_position()
+	pos_new_sprite = $tomatoBox.get_position()
+	pos_new_text = $instructions.get_position()
 	pos_new_sprite.y = pos_new_sprite.y-1
 	pos_new_text.y = pos_new_text.y-1
 
 
 #Alterando o idioma do label "Instructions"/"Instruções" com base nas configurações definidas
 func language():
-	if(configuration.language_english):
-		text.set_texture(base_portuguese_text)
+	if(!configuration.language_english):
+		$instructions.set_texture(base_portuguese_text)
 	else:
-		text.set_texture(base_english_text)
+		$instructions.set_texture(base_english_text)
 
 
 #Mouse clicando no sprite "tomatoBox"
@@ -42,19 +40,19 @@ func _on_tomatoStaticBody2D_input_event(viewport, event, shape_idx):
 func _on_tomatoStaticBody2D_mouse_entered():
 	if(configuration.sound_effects):
 		configuration.mouseHover_sound.play()
-	sprite.set_position(pos_new_sprite)
-	text.set_position(pos_new_text)
-	if(configuration.language_english == true):
-		text.set_texture(hover_english_text)
+	$tomatoBox.set_position(pos_new_sprite)
+	$instructions.set_position(pos_new_text)
+	if(configuration.language_english):
+		$instructions.set_texture(hover_english_text)
 	else:
-		text.set_texture(hover_portuguese_text)
+		$instructions.set_texture(hover_portuguese_text)
 
 
 #Mouse saindo do sprite "tomatoBox"
 func _on_tomatoStaticBody2D_mouse_exited():
-	sprite.set_position(pos_origin_sprite)
-	text.set_position(pos_origin_text)
-	if(configuration.language_english == true):
-		text.set_texture(base_english_text)
+	$tomatoBox.set_position(pos_origin_sprite)
+	$instructions.set_position(pos_origin_text)
+	if(configuration.language_english):
+		$instructions.set_texture(base_english_text)
 	else:
-		text.set_texture(base_portuguese_text)
+		$instructions.set_texture(base_portuguese_text)

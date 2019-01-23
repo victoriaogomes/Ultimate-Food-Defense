@@ -30,9 +30,9 @@ func language():
 #Mouse clicando no botão "back"/"voltar"
 func _on_backStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
-		animation.play_backwards("options_configuration", -1)
+		animation.play_backwards("showing_credits", -1)
 		yield(animation, "animation_finished")
-		get_node("/root/Node2D/options").set_visible(false)
+		get_node("/root/Node2D/credits").set_visible(false)
 		banana.set_pickable(true)
 		tomato.set_pickable(true)
 		pepper.set_pickable(true)
