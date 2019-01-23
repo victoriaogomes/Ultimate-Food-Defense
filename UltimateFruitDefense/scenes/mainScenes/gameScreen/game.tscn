@@ -10,7 +10,6 @@ scale = Vector2( 1.02115, 1.06249 )
 
 [node name="game_map" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Animation", "Offset", "Region", "Visibility" ]
 
@@ -42,8 +41,8 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 [node name="MobTimer" type="Timer" parent="Node2D" index="1"]
 
 process_mode = 1
-wait_time = 0.5
-one_shot = true
+wait_time = 5.0
+one_shot = false
 autostart = false
 
 
