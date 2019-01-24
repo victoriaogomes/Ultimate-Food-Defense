@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/Mob.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/gameScreen/leftRefriArm.png" type="Texture" id=2]
@@ -6,109 +6,8 @@
 [ext_resource path="res://assets/sprites/gameScreen/Enemies/soda.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/gameScreen/rightRefriLeg.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sprites/gameScreen/rightRefriArm.png" type="Texture" id=6]
-
-[sub_resource type="Animation" id=1]
-
-resource_name = "walk"
-length = 1.2
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("leftArm:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -21.3797, 12.828 ), Vector2( -27.9955, 12.828 ), Vector2( -21.3797, 12.828 ), Vector2( -15.499, 13.563 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("leftArm:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 19.0539, 0.0, -11.4314 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("leftLeg:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 12.7791, 70.1201 ), Vector2( 30.4213, 48.8025 ), Vector2( 12.7791, 70.1201 ), Vector2( -0.709145, 83.0652 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("leftLeg:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -27.2, 0.0, 27.0001 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("corpo/rightLeg:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.00195313, 983.725 ), Vector2( -188.458, 816.696 ), Vector2( 0.00195313, 983.725 ), Vector2( 80.7705, 1022.27 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("corpo/rightLeg:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 33.8523, 0.0, -26.3633 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("corpo/rightArm:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 851.099, 405.483 ), Vector2( 972.252, 289.848 ), Vector2( 851.099, 405.483 ), Vector2( 581.869, 533.968 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("corpo/rightArm:rotation_degrees")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -14.1655, 0.0, 25.837 ]
-}
+[ext_resource path="res://Scenes/mainScenes/gameScreen/atackSoda.tres" type="Animation" id=7]
+[ext_resource path="res://Scenes/mainScenes/gameScreen/soda.tres" type="Animation" id=8]
 
 [node name="Mob" type="KinematicBody2D" index="0"]
 
@@ -133,19 +32,24 @@ rect = Rect2( -10, -10, 20, 20 )
 
 [node name="leftArm" type="Sprite" parent="." index="2"]
 
-position = Vector2( -25.4941, 12.828 )
-rotation = 0.206818
+position = Vector2( -39.9291, -18.1502 )
+rotation = 2.11315
 scale = Vector2( 0.0242142, 0.0372779 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
 
 [node name="leftLeg" type="Sprite" parent="." index="3"]
 
-position = Vector2( 23.7509, 56.8624 )
-rotation = -0.295239
+position = Vector2( 12.7791, 70.1201 )
 scale = Vector2( 0.0558197, 0.053837 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
 
 [node name="corpo" type="Sprite" parent="." index="4"]
 
@@ -153,21 +57,29 @@ position = Vector2( -0.607602, 3.70039 )
 scale = Vector2( 0.0546071, 0.0572125 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_bone_": true
+}
 
 [node name="rightLeg" type="Sprite" parent="corpo" index="0"]
 
-position = Vector2( -117.203, 879.848 )
-rotation = 0.367446
+position = Vector2( 0.00195313, 983.725 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
 
 [node name="rightArm" type="Sprite" parent="corpo" index="1"]
 
-position = Vector2( 926.445, 333.568 )
-rotation = -0.153758
+position = Vector2( -249.071, -95.8397 )
+rotation = 2.1141
 scale = Vector2( 0.643789, 0.716531 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_bone_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
 
@@ -176,7 +88,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/walk = SubResource( 1 )
+anims/atackSoda = ExtResource( 7 )
+anims/walk = ExtResource( 8 )
 blend_times = [  ]
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
