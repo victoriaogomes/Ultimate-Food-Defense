@@ -2,7 +2,7 @@
 
 [resource]
 
-resource_name = "atackPizza"
+resource_name = "atack"
 length = 2.8
 loop = true
 step = 0.01
