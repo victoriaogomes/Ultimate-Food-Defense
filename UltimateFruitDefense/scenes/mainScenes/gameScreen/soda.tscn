@@ -9,15 +9,18 @@
 [ext_resource path="res://Scenes/mainScenes/gameScreen/atackSoda.tres" type="Animation" id=7]
 [ext_resource path="res://Scenes/mainScenes/gameScreen/soda.tres" type="Animation" id=8]
 
-[node name="Mob" type="KinematicBody2D"]
+[node name="Mob" type="KinematicBody2D" index="0"]
 
-position = Vector2( 532.978, 298.061 )
+position = Vector2( 2.97522, 8.43394 )
 input_pickable = false
 collision_layer = 0
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="0"]
 
