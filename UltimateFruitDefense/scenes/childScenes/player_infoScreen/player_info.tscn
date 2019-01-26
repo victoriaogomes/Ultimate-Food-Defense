@@ -151,7 +151,7 @@ tracks/9/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Node2D2" type="Node2D" index="0"]
+[node name="Node2D2" type="Node2D"]
 
 position = Vector2( 498.284, 291.382 )
 scale = Vector2( 10.6808, 7.17136 )

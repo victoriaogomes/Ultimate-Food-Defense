@@ -24,6 +24,7 @@ _sections_unfolded = [ "Animation", "Offset", "Pause", "Region", "Visibility" ]
 
 [node name="Node2D" type="Node2D" parent="." index="1"]
 
+editor/display_folded = true
 position = Vector2( 0.00972712, -0.0615809 )
 scale = Vector2( 1.00129, 1.0044 )
 script = ExtResource( 3 )
@@ -38,6 +39,7 @@ autostart = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D" index="1"]
 
+editor/display_folded = true
 position = Vector2( -17.4555, -6.30489 )
 scale = Vector2( 0.147844, 0.723776 )
 input_pickable = false
@@ -98,10 +100,10 @@ visible = false
 position = Vector2( 0.000859295, -0.0380006 )
 scale = Vector2( 1.0001, 1.00097 )
 
-[node name="Position2D" type="Position2D" parent="." index="6"]
+[node name="Position2D2" type="Position2D" parent="." index="6"]
 
-position = Vector2( 0.0169916, 0.0517502 )
-scale = Vector2( 3.20279, 3.18516 )
+position = Vector2( 32.0012, 10.0185 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="mouse_entered" from="pauseButton" to="." method="_on_pauseButton_mouse_entered"]
 
