@@ -11,19 +11,19 @@ func _ready():
 	#print(selec)
 	match(select):
 		1:
-			var pos = Vector2(600, 95)
+			var pos = Vector2(600, -150)
 			self.set_position(pos)
 		2:
-			var pos = Vector2(600, 162)
+			var pos = Vector2(600, -89)
 			self.set_position(pos)
 		3:
-			var pos = Vector2(600, 220)
+			var pos = Vector2(600, -32)
 			self.set_position(pos)
 		4:
-			var pos = Vector2(600, 288)
+			var pos = Vector2(600, 17)
 			self.set_position(pos)
 		5:
-			var pos = Vector2(600, 330)
+			var pos = Vector2(600, 74)
 			self.set_position(pos)
 
 
@@ -35,3 +35,4 @@ func _physics_process(delta):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+	print("excluido")
