@@ -21,7 +21,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": true,
+"loop": false,
 "name": "shootDown2",
 "speed": 5.0
 }, {
@@ -31,7 +31,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
+"loop": false,
 "name": "shootCenter",
 "speed": 5.0
 }, {
@@ -41,7 +41,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
+"loop": false,
 "name": "shootUp1",
 "speed": 5.0
 }, {
@@ -56,12 +56,12 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 10 ) ],
-"loop": true,
+"loop": false,
 "name": "shootUp2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 11 ) ],
-"loop": true,
+"loop": false,
 "name": "shootDown1",
 "speed": 5.0
 } ]
@@ -77,7 +77,7 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 3.34393, -2.48639 )
 scale = Vector2( 0.0726616, 0.063358 )
 frames = SubResource( 1 )
-animation = "shootUp2"
+animation = "shootUp1"
 frame = 1
 
 [node name="PositionCenter" type="Position2D" parent="." index="1"]

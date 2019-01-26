@@ -83,6 +83,11 @@ func _on_on_pressed():
 		$off.set_hover_texture(hover_port_off_text_off)
 
 
+func _on_on_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
+
+
 #Mouse clicando no "Off"/"Deslig" das músicas
 func _on_off_pressed():
 	configuration.music_off()
@@ -96,3 +101,8 @@ func _on_off_pressed():
 		$on.set_hover_texture(hover_port_on_text_off)
 		$off.set_normal_texture(base_port_off_text_on)
 		$off.set_hover_texture(hover_port_off_text_on)
+
+
+func _on_off_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()

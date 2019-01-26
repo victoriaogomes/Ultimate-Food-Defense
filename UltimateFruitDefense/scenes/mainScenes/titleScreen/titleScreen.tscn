@@ -298,7 +298,7 @@ tracks/1/keys = {
 "values": [ Vector2( -4.36102, 0 ), Vector2( 1932.9, 0 ) ]
 }
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )

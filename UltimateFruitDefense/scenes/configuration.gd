@@ -32,7 +32,6 @@ func _ready():
 func port():
 	language_english = false
 	emit_signal("language_changed")
-	print("oi")
 
 
 #Altera o idioma do jogo para inglês

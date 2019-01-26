@@ -133,8 +133,68 @@ tracks/8/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.259647 ) ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("soundEffects/on:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("soundEffects/off:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("music/on:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("music/off:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("back:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 498.284, 291.382 )
 scale = Vector2( 10.6808, 7.17136 )
@@ -143,7 +203,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="black_background" type="ColorRect" parent="." index="0"]
 
-self_modulate = Color( 1, 1, 1, 0.558 )
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -163,7 +223,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="white_background" type="ColorRect" parent="." index="1"]
 
-self_modulate = Color( 1, 1, 1, 0.259647 )
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -183,6 +243,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="optionsTitle" type="Sprite" parent="." index="2"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.47197, -36.0233 )
 scale = Vector2( 0.0932625, 0.144711 )
 texture = ExtResource( 2 )
@@ -190,7 +251,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="box1" type="Sprite" parent="." index="3"]
 
-self_modulate = Color( 1, 1, 1, 0.922667 )
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.986531, -1.41415 )
 scale = Vector2( 0.0238927, 0.0436606 )
 texture = ExtResource( 3 )
@@ -198,6 +259,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="language" type="Sprite" parent="." index="4"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -7.00258, -16.1304 )
 scale = Vector2( 0.0728085, 0.103731 )
 texture = ExtResource( 4 )
@@ -206,6 +268,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="soundEffects" type="Sprite" parent="." index="5"]
 
 editor/display_folded = true
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -5.6427, 2.66025 )
 scale = Vector2( 0.0633886, 0.110655 )
 texture = ExtResource( 5 )
@@ -214,6 +277,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="on" type="TextureButton" parent="soundEffects" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -235,10 +299,11 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "Visibility" ]
 
 [node name="off" type="TextureButton" parent="soundEffects" index="1"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -260,11 +325,11 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "Visibility" ]
 
 [node name="music" type="Sprite" parent="." index="6"]
 
-editor/display_folded = true
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -9.84626, 19.5016 )
 scale = Vector2( 0.0633886, 0.110655 )
 texture = ExtResource( 11 )
@@ -273,6 +338,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="on" type="TextureButton" parent="music" index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -294,10 +360,11 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "Visibility" ]
 
 [node name="off" type="TextureButton" parent="music" index="1"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -319,7 +386,7 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
 
@@ -333,6 +400,7 @@ blend_times = [  ]
 
 [node name="english" type="TextureButton" parent="." index="8"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -359,6 +427,7 @@ _sections_unfolded = [ "Anchor", "Rect", "Textures" ]
 
 [node name="portuguese" type="TextureButton" parent="." index="9"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -384,6 +453,7 @@ _sections_unfolded = [ "Grow Direction", "Rect", "Textures" ]
 
 [node name="back" type="TextureButton" parent="." index="10"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -407,19 +477,33 @@ texture_normal = ExtResource( 16 )
 texture_hover = ExtResource( 17 )
 expand = true
 script = ExtResource( 18 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Textures", "Visibility" ]
+
+[connection signal="mouse_entered" from="soundEffects/on" to="soundEffects" method="_on_on_mouse_entered"]
 
 [connection signal="pressed" from="soundEffects/on" to="soundEffects" method="_on_on_pressed"]
 
+[connection signal="mouse_entered" from="soundEffects/off" to="soundEffects" method="_on_off_mouse_entered"]
+
 [connection signal="pressed" from="soundEffects/off" to="soundEffects" method="_on_off_pressed"]
+
+[connection signal="mouse_entered" from="music/on" to="music" method="_on_on_mouse_entered"]
 
 [connection signal="pressed" from="music/on" to="music" method="_on_on_pressed"]
 
+[connection signal="mouse_entered" from="music/off" to="music" method="_on_off_mouse_entered"]
+
 [connection signal="pressed" from="music/off" to="music" method="_on_off_pressed"]
+
+[connection signal="mouse_entered" from="english" to="." method="_on_english_mouse_entered"]
 
 [connection signal="pressed" from="english" to="." method="_on_english_pressed"]
 
+[connection signal="mouse_entered" from="portuguese" to="." method="_on_portuguese_mouse_entered"]
+
 [connection signal="pressed" from="portuguese" to="." method="_on_portuguese_pressed"]
+
+[connection signal="mouse_entered" from="back" to="back" method="_on_back_mouse_entered"]
 
 [connection signal="pressed" from="back" to="back" method="_on_back_pressed"]
 

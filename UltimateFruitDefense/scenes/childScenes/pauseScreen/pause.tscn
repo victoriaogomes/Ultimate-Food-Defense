@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/childScenes/pauseScreen/pause.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/optionsScreen/scenario/option-field.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/sprites/pause/texts/english/mainMenu(v2).png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/pause/texts/english/resumeGame.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/pause/texts/english/resumeGame(v2).png" type="Texture" id=8]
+[ext_resource path="res://scenes/childScenes/optionsScreen/options.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Animation" id=1]
 
@@ -88,7 +89,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Node2" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 511.906, 299.98 )
@@ -138,6 +139,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="box1" type="Sprite" parent="." index="2"]
 
 pause_mode = 2
+editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.922667 )
 position = Vector2( 0.610363, 0.435844 )
 scale = Vector2( 0.014474, 0.0345279 )
@@ -234,9 +236,21 @@ anims/pause = SubResource( 1 )
 blend_times = [  ]
 _sections_unfolded = [ "Pause" ]
 
+[node name="options" parent="." index="4" instance=ExtResource( 9 )]
+
+visible = false
+position = Vector2( -0.909736, -0.880949 )
+scale = Vector2( 0.661486, 0.768004 )
+
+[connection signal="mouse_entered" from="box1/options" to="." method="_on_options_mouse_entered"]
+
 [connection signal="pressed" from="box1/options" to="." method="_on_options_pressed"]
 
+[connection signal="mouse_entered" from="box1/mainMenu" to="." method="_on_mainMenu_mouse_entered"]
+
 [connection signal="pressed" from="box1/mainMenu" to="." method="_on_mainMenu_pressed"]
+
+[connection signal="mouse_entered" from="box1/resumeGame" to="." method="_on_resumeGame_mouse_entered"]
 
 [connection signal="pressed" from="box1/resumeGame" to="." method="_on_resumeGame_pressed"]
 

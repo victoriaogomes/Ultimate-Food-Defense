@@ -6,12 +6,7 @@ var hover_back_english = preload("res://Assets/Sprites/OptionsScreen/Texts/Engli
 var base_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar.png")
 var hover_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar(v2).png")
 onready var animation = get_node("../AnimationPlayer")
-
-onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")
-onready var tomato = get_node("/root/Node2D/Node2D/tomatoStaticBody2D")
-onready var pepper = get_node("/root/Node2D/Node2D/pepperStaticBody2D")
-onready var cucumber = get_node("/root/Node2D/Node2D/cucumberStaticBody2D")
-onready var pineapple = get_node("/root/Node2D/Node2D/pineappleStaticBody2D")
+var scene
 
 
 #Chama a função "language" para colocar o text do sprite no idioma correto
@@ -32,11 +27,25 @@ func language():
 
 #Mouse clicando no botão "back"/"voltar"
 func _on_back_pressed():
-	animation.play_backwards("options_configuration", -1)
-	yield(animation, "animation_finished")
-	get_node("/root/Node2D/options").set_visible(false)
-	banana.set_pickable(true)
-	tomato.set_pickable(true)
-	pepper.set_pickable(true)
-	cucumber.set_pickable(true)
-	pineapple.set_pickable(true)
+	scene = get_tree().get_current_scene().filename
+	scene.erase(0,scene.find_last("/")+1)
+	scene.erase(scene.findn(".tscn"), 5)
+	if(scene == "titleScreen"):
+		get_node("/root/Node2D/options").set_visible(false)
+		get_node("/root/Node2D/Node2D/bananaStaticBody2D").set_pickable(true)
+		get_node("/root/Node2D/Node2D/tomatoStaticBody2D").set_pickable(true)
+		get_node("/root/Node2D/Node2D/pepperStaticBody2D").set_pickable(true)
+		get_node("/root/Node2D/Node2D/cucumberStaticBody2D").set_pickable(true)
+		get_node("/root/Node2D/Node2D/pineappleStaticBody2D").set_pickable(true)
+		animation.play_backwards("options_configuration", -1)
+		yield(animation, "animation_finished")
+	else:
+		get_node("/root/Node2D/pause/options").set_visible(false)
+		get_node("/root/Node2D/pause/black_background").set_visible(true)
+		get_node("/root/Node2D/pause/white_background").set_visible(true)
+		get_node("/root/Node2D/pause/box1").set_visible(true)
+
+
+func _on_back_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
