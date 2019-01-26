@@ -23,7 +23,4 @@ func on_Mob_TimeOut():
 		$MobTimer.set_wait_time(waitTime)
 		mob = enemies_types[randi()%3].instance()
 		add_child(mob)
-		quant+=1
-		#if quant == 4:
-		#	$MobTimer.stop()
 		#yield($MobTimer.start(5.0), "timeout")
