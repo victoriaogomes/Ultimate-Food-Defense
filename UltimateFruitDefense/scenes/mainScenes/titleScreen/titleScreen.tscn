@@ -298,7 +298,7 @@ tracks/1/keys = {
 "values": [ Vector2( -4.36102, 0 ), Vector2( 1932.9, 0 ) ]
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
@@ -348,6 +348,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Node2D" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
 _sections_unfolded = [ "Transform" ]

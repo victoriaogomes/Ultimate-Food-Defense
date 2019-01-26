@@ -1,13 +1,5 @@
 extends Sprite
 
-# Nodes para mudar os textos dos boxes
-onready var pineapple = get_node("/root/Node2D/Node2D/pineappleStaticBody2D")
-onready var tomato = get_node("/root/Node2D/Node2D/tomatoStaticBody2D")
-onready var pepper = get_node("/root/Node2D/Node2D/pepperStaticBody2D")
-onready var cucumber = get_node("/root/Node2D/Node2D/cucumberStaticBody2D")
-onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")
-onready var gameTitle = get_node("/root/Node2D/gameTitle")
-
 # Nodes e assets para mexer no texto "Options"/Opções"
 onready var optionsText = get_node("../optionsTitle")
 var options_english = preload("res://assets/sprites/optionsScreen/Texts/English/Options.png")
@@ -71,14 +63,8 @@ func _on_englishStaticBody2D_input_event(viewport, event, shape_idx):
 		portugueseText.set_texture(base_portuguese_text_off)
 		configuration.engli()
 		backText.language()
-		pineapple.language()
-		tomato.language()
-		pepper.language()
-		cucumber.language()
-		banana.language()
 		sound_effects.language()
 		music.language()
-		gameTitle.language()
 
 
 #Mouse entrando no texto "inglês"/"english"
@@ -110,14 +96,8 @@ func _on_portugueseStaticBody2D_input_event(viewport, event, shape_idx):
 		portugueseText.set_texture(hover_portuguese_text_on)
 		configuration.port()
 		backText.language()
-		pineapple.language()
-		tomato.language()
-		pepper.language()
-		cucumber.language()
-		banana.language()
 		sound_effects.language()
 		music.language()
-		gameTitle.language()
 
 
 #Mouse entrando no texto "portugues"/"portuguese"

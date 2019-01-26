@@ -2,7 +2,7 @@ extends Node2D
 
 #Script "Global", carregado por todas as cenas
 
-#Variáveis para as configurações do jogo: idioma, efeitos sonoros, música
+#Variáveis para as configurações do jogo: idioma, música, efeitos sonoros
 var language_english
 var music
 var sound_effects
@@ -14,6 +14,9 @@ var player_sex
 
 #Variável que armazena o nome do jogador
 var player_name
+
+#Sinal emitido quando o idioma do jogo é mudado
+signal language_changed
 
 
 #Por default, coloca o idioma em português e os efeitos sonoros e a música ligados
@@ -28,11 +31,14 @@ func _ready():
 #Altera o idioma do jogo para português
 func port():
 	language_english = false
+	emit_signal("language_changed")
+	print("oi")
 
 
 #Altera o idioma do jogo para inglês
 func engli():
 	language_english = true
+	emit_signal("language_changed")
 
 
 #Liga os efeitos sonoros do jogo

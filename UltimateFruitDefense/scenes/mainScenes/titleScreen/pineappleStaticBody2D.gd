@@ -25,7 +25,7 @@ var pos_new_text
 
 #Chama a função para colocar sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
-	language()
+	configuration.connect("language_changed", self, "language")
 	pos_origin_sprite = $pineappleBox.get_position()
 	pos_origin_text = $newGame.get_position()
 	pos_new_sprite = $pineappleBox.get_position()
@@ -36,10 +36,10 @@ func _ready():
 
 #Alterando o idioma do label "New game"/"Novo jogo" com base nas configurações definidas
 func language():
-	if(!configuration.language_english):
-		$newGame.set_texture(base_portuguese_text)
-	else:
+	if(configuration.language_english):
 		$newGame.set_texture(base_english_text)
+	else:
+		$newGame.set_texture(base_portuguese_text)
 
 
 #Mouse clicando no sprite "pineappleBox"

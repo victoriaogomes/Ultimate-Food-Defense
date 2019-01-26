@@ -24,18 +24,13 @@ var pos_new_text
 
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
-	language()
-	self.set_process(true)
+	configuration.connect("language_changed", self, "language")
 	pos_origin_sprite = $pepperBox.get_position()
 	pos_origin_text = $credits.get_position()
 	pos_new_sprite = $pepperBox.get_position()
 	pos_new_text = $credits.get_position()
 	pos_new_sprite.y = pos_new_sprite.y-1
 	pos_new_text.y = pos_new_text.y-1
-
-
-func _process(delta):
-	language()
 
 
 #Alterando o idioma do label "Credits"/"Créditos" com base nas configurações definidas

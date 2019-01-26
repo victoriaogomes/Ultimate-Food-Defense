@@ -24,8 +24,7 @@ var pos_new_text
 
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
-	language()
-	self.set_process(true)
+	configuration.connect("language_changed", self, "language")
 	pos_origin_sprite = $cucumberBox.get_position()
 	pos_origin_text = $options.get_position()
 	pos_new_sprite = $cucumberBox.get_position()
