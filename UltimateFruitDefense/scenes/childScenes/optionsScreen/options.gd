@@ -45,6 +45,11 @@ func _on_english_pressed():
 	$portuguese.set_hover_texture(hover_portuguese_text_off)
 
 
+func _on_english_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
+
+
 func _on_portuguese_pressed():
 	configuration.port()
 	$optionsTitle.set_texture(options_port)
@@ -55,3 +60,8 @@ func _on_portuguese_pressed():
 	$english.set_hover_texture(hover_english_text_off)
 	$portuguese.set_normal_texture(base_portuguese_text_on)
 	$portuguese.set_hover_texture(hover_portuguese_text_on)
+
+
+func _on_portuguese_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()

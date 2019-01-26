@@ -16,6 +16,7 @@ var base_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br
 var hover_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/voltarjogo(v2).png")
 
 func _ready():
+	language()
 	configuration.connect("language_changed", self, "language")
 
 func language():
@@ -36,16 +37,39 @@ func language():
 
 #Mouse clicando no sprite "mainMenu"
 func _on_mainMenu_pressed():
-	pass # replace with function body
+	$AnimationPlayer.play_backwards("pause", -1)
+	yield($AnimationPlayer, "animation_finished")
+	get_tree().change_scene("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
+
+
+func _on_mainMenu_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
 
 
 #Mouse clicando no sprite "options"
 func _on_options_pressed():
-	pass # replace with function body
+	$options.set_visible(true)
+	$black_background.set_visible(false)
+	$white_background.set_visible(false)
+	$box1.set_visible(false)
+	$options/AnimationPlayer.play("options_configuration", -1, 1.0, false)
+	yield($options/AnimationPlayer, "animation_finished")
+
+
+func _on_options_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
 
 
 #Mouse clicando no sprite "resumeGame"
 func _on_resumeGame_pressed():
 		$AnimationPlayer.play_backwards("pause", -1)
 		yield($AnimationPlayer, "animation_finished")
+		get_node("/root/Node2D/pause").set_visible(false)
 		get_tree().set_pause(false)
+
+
+func _on_resumeGame_mouse_entered():
+	if(configuration.sound_effects):
+		configuration.mouseHover_sound.play()
