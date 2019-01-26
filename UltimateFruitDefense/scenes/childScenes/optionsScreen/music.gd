@@ -30,115 +30,69 @@ onready var music_portuguese_position = self.get_position()
 
 #Chama função para ver em qual idioma os sprites devem ser exibido
 func _ready():
-	language()
+	configuration.connect("language_changed", self, "language")
 	music_portuguese_position.x +=0.6
 
 
 #Alterando o idioma do label "Off"/"Des.", "On"/"Lig." e "Music"/"Música" com base nas configurações definidas
 func language():
 	if(configuration.music):
-		if(!configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(base_port_on_text_on)
-			$off_musicStaticBody2D2/off.set_texture(base_port_off_text_off)
+		if(configuration.language_english):
+			$on.set_normal_texture(base_english_on_text_on)
+			$on.set_hover_texture(hover_english_on_text_on)
+			$off.set_normal_texture(base_english_off_text_off)
+			$off.set_hover_texture(hover_english_off_text_off)
 			self.set_texture(music_port)
 			self.set_position(music_portuguese_position)
 		else:
-			$on_musicStaticBody2D2/on.set_texture(base_english_on_text_on)
-			$off_musicStaticBody2D2/off.set_texture(base_english_off_text_off)
+			$on.set_normal_texture(base_port_on_text_on)
+			$on.set_hover_texture(hover_port_on_text_on)
+			$off.set_normal_texture(base_port_off_text_off)
+			$off.set_hover_texture(hover_port_off_text_off)
 			self.set_texture(music_english)
 			self.set_position(music_english_position)
 	else:
-		if(!configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(base_port_on_text_off)
-			$off_musicStaticBody2D2/off.set_texture(base_port_off_text_on)
+		if(configuration.language_english):
+			$on.set_normal_texture(base_english_on_text_off)
+			$on.set_hover_texture(hover_english_on_text_off)
+			$off.set_normal_texture(base_english_off_text_on)
+			$off.set_hover_texture(hover_english_off_text_on)
 			self.set_texture(music_port)
 			self.set_position(music_portuguese_position)
 		else:
-			$on_musicStaticBody2D2/on.set_texture(base_english_on_text_off)
-			$off_musicStaticBody2D2/off.set_texture(base_english_off_text_on)
+			$on.set_normal_texture(base_port_on_text_off)
+			$on.set_hover_texture(hover_port_on_text_off)
+			$off.set_normal_texture(base_port_off_text_on)
+			$off.set_hover_texture(hover_port_off_text_on)
 			self.set_texture(music_english)
 			self.set_position(music_english_position)
 
 
 #Mouse clicando no "On"/"Lig" das músicas
-func _on_on_musicStaticBody2D2_input_event(viewport, event, shape_idx):
-	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
-		configuration.music_on()
-		if(configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(hover_english_on_text_on)
-			$off_musicStaticBody2D2/off.set_texture(base_english_off_text_off)
-		else:
-			$on_musicStaticBody2D2/on.set_texture(hover_port_on_text_on)
-			$off_musicStaticBody2D2/off.set_texture(base_port_off_text_off)
-
-
-#Mouse entrando no "On"/"Lig" das músicas
-func _on_on_musicStaticBody2D2_mouse_entered():
-	if(configuration.sound_effects):
-		configuration.mouseHover_sound.play()
-	if(configuration.music):
-		if(configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(hover_english_on_text_on)
-		else:
-			$on_musicStaticBody2D2/on.set_texture(hover_port_on_text_on)
+func _on_on_pressed():
+	configuration.music_on()
+	if(configuration.language_english):
+		$on.set_normal_texture(base_english_on_text_on)
+		$on.set_hover_texture(hover_english_on_text_on)
+		$off.set_normal_texture(base_english_off_text_off)
+		$off.set_hover_texture(hover_english_off_text_off)
 	else:
-		if(configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(hover_english_on_text_off)
-		else:
-			$on_musicStaticBody2D2/on.set_texture(hover_port_on_text_off)
-
-
-#Mouse saindo do "On"/"Lig" das músicas
-func _on_on_musicStaticBody2D2_mouse_exited():
-	if(configuration.music):
-		if(configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(base_english_on_text_on)
-		else:
-			$on_musicStaticBody2D2/on.set_texture(base_port_on_text_on)
-	else:
-		if(configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(base_english_on_text_off)
-		else:
-			$on_musicStaticBody2D2/on.set_texture(base_port_on_text_off)
+		$on.set_normal_texture(base_port_on_text_on)
+		$on.set_hover_texture(hover_port_on_text_on)
+		$off.set_normal_texture(base_port_off_text_off)
+		$off.set_hover_texture(hover_port_off_text_off)
 
 
 #Mouse clicando no "Off"/"Deslig" das músicas
-func _on_off_musicStaticBody2D2_input_event(viewport, event, shape_idx):
-	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
-		configuration.music_off()
-		if(configuration.language_english):
-			$on_musicStaticBody2D2/on.set_texture(base_english_on_text_off)
-			$off_musicStaticBody2D2/off.set_texture(hover_english_off_text_on)
-		else:
-			$on_musicStaticBody2D2/on.set_texture(base_port_on_text_off)
-			$off_musicStaticBody2D2/off.set_texture(hover_port_off_text_on)
-
-
-#Mouse entrando no "Off"/"Deslig" das músicas
-func _on_off_musicStaticBody2D2_mouse_entered():
-	if(configuration.sound_effects):
-		configuration.mouseHover_sound.play()
-	if(!configuration.music):
-		if(configuration.language_english):
-			$off_musicStaticBody2D2/off.set_texture(hover_english_off_text_on)
-		else:
-			$off_musicStaticBody2D2/off.set_texture(hover_port_off_text_on)
+func _on_off_pressed():
+	configuration.music_off()
+	if(configuration.language_english):
+		$on.set_normal_texture(base_english_on_text_off)
+		$on.set_hover_texture(hover_english_on_text_off)
+		$off.set_normal_texture(base_english_off_text_on)
+		$off.set_hover_texture(hover_english_off_text_on)
 	else:
-		if(configuration.language_english):
-			$off_musicStaticBody2D2/off.set_texture(hover_english_off_text_off)
-		else:
-			$off_musicStaticBody2D2/off.set_texture(hover_port_off_text_off)
-
-
-#Mouse saindo do "Off"/"Deslig" das músicas
-func _on_off_musicStaticBody2D2_mouse_exited():
-	if(configuration.music):
-		if(configuration.language_english):
-			$off_musicStaticBody2D2/off.set_texture(base_english_off_text_off)
-		else:
-			$off_musicStaticBody2D2/off.set_texture(base_port_off_text_off)
-	else:
-		if(configuration.language_english):
-			$off_musicStaticBody2D2/off.set_texture(base_english_off_text_on)
-		else:
-			$off_musicStaticBody2D2/off.set_texture(base_port_off_text_on)
+		$on.set_normal_texture(base_port_on_text_off)
+		$on.set_hover_texture(hover_port_on_text_off)
+		$off.set_normal_texture(base_port_off_text_on)
+		$off.set_hover_texture(hover_port_off_text_on)

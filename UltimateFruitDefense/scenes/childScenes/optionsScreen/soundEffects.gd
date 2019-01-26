@@ -28,117 +28,72 @@ onready var soundEffects_english_position = self.get_position()
 onready var soundEffects_portuguese_position = self.get_position()
 
 
-#Chama função para ver em qual idioma os sprites devem ser exibido
+#Chama função para ver em qual idioma os sprites devem ser exibidos
 func _ready():
 	language()
+	configuration.connect("language_changed", self, "language")
 	soundEffects_portuguese_position.x +=0.9
 
 
 #Alterando o idioma do label "Off/Des.", "On/Lig." e "Sound effects/Efeitos sonoros" com base nas configurações definidas
 func language():
 	if(configuration.sound_effects == true):
-		if(!configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(base_port_on_text_on)
-			$soundEffects_offStaticBody2D/off.set_texture(base_port_off_text_off)
-			self.set_texture(sound_effects_port)
-			self.set_position(soundEffects_portuguese_position)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(base_english_on_text_on)
-			$soundEffects_offStaticBody2D/off.set_texture(base_english_off_text_off)
+		if(configuration.language_english):
+			$on.set_normal_texture(base_english_on_text_on)
+			$on.set_hover_texture(hover_english_on_text_on)
+			$off.set_normal_texture(base_english_off_text_off)
+			$off.set_hover_texture(hover_english_off_text_off)
 			self.set_texture(sound_effects_english)
 			self.set_position(soundEffects_english_position)
+		else:
+			$on.set_normal_texture(base_port_on_text_on)
+			$on.set_hover_texture(hover_port_on_text_on)
+			$off.set_normal_texture(base_port_off_text_off)
+			$off.set_hover_texture(hover_port_off_text_off)
+			self.set_texture(sound_effects_port)
+			self.set_position(soundEffects_portuguese_position)
 	else:
-		if(!configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(base_port_on_text_off)
-			$soundEffects_offStaticBody2D/off.set_texture(base_port_off_text_on)
-			self.set_texture(sound_effects_port)
-			self.set_position(soundEffects_portuguese_position)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(base_english_on_text_off)
-			$soundEffects_offStaticBody2D/off.set_texture(base_english_off_text_on)
+		if(configuration.language_english):
+			$on.set_normal_texture(base_english_on_text_off)
+			$on.set_hover_texture(hover_english_on_text_off)
+			$off.set_normal_texture(base_english_off_text_on)
+			$off.set_hover_texture(hover_english_off_text_on)
 			self.set_texture(sound_effects_english)
 			self.set_position(soundEffects_english_position)
+		else:
+			$on.set_normal_texture(base_port_on_text_off)
+			$on.set_hover_texture(hover_port_on_text_off)
+			$off.set_normal_texture(base_port_off_text_on)
+			$off.set_hover_texture(hover_port_off_text_on)
+			self.set_texture(sound_effects_port)
+			self.set_position(soundEffects_portuguese_position)
 
 
 #Mouse clicando no "On"/"Lig" dos efeitos musicais
-func _on_soundEffects_onStaticBody2D_input_event(viewport, event, shape_idx):
-	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
-		configuration.sound_effects_on()
-		if(configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(hover_english_on_text_on)
-			$soundEffects_offStaticBody2D/off.set_texture(base_english_off_text_off)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(hover_port_on_text_on)
-			$soundEffects_offStaticBody2D/off.set_texture(base_port_off_text_off)
-
-
-#Mouse entrando no "On"/"Lig" dos efeitos musicais
-func _on_soundEffects_onStaticBody2D_mouse_entered():
-	if(configuration.sound_effects):
-		configuration.mouseHover_sound.play()
-	if(configuration.sound_effects):
-		if(configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(hover_english_on_text_on)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(hover_port_on_text_on)
+func _on_on_pressed():
+	configuration.sound_effects_on()
+	if(configuration.language_english):
+		$on.set_normal_texture(base_english_on_text_on)
+		$on.set_hover_texture(hover_english_on_text_on)
+		$off.set_normal_texture(base_english_off_text_off)
+		$off.set_hover_texture(hover_english_off_text_off)
 	else:
-		if(configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(hover_english_on_text_off)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(hover_port_on_text_off)
-
-
-#Mouse saindo do "On"/"Lig" dos efeitos musicais
-func _on_soundEffects_onStaticBody2D_mouse_exited():
-	if(configuration.sound_effects):
-		if(configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(base_english_on_text_on)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(base_port_on_text_on)
-	else:
-		if(configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(base_english_on_text_off)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(base_port_on_text_off)
+		$on.set_normal_texture(base_port_on_text_on)
+		$on.set_hover_texture(hover_port_on_text_on)
+		$off.set_normal_texture(base_port_off_text_off)
+		$off.set_hover_texture(hover_port_off_text_off)
 
 
 #Mouse clicando no "Off"/"Deslig" dos efeitos musicais
-func _on_soundEffects_offStaticBody2D_input_event(viewport, event, shape_idx):
-	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
-		configuration.sound_effects_off()
-		if(configuration.language_english):
-			$soundEffects_onStaticBody2D/on.set_texture(base_english_on_text_off)
-			$soundEffects_offStaticBody2D/off.set_texture(hover_english_off_text_on)
-		else:
-			$soundEffects_onStaticBody2D/on.set_texture(base_port_on_text_off)
-			$soundEffects_offStaticBody2D/off.set_texture(hover_port_off_text_on)
-
-
-#Mouse entrando no "Off"/"Deslig" dos efeitos musicais
-func _on_soundEffects_offStaticBody2D_mouse_entered():
-	if(configuration.sound_effects):
-		configuration.mouseHover_sound.play()
-	if(!configuration.sound_effects):
-		if(configuration.language_english):
-			$soundEffects_offStaticBody2D/off.set_texture(hover_english_off_text_on)
-		else:
-			$soundEffects_offStaticBody2D/off.set_texture(hover_port_off_text_on)
+func _on_off_pressed():
+	configuration.sound_effects_off()
+	if(configuration.language_english):
+		$on.set_normal_texture(base_english_on_text_off)
+		$on.set_hover_texture(hover_english_on_text_off)
+		$off.set_normal_texture(base_english_off_text_on)
+		$off.set_hover_texture(hover_english_off_text_on)
 	else:
-		if(configuration.language_english):
-			$soundEffects_offStaticBody2D/off.set_texture(hover_english_off_text_off)
-		else:
-			$soundEffects_offStaticBody2D/off.set_texture(hover_port_off_text_off)
-
-
-#Mouse saindo no "Off"/"Deslig" dos efeitos musicais
-func _on_soundEffects_offStaticBody2D_mouse_exited():
-	if(configuration.sound_effects):
-		if(configuration.language_english):
-			$soundEffects_offStaticBody2D/off.set_texture(base_english_off_text_off)
-		else:
-			$soundEffects_offStaticBody2D/off.set_texture(base_port_off_text_off)
-	else:
-		if(configuration.language_english):
-			$soundEffects_offStaticBody2D/off.set_texture(base_english_off_text_on)
-		else:
-			$soundEffects_offStaticBody2D/off.set_texture(base_port_off_text_on)
+		$on.set_normal_texture(base_port_on_text_off)
+		$on.set_hover_texture(hover_port_on_text_off)
+		$off.set_normal_texture(base_port_off_text_on)
+		$off.set_hover_texture(hover_port_off_text_on)

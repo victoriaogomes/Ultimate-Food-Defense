@@ -16,8 +16,23 @@ var base_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br
 var hover_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/voltarjogo(v2).png")
 
 func _ready():
-	pass
+	configuration.connect("language_changed", self, "language")
 
+func language():
+	if(configuration.language_english):
+		$box1/options.set_normal_texture(base_options_english)
+		$box1/options.set_hover_texture(hover_options_english)
+		$box1/mainMenu.set_normal_texture(base_mainMenu_english)
+		$box1/mainMenu.set_hover_texture(hover_mainMenu_english)
+		$box1/resumeGame.set_normal_texture(base_resumeGame_english)
+		$box1/resumeGame.set_hover_texture(hover_resumeGame_english)
+	else:
+		$box1/options.set_normal_texture(base_options_portuguese)
+		$box1/options.set_hover_texture(hover_options_portuguese)
+		$box1/mainMenu.set_normal_texture(base_mainMenu_portuguese)
+		$box1/mainMenu.set_hover_texture(hover_mainMenu_portuguese)
+		$box1/resumeGame.set_normal_texture(base_resumeGame_portuguese)
+		$box1/resumeGame.set_hover_texture(hover_resumeGame_portuguese)
 
 #Mouse clicando no sprite "mainMenu"
 func _on_mainMenu_pressed():

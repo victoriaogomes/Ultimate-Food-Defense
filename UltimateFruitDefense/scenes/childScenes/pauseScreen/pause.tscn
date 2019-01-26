@@ -88,7 +88,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Node2" type="Node2D"]
+[node name="Node2" type="Node2D" index="0"]
 
 pause_mode = 2
 position = Vector2( 511.906, 299.98 )
