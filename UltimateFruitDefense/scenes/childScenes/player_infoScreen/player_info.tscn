@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/childScenes/player_infoScreen/Node2D2.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/player_infoScreen/shadow.png" type="Texture" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://assets/sprites/player_infoScreen/player_sex/boy.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start.png" type="Texture" id=12]
 [ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start(v2).png" type="Texture" id=13]
-[ext_resource path="res://scenes/childScenes/player_infoScreen/start.gd" type="Script" id=14]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -193,7 +192,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="my name is" type="Sprite" parent="." index="4"]
 
-editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -4.00773, -10.928 )
 scale = Vector2( 0.0728085, 0.103731 )
@@ -237,7 +235,7 @@ caret_block_mode = false
 caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
-_sections_unfolded = [ "Material", "Pause", "Theme", "Visibility" ]
+_sections_unfolded = [ "Caret", "Material", "Pause", "Theme", "Visibility" ]
 
 [node name="i am a" type="Sprite" parent="." index="5"]
 
@@ -339,8 +337,30 @@ group = null
 texture_normal = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
 expand = true
-script = ExtResource( 14 )
 _sections_unfolded = [ "Textures", "Visibility" ]
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="." index="8"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 200.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Please Confirm..."
+resizable = false
+dialog_text = "Please"
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog", "Popup" ]
 
 [connection signal="input_event" from="i am a/femaleStaticBody2D" to="i am a/femaleStaticBody2D" method="_on_femaleStaticBody2D_input_event"]
 
@@ -354,6 +374,6 @@ _sections_unfolded = [ "Textures", "Visibility" ]
 
 [connection signal="mouse_exited" from="i am a/maleStaticBody2D" to="i am a/femaleStaticBody2D" method="_on_maleStaticBody2D_mouse_exited"]
 
-[connection signal="pressed" from="start" to="start" method="_on_start_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
 
 
