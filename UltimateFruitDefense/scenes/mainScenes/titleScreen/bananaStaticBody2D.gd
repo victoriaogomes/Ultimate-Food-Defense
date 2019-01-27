@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 #Carregando assets para mexer no sprites "loadGame" e "bananaBox"
-var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Load game.png")
-var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Load game(v2).png")
-var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Jogos salvos.png")
-var hover_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Jogos salvos(v2).png")
+var base_english_text = preload("res://assets/sprites/titleScreen/texts/English/Load game.png")
+var hover_english_text = preload("res://assets/sprites/titleScreen/texts/English/Load game(v2).png")
+var base_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Jogos salvos.png")
+var hover_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Jogos salvos(v2).png")
 
 #Variáveis para controlar a posição do texto "Load Game"/"Jogos Salvos" e do sprite "bananaBox"
 var pos_origin_sprite

@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 #Carregando assets para mexer no sprites "instructions" e "tomatoBox"
-var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Instructions.png")
-var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Instructions(v2).png")
-var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Instruções.png")
-var hover_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Instruções(v2).png")
+var base_english_text = preload("res://assets/sprites/titleScreen/texts/English/Instructions.png")
+var hover_english_text = preload("res://assets/sprites/titleScreen/texts/English/Instructions(v2).png")
+var base_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Instruções.png")
+var hover_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Instruções(v2).png")
 
 #Variáveis para controlar a posição do texto "Instructions"/"Instruções" e do sprite "tomatoBox"
 var pos_origin_sprite

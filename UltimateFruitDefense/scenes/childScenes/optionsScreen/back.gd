@@ -1,10 +1,10 @@
 extends TextureButton
 
 #Carregando assets para mexer no sprite "back"
-var base_back_english = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Back.png")
-var hover_back_english = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Back(v2).png")
-var base_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar.png")
-var hover_back_portuguese = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Voltar(v2).png")
+var base_back_english = preload("res://assets/sprites/optionsScreen/texts/English/Back.png")
+var hover_back_english = preload("res://assets/sprites/optionsScreen/texts/English/Back(v2).png")
+var base_back_portuguese = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Voltar.png")
+var hover_back_portuguese = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Voltar(v2).png")
 onready var animation = get_node("../AnimationPlayer")
 var scene
 
