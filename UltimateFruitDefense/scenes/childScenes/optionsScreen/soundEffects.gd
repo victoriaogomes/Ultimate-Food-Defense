@@ -1,24 +1,24 @@
 extends Sprite
 
 #Carregando assets para mexer no sprite "On"/"Lig."
-var base_english_on_text_on = preload("res://assets/sprites/optionsScreen/texts/English/on.png")
-var base_english_on_text_off = preload("res://assets/sprites/optionsScreen/texts/English/on(v3).png")
+var base_english_on_text_on = preload("res://assets/sprites/optionsScreen/texts/English/On.png")
+var base_english_on_text_off = preload("res://assets/sprites/optionsScreen/texts/English/On(v3).png")
 var base_port_on_text_on = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Lig.png")
 var base_port_on_text_off = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Lig(v3).png")
-var hover_english_on_text_on = preload("res://assets/sprites/optionsScreen/texts/English/on(v2).png")
-var hover_english_on_text_off = preload("res://assets/sprites/optionsScreen/texts/English/on(v4).png")
+var hover_english_on_text_on = preload("res://assets/sprites/optionsScreen/texts/English/On(v2).png")
+var hover_english_on_text_off = preload("res://assets/sprites/optionsScreen/texts/English/On(v4).png")
 var hover_port_on_text_on = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Lig(v2).png")
 var hover_port_on_text_off = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Lig(v4).png")
 
 #Carregando assets para mexer no sprite "Off"/"Des."
 var base_port_off_text_on = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Des.png")
 var base_port_off_text_off = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Des(v3).png")
-var base_english_off_text_on = preload("res://assets/sprites/optionsScreen/texts/English/off.png")
-var base_english_off_text_off = preload("res://assets/sprites/optionsScreen/texts/English/off(v3).png")
+var base_english_off_text_on = preload("res://assets/sprites/optionsScreen/texts/English/Off.png")
+var base_english_off_text_off = preload("res://assets/sprites/optionsScreen/texts/English/Off(v3).png")
 var hover_port_off_text_on = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Des(v2).png")
 var hover_port_off_text_off = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Des(v4).png")
-var hover_english_off_text_on = preload("res://assets/sprites/optionsScreen/texts/English/off(v2).png")
-var hover_english_off_text_off = preload("res://assets/sprites/optionsScreen/texts/English/off(v4).png")
+var hover_english_off_text_on = preload("res://assets/sprites/optionsScreen/texts/English/Off(v2).png")
+var hover_english_off_text_off = preload("res://assets/sprites/optionsScreen/texts/English/Off(v4).png")
 
 #Carregando assets para mexer no sprite "Sound Effects"
 var sound_effects_english = preload("res://assets/sprites/optionsScreen/texts/English/Sound effects.png")
