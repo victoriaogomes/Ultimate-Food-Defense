@@ -2,10 +2,10 @@ extends StaticBody2D
 
 #Carregando assets para mexer no sprites "credits" e "pepperBox"
 var next_scene = preload("res://scenes/childScenes/creditScreen/credit.tscn")
-var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Credits.png")
-var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Credits(v2).png")
-var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Créditos.png")
-var hover_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Créditos(v2).png")
+var base_english_text = preload("res://assets/sprites/titleScreen/texts/English/Credits.png")
+var hover_english_text = preload("res://assets/sprites/titleScreen/texts/English/Credits(v2).png")
+var base_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Créditos.png")
+var hover_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Créditos(v2).png")
 
 #Carregando os respectivos staticBody2D das caixas de frutas
 onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")

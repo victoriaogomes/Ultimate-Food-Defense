@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 #Carregando assets para mexer no sprites "options" e "cucumberBox"
-var base_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Options.png")
-var hover_english_text = preload("res://Assets/Sprites/TitleScreen/Texts/English/Options(v2).png")
-var base_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Opções.png")
-var hover_portuguese_text = preload("res://Assets/Sprites/TitleScreen/Texts/Pt-Br/Opções(v2).png")
+var base_english_text = preload("res://assets/sprites/titleScreen/texts/English/Options.png")
+var hover_english_text = preload("res://assets/sprites/titleScreen/texts/English/Options(v2).png")
+var base_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Opções.png")
+var hover_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Opções(v2).png")
 
 #Carregando os respectivos staticBody2D das caixas de frutas
 onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")

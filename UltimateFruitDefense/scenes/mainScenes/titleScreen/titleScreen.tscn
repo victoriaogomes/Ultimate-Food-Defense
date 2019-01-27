@@ -376,6 +376,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="pineappleStaticBody2D" type="StaticBody2D" parent="Node2D" index="3"]
 
+editor/display_folded = true
 position = Vector2( -18.4007, 8.96136 )
 scale = Vector2( 0.205156, 0.243052 )
 input_pickable = true
@@ -412,6 +413,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="bananaStaticBody2D" type="StaticBody2D" parent="Node2D" index="4"]
 
+editor/display_folded = true
 position = Vector2( 2.98078, 0.247337 )
 scale = Vector2( 1.04489, 1.00158 )
 input_pickable = true
@@ -490,6 +492,7 @@ polygon = PoolVector2Array( 9.99078, 25.5193, 7.76387, 25.5547, 6.98341, 25.4483
 
 [node name="pepperStaticBody2D" type="StaticBody2D" parent="Node2D" index="7"]
 
+editor/display_folded = true
 position = Vector2( 4.30326, 0.247337 )
 scale = Vector2( 0.97843, 1.00158 )
 input_pickable = true
