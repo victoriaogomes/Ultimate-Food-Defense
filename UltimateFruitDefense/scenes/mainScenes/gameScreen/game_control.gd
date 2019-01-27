@@ -7,6 +7,7 @@ var line3_enemies = [[], [], []]
 var line4_enemies = [[], [], []]
 var line5_enemies = [[], [], []]
 
+var target
 
 func add_enemie(var enemie, var enemie_type, var line):
 	print("-> Adicionar inimigo do tipo ", enemie_type, " na linha ", line)

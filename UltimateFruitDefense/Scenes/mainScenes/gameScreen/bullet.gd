@@ -1,8 +1,7 @@
 extends RigidBody2D
 
 export (int) var SPEED
-onready var target = get_node("res://Scenes/mainScenes/gameScreen/burguer.tscn", "res://Scenes/mainScenes/gameScreen/pizza.tscn", 
-"res://Scenes/mainScenes/gameScreen/soda.tscn")
+onready var node = get_node("gameControl")
 
 func _ready():
 	self.set_physics_process(true)
@@ -12,8 +11,8 @@ func _physics_process(delta):
 	move_bullet(delta)
 
 func move_bullet(delta):
-	if target != null:
-		var target_posistion = target.position
+	if node.target != null:
+		var target_posistion = node.target.position
 		look_at(target_posistion)
 		var direction = (target_posistion - self.position).normalized()
 		var motion = direction * delta * SPEED
