@@ -447,7 +447,6 @@ blend_times = [  ]
 
 [node name="backStaticBody2D" type="StaticBody2D" parent="." index="22"]
 
-editor/display_folded = true
 position = Vector2( 29.2612, -29.1252 )
 scale = Vector2( 0.0568648, 0.0361171 )
 input_pickable = true

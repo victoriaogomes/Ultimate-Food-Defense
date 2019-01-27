@@ -1,28 +1,28 @@
 extends Node2D
 
 # Assets para mexer no texto "Options"/Opções"
-var options_english = preload("res://assets/sprites/optionsScreen/Texts/English/Options.png")
-var options_port = preload("res://assets/sprites/optionsScreen/Texts/Pt-Br/Opcoes.png")
+var options_english = preload("res://assets/sprites/optionsScreen/texts/English/Options.png")
+var options_port = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Opcoes.png")
 onready var options_english_position = $optionsTitle.get_position()
 onready var options_portuguese_position = $optionsTitle.get_position()
 
 # Assets para mexer no texto "Language"/"Idioma"
-var language_port = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Idioma.png")
-var language_english = preload("res://Assets/Sprites/OptionsScreen/Texts/english/language.png")
+var language_port = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Idioma.png")
+var language_english = preload("res://assets/sprites/optionsScreen/texts/English/language.png")
 onready var language_english_position = $language.get_position()
 onready var language_portuguese_position = $language.get_position()
 
 # Assets para mexer no texto "English"/"Inglês"
-var base_english_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/English/English.png")
-var base_english_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Ingles.png")
-var hover_english_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/English/English(v2).png")
-var hover_english_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Ingles(v2).png")
+var base_english_text_on = preload("res://assets/sprites/optionsScreen/texts/English/English.png")
+var base_english_text_off = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Ingles.png")
+var hover_english_text_on = preload("res://assets/sprites/optionsScreen/texts/English/English(v2).png")
+var hover_english_text_off = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Ingles(v2).png")
 
 # Assets para mexer no texto "Portuguese"/"Português"
-var base_portuguese_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Portugues.png")
-var base_portuguese_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Portuguese.png")
-var hover_portuguese_text_on = preload("res://Assets/Sprites/OptionsScreen/Texts/Pt-Br/Portugues(v2).png")
-var hover_portuguese_text_off = preload("res://Assets/Sprites/OptionsScreen/Texts/English/Portuguese(v2).png")
+var base_portuguese_text_on = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Portugues.png")
+var base_portuguese_text_off = preload("res://assets/sprites/optionsScreen/texts/English/Portuguese.png")
+var hover_portuguese_text_on = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Portugues(v2).png")
+var hover_portuguese_text_off = preload("res://assets/sprites/optionsScreen/texts/English/Portuguese(v2).png")
 
 func _ready():
 	language_portuguese_position.x -=2
