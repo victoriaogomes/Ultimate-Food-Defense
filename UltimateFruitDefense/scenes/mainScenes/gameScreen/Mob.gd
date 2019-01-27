@@ -11,19 +11,19 @@ func _ready():
 	#print(selec)
 	match(select):
 		1:
-			var pos = Vector2(32, -16.244953)
+			var pos = Vector2(32, -17.443962)
 			self.set_position(pos)
 		2:
-			var pos = Vector2(32, -8.985142)
+			var pos = Vector2(32, -11.465253)
 			self.set_position(pos)
 		3:
-			var pos = Vector2(32, -2.899712)
+			var pos = Vector2(32, -5.486543)
 			self.set_position(pos)
 		4:
-			var pos = Vector2(32, 3.612766)
+			var pos = Vector2(32, 1.453015)
 			self.set_position(pos)
 		5:
-			var pos = Vector2(32, 10.018482)
+			var pos = Vector2(32, 7.538473)
 			self.set_position(pos)
 
 
