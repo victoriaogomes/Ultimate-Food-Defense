@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 
 configuration="*res://scenes/configuration.gd"
 animationControl="*res://scenes/animationControl.gd"
+game_control="*res://scenes/mainScenes/gameScreen/game_control.gd"
 
 [display]
 

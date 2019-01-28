@@ -35,4 +35,5 @@ func _physics_process(delta):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+	game_control.target = game_control.enemies[game_control.enemies.size()-1]
 	print("excluido")

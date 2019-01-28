@@ -18,6 +18,9 @@ var player_name
 #Sinal emitido quando o idioma do jogo é mudado
 signal language_changed
 
+#Nível em que o jogador se encontra
+var level = 3
+
 
 #Por default, coloca o idioma em português e os efeitos sonoros e a música ligados
 func _ready():
@@ -75,3 +78,27 @@ func mouseHover_effect():
 	#mouseHover_sound.stream = load("res://Assets/Sounds/biting.wav")
 	mouseHover_sound.stream = load("res://Assets/Sounds/menuSelection.wav")
 	mouseHover_sound.volume_db = -25
+
+
+#Função para salvar os dados do jogo
+func salvarDados():
+	var arquivo = File.new()
+	var erro = arquivo.open("user://save.data", File.WRITE)
+	if not erro:
+		arquivo.store_var(level)
+	else:
+		print("Erro ao salvar dados")
+	arquivo.close()
+
+
+#Função para carregar os dados do jogo
+func carregarDados():
+	var arquivo = File.new()
+	var erro = arquivo.open("user://save.data", File.READ)
+	if not erro:
+		var dadosSalvos = arquivo.get_var()
+		level = dadosSalvos
+	else:
+		print("Erro ao carregar dados")
+	arquivo.close()
+	pass
