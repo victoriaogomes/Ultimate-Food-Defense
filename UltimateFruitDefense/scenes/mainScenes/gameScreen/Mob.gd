@@ -11,7 +11,6 @@ func _ready():
 	$AnimationPlayer.play("walk")
 	self.set_physics_process(true)
 	select = randi()%5+1
-	#print(selec)
 	match(select):
 		1:
 			var pos = Vector2(32, -17.443962)
@@ -40,27 +39,14 @@ func _physics_process(delta):
 			velocity = Vector2(0,0)
 			$AnimationPlayer.play("atack")
 	else:
+		game_control.beatedEnemies +=1
 		if(game_control.target == self):
 			game_control.target = null
 		queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_exited():
-	#game_control.target = game_control.enemies[game_control.enemies.size()-1]
-	#game_control.remove_enemie(self)
 	self.remove_from_group("enemies")
 	queue_free()
-	print("Sobraram ", get_tree().get_nodes_in_group("enemies").size(), "inimigos")
-	print("excluido")
-
-
-#func _on_Area2D_body_entered(body):
-#	if(body.is_in_group("bullet")):
-#		if(life == 0):
-#			self.remove_from_group("enemies")
-#			self.queue_free()
-#			print("Sobraram ", get_tree().get_nodes_in_group("enemies").size(), "inimigos")
-#		else:
-#			print("entrei aqui")
-#			life = life -1
-#	print(life)
+	#print("Sobraram ", get_tree().get_nodes_in_group("enemies").size(), "inimigos")
+	#print("excluido")

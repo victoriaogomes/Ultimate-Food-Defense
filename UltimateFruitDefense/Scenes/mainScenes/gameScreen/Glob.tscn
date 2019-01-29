@@ -1,16 +1,27 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scenes/mainScenes/gameScreen/Glob.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierCenter.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingDown2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown2.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingUp2.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp2.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingCenter.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingDown1.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown1.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingUp1.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp1.png" type="Texture" id=11]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/gameScreen/shotingDown2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/gameScreen/soldierDown2.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/gameScreen/shotingUp2.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/soldierUp2.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/shotingCenter.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/shotingDown1.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/soldierDown1.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/shotingUp1.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/soldierUp1.png" type="Texture" id=11]
+
+
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 

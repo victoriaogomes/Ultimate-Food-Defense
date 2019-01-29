@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/game.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/gameMap.jpg" type="Texture" id=2]
 [ext_resource path="res://scenes/mainScenes/gameScreen/Node2D.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/gameScreen/pause.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -100,27 +101,33 @@ visible = false
 position = Vector2( 0.000859295, -0.0380006 )
 scale = Vector2( 1.0001, 1.00097 )
 
-[node name="PositionUp2" type="Position2D" parent="." index="6"]
+[node name="nextLevel" parent="." index="6" instance=ExtResource( 8 )]
+
+visible = false
+position = Vector2( 0.000859, -0.038001 )
+scale = Vector2( 1.0001, 1.00097 )
+
+[node name="PositionUp2" type="Position2D" parent="." index="7"]
 
 position = Vector2( -19.6055, -22.3522 )
 scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="PositionUp1" type="Position2D" parent="." index="7"]
+[node name="PositionUp1" type="Position2D" parent="." index="8"]
 
 position = Vector2( -18.8975, -20.0648 )
 scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="PositionCenter" type="Position2D" parent="." index="8"]
+[node name="PositionCenter" type="Position2D" parent="." index="9"]
 
 position = Vector2( -17.1148, -15.9952 )
 scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="PositionDown1" type="Position2D" parent="." index="9"]
+[node name="PositionDown1" type="Position2D" parent="." index="10"]
 
 position = Vector2( -18.8959, -14.4931 )
 scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="PositionDown2" type="Position2D" parent="." index="10"]
+[node name="PositionDown2" type="Position2D" parent="." index="11"]
 
 position = Vector2( -20.4114, -13.3426 )
 scale = Vector2( 0.0662609, 0.120058 )

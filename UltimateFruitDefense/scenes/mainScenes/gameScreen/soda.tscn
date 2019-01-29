@@ -1,13 +1,19 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/Mob.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/gameScreen/leftRefriArm.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sprites/gameScreen/leftRefriLeg.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/gameScreen/leftRefriArm.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/gameScreen/leftRefriLeg.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/gameScreen/Enemies/soda.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Sprites/gameScreen/rightRefriLeg.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Sprites/gameScreen/rightRefriArm.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/mainScenes/gameScreen/atackSoda.tres" type="Animation" id=7]
-[ext_resource path="res://Scenes/mainScenes/gameScreen/soda.tres" type="Animation" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/rightRefriLeg.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/rightRefriArm.png" type="Texture" id=6]
+[ext_resource path="res://scenes/mainScenes/gameScreen/atackSoda.tres" type="Animation" id=7]
+[ext_resource path="res://scenes/mainScenes/gameScreen/soda.tres" type="Animation" id=8]
+
+
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 
