@@ -19,7 +19,7 @@ var player_name
 signal language_changed
 
 #Nível em que o jogador se encontra
-var level = 3
+var level = 1
 
 
 #Por default, coloca o idioma em português e os efeitos sonoros e a música ligados
