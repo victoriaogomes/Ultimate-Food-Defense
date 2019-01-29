@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/Mob.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/gameScreen/leftRefriArm.png" type="Texture" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://Assets/Sprites/gameScreen/rightRefriArm.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/mainScenes/gameScreen/atackSoda.tres" type="Animation" id=7]
 [ext_resource path="res://Scenes/mainScenes/gameScreen/soda.tres" type="Animation" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 38.3234, 50.5674 )
 
 [node name="Mob" type="KinematicBody2D"]
 
@@ -93,6 +98,20 @@ playback_speed = 1.0
 anims/atack = ExtResource( 7 )
 anims/walk = ExtResource( 8 )
 blend_times = [  ]
+
+[node name="Area2D" type="Area2D" parent="." index="6"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+shape = SubResource( 1 )
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
 

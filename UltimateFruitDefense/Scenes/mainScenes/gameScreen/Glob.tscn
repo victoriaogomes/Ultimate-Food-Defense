@@ -2,15 +2,15 @@
 
 [ext_resource path="res://Scenes/mainScenes/gameScreen/Glob.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/gameScreen/soldierCenter.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingDown2.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/gameScreen/shotingDown2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Sprites/gameScreen/shotingUp1.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown1.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingDown1.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp2.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingUp2.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingCenter.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/gameScreen/shotingCenter.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/gameScreen/shotingDown1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/gameScreen/shotingUp2.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -21,48 +21,48 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": false,
+"loop": true,
 "name": "shootDown2",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "lookup2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "lookDown2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "lookUp1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": false,
 "name": "shootUp1",
-"speed": 5.0
+"speed": 1.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "shootDown1",
-"speed": 5.0
+"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "shootCenter",
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": false,
+"loop": true,
+"name": "shootDown1",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 5 ) ],
+"loop": true,
 "name": "shootUp2",
-"speed": 5.0
+"speed": 1.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 11 ) ],
-"loop": false,
-"name": "shootCenter",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "lookDown1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "lookup2",
+"name": "lookUp1",
 "speed": 5.0
 } ]
 _sections_unfolded = [ "Resource" ]
