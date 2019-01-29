@@ -144,5 +144,6 @@ func swap_animation(delta):
 func spwan_bullet(pos):
 	var clone_bullet = bullet.instance()
 	get_parent().add_child(clone_bullet)
+	clone_bullet.add_to_group("bullet")
 	clone_bullet.position = pos.position
 	#print("adicionei uma")

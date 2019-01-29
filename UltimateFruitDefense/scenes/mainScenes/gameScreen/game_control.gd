@@ -87,3 +87,7 @@ func add_enemie(var enemie, var enemie_type, var line):
 #					line5_enemies[2].resize(line5_enemies[2].size()+1)
 #					line5_enemies[2][line5_enemies[2].size()-1] = enemie
 #					print("Line 5: soda")
+
+func remove_enemie(var enemie):
+	enemies.erase(enemie)
+	print(enemies.size())

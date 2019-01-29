@@ -5,11 +5,11 @@
 [ext_resource path="res://Assets/Sprites/gameScreen/shotingDown2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sprites/gameScreen/soldierDown2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/gameScreen/soldierUp2.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingUp1.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp1.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Sprites/gameScreen/shotingCenter.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/gameScreen/shotingCenter.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/gameScreen/soldierUp1.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Sprites/gameScreen/shotingDown1.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Sprites/gameScreen/soldierDown1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/gameScreen/shotingUp1.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Sprites/gameScreen/shotingUp2.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -35,35 +35,35 @@ animations = [ {
 "name": "lookDown2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "shootUp1",
-"speed": 1.0
+"name": "lookDown1",
+"speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "shootCenter",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "lookUp1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "shootDown1",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "shootUp1",
 "speed": 1.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "shootUp2",
 "speed": 1.0
-}, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "lookDown1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "lookUp1",
-"speed": 5.0
 } ]
 _sections_unfolded = [ "Resource" ]
 

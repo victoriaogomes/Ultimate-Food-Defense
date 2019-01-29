@@ -3,6 +3,7 @@ extends KinematicBody2D
 var select
 var velocity = Vector2(-50, 0)
 var collision_info
+var life = 3
 
 func _ready():
 	$AnimationPlayer.play("walk")
@@ -31,12 +32,21 @@ func _physics_process(delta):
 	collision_info = move_and_collide(velocity*delta)
 	if collision_info:
 		velocity = Vector2(0,0)
+		game_control.remove_enemie(self)
 		$AnimationPlayer.play("atack")
 
+
 func _on_VisibilityNotifier2D_screen_exited():
+	#game_control.target = game_control.enemies[game_control.enemies.size()-1]
+	game_control.remove_enemie(self)
 	queue_free()
-	game_control.target = game_control.enemies[game_control.enemies.size()-1]
 	print("excluido")
 
-func _on_Area2D_area_entered(area):
-	self.queue_free()
+
+#func _on_Area2D_body_entered(body):
+#	if(body.is_in_group("bullet")):
+##			self.queue_free()
+#		else:
+#			print("entrei aqui")
+#			life = life -1
+#	print(life)
