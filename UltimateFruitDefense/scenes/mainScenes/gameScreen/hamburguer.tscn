@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/sprites/gameScreen/leftHamburguerArm.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/gameScreen/leftHamburguerLeg.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/gameScreen/Enemies/burguer.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/gameScreen/rightHamburguerLeg.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/gameScreen/rightHamburguerArm.png" type="Texture" id=5]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Mob.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/gameScreen/leftHamburguerArm.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/gameScreen/leftHamburguerLeg.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/gameScreen/Enemies/burguer.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/gameScreen/rightHamburguerLeg.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/rightHamburguerArm.png" type="Texture" id=6]
+[ext_resource path="res://scenes/mainScenes/gameScreen/hamburguer.tres" type="Animation" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,8 +15,8 @@ extents = Vector2( 222.972, 173.25 )
 
 [sub_resource type="Animation" id=2]
 
-resource_name = "walk"
-length = 1.2
+resource_name = "atack"
+length = 2.8
 loop = true
 step = 0.01
 tracks/0/type = "value"
@@ -24,10 +26,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -62, 94 ), Vector2( -67.9998, 105 ), Vector2( -62, 94 ), Vector2( -51.9999, 68.9995 ) ]
+"values": [ Vector2( -62, 94 ), Vector2( -108, 147 ), Vector2( -158, 153.001 ), Vector2( -218.999, 101.001 ), Vector2( -244.999, -12.0001 ), Vector2( -215.249, 104.501 ), Vector2( -160.166, 157.001 ), Vector2( -109.083, 149.5 ), Vector2( -62, 94 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("leftArm:rotation_degrees")
@@ -36,10 +38,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 16.9516, 3.03118e-006, -22.4754 ]
+"values": [ 0.0, 32.423, 65.0276, 97.6378, 129.968, 97.4763, 64.9842, 32.4921, 0.0 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("leftLeg:position")
@@ -48,10 +50,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -38, 258 ), Vector2( 12.9997, 213.001 ), Vector2( -38, 258 ), Vector2( -67.0002, 266 ) ]
+"values": [ Vector2( -38, 258 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("leftLeg:rotation_degrees")
@@ -60,10 +62,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0, -26.8132, -4.79457e-006, 25.6446 ]
+"values": [ 0.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("corpo/rightLeg:position")
@@ -72,10 +74,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 286.667, 906.667 ), Vector2( 103.334, 856.667 ), Vector2( 286.667, 906.667 ), Vector2( 420, 833.332 ) ]
+"values": [ Vector2( 286.667, 906.667 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("corpo/rightLeg:rotation_degrees")
@@ -84,10 +86,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0, 26.4775, 4.73454e-006, -26.2514 ]
+"values": [ 0.0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("corpo/rightArm:position")
@@ -96,10 +98,10 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 740, 366.667 ), Vector2( 869.997, 240.001 ), Vector2( 740, 366.667 ), Vector2( 540, 449.999 ) ]
+"values": [ Vector2( 740, 366.667 ), Vector2( 436.666, 479.995 ), Vector2( 123.337, 419.999 ), Vector2( -99.9946, 190.002 ), Vector2( -189.996, -123.327 ), Vector2( -90.829, 192.506 ), Vector2( 119.446, 407.228 ), Vector2( 433.056, 483.615 ), Vector2( 740, 366.667 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("corpo/rightArm:rotation_degrees")
@@ -108,19 +110,24 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 1.7, 1.8, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -17.8283, -3.18795e-006, 22.7806 ]
+"values": [ 0.0, 32.3099, 65.0297, 97.2668, 129.914, 97.4356, 64.9571, 32.4785, 0.0 ]
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[node name="Mob" type="KinematicBody2D" index="0"]
 
+scale = Vector2( 0.05, 0.05 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -135,10 +142,9 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="leftArm" type="Sprite" parent="." index="2"]
 
-position = Vector2( -52.6736, 70.6836 )
-rotation = -0.365845
+position = Vector2( -62, 94 )
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -146,10 +152,9 @@ __meta__ = {
 
 [node name="leftLeg" type="Sprite" parent="." index="3"]
 
-position = Vector2( -65.0466, 265.461 )
-rotation = 0.417432
+position = Vector2( -38, 258 )
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -158,7 +163,7 @@ __meta__ = {
 [node name="corpo" type="Sprite" parent="." index="4"]
 
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -166,9 +171,8 @@ __meta__ = {
 
 [node name="rightLeg" type="Sprite" parent="corpo" index="0"]
 
-position = Vector2( 411.019, 838.272 )
-rotation = -0.427309
-texture = ExtResource( 4 )
+position = Vector2( 286.667, 906.667 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -176,9 +180,8 @@ __meta__ = {
 
 [node name="rightArm" type="Sprite" parent="corpo" index="1"]
 
-position = Vector2( 553.473, 444.385 )
-rotation = 0.370814
-texture = ExtResource( 5 )
+position = Vector2( 740, 366.667 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
@@ -191,7 +194,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/walk = SubResource( 2 )
+anims/atack = SubResource( 2 )
+anims/walk = ExtResource( 7 )
 blend_times = [  ]
 
 
