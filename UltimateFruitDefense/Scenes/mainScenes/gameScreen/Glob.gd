@@ -7,6 +7,7 @@ var pos
 var target_position
 onready var bullet = preload("res://scenes/mainScenes/gameScreen/bullet.tscn")
 
+
 func _ready():
 	self.set_physics_process(true)
 	$timer.start()
@@ -17,81 +18,16 @@ func on_TimeOut():
 	if(game_control.target!=null):
 		spwan_bullet(pos)
 
+
 func _process(delta):
 	choose_and_lock()
 	swap_animation(delta)
 
-#func find_enemies():
-#	choose_and_lock()
-#	var i
-#	var j
-#	print("oi")
-#	i = 0
-#	while i<3:
-#		j = 0
-#		while j<5:
-#			if(node.line1_enemies[i].size()>0):
-#				if node.line1_enemies[i][j] != null:
-#					enemies[numberEnemies] = node.line1_enemies[i][j]
-#					numberEnemies+=1
-#				j+=1
-#			else:
-#				break
-#		i+=1
-#	i = 0
-#	print("cabou while1")
-#	while i<3:
-#		j = 0
-#		while j<5:
-#			if(node.line2_enemies[i].size()>0):
-#				if node.line2_enemies[i][j] != null:
-#					enemies[numberEnemies] = node.line2_enemies[i][j]
-#					numberEnemies+=1
-#				j+=1
-#		i+=1
-#	i = 0
-#	print("cabou while2")
-#	while i<3:
-#		j = 0
-#		while j<5:
-#			if(node.line3_enemies[i].size()>0):
-#				if node.line3_enemies[i][j] != null:
-#					enemies[numberEnemies] = node.line3_enemies[i][j]
-#					numberEnemies+=1
-#				j+=1
-#		i+=1
-#	i = 0
-#	print("cabou while3")
-#	while i<3:
-#		j = 0
-#		while j<5:
-#			if(node.line4_enemies[i].size()>0):
-#				if node.line4_enemies[i][j] != null:
-#					enemies[numberEnemies] = node.line4_enemies[i][j]
-#					numberEnemies+=1
-#				j+=1
-#		i+=1
-#	i = 0
-#	print("cabou while4")
-#	while i<3:
-#		j = 0
-#		while j<5:
-#			if(node.line5_enemies[i].size()>0):
-#				if node.line5_enemies[i][j] != null:
-#					enemies[numberEnemies] = node.line5_enemies[i][j]
-#					numberEnemies+=1
-#				j+=1
-#		i+=1
-#		choose_and_lock()
-#		numberEnemies = 0
-#	print("cabou while5")
 
 #acha o melhor inimigo e passa a instâcia dele para um variável no outro script
 func choose_and_lock():
-	#if enemies[0] != 0:
-	#print(game_control.enemies.size())
-	if(game_control.enemies.size()>0):
-		enemies = game_control.enemies
+	if(get_tree().get_nodes_in_group("enemies").size()>0):
+		enemies = get_tree().get_nodes_in_group("enemies")
 		game_control.target = enemies[0]
 		var i = 1
 		while i < enemies.size():
@@ -102,7 +38,6 @@ func choose_and_lock():
 
 func swap_animation(delta):
 	if game_control.target != null:
-		#print("tem inimigo")
 		target_position = game_control.target.position
 		if target_position.y < -111:
 			if target_position.x <-91:
@@ -136,14 +71,12 @@ func swap_animation(delta):
 				anim = "shootDown1"
 				pos = get_node("/root/Node2D/PositionDown1")
 		$AnimatedSprite.play(anim)
-		#spwan_bullet(pos)
 	else:
-		#print("n tem inimigo!")
 		$AnimatedSprite.play("idle")
+
 
 func spwan_bullet(pos):
 	var clone_bullet = bullet.instance()
 	get_parent().add_child(clone_bullet)
 	clone_bullet.add_to_group("bullet")
 	clone_bullet.position = pos.position
-	#print("adicionei uma")
