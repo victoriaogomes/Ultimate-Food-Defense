@@ -1,0 +1,59 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed2.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed3.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed4.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed5.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed6.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed7.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed8.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed9.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed10.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed11.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed12.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed13.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": false,
+"name": "used",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 430.315
+height = 200.009
+
+[node name="strawberry" type="KinematicBody2D" index="0"]
+
+scale = Vector2( 0.1, 0.1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 81.2209, 113.599 )
+rotation = -0.403504
+scale = Vector2( 1.01828, 1.31125 )
+shape = SubResource( 2 )
+
+
