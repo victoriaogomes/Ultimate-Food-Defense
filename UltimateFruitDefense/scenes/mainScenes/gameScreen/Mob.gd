@@ -37,9 +37,12 @@ func _physics_process(delta):
 	if(life>0):
 		collision_info = move_and_collide(velocity*delta)
 		if collision_info:
-			velocity = Vector2(0,0)
-			$AnimationPlayer.play("atack")
-			$Timer.start()
+			if(collision_info.get_collider().is_in_group("wall")):
+				velocity = Vector2(0,0)
+				$AnimationPlayer.play("atack")
+				$Timer.start()
+			else:
+				move_and_slide(velocity*delta)
 	else:
 		game_control.beatedEnemies +=1
 		if(game_control.target == self):

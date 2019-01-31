@@ -68,7 +68,7 @@ func music_off():
 #Função que seta as configurações da música que deve ser tocada na abertura do jogo
 func playSong():
 	self.add_child(player)
-	player.stream = load("res://Assets/Sounds/JeffSpeed68_-_Little_reindeer (online-audio-converter.com).ogg")
+	player.stream = load("res://assets/sounds/JeffSpeed68_-_Little_reindeer (online-audio-converter.com).ogg")
 	player.volume_db = -20
 
 
@@ -76,7 +76,7 @@ func playSong():
 func mouseHover_effect():
 	self.add_child(mouseHover_sound)
 	#mouseHover_sound.stream = load("res://Assets/Sounds/biting.wav")
-	mouseHover_sound.stream = load("res://Assets/Sounds/menuSelection.wav")
+	mouseHover_sound.stream = load("res://assets/sounds/menuSelection.wav")
 	mouseHover_sound.volume_db = -25
 
 

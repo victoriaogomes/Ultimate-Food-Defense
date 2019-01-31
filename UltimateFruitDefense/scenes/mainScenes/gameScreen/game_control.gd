@@ -10,3 +10,8 @@ signal sugarLevelChange
 func aumentarSugarLevel():
 	sugarLevel +=2
 	emit_signal("sugarLevelChange")
+
+
+func diminuirSugarLevel():
+	sugarLevel -=2
+	emit_signal("sugarLevelChange")

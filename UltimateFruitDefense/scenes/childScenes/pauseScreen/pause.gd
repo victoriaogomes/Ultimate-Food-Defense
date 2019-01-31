@@ -12,8 +12,8 @@ var hover_mainMenu_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/
 
 var base_resumeGame_english = preload("res://assets/sprites/pause/texts/english/resumeGame.png")
 var hover_resumeGame_english = preload("res://assets/sprites/pause/texts/english/resumeGame(v2).png")
-var base_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/voltarjogo.png")
-var hover_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/voltarjogo(v2).png")
+var base_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/voltarJogo.png")
+var hover_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/voltarJogo(v2).png")
 
 func _ready():
 	language()

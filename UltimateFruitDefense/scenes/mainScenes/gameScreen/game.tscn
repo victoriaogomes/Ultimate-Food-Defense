@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/game.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/gameMap.jpg" type="Texture" id=2]
@@ -12,50 +12,6 @@
 [ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=12]
-
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 527.712
-
-[sub_resource type="SpriteFrames" id=2]
-
-animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=3]
-
-custom_solver_bias = 0.0
-radius = 634.816
-height = 808.333
-
-[sub_resource type="SpriteFrames" id=4]
-
-animations = [ {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=5]
-
-custom_solver_bias = 0.0
-radius = 379.363
-height = 348.804
-
-[sub_resource type="SpriteFrames" id=6]
-
-animations = [ {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-} ]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -213,90 +169,83 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "R
 
 [node name="frutas" type="Node" parent="." index="14"]
 
-[node name="lemon" type="Area2D" parent="frutas" index="0"]
+_sections_unfolded = [ "Pause" ]
 
-editor/display_folded = true
-position = Vector2( 295, 550 )
-scale = Vector2( 0.07, 0.07 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
+[node name="lemon" type="TextureButton" parent="frutas" index="0"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="frutas/lemon" index="0"]
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 248.0
+margin_top = 507.0
+margin_right = 325.0
+margin_bottom = 584.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+expand = true
+_sections_unfolded = [ "Material", "Mouse", "Size Flags", "Textures", "Visibility" ]
 
-position = Vector2( -46.3359, 5.35742 )
-scale = Vector2( 1.08328, 1.18305 )
-shape = SubResource( 1 )
+[node name="strawberry" type="TextureButton" parent="frutas" index="1"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="frutas/lemon" index="1"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 347.0
+margin_top = 507.0
+margin_right = 423.0
+margin_bottom = 583.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 11 )
+expand = true
+_sections_unfolded = [ "Textures" ]
 
-frames = SubResource( 2 )
-animation = "idle"
+[node name="grape" type="TextureButton" parent="frutas" index="2"]
 
-[node name="strawberry" type="Area2D" parent="frutas" index="1"]
-
-editor/display_folded = true
-position = Vector2( 417, 548 )
-scale = Vector2( 0.06, 0.06 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="frutas/strawberry" index="0"]
-
-position = Vector2( 97.5566, 80.877 )
-rotation = -0.574197
-scale = Vector2( 0.886422, 0.714403 )
-shape = SubResource( 3 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="frutas/strawberry" index="1"]
-
-frames = SubResource( 4 )
-animation = "idle"
-
-[node name="grape" type="Area2D" parent="frutas" index="2"]
-
-position = Vector2( 550, 548 )
-scale = Vector2( 0.05, 0.05 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Transform", "Z Index" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="frutas/grape" index="0"]
-
-position = Vector2( -51.6875, 91.5107 )
-rotation = -0.22676
-scale = Vector2( 1, 1.35416 )
-shape = SubResource( 5 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="frutas/grape" index="1"]
-
-frames = SubResource( 6 )
-animation = "idle"
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 443.0
+margin_top = 516.0
+margin_right = 514.0
+margin_bottom = 587.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 12 )
+expand = true
+_sections_unfolded = [ "Textures" ]
 
 [connection signal="mouse_entered" from="pauseButton" to="." method="_on_pauseButton_mouse_entered"]
 
@@ -304,8 +253,14 @@ animation = "idle"
 
 [connection signal="mouse_entered" from="frutas/lemon" to="." method="_on_lemon_mouse_entered"]
 
+[connection signal="pressed" from="frutas/lemon" to="." method="_on_lemon_pressed"]
+
 [connection signal="mouse_entered" from="frutas/strawberry" to="." method="_on_strawberry_mouse_entered"]
 
+[connection signal="pressed" from="frutas/strawberry" to="." method="_on_strawberry_pressed"]
+
 [connection signal="mouse_entered" from="frutas/grape" to="." method="_on_grape_mouse_entered"]
+
+[connection signal="pressed" from="frutas/grape" to="." method="_on_grape_pressed"]
 
 

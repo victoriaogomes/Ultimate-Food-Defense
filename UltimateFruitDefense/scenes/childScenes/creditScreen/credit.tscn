@@ -20,6 +20,8 @@
 [ext_resource path="res://scenes/childScenes/creditScreen/backStaticBody2D.gd" type="Script" id=18]
 [ext_resource path="res://assets/sprites/optionsScreen/texts/English/Back.png" type="Texture" id=19]
 
+
+
 [sub_resource type="Animation" id=1]
 
 resource_name = "showing_credits"

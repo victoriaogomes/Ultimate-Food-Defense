@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://scenes/mainScenes/gameScreen/Lemon.gd" type="Script" id=1]
+[ext_resource path="res://scenes/mainScenes/gameScreen/fruit.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed1.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberryUsed2.png" type="Texture" id=4]
@@ -30,7 +30,12 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="strawberry" type="KinematicBody2D"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 597.764, 574.054 )
+
+[node name="fruit" type="KinematicBody2D"]
 
 scale = Vector2( 0.01, 0.01 )
 input_pickable = false
@@ -38,7 +43,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -51,9 +56,10 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 81.2209, 113.599 )
+position = Vector2( 106.29, 50.9267 )
 rotation = -0.403504
 scale = Vector2( 1.01828, 1.31125 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Timer" type="Timer" parent="." index="2"]

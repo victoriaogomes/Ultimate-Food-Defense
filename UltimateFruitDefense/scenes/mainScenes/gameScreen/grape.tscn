@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://scenes/mainScenes/gameScreen/Lemon.gd" type="Script" id=1]
+[ext_resource path="res://scenes/mainScenes/gameScreen/fruit.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed1.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed2.png" type="Texture" id=4]
@@ -31,7 +31,12 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="grape" type="KinematicBody2D"]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 601.321, 682.14 )
+
+[node name="fruit" type="KinematicBody2D"]
 
 scale = Vector2( 0.01, 0.01 )
 input_pickable = false
@@ -41,18 +46,19 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
-position = Vector2( -86.4654, 115.254 )
-rotation = -0.184173
-scale = Vector2( 1.11112, 1.16677 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
 animation = "idle"
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -79.5209, -37.5202 )
+rotation = -0.184173
+scale = Vector2( 1.11112, 1.16677 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Timer" type="Timer" parent="." index="2"]
 
