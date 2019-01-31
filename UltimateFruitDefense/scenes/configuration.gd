@@ -8,6 +8,7 @@ var music
 var sound_effects
 var player = AudioStreamPlayer.new()
 var mouseHover_sound = AudioStreamPlayer.new()
+var gun_sound = AudioStreamPlayer.new()
 
 #Variável que representa o sexo do jogador. É "m" caso seja mulher e "h" caso seja homem
 var player_sex
@@ -29,6 +30,7 @@ func _ready():
 	music = true
 	playSong()
 	mouseHover_effect()
+	gunSound()
 
 
 #Altera o idioma do jogo para português
@@ -75,7 +77,6 @@ func playSong():
 #Função que seta as configurações do som que deve ser tocado quando o mouse encosta em alguma opção de menus
 func mouseHover_effect():
 	self.add_child(mouseHover_sound)
-	#mouseHover_sound.stream = load("res://Assets/Sounds/biting.wav")
 	mouseHover_sound.stream = load("res://assets/sounds/menuSelection.wav")
 	mouseHover_sound.volume_db = -25
 
@@ -101,4 +102,9 @@ func carregarDados():
 	else:
 		print("Erro ao carregar dados")
 	arquivo.close()
-	pass
+
+
+func gunSound():
+	self.add_child(gun_sound)
+	gun_sound.stream = load("res://assets/sounds/gun.wav")
+	gun_sound.volume_db = -25

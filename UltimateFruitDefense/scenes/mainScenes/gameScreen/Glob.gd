@@ -80,3 +80,5 @@ func spwan_bullet(pos):
 	get_parent().add_child(clone_bullet)
 	clone_bullet.add_to_group("bullet")
 	clone_bullet.position = pos.position
+	if(configuration.sound_effects):
+		configuration.gun_sound.play()
