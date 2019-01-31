@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/Lemon.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=2]
@@ -27,14 +27,8 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": false,
 "name": "used",
-"speed": 5.0
+"speed": 10.0
 } ]
-
-[sub_resource type="CapsuleShape2D" id=2]
-
-custom_solver_bias = 0.0
-radius = 430.315
-height = 200.009
 
 [node name="strawberry" type="KinematicBody2D"]
 
@@ -45,18 +39,22 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
 animation = "idle"
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( 81.2209, 113.599 )
 rotation = -0.403504
 scale = Vector2( 1.01828, 1.31125 )
-shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Timer" type="Timer" parent="." index="2"]
 

@@ -1,50 +1,44 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed1.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed2.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed3.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed4.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed5.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed6.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed7.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed8.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed9.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed10.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed11.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed12.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed13.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed14.png" type="Texture" id=15]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Lemon.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed1.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed2.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed3.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed4.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed5.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed6.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed7.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed8.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed9.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed10.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed11.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed12.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed13.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed14.png" type="Texture" id=16]
 
-
-
-[sub_resource type="CapsuleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 309.109
-height = 451.261
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "used",
-"speed": 5.0
+"speed": 10.0
 } ]
 
-[node name="grape" type="KinematicBody2D" index="0"]
+[node name="grape" type="KinematicBody2D"]
 
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.01, 0.01 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
@@ -52,12 +46,19 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -86.4654, 115.254 )
 rotation = -0.184173
 scale = Vector2( 1.11112, 1.16677 )
-shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "idle"
 playing = true
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 
