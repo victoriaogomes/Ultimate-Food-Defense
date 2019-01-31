@@ -1,57 +1,57 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=1]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed1.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed2.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed3.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed4.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed5.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed7.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed8.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed9.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed10.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed11.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed12.png" type="Texture" id=12]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Lemon.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed1.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed2.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed3.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed4.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed5.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed7.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed8.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed9.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed10.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed11.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemonUsed12.png" type="Texture" id=13]
 
-[sub_resource type="CapsuleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 57.9941
-height = 2.01172
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "used",
-"speed": 5.0
+"speed": 8.0
 } ]
 _sections_unfolded = [ "Resource" ]
 
-[node name="Lemon" type="KinematicBody2D" index="0"]
+[node name="fruit" type="KinematicBody2D"]
 
-scale = Vector2( 0.1, 0.1 )
+scale = Vector2( 0.01, 0.01 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-shape = SubResource( 1 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
-frames = SubResource( 2 )
-animation = "used"
-frame = 9
+frames = SubResource( 1 )
+animation = "idle"
 playing = true
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.5
+one_shot = true
+autostart = false
 
 

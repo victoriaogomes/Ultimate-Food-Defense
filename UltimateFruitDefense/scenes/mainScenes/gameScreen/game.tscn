@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/game.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/gameMap.jpg" type="Texture" id=2]
@@ -9,6 +9,53 @@
 [ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=12]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 527.712
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 634.816
+height = 808.333
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=5]
+
+custom_solver_bias = 0.0
+radius = 379.363
+height = 348.804
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -164,8 +211,101 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Visibility", "custom_colors" ]
 
+[node name="frutas" type="Node" parent="." index="14"]
+
+[node name="lemon" type="Area2D" parent="frutas" index="0"]
+
+editor/display_folded = true
+position = Vector2( 295, 550 )
+scale = Vector2( 0.07, 0.07 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="frutas/lemon" index="0"]
+
+position = Vector2( -46.3359, 5.35742 )
+scale = Vector2( 1.08328, 1.18305 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="frutas/lemon" index="1"]
+
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="strawberry" type="Area2D" parent="frutas" index="1"]
+
+editor/display_folded = true
+position = Vector2( 417, 548 )
+scale = Vector2( 0.06, 0.06 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="frutas/strawberry" index="0"]
+
+position = Vector2( 97.5566, 80.877 )
+rotation = -0.574197
+scale = Vector2( 0.886422, 0.714403 )
+shape = SubResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="frutas/strawberry" index="1"]
+
+frames = SubResource( 4 )
+animation = "idle"
+
+[node name="grape" type="Area2D" parent="frutas" index="2"]
+
+position = Vector2( 550, 548 )
+scale = Vector2( 0.05, 0.05 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="frutas/grape" index="0"]
+
+position = Vector2( -51.6875, 91.5107 )
+rotation = -0.22676
+scale = Vector2( 1, 1.35416 )
+shape = SubResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="frutas/grape" index="1"]
+
+frames = SubResource( 6 )
+animation = "idle"
+
 [connection signal="mouse_entered" from="pauseButton" to="." method="_on_pauseButton_mouse_entered"]
 
 [connection signal="pressed" from="pauseButton" to="." method="_on_pauseButton_pressed"]
+
+[connection signal="mouse_entered" from="frutas/lemon" to="." method="_on_lemon_mouse_entered"]
+
+[connection signal="mouse_entered" from="frutas/strawberry" to="." method="_on_strawberry_mouse_entered"]
+
+[connection signal="mouse_entered" from="frutas/grape" to="." method="_on_grape_mouse_entered"]
 
 
