@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/childScenes/loseScene/loseScene.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/loseScreen/texts/english/you lose.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/sprites/loseScreen/sickGirl.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/pause/texts/english/mainMenu.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/pause/texts/english/mainMenu(v2).png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/loseScreen/texts/english/Try level again.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/loseScreen/texts/english/Try level again(v2).png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -32,6 +34,54 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("youLose:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ohNo:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sick:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mainMenu:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -99,21 +149,24 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="youLose" type="Sprite" parent="." index="3"]
 
-position = Vector2( 0.177509, 16.9858 )
-scale = Vector2( 0.0682004, 0.11434 )
+position = Vector2( 0.689831, 21.3546 )
+scale = Vector2( 0.0601006, 0.108436 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="ohNo" type="Sprite" parent="." index="4"]
 
-position = Vector2( -0.0831795, -19.3707 )
+position = Vector2( 0.404354, -24.3521 )
 scale = Vector2( 0.0704831, 0.115203 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="sick" type="Sprite" parent="." index="5"]
 
-position = Vector2( -0.000762939, -1.87023 )
+position = Vector2( 0.608654, -4.36091 )
 scale = Vector2( 0.0168771, 0.0250635 )
 texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="mainMenu" type="TextureButton" parent="." index="6"]
 
@@ -121,10 +174,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 21.0
-margin_top = 27.0
-margin_right = 31.0
-margin_bottom = 31.0
+margin_left = 22.0
+margin_top = 23.0
+margin_right = 32.0
+margin_bottom = 27.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -139,10 +192,40 @@ group = null
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 expand = true
+_sections_unfolded = [ "Textures", "Visibility" ]
+
+[node name="tryAgain" type="TextureButton" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 21.0
+margin_top = 27.0
+margin_right = 34.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+expand = true
 _sections_unfolded = [ "Textures" ]
 
 [connection signal="mouse_entered" from="mainMenu" to="." method="_on_mainMenu_mouse_entered"]
 
 [connection signal="pressed" from="mainMenu" to="." method="_on_mainMenu_pressed"]
+
+[connection signal="mouse_entered" from="tryAgain" to="." method="_on_tryAgain_mouse_entered"]
+
+[connection signal="pressed" from="tryAgain" to="." method="_on_tryAgain_pressed"]
 
 

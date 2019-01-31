@@ -3,11 +3,12 @@ extends KinematicBody2D
 var select
 var velocity = Vector2(-50, 0)
 var collision_info
-var life = 3
+var life = 15
 var shot
 
 func _ready():
 	shot = false
+	$Timer.connect("timeout", self, "on_TimeOut")
 	$AnimationPlayer.play("walk")
 	self.set_physics_process(true)
 	select = randi()%5+1
@@ -38,11 +39,15 @@ func _physics_process(delta):
 		if collision_info:
 			velocity = Vector2(0,0)
 			$AnimationPlayer.play("atack")
+			$Timer.start()
 	else:
 		game_control.beatedEnemies +=1
 		if(game_control.target == self):
 			game_control.target = null
 		queue_free()
+
+func on_TimeOut():
+	game_control.aumentarSugarLevel()
 
 
 func _on_VisibilityNotifier2D_screen_exited():

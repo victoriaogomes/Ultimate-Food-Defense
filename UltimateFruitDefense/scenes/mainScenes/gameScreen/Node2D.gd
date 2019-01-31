@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var enemies_types = [preload("res://scenes/mainScenes/gameScreen/pizza.tscn"), preload("res://scenes/mainScenes/gameScreen/soda.tscn"), preload("res://scenes/mainScenes/gameScreen/burguer.tscn")]
+onready var enemies_types = [preload("res://scenes/mainScenes/gameScreen/pizza.tscn"), preload("res://scenes/mainScenes/gameScreen/soda.tscn"), preload("res://scenes/mainScenes/gameScreen/hamburguer.tscn")]
 onready var glob = preload("res://scenes/mainScenes/gameScreen/Glob.tscn")
 var mob
 var waitTime = 1
@@ -25,6 +25,12 @@ func _process(delta):
 		game_control.beatedEnemies = 0
 		get_node("../nextLevel").set_visible(true)
 		get_node("../nextLevel/AnimationPlayer").play("nextLevel", -1, 1.0, false)
+		get_tree().set_pause(true)
+	elif (game_control.sugarLevel >=99):
+		for i in range(0, get_child_count()):
+    		get_child(i).queue_free()
+		get_node("../loseScreen").set_visible(true)
+		get_node("../loseScreen/AnimationPlayer").play("lose", -1, 1.0, false)
 		get_tree().set_pause(true)
 	else:
 		qnt = get_tree().get_nodes_in_group("enemies").size()
