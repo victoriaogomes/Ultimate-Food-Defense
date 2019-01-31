@@ -13,5 +13,7 @@ func aumentarSugarLevel():
 
 
 func diminuirSugarLevel():
-	sugarLevel -=2
-	emit_signal("sugarLevelChange")
+	if(sugarLevel>50):
+		print("toqui")
+		sugarLevel -=2
+		emit_signal("sugarLevelChange")

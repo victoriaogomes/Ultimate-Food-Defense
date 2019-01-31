@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 func _ready():
 	used()
-	print("instaced")
+	#print("instaced")
 	$Timer.connect("timeout", self, "done")
 	$Timer.start()
 
@@ -17,4 +17,4 @@ func used():
 	
 func done():
 	self.queue_free()
-	print("fruta destruída")
+	#print("fruta destruída")

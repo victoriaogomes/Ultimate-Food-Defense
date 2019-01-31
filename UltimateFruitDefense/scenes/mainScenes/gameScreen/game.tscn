@@ -5,13 +5,13 @@
 [ext_resource path="res://scenes/mainScenes/gameScreen/Node2D.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/gameScreen/pause.png" type="Texture" id=5]
-[ext_resource path="res://scenes/childScenes/loseScene/loseScene.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=8]
+[ext_resource path="res://scenes/childScenes/loseScene/loseScene.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=12]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -27,7 +27,9 @@ scale = Vector2( 0.021349, 0.0335617 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Offset", "Pause", "Region", "Visibility" ]
 
-[node name="Node2D" type="Node2D" parent="." index="1"]
+[node name="Node2D" type="Node2D" parent="." index="1" groups=[
+"wall",
+]]
 
 editor/display_folded = true
 position = Vector2( 0.00972712, -0.0615809 )
@@ -35,14 +37,18 @@ scale = Vector2( 1.00129, 1.0044 )
 script = ExtResource( 3 )
 _sections_unfolded = [ "Pause", "Transform" ]
 
-[node name="MobTimer" type="Timer" parent="Node2D" index="0"]
+[node name="MobTimer" type="Timer" parent="Node2D" index="0" groups=[
+"wall",
+]]
 
 process_mode = 1
 wait_time = 5.0
 one_shot = false
 autostart = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" index="1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" index="1" groups=[
+"wall",
+]]
 
 position = Vector2( -17.4555, -6.30489 )
 scale = Vector2( 0.147844, 0.723776 )
@@ -54,7 +60,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D" index="0" groups=[
+"wall",
+]]
 
 build_mode = 0
 polygon = PoolVector2Array( 4.53254, 30.6587, 5.31183, 29.9855, 6.09113, 29.1023, 6.89555, 27.9394, 7.19722, 26.9251, 7.09666, 25.8758, 6.6693, 24.7916, 6.24195, 24.0046, 5.38725, 23.2352, 5.36211, 22.9117, 6.11626, 22.7105, 7.04639, 22.4307, 8.1022, 22.1247, 8.73067, 21.9498, 9.10775, 21.7662, 9.86191, 21.7225, 10.4652, 21.7837, 10.792, 21.8012, 10.3898, 20.7257, 9.71107, 20.5333, 8.83122, 20.3584, 7.64972, 20.2623, 5.66376, 20.3147, 5.11072, 20.3235, 5.83974, 19.9562, 6.49334, 19.589, 7.02126, 19.1693, 7.87596, 18.3648, 8.68039, 17.5517, 9.45969, 16.5898, 9.9876, 15.8378, 10.6412, 14.9635, 11.3199, 14.2465, 12.3506, 13.2497, 12.5266, 12.9786, 12.3758, 12.2266, 12.6271, 11.7982, 12.1268, 10.6253, 12.1268, 10.4281, 13.1577, 10.2488, 13.7305, 10.1477, 14.2294, 9.98701, 14.9686, 9.91631, 15.9849, 9.7492, 16.5432, 9.62237, 16.6456, 9.3731, 17.2598, 9.2093, 16.9527, 8.65379, 16.666, 8.23359, 16.1132, 8.03418, 15.4375, 7.9772, 14.168, 7.96296, 12.7552, 8.09115, 12.0181, 8.26208, 11.8748, 8.2692, 12.4071, 7.84188, 12.919, 7.27213, 13.8609, 6.53856, 14.6185, 5.8691, 15.7447, 5.10705, 16.2566, 4.44471, 16.9118, 3.46901, 17.2598, 2.47193, 17.5465, 1.76686, 18.1403, 1.45349, 17.4296, 0.939857, 16.9759, 0.639988, 16.7717, 0.198071, 16.749, -0.00710297, 17.2027, -0.149151, 17.9741, -0.259628, 18.9724, -0.409565, 20.5151, -0.630524, 21.5587, -1.04876, 21.9814, -1.40858, 21.87, -1.82518, 20.9787, -2.13522, 19.6417, -2.35805, 17.8869, -2.41618, 15.937, -2.12553, 14.5443, -1.70892, 13.6251, -1.3892, 12.9566, -1.16637, 11.9539, -1.26325, 11.5082, -1.61204, 12.5388, -2.13522, 14.4774, -3.59344, 16.0309, -5.21448, 16.9546, -6.03229, 17.2065, -6.67486, 16.8706, -7.27362, 16.6187, -7.82857, 16.5347, -8.98228, 15.821, -9.47881, 15.0232, -9.93153, 15.4851, -10.063, 16.4088, -10.1506, 17.2485, -10.5157, 18.2981, -10.983, 18.3821, -11.6694, 17.9203, -12.1951, 15.821, -12.1513, 16.7867, -12.8231, 17.5844, -13.3196, 18.3821, -14.079, 19.2218, -14.8822, 19.9356, -15.7293, 20.2295, -16.5909, 20.1035, -17.5255, 19.4318, -18.3872, 18.9699, -19.1174, 19.5577, -19.7453, 21.615, -20.0374, 22.2448, -20.2419, 22.2868, -20.9137, 21.3631, -21.8045, 19.5997, -22.082, 18.3401, -22.0381, 19.2218, -22.3302, 20.0196, -22.4471, 20.5234, -22.7683, 21.0692, -23.0166, 21.699, -23.1773, 21.699, -23.7322, 21.9929, -24.1411, 21.867, -24.5938, 21.5311, -24.9443, 21.1952, -25.4701, 20.1036, -26.3171, 19.7677, -26.8574, 20.0196, -27.4124, 20.8173, -27.7483, 21.867, -28.0403, 21.615, -28.5077, 22.4967, -28.8874, 21.2792, -29.0188, 19.9776, -29.0188, 18.802, -28.9166, 18.2982, -28.8144, 17.7523, -28.5661, 16.3668, -28.3616, 15.1912, -28.3762, 14.0576, -28.4931, 13.0499, -28.6537, 12.924, -28.9166, 13.4698, -29.1356, 13.4698, -29.3547, 13.4278, -29.676, 13.8896, -29.9096, 10.2788, -30.0119, 6.24818, -30.0995, 3.855, -30.1141, 3.98095, -29.9535, 3.68705, -29.7344, 3.35116, -29.5007, 3.18321, -29.2233, 3.2252, -29.1356, 2.21754, -29.1648, 1.58775, -29.1648, 0.328171, -28.9312, -0.637505, -28.6975, -1.89709, -28.7559, -2.7368, -29.0918, -3.36659, -29.4423, -4.29028, -29.5007, -5.17199, -29.5445, -6.09568, -29.6468, -7.01937, -29.5592, -8.06902, -29.3401, -7.90108, -28.6391, -7.8171, -28.2156, -7.06136, -28.0111, -6.3476, -27.4124, -6.47355, -26.9012, -7.06136, -26.5069, -7.06136, -25.806, -7.06136, -25.4263, -5.67582, -25.4701, -5.00405, -25.2656, -3.9544, -25.251, -2.98872, -25.2802, -1.68716, -25.4555, -1.5612, -24.6814, -1.51921, -23.6154, -1.51921, -22.7099, -1.39326, -21.7023, -1.60319, -21.4978, -1.60319, -21.3372, -1.81311, -21.0889, -1.93907, -20.753, -1.77113, -20.5486, -2.02305, -19.5555, -2.31695, -18.2557, -2.26173, -16.6759, -2.71645, -16.5968, -2.75433, -16.1355, -3.20905, -15.1733, -3.24694, -14.4089, -3.05747, -14.1848, -3.24694, -14.0662, -3.70164, -13.7894, -4.08057, -13.3281, -4.19424, -12.8536, -4.11846, -12.3264, -3.89111, -11.997, -4.50924, -11.5006, -4.69442, -11.0712, -5.28083, -10.7599, -5.34255, -10.4271, -5.71292, -10.0084, -5.86723, -9.579, -6.63882, -9.27841, -6.91276, -8.61309, -7.56252, -8.13729, -8.62265, -7.73286, -9.2724, -7.53065, -10.0932, -7.26896, -10.0907, -6.72584, -10.8932, -6.32864, -12.4981, -5.67379, -15.6462, -4.25674, -15.8278, -3.83751, -15.5747, -3.59536, -15.8911, -3.24315, -15.8911, -2.78088, -15.6379, -2.4727, -16.2075, -2.16452, -16.7771, -1.72425, -16.3974, -1.08588, -15.3215, -0.205357, -14.5621, 0.300941, -14.8152, 0.543083, -15.3215, 0.653149, -15.1316, 1.15945, -16.3341, 2.15004, -16.8404, 3.03056, -17.4733, 3.91108, -17.7264, 4.83563, -17.853, 6.02433, -18.0429, 6.9929, -17.5366, 7.34511, -17.9796, 7.6753, -19.0555, 7.80738, -20.4478, 8.13758, -21.9034, 8.55582, -22.6628, 9.08413, -22.7261, 9.50238, -22.2831, 9.83258, -20.7642, 9.89862, -19.4985, 9.74452, -17.4733, 9.52439, -16.8404, 9.48037, -18.1276, 10.811, -18.1276, 11.2679, -18.5845, 11.5063, -18.9272, 12.0229, -19.6698, 12.7381, -20.8121, 13.2745, -21.6688, 14.2877, -21.6117, 15.7578, -21.726, 16.5127, -21.8973, 17.3273, -21.5546, 18.2411, -21.0977, 18.8968, -20.6979, 19.1153, -21.8402, 19.0557, -23.2681, 19.3338, -24.1248, 19.6716, -23.8964, 20.3669, -23.0967, 20.7046, -22.0115, 20.9828, -21.4404, 21.2808, -22.0115, 21.6384, -23.0967, 21.9562, -24.696, 22.9297, -25.9526, 23.8038, -26.9807, 24.9362, -27.2663, 25.6912, -27.7803, 27.1613, -28.3515, 28.2739, -28.0659, 29.2672, -27.2091, 29.7837, -26.638, 29.9625, -26.6951, 30.3003, -27.609, 30.5983, -28.4657, 30.936, -28.9798, 31.234, -27.7803, 31.1943, -26.5237, 31.2141, -25.1529, 31.1943, -23.3252, 31.0353, -20.2409, 30.9161, -16.4712, 30.5387, -15.8429, 30.7969, -15.2147, 30.7969, -15.2147, 30.4791, -14.3008, 30.4989, -13.5012, 30.3996, -13.2727, 30.2208, -12.4731, 30.2208, -12.0161, 30.3797, -10.6453, 30.3797, -7.50391, 30.34, -7.4468, 30.4791, -6.59005, 30.5188, -5.90465, 30.3003, -4.81944, 30.3996, -2.9917, 30.3996, -0.707031, 30.3797, 0.778, 30.4195, 2.71996, 30.5188 )
@@ -92,56 +100,88 @@ texture_normal = ExtResource( 5 )
 expand = true
 _sections_unfolded = [ "Pause", "Textures" ]
 
-[node name="loseScreen" parent="." index="4" instance=ExtResource( 6 )]
+[node name="frutas" type="Node" parent="." index="4"]
 
-visible = false
-position = Vector2( 0.000858307, -0.0379982 )
-scale = Vector2( 1.0001, 1.00097 )
+editor/display_folded = true
+_sections_unfolded = [ "Pause" ]
 
-[node name="Glob" parent="." index="5" instance=ExtResource( 7 )]
+[node name="lemon" type="TextureButton" parent="frutas" index="0"]
 
-position = Vector2( -22.6796, -19.5332 )
-scale = Vector2( 0.0735134, 0.120278 )
-_sections_unfolded = [ "Pause", "Transform" ]
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 239.0
+margin_top = 507.0
+margin_right = 325.0
+margin_bottom = 593.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+expand = true
+_sections_unfolded = [ "Material", "Mouse", "Size Flags", "Textures", "Visibility" ]
 
-[node name="pause" parent="." index="6" instance=ExtResource( 8 )]
+[node name="strawberry" type="TextureButton" parent="frutas" index="1"]
 
-visible = false
-position = Vector2( 0.000859295, -0.0380006 )
-scale = Vector2( 1.0001, 1.00097 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 325.0
+margin_top = 507.0
+margin_right = 408.0
+margin_bottom = 590.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+expand = true
+_sections_unfolded = [ "Textures" ]
 
-[node name="nextLevel" parent="." index="7" instance=ExtResource( 9 )]
+[node name="grape" type="TextureButton" parent="frutas" index="2"]
 
-visible = false
-position = Vector2( 0.000859, -0.038001 )
-scale = Vector2( 1.0001, 1.00097 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 422.0
+margin_top = 513.0
+margin_right = 502.0
+margin_bottom = 593.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+expand = true
+_sections_unfolded = [ "Textures" ]
 
-[node name="PositionUp2" type="Position2D" parent="." index="8"]
-
-position = Vector2( -19.6055, -22.3522 )
-scale = Vector2( 0.0662609, 0.120058 )
-
-[node name="PositionUp1" type="Position2D" parent="." index="9"]
-
-position = Vector2( -18.8975, -20.0648 )
-scale = Vector2( 0.0662609, 0.120058 )
-
-[node name="PositionCenter" type="Position2D" parent="." index="10"]
-
-position = Vector2( -17.1148, -15.9952 )
-scale = Vector2( 0.0662609, 0.120058 )
-
-[node name="PositionDown1" type="Position2D" parent="." index="11"]
-
-position = Vector2( -18.8959, -14.4931 )
-scale = Vector2( 0.0662609, 0.120058 )
-
-[node name="PositionDown2" type="Position2D" parent="." index="12"]
-
-position = Vector2( -20.4114, -13.3426 )
-scale = Vector2( 0.0662609, 0.120058 )
-
-[node name="Label" type="Label" parent="." index="13"]
+[node name="Label" type="Label" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -167,85 +207,54 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Visibility", "custom_colors" ]
 
-[node name="frutas" type="Node" parent="." index="14"]
+[node name="PositionUp2" type="Position2D" parent="." index="6"]
 
-_sections_unfolded = [ "Pause" ]
+position = Vector2( -19.6055, -22.3522 )
+scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="lemon" type="TextureButton" parent="frutas" index="0"]
+[node name="PositionUp1" type="Position2D" parent="." index="7"]
 
-light_mask = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 248.0
-margin_top = 507.0
-margin_right = 325.0
-margin_bottom = 584.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 10 )
-expand = true
-_sections_unfolded = [ "Material", "Mouse", "Size Flags", "Textures", "Visibility" ]
+position = Vector2( -18.8975, -20.0648 )
+scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="strawberry" type="TextureButton" parent="frutas" index="1"]
+[node name="PositionCenter" type="Position2D" parent="." index="8"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 347.0
-margin_top = 507.0
-margin_right = 423.0
-margin_bottom = 583.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 11 )
-expand = true
-_sections_unfolded = [ "Textures" ]
+position = Vector2( -17.1148, -15.9952 )
+scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="grape" type="TextureButton" parent="frutas" index="2"]
+[node name="PositionDown1" type="Position2D" parent="." index="9"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 443.0
-margin_top = 516.0
-margin_right = 514.0
-margin_bottom = 587.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 12 )
-expand = true
-_sections_unfolded = [ "Textures" ]
+position = Vector2( -18.8959, -14.4931 )
+scale = Vector2( 0.0662609, 0.120058 )
+
+[node name="PositionDown2" type="Position2D" parent="." index="10"]
+
+position = Vector2( -20.4114, -13.3426 )
+scale = Vector2( 0.0662609, 0.120058 )
+
+[node name="loseScreen" parent="." index="11" instance=ExtResource( 9 )]
+
+visible = false
+position = Vector2( 0.000858307, -0.0379982 )
+scale = Vector2( 1.0001, 1.00097 )
+
+[node name="Glob" parent="." index="12" instance=ExtResource( 10 )]
+
+position = Vector2( -22.6796, -19.5332 )
+scale = Vector2( 0.0735134, 0.120278 )
+_sections_unfolded = [ "Pause", "Transform" ]
+
+[node name="pause" parent="." index="13" instance=ExtResource( 11 )]
+
+visible = false
+position = Vector2( 0.000859295, -0.0380006 )
+scale = Vector2( 1.0001, 1.00097 )
+
+[node name="nextLevel" parent="." index="14" instance=ExtResource( 12 )]
+
+visible = false
+position = Vector2( 0.000859, -0.038001 )
+scale = Vector2( 1.0001, 1.00097 )
 
 [connection signal="mouse_entered" from="pauseButton" to="." method="_on_pauseButton_mouse_entered"]
 
