@@ -374,6 +374,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="pineappleStaticBody2D" type="StaticBody2D" parent="Node2D" index="3"]
 
+editor/display_folded = true
 position = Vector2( -18.4007, 8.96136 )
 scale = Vector2( 0.205156, 0.243052 )
 input_pickable = true
@@ -453,7 +454,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="tomatoStaticBody2D" type="StaticBody2D" parent="Node2D" index="6"]
 
-editor/display_folded = true
 position = Vector2( 3.29589, 0.247337 )
 scale = Vector2( 1.00991, 1.00158 )
 input_pickable = true

@@ -12,6 +12,7 @@ var pos_new_sprite
 var pos_origin_text
 var pos_new_text
 
+
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
 	configuration.connect("language_changed", self, "language")
@@ -33,7 +34,8 @@ func language():
 
 #Mouse clicando no sprite "tomatoBox"
 func _on_tomatoStaticBody2D_input_event(viewport, event, shape_idx):
-	pass # replace with function body
+	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		get_tree().change_scene("res://scenes/childScenes/instructions/instructions.tscn")
 
 
 #Mouse entrando no sprite "tomatoBox"
