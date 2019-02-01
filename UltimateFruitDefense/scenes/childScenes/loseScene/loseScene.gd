@@ -22,7 +22,7 @@ var sickBoy = preload("res://assets/sprites/loseScreen/sickBoy.png")
 func _ready():
 	language()
 	configuration.connect("language_changed", self, "language")
-	if(configuration.player_sex == "m"):
+	if(configuration.player_sex == "h"):
 		$sick.set_texture(sickBoy)
 	else:
 		$sick.set_texture(sickGirl)
