@@ -19,6 +19,8 @@ func _process(delta):
 		disable_fruits()
 	vitamins = vitamins + delta
 	print(vitamins)
+	$Label2.text = str(int(vitamins))
+
 #Função chamada para modificar o valor da glicemia mostrado
 func changeLabel():
 	$Label.text = str(game_control.sugarLevel, " mg/dL")
@@ -74,15 +76,15 @@ func _on_grape_pressed():
 		add_child(grape)
 
 func enable_fruits():
-	$frutas/lemon.disabled = false
-	$frutas/strawberry.disabled = false
-	$frutas/grape.disabled = false
+	$lemon.disabled = false
+	$strawberry.disabled = false
+	$grape.disabled = false
 	
 	
 func disable_fruits():
-	$frutas/lemon.disabled = true
-	$frutas/strawberry.disabled = true
-	$frutas/grape.disabled = true
+	$lemon.disabled = true
+	$strawberry.disabled = true
+	$grape.disabled = true
 	
 
 #Função chamada quando o mouse entra no sprite da uva
