@@ -5,10 +5,13 @@ var beatedEnemies = 0
 var level = 1
 var vitamins = 0
 var sugarLevel = 50
+var dano = 2
+var wait_time = 2
+var avaliable = true
 signal sugarLevelChange
 
 func aumentarSugarLevel():
-	sugarLevel +=2
+	sugarLevel += dano
 	emit_signal("sugarLevelChange")
 
 

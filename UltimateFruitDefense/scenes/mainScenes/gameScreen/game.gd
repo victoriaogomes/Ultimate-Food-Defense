@@ -4,7 +4,7 @@ extends Node2D
 onready var fruit1 = preload("res://scenes/mainScenes/gameScreen/Lemon.tscn")
 onready var fruit2 = preload("res://scenes/mainScenes/gameScreen/strawberry.tscn")
 onready var fruit3 = preload("res://scenes/mainScenes/gameScreen/grape.tscn")
-var vitamins = 150
+var vitamins = 180
 
 #Conecta ao sinal que é emitido quando o nível de açúcar no 
 #sangue altera
@@ -17,7 +17,7 @@ func _process(delta):
 		enable_fruits()
 	else:
 		disable_fruits()
-	vitamins = vitamins + delta
+	vitamins = vitamins + delta*2
 	print(vitamins)
 	$Label2.text = str(int(vitamins))
 
@@ -45,7 +45,7 @@ func _on_lemon_pressed():
 		vitamins-=100
 		var lemon = fruit1.instance()
 		add_child(lemon)
-		game_control.diminuirSugarLevel()
+		game_control.dano = 1
 
 
 #Função chamada quando o mouse entra no sprite do limão
@@ -60,6 +60,7 @@ func _on_strawberry_pressed():
 		vitamins-=100
 		var sberry = fruit2.instance()
 		add_child(sberry)
+		game_control.diminuirSugarLevel()
 
 
 #Função chamada quando o mouse entra no sprite do morango
@@ -74,6 +75,7 @@ func _on_grape_pressed():
 		vitamins-=100
 		var grape =  fruit3.instance()
 		add_child(grape)
+		game_control.wait_time = 1
 
 func enable_fruits():
 	$lemon.disabled = false

@@ -5,6 +5,7 @@ var numberEnemies = 0
 var anim
 var pos
 var target_position
+
 onready var bullet = preload("res://scenes/mainScenes/gameScreen/bullet.tscn")
 
 
@@ -12,6 +13,8 @@ func _ready():
 	self.set_physics_process(true)
 	$timer.start()
 	$timer.connect("timeout", self, "on_TimeOut")
+	$tempo.connect("timeout", self, "_on_tempo_timeout")
+
 
 
 func on_TimeOut():
@@ -20,6 +23,7 @@ func on_TimeOut():
 
 
 func _process(delta):
+	set_wait_time(game_control.wait_time)
 	choose_and_lock()
 	swap_animation(delta)
 
@@ -35,7 +39,12 @@ func choose_and_lock():
 				game_control.target = enemies[1]
 			i+=1
 
-
+func set_wait_time(time):
+	$timer.wait_time = time
+	if game_control.avaliable && time == 1:
+		$tempo.start()
+		game_control.avaliable = false
+	
 func swap_animation(delta):
 	if game_control.target != null:
 		target_position = game_control.target.position
@@ -82,3 +91,7 @@ func spwan_bullet(pos):
 	clone_bullet.position = pos.position
 	if(configuration.sound_effects):
 		configuration.gun_sound.play()
+
+func _on_tempo_timeout():
+	game_control.wait_time = 2
+	game_control.avaliable = true
