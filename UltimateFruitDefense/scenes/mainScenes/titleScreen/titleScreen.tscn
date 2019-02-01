@@ -302,9 +302,6 @@ position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Theme", "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="background" type="Sprite" parent="." index="0"]
 
