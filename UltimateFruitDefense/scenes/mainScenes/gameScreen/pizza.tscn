@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/Mob.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/leftPizzaArm.png" type="Texture" id=2]
@@ -8,14 +8,9 @@
 [ext_resource path="res://assets/sprites/gameScreen/rightPizzaArm.png" type="Texture" id=6]
 [ext_resource path="res://scenes/mainScenes/gameScreen/atackPizza.tres" type="Animation" id=7]
 [ext_resource path="res://scenes/mainScenes/gameScreen/pizza.tres" type="Animation" id=8]
+[ext_resource path="res://assets/sounds/breaking.wav" type="AudioStream" id=9]
 
-
-
-
-
-
-
-[node name="Mob" type="KinematicBody2D"]
+[node name="Mob" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 0.0502731, 0.0502731 )
 input_pickable = false
@@ -38,8 +33,8 @@ rect = Rect2( -10, -10, 20, 20 )
 "member",
 ]]
 
-position = Vector2( -19.5554, 25.8925 )
-rotation = 0.575562
+position = Vector2( -8.55536, 18.8925 )
+rotation = 0.0100968
 scale = Vector2( 0.0418298, 0.0471288 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
@@ -82,8 +77,8 @@ __meta__ = {
 "member",
 ]]
 
-position = Vector2( 358.093, 362.217 )
-rotation = 0.569588
+position = Vector2( 651.096, 362.217 )
+rotation = 2.10626e-007
 scale = Vector2( 0.770992, 0.882598 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
@@ -113,6 +108,15 @@ process_mode = 1
 wait_time = 2.6
 one_shot = false
 autostart = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 9 )
+volume_db = -25.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
 

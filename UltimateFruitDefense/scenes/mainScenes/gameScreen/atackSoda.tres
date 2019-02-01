@@ -102,4 +102,16 @@ tracks/7/keys = {
 "update": 0,
 "values": [ 0.0, 32.4799, 65.1468, 97.5887, 130.045, 97.6249, 64.8562, 32.6173, 0.0 ]
 }
+tracks/8/type = "value"
+tracks/8/path = NodePath("AudioStreamPlayer:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.18 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
