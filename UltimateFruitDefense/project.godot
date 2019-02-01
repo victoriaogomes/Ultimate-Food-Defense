@@ -35,6 +35,10 @@ ui_mouse_left_button=[ Object(InputEventMouseButton,"resource_local_to_scene":fa
 
 limits/message_queue/max_size_kb=2048
 
+[network]
+
+limits/debugger_stdout/max_chars_per_second=1024
+
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=0

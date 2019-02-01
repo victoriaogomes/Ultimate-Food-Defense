@@ -4,14 +4,21 @@ extends Node2D
 onready var fruit1 = preload("res://scenes/mainScenes/gameScreen/Lemon.tscn")
 onready var fruit2 = preload("res://scenes/mainScenes/gameScreen/strawberry.tscn")
 onready var fruit3 = preload("res://scenes/mainScenes/gameScreen/grape.tscn")
-
+var vitamins = 150
 
 #Conecta ao sinal que é emitido quando o nível de açúcar no 
 #sangue altera
 func _ready():
+	self.set_physics_process(true)
 	game_control.connect("sugarLevelChange", self, "changeLabel")
 
-
+func _process(delta):
+	if vitamins >=100:
+		enable_fruits()
+	else:
+		disable_fruits()
+	vitamins = vitamins + delta
+	print(vitamins)
 #Função chamada para modificar o valor da glicemia mostrado
 func changeLabel():
 	$Label.text = str(game_control.sugarLevel, " mg/dL")
@@ -32,9 +39,11 @@ func _on_pauseButton_mouse_entered():
 
 #Função chamada quando o limão é pressionado
 func _on_lemon_pressed():
-	var lemon = fruit1.instance()
-	add_child(lemon)
-	game_control.diminuirSugarLevel()
+	if vitamins >= 100:
+		vitamins-=100
+		var lemon = fruit1.instance()
+		add_child(lemon)
+		game_control.diminuirSugarLevel()
 
 
 #Função chamada quando o mouse entra no sprite do limão
@@ -45,8 +54,10 @@ func _on_lemon_mouse_entered():
 
 #Função chamada quando o morango é pressionado
 func _on_strawberry_pressed():
-	var sberry = fruit2.instance()
-	add_child(sberry)
+	if vitamins >= 100:
+		vitamins-=100
+		var sberry = fruit2.instance()
+		add_child(sberry)
 
 
 #Função chamada quando o mouse entra no sprite do morango
@@ -57,9 +68,22 @@ func _on_strawberry_mouse_entered():
 
 #Função chamada quando a uva é pressionada
 func _on_grape_pressed():
-	var grape =  fruit3.instance()
-	add_child(grape)
+	if vitamins >=100:
+		vitamins-=100
+		var grape =  fruit3.instance()
+		add_child(grape)
 
+func enable_fruits():
+	$frutas/lemon.disabled = false
+	$frutas/strawberry.disabled = false
+	$frutas/grape.disabled = false
+	
+	
+func disable_fruits():
+	$frutas/lemon.disabled = true
+	$frutas/strawberry.disabled = true
+	$frutas/grape.disabled = true
+	
 
 #Função chamada quando o mouse entra no sprite da uva
 func _on_grape_mouse_entered():
