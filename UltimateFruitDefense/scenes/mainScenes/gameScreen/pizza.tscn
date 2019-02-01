@@ -10,7 +10,7 @@
 [ext_resource path="res://scenes/mainScenes/gameScreen/pizza.tres" type="Animation" id=8]
 [ext_resource path="res://assets/sounds/breaking.wav" type="AudioStream" id=9]
 
-[node name="Mob" type="KinematicBody2D" index="0"]
+[node name="Mob" type="KinematicBody2D"]
 
 scale = Vector2( 0.0502731, 0.0502731 )
 input_pickable = false
@@ -25,8 +25,8 @@ __meta__ = {
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="0"]
 
-position = Vector2( 0.508728, 5.43546 )
-scale = Vector2( 4.0055, 4.89422 )
+position = Vector2( -4.4152, 5.43546 )
+scale = Vector2( 1.79828, 4.89422 )
 rect = Rect2( -10, -10, 20, 20 )
 
 [node name="leftArm" type="Sprite" parent="." index="1" groups=[
@@ -55,6 +55,7 @@ __meta__ = {
 
 [node name="corpo" type="Sprite" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( -0.607602, 3.70039 )
 scale = Vector2( 0.0546071, 0.0572125 )
 texture = ExtResource( 4 )
@@ -112,7 +113,7 @@ autostart = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
 
 stream = ExtResource( 9 )
-volume_db = -25.0
+volume_db = -35.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0

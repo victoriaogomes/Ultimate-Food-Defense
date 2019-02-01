@@ -124,7 +124,7 @@ tracks/8/keys = {
 "values": [ true, false, true ]
 }
 
-[node name="Mob" type="KinematicBody2D" index="0"]
+[node name="Mob" type="KinematicBody2D"]
 
 scale = Vector2( 0.00936485, 0.00936485 )
 input_pickable = false
@@ -222,7 +222,7 @@ autostart = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
 
 stream = ExtResource( 8 )
-volume_db = -25.0
+volume_db = -35.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
