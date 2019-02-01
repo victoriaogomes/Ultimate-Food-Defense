@@ -18,7 +18,7 @@ func _ready():
 
 func _process(delta):
 	#Pra efeitos de teste, tá passando de fase após matar poucos inimigos. Mudo isso dps que já tiver tudo shows
-	aux = 0 + (game_control.level*2)
+	aux = 20 + (game_control.level*2)
 	if(game_control.beatedEnemies == aux):
 		$MobTimer.stop()
 		game_control.level = game_control.level+1
