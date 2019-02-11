@@ -46,7 +46,7 @@ func _on_cucumberStaticBody2D_input_event(viewport, event, shape_idx):
 	var sEfect = AudioStreamPlayer.new()
 	self.add_child(sEfect)
 	#sEfect.stream = load("res://Assets/Sounds/biting.wav") #som fica bugado com touchpad
-	sEfect.stream = load("res://Assets/Sounds/click.wav")
+	#sEfect.stream = load("res://Assets/Sounds/click.wav")
 	sEfect.volume_db = -35
 	if(!sEfect.playing):
 		sEfect.play()

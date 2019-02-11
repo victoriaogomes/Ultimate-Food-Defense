@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/game.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/gameScreen/Ativo 2756@3x.png" type="Texture" id=2]
@@ -6,17 +6,34 @@
 [ext_resource path="res://assets/sprites/gameScreen/wallet.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/gameScreen/vitamins.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/gameScreen/pause.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon (v2).png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry(v2).png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grape(v2).png" type="Texture" id=13]
-[ext_resource path="res://scenes/childScenes/loseScene/loseScene.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=17]
+[ext_resource path="res://KGSecondChancesSketch.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/pause.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon (v2).png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry(v2).png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grape(v2).png" type="Texture" id=14]
+[ext_resource path="res://scenes/childScenes/loseScene/loseScene.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=18]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 25
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Font/fallback", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 13
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -101,9 +118,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -20.0
-margin_top = 27.0
+margin_top = 26.0
 margin_right = 24.0
-margin_bottom = 54.0
+margin_bottom = 65.0
 rect_scale = Vector2( 0.14, 0.14 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -111,6 +128,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
@@ -118,7 +136,7 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Visibility", "custom_colors" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Visibility", "custom_colors", "custom_fonts" ]
 
 [node name="pauseButton" type="TextureButton" parent="." index="6"]
 
@@ -141,7 +159,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 8 )
 expand = true
 _sections_unfolded = [ "Pause", "Textures" ]
 
@@ -167,8 +185,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 8 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
 expand = true
 _sections_unfolded = [ "Material", "Mouse", "Size Flags", "Textures", "Visibility" ]
 
@@ -193,8 +211,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 10 )
-texture_hover = ExtResource( 11 )
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
 expand = true
 _sections_unfolded = [ "Textures" ]
 
@@ -219,8 +237,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 12 )
-texture_hover = ExtResource( 13 )
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
 expand = true
 _sections_unfolded = [ "Textures" ]
 
@@ -230,10 +248,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -29.0
-margin_top = 19.0
-margin_right = 17.0
-margin_bottom = 50.0
+margin_left = -30.0
+margin_top = 18.0
+margin_right = 34.0
+margin_bottom = 76.0
 rect_scale = Vector2( 0.11, 0.11 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -241,6 +259,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "50 mg/dL"
 align = 1
@@ -248,7 +267,7 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Visibility", "custom_colors" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Visibility", "custom_colors", "custom_fonts" ]
 
 [node name="PositionUp2" type="Position2D" parent="." index="11"]
 
@@ -275,25 +294,25 @@ scale = Vector2( 0.0662609, 0.120058 )
 position = Vector2( -20.4114, -13.3426 )
 scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="loseScreen" parent="." index="16" instance=ExtResource( 14 )]
+[node name="loseScreen" parent="." index="16" instance=ExtResource( 15 )]
 
 visible = false
 position = Vector2( 0.000858307, -0.0379982 )
 scale = Vector2( 1.0001, 1.00097 )
 
-[node name="Glob" parent="." index="17" instance=ExtResource( 15 )]
+[node name="Glob" parent="." index="17" instance=ExtResource( 16 )]
 
 position = Vector2( -22.6796, -19.5332 )
 scale = Vector2( 0.0735134, 0.120278 )
 _sections_unfolded = [ "Pause", "Transform" ]
 
-[node name="pause" parent="." index="18" instance=ExtResource( 16 )]
+[node name="pause" parent="." index="18" instance=ExtResource( 17 )]
 
 visible = false
 position = Vector2( 0.000859295, -0.0380006 )
 scale = Vector2( 1.0001, 1.00097 )
 
-[node name="nextLevel" parent="." index="19" instance=ExtResource( 17 )]
+[node name="nextLevel" parent="." index="19" instance=ExtResource( 18 )]
 
 visible = false
 position = Vector2( 0.000859, -0.038001 )
