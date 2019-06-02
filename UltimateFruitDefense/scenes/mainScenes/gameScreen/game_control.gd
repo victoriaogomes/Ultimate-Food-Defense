@@ -1,12 +1,18 @@
 extends Node2D
 
+#warning-ignore:unused_class_variable
 var target
+#warning-ignore:unused_class_variable
 var beatedEnemies = 0
+#warning-ignore:unused_class_variable
 var level = 1
+#warning-ignore:unused_class_variable
 var vitamins = 0
 var sugarLevel = 50
 var dano = 2
+#warning-ignore:unused_class_variable
 var wait_time = 2
+#warning-ignore:unused_class_variable
 var avaliable = true
 signal sugarLevelChange
 

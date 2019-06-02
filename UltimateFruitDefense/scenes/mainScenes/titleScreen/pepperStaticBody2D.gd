@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 #Carregando assets para mexer no sprites "credits" e "pepperBox"
+#warning-ignore:unused_class_variable
 var next_scene = preload("res://scenes/childScenes/creditScreen/credit.tscn")
 var base_english_text = preload("res://assets/sprites/titleScreen/texts/English/Credits.png")
 var hover_english_text = preload("res://assets/sprites/titleScreen/texts/English/Credits(v2).png")
@@ -24,6 +25,7 @@ var pos_new_text
 
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	pos_origin_sprite = $pepperBox.get_position()
 	pos_origin_text = $credits.get_position()
@@ -42,6 +44,9 @@ func language():
 
 
 #Mouse clicando no sprite "pepperBox"
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
 func _on_pepperStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
 		self.set_pickable(false)

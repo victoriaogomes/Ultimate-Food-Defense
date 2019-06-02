@@ -12,6 +12,7 @@ var scene
 #Chama a função "language" para colocar o text do sprite no idioma correto
 func _ready():
 	language()
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 
 

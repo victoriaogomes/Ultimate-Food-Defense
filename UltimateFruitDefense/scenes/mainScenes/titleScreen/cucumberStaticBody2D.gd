@@ -24,6 +24,7 @@ var pos_new_text
 
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	pos_origin_sprite = $cucumberBox.get_position()
 	pos_origin_text = $options.get_position()
@@ -42,6 +43,9 @@ func language():
 
 
 #Mouse clicando no sprite "cucumberBox"
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
 func _on_cucumberStaticBody2D_input_event(viewport, event, shape_idx):
 	var sEfect = AudioStreamPlayer.new()
 	self.add_child(sEfect)

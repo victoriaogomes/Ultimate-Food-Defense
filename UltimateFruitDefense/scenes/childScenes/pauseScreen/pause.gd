@@ -17,6 +17,7 @@ var hover_resumeGame_portuguese = preload("res://assets/sprites/pause/texts/pt-B
 
 func _ready():
 	language()
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 
 func language():
@@ -39,6 +40,7 @@ func language():
 func _on_mainMenu_pressed():
 	$AnimationPlayer.play_backwards("pause", -1)
 	yield($AnimationPlayer, "animation_finished")
+	#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
 
 

@@ -10,6 +10,7 @@ var vitamins = 180
 #sangue altera
 func _ready():
 	self.set_physics_process(true)
+	#warning-ignore:return_value_discarded
 	game_control.connect("sugarLevelChange", self, "changeLabel")
 
 func _process(delta):
@@ -18,7 +19,7 @@ func _process(delta):
 	else:
 		disable_fruits()
 	vitamins = vitamins + delta*2
-	print(vitamins)
+	#print(vitamins)
 	$Label2.text = str(int(vitamins))
 
 #Função chamada para modificar o valor da glicemia mostrado

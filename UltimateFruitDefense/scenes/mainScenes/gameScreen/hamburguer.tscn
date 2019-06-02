@@ -7,7 +7,8 @@
 [ext_resource path="res://assets/sprites/gameScreen/rightHamburguerArm.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/gameScreen/rightHamburguerLeg.png" type="Texture" id=6]
 [ext_resource path="res://scenes/mainScenes/gameScreen/hamburguer.tres" type="Animation" id=7]
-[ext_resource path="res://assets/sounds/breaking.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/breaking.ogg" type="AudioStream" id=8]
+
 
 [sub_resource type="Animation" id=1]
 

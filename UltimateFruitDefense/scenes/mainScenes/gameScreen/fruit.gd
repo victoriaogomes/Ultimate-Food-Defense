@@ -7,6 +7,7 @@ extends KinematicBody2D
 func _ready():
 	used()
 	#print("instaced")
+	#warning-ignore:return_value_discarded
 	$Timer.connect("timeout", self, "done")
 	$Timer.start()
 

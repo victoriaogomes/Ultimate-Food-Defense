@@ -12,6 +12,7 @@ var tryAgainBase_english = preload("res://assets/sprites/loseScreen/texts/englis
 var tryAgainhover_english = preload("res://assets/sprites/loseScreen/texts/english/Try level again(v2).png")
 
 var mainMenuBase_english = preload("res://assets/sprites/pause/texts/english/mainMenu.png")
+#warning-ignore:unused_class_variable
 var mainMenuhover_english = preload("res://assets/sprites/pause/texts/english/mainMenu(v2).png")
 var mainMenuBase_port = preload("res://assets/sprites/pause/texts/pt-Br/menuInicial.png")
 var mainMenuhover_port = preload("res://assets/sprites/pause/texts/pt-Br/menuInicial(v2).png")
@@ -21,6 +22,7 @@ var sickBoy = preload("res://assets/sprites/loseScreen/sickBoy.png")
 
 func _ready():
 	language()
+#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	if(configuration.player_sex == "h"):
 		$sick.set_texture(sickBoy)
@@ -48,6 +50,7 @@ func _on_mainMenu_pressed():
 	$AnimationPlayer.play_backwards("lose", -1)
 	yield($AnimationPlayer, "animation_finished")
 	get_tree().set_pause(false)
+#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
 
 
@@ -58,6 +61,7 @@ func _on_mainMenu_mouse_entered():
 
 func _on_tryAgain_pressed():
 	game_control.sugarLevel = 50
+#warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
 	get_tree().set_pause(false)
 	game_control.target = null

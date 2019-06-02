@@ -1,6 +1,7 @@
 extends Node2D
 
 var enemies
+#warning-ignore:unused_class_variable
 var numberEnemies = 0
 var anim
 var pos
@@ -12,7 +13,9 @@ onready var bullet = preload("res://scenes/mainScenes/gameScreen/bullet.tscn")
 func _ready():
 	self.set_physics_process(true)
 	$timer.start()
+	#warning-ignore:return_value_discarded
 	$timer.connect("timeout", self, "on_TimeOut")
+	#warning-ignore:return_value_discarded
 	$tempo.connect("timeout", self, "_on_tempo_timeout")
 
 
@@ -45,6 +48,7 @@ func set_wait_time(time):
 		$tempo.start()
 		game_control.avaliable = false
 	
+#warning-ignore:unused_argument
 func swap_animation(delta):
 	if game_control.target != null:
 		target_position = game_control.target.position

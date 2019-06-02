@@ -9,6 +9,7 @@ var healthEngli = preload("res://assets/sprites/nextLevel/texts/english/youHealt
 
 func _ready():
 	language()
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	if(configuration.player_sex == "m"):
 		$avatar.set_texture(boy)
@@ -26,6 +27,7 @@ func language():
 
 func _on_nextLevel_pressed():
 	get_tree().set_pause(false)
+	#warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
 
 

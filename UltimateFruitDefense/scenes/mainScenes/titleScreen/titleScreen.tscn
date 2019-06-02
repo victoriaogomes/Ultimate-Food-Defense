@@ -32,10 +32,7 @@
 [ext_resource path="res://scenes/childScenes/creditScreen/credit.tscn" type="PackedScene" id=30]
 
 [sub_resource type="Animation" id=1]
-
 length = 3.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Node2D:position")
 tracks/0/interp = 1
@@ -206,10 +203,7 @@ tracks/13/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 length = 2.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("gameTitle:self_modulate")
 tracks/0/interp = 1
@@ -260,17 +254,11 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 resource_name = "clouds"
-length = 1.0
-loop = false
-step = 0.1
 
 [sub_resource type="Animation" id=4]
-
 length = 20.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("background/clouds:position")
 tracks/0/interp = 1
@@ -297,385 +285,232 @@ tracks/1/keys = {
 }
 
 [node name="Node2D" type="Node2D"]
-
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Theme", "Transform" ]
 
-[node name="background" type="Sprite" parent="." index="0"]
-
+[node name="background" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( 0.138177, -0.341943 )
 scale = Vector2( 0.0332293, 0.049872 )
 texture = ExtResource( 2 )
 
-[node name="clouds" type="Sprite" parent="background" index="0"]
-
+[node name="clouds" type="Sprite" parent="background"]
 position = Vector2( -1605.72, 0 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility" ]
 
-[node name="clouds2" type="Sprite" parent="background" index="1"]
-
+[node name="clouds2" type="Sprite" parent="background"]
 position = Vector2( 334.659, 0 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility" ]
 
-[node name="gameTitle" type="Sprite" parent="." index="1"]
-
+[node name="gameTitle" type="Sprite" parent="."]
 position = Vector2( -14.2857, -9.05413 )
 scale = Vector2( 0.0361571, 0.0603706 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="road" type="Sprite" parent="." index="2"]
-
+[node name="road" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( 11.0793, 24.5396 )
 scale = Vector2( 0.0374752, 0.0739871 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Sprite" type="Sprite" parent="road" index="0"]
-
+[node name="Sprite" type="Sprite" parent="road"]
 position = Vector2( -856.375, -0.090698 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="Node2D" type="Node2D" parent="." index="3"]
-
+[node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 17.4824, -1.31449 )
 scale = Vector2( 0.467466, 0.998427 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="seller" type="Sprite" parent="Node2D" index="0"]
-
+[node name="seller" type="Sprite" parent="Node2D"]
 position = Vector2( -2.82765, 4.04061 )
 scale = Vector2( 0.110925, 0.0850863 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="well2" type="Sprite" parent="Node2D" index="1"]
-
+[node name="well2" type="Sprite" parent="Node2D"]
 position = Vector2( -23.4088, 30.0282 )
 rotation = 25.1327
 scale = Vector2( 0.035074, 0.035074 )
 texture = ExtResource( 9 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="car" type="Sprite" parent="Node2D" index="2"]
-
+[node name="car" type="Sprite" parent="Node2D"]
 position = Vector2( -0.603302, 0.603747 )
 scale = Vector2( 0.0417297, 0.0376911 )
 texture = ExtResource( 10 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="pineappleStaticBody2D" type="StaticBody2D" parent="Node2D" index="3"]
-
+[node name="pineappleStaticBody2D" type="StaticBody2D" parent="Node2D"]
 editor/display_folded = true
 position = Vector2( -18.4007, 8.96136 )
 scale = Vector2( 0.205156, 0.243052 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 script = ExtResource( 11 )
-_sections_unfolded = [ "Material", "Pickable", "Visibility", "Z Index" ]
 
-[node name="pineappleBox" type="Sprite" parent="Node2D/pineappleStaticBody2D" index="0"]
-
+[node name="pineappleBox" type="Sprite" parent="Node2D/pineappleStaticBody2D"]
 position = Vector2( -3.58496, -2.336 )
 scale = Vector2( 0.224094, 0.161037 )
 texture = ExtResource( 12 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pineappleStaticBody2D" index="1"]
-
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pineappleStaticBody2D"]
 position = Vector2( -3.62222, -2.12581 )
 scale = Vector2( 0.224094, 0.161037 )
-build_mode = 0
 polygon = PoolVector2Array( 127.378, -40.0907, 130.808, 54.6947, 128.273, 105.831, 123.557, 183.44, -132.459, 184.297, -143.922, 107.217, -115.264, 10.4393, -122.906, -14.3975, -105.417, -45.0613, -100.675, -49.8126, -113.695, -53.1143, -113.204, -56.0859, -107.61, -59.4432, -100.93, -58.2454, -107.944, -73.9667, -110.783, -79.6564, -120.47, -86.0947, -117.242, -87.6723, -108.672, -84.6235, -133.837, -110.234, -120.234, -108.77, -109.76, -96.575, -121.458, -125.966, -119.962, -130.234, -112.208, -123.649, -114.385, -133.771, -125.539, -145.966, -118.466, -147.43, -104.047, -139.259, -97.1094, -128.893, -97.2455, -139.015, -93.8446, -139.747, -90.3081, -135.478, -83.3705, -147.673, -74.5287, -154.869, -68.2715, -157.308, -67.7272, -151.454, -72.7604, -138.771, -59.9738, -143.283, -58.6134, -139.503, -62.0142, -136.21, -63.1023, -127.551, -66.3671, -114.624, -48.8193, -122.917, -46.6428, -120.722, -71.9441, -98.4042, -75.2089, -91.087, -65.2787, -99.8677, -61.3339, -99.6238, -61.606, -93.5261, -66.2308, -87.0626, -71.2639, -79.0137, -70.8556, -73.1885, -60.9116, -81.3332, -47.8983, -85.9557, -43.3561, -83.4243, -55.6326, -76.0502, -60.4205, -71.0973, -57.2285, -70.7671, -57.1058, -66.2546, -63.8579, -56.7891, -56.6147, -58.1097, -56.369, -56.6789, -50.3536, -60.0909, -45.5658, -60.6412, -45.443, -56.789, -48.2665, -51.9462, -45.8113, -49.4147, -36.3583, -50.1852, -36.972, -55.2482, -32.7981, -56.4588, -23.959, -51.3959, -24.2046, -53.8173, -21.0125, -54.5878, -35.0079, -64.6035, -35.3761, -67.1349, -28.3787, -66.6946, -22.7312, -64.2733, -12.4192, -57.5594, -13.0327, -62.2921, -22.1177, -76.7104, -22.4858, -80.4526, -18.803, -81.333, -10.7002, -74.6191, -9.96362, -74.6191, -12.9102, -80.8928, -21.1558, -85.6013, -32.9001, -94.3425, -36.1132, -99.3091, -33.011, -100.302, -22.2637, -95.6339, -18.4966, -94.6404, -23.0393, -108.448, -23.1501, -112.62, -27.9143, -118.083, -24.9229, -119.871, -13.4001, -116.99, -18.6074, -125.731, -19.1614, -132.784, -13.4001, -131.89, -4.53638, -123.943, 2.00049, -114.11, 4.21655, -118.182, 7.76196, -118.381, 8.09424, -108.15, 14.9636, -118.977, 26.5972, -126.923, 33.4666, -125.731, 28.3701, -119.771, 23.7166, -113.216, 23.1626, -106.262, 28.5916, -111.13, 30.5859, -108.05, 26.2649, -96.3293, 24.1599, -86.1974, 21.5005, -81.0322, 29.2563, -89.8727, 33.0234, -92.4553, 43.1057, -93.9453, 35.3501, -84.5087, 28.1482, -76.1649, 22.0544, -69.609, 30.0317, -72.8869, 31.4722, -70.9003, 27.5942, -67.1257, 35.4609, -61.7618, 11.7891, -66.6404, 37.2629, -61.6209, 42.2593, -56.9757, 42.2593, -62.2845, 47.2556, -62.7822, 49.4763, -55.9803, 51.5117, -56.1462, 52.6221, -61.7868, 48.9211, -68.257, 53.1772, -68.5889, 36.8928, -78.2111, 38.5586, -81.1974, 51.3269, -79.7043, 59.0989, -73.8976, 61.5046, -77.7134, 48.9211, -95.465, 53.5474, -96.7922, 64.6504, -89.4926, 59.2839, -97.1241, 33.1921, -114.046, 34.8574, -116.369, 51.697, -111.226, 45.9604, -130.47, 41.7043, -135.613, 44.8501, -137.604, 51.5117, -136.277, 55.583, -134.95, 50.2166, -146.563, 50.2166, -151.872, 56.1382, -150.379, 71.8674, -134.618, 75.0132, -138.102, 78.1589, -138.102, 80.1946, -129.973, 85.561, -139.595, 97.0339, -149.549, 105.546, -150.047, 99.9949, -142.25, 95.1833, -134.452, 95.1833, -127.65, 101.29, -133.125, 104.806, -129.641, 101.105, -120.516, 95.9236, -100.608, 106.102, -112.387, 115.354, -116.369, 117.945, -115.539, 96.1057, -88.7527, 108.092, -91.2089, 99.8728, -81.9983, 94.051, -66.0331, 92.7717, -60.3909, 102.613, -61.4278, 105.471, -59.3151, 104.871, -56.8946, 91.3115, -52.2171, 107.064, -42.3925 )
-_sections_unfolded = [ "Pause", "Transform", "Visibility" ]
 
-[node name="newGame" type="Sprite" parent="Node2D/pineappleStaticBody2D" index="2"]
-
+[node name="newGame" type="Sprite" parent="Node2D/pineappleStaticBody2D"]
 position = Vector2( -5.45602, 22.9412 )
 scale = Vector2( 0.231831, 0.165502 )
 texture = ExtResource( 13 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="bananaStaticBody2D" type="StaticBody2D" parent="Node2D" index="4"]
-
+[node name="bananaStaticBody2D" type="StaticBody2D" parent="Node2D"]
 editor/display_folded = true
 position = Vector2( 2.98078, 0.247337 )
 scale = Vector2( 1.04489, 1.00158 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 script = ExtResource( 14 )
-_sections_unfolded = [ "Pickable" ]
 
-[node name="bananaBox" type="Sprite" parent="Node2D/bananaStaticBody2D" index="0"]
-
+[node name="bananaBox" type="Sprite" parent="Node2D/bananaStaticBody2D"]
 position = Vector2( 10.7327, 9.45549 )
 scale = Vector2( 0.0342874, 0.0309638 )
 texture = ExtResource( 15 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/bananaStaticBody2D" index="1"]
-
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/bananaStaticBody2D"]
 position = Vector2( -33.5134, 0 )
 scale = Vector2( 2.04729, 1 )
-build_mode = 0
 polygon = PoolVector2Array( 24.9794, 15.7253, 24.3751, 15.9208, 22.0573, 15.6471, 19.6706, 15.6992, 19.5636, 15.3082, 19.5483, 15.0866, 19.5712, 12.2063, 18.6824, 9.11278, 18.6367, 8.3, 18.3322, 7.69474, 18.2866, 7.6861, 18.2206, 7.49588, 18.246, 7.23648, 18.4693, 7.22783, 18.4502, 6.831, 18.4056, 6.63703, 18.5541, 6.51896, 18.6012, 6.64968, 18.6902, 6.69184, 18.908, 7.00388, 18.9798, 7.01232, 19.0145, 7.16412, 19.1229, 7.31826, 19.6582, 7.30679, 20.7019, 7.20353, 20.7322, 7.19206, 21.0082, 6.49797, 21.3247, 5.7121, 21.3685, 4.88607, 21.4661, 4.84592, 21.4931, 5.09831, 21.4897, 5.67194, 21.5772, 6.05054, 21.5772, 6.67006, 21.5335, 7.07159, 21.5335, 7.15191, 21.6715, 7.00276, 22.3583, 6.44061, 22.8437, 6.57828, 22.9279, 6.68727, 23.0154, 6.53239, 23.1063, 6.60122, 23.0626, 6.86509, 23.1265, 6.93392, 23.1804, 6.91671, 23.204, 7.00276, 23.3622, 7.22647, 23.6114, 7.82382, 23.9076, 8.49496, 23.9649, 8.40892, 24.1702, 8.35729, 24.2308, 8.27699, 24.2477, 8.32288, 24.2847, 8.32288, 24.3386, 8.50644, 24.2679, 8.61542, 24.1332, 9.03991, 24.3352, 8.79898, 24.5136, 8.53511, 24.7257, 8.47775, 24.7729, 8.39171, 24.8032, 8.45481, 24.8267, 8.44334, 24.8941, 8.62116, 24.8267, 8.73015, 24.5655, 9.57995, 24.4894, 9.84231, 24.7939, 10.5254, 24.8446, 10.7761, 24.8599, 11.0355, 24.8294, 11.3122, 24.8142, 11.5457, 24.8985, 13.1738 )
 
-[node name="loadGame" type="Sprite" parent="Node2D/bananaStaticBody2D" index="2"]
-
+[node name="loadGame" type="Sprite" parent="Node2D/bananaStaticBody2D"]
 position = Vector2( 12.1707, 14.2241 )
 scale = Vector2( 0.0468723, 0.0423534 )
 texture = ExtResource( 13 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="orangeBox" type="Sprite" parent="Node2D" index="5"]
-
+[node name="orangeBox" type="Sprite" parent="Node2D"]
 position = Vector2( 3.54071, 10.2166 )
 scale = Vector2( 0.0386396, 0.037769 )
 texture = ExtResource( 16 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="tomatoStaticBody2D" type="StaticBody2D" parent="Node2D" index="6"]
-
+[node name="tomatoStaticBody2D" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 3.29589, 0.247337 )
 scale = Vector2( 1.00991, 1.00158 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 script = ExtResource( 17 )
-_sections_unfolded = [ "Pickable" ]
 
-[node name="tomatoBox" type="Sprite" parent="Node2D/tomatoStaticBody2D" index="0"]
-
+[node name="tomatoBox" type="Sprite" parent="Node2D/tomatoStaticBody2D"]
 position = Vector2( -20.7228, 21.1594 )
 scale = Vector2( 0.0448707, 0.0360012 )
 texture = ExtResource( 18 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="instructions" type="Sprite" parent="Node2D/tomatoStaticBody2D" index="1"]
-
+[node name="instructions" type="Sprite" parent="Node2D/tomatoStaticBody2D"]
 position = Vector2( -20.9696, 24.0544 )
 scale = Vector2( 0.0519686, 0.0437396 )
 texture = ExtResource( 19 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/tomatoStaticBody2D" index="2"]
-
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/tomatoStaticBody2D"]
 position = Vector2( -35.7824, 0 )
 scale = Vector2( 2.1182, 1 )
-build_mode = 0
 polygon = PoolVector2Array( 9.99078, 25.5193, 7.76387, 25.5547, 6.98341, 25.4483, 4.27782, 25.4483, 3.94482, 25.4661, 3.86157, 25.4129, 3.94482, 25.1647, 3.9136, 21.5654, 3.86157, 21.3704, 4.4235, 20.2711, 4.4235, 20.0938, 4.55878, 20.1825, 4.65244, 19.8634, 4.91259, 19.5088, 5.09893, 19.5094, 5.16817, 19.5703, 5.17934, 19.5741, 5.17934, 19.4866, 5.0431, 19.3153, 5.04756, 19.2316, 5.09893, 19.2658, 5.17711, 19.3153, 5.25528, 19.4866, 5.25752, 19.4828, 5.27092, 19.3191, 5.29325, 19.1935, 5.33123, 19.0641, 5.34909, 19.0527, 5.3558, 19.243, 5.3558, 19.3077, 5.37143, 19.3876, 5.3759, 19.4485, 5.38706, 19.4409, 5.44291, 19.3191, 5.47194, 19.2392, 5.48534, 19.1897, 5.54118, 19.1745, 5.54565, 19.2202, 5.54118, 19.2658, 5.50768, 19.2887, 5.49874, 19.4219, 5.46747, 19.5741, 5.46301, 19.6388, 5.53225, 19.6198, 5.57692, 19.5627, 5.64392, 19.5322, 5.7355, 19.5627, 5.82708, 19.6121, 5.87175, 19.673, 5.90748, 19.7491, 5.94322, 19.8176, 5.99236, 19.7377, 6.06383, 19.6388, 6.22023, 19.4359, 6.45077, 19.4147, 6.51307, 19.4466, 6.51254, 19.3649, 6.43193, 19.2561, 6.37786, 19.2008, 6.36311, 19.1355, 6.37983, 19.1036, 6.41325, 19.1305, 6.46043, 19.164, 6.50467, 19.2075, 6.53908, 19.2728, 6.57053, 19.3247, 6.58921, 19.3532, 6.59904, 19.3616, 6.59904, 19.2293, 6.61871, 19.1204, 6.6305, 19.0333, 6.63935, 18.9697, 6.65999, 18.9496, 6.6826, 18.9579, 6.68998, 18.9899, 6.68013, 19.1717, 6.69393, 19.2999, 6.71643, 19.3326, 6.73604, 19.288, 6.75891, 19.2379, 6.7807, 19.186, 6.80248, 19.1303, 6.82209, 19.0913, 6.83298, 19.0709, 6.87219, 19.0709, 6.87982, 19.1173, 6.85477, 19.1563, 6.83516, 19.1618, 6.83843, 19.2175, 6.82644, 19.288, 6.81338, 19.327, 6.8112, 19.3771, 6.80793, 19.4217, 6.79921, 19.4736, 6.79813, 19.5089, 6.80466, 19.5219, 6.82209, 19.5015, 6.85258, 19.4848, 6.89833, 19.4643, 6.95389, 19.4217, 6.99528, 19.4105, 7.08569, 19.4384, 7.14777, 19.4681, 7.1859, 19.5126, 7.21313, 19.5627, 7.23383, 19.5868, 7.25126, 19.5423, 7.29264, 19.4254, 7.34384, 19.3511, 7.45768, 19.1605, 7.56605, 19.0458, 7.69677, 19.0055, 7.75079, 19.0122, 7.84307, 19.0692, 7.84975, 18.994, 7.81499, 18.9621, 7.78824, 18.9165, 7.74678, 18.8641, 7.70132, 18.8277, 7.69864, 18.7593, 7.74143, 18.7593, 7.7762, 18.7844, 7.80027, 18.7912, 7.84173, 18.8413, 7.90057, 18.9461, 7.91796, 18.9894, 7.92732, 18.9348, 7.92866, 18.8299, 7.95298, 18.6976, 7.97845, 18.6046, 7.98572, 18.5674, 8.01301, 18.5612, 8.02393, 18.5922, 8.02393, 18.741, 8.01847, 18.8185, 8.02938, 18.8743, 8.03666, 18.9301, 8.05304, 18.9611, 8.0967, 18.8464, 8.13308, 18.741, 8.14764, 18.6976, 8.21313, 18.6914, 8.20767, 18.7503, 8.17493, 18.7627, 8.16401, 18.8805, 8.14945, 18.9611, 8.14582, 19.0231, 8.12399, 19.0665, 8.12399, 19.1378, 8.17856, 19.1223, 8.24406, 19.0665, 8.28044, 19.0417, 8.36595, 19.0448, 8.40233, 19.0789, 8.45691, 19.082, 8.46419, 19.1068, 8.49693, 19.1099, 8.66009, 19.3945, 8.70711, 19.4619, 8.73026, 19.658, 8.77583, 19.5804, 8.80318, 19.5234, 8.8518, 19.5079, 8.90649, 19.4872, 8.96725, 19.4717, 9.02499, 19.4509, 9.04626, 19.4924, 9.07664, 19.5131, 9.12526, 19.5597, 9.15868, 19.5493, 9.14349, 19.3526, 9.11918, 19.2594, 9.1283, 19.2128, 9.07968, 19.1455, 9.12526, 19.1196, 9.15564, 19.1662, 9.18603, 19.2335, 9.20426, 19.3008, 9.23768, 19.3681, 9.26503, 19.3629, 9.28326, 19.1869, 9.28022, 19.0937, 9.27414, 19.0109, 9.27414, 18.9643, 9.3106, 18.9695, 9.33187, 19.073, 9.33795, 19.1507, 9.35618, 19.2128, 9.35618, 19.3163, 9.35314, 19.3888, 9.3896, 19.4095, 9.4443, 19.2801, 9.46253, 19.2283, 9.51114, 19.2076, 9.5476, 19.1921, 9.5834, 19.1699, 9.59953, 19.1768, 9.5834, 19.2798, 9.54107, 19.2798, 9.51083, 19.3313, 9.47253, 19.3726, 9.44835, 19.4206, 9.44835, 19.4756, 9.47052, 19.479, 9.50882, 19.4618, 9.51083, 19.4241, 9.64388, 19.4378, 9.70234, 19.4378, 9.72854, 19.4687, 9.76886, 19.4756, 9.85232, 19.5991, 9.87907, 19.6469, 9.92453, 19.7039, 9.97535, 19.7631, 10.0155, 19.8315, 10.0168, 19.8748, 10.0543, 20.0115, 10.0609, 20.0411, 10.075, 20.4937, 10.0404, 21.1524, 9.99211, 21.4935 )
 
-[node name="pepperStaticBody2D" type="StaticBody2D" parent="Node2D" index="7"]
-
+[node name="pepperStaticBody2D" type="StaticBody2D" parent="Node2D"]
 editor/display_folded = true
 position = Vector2( 4.30326, 0.247337 )
 scale = Vector2( 0.97843, 1.00158 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 script = ExtResource( 20 )
-_sections_unfolded = [ "Pickable" ]
 
-[node name="pepperBox" type="Sprite" parent="Node2D/pepperStaticBody2D" index="0"]
-
+[node name="pepperBox" type="Sprite" parent="Node2D/pepperStaticBody2D"]
 position = Vector2( 2.54655, 20.4891 )
 scale = Vector2( 0.0421092, 0.0347177 )
 texture = ExtResource( 21 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="credits" type="Sprite" parent="Node2D/pepperStaticBody2D" index="1"]
-
+[node name="credits" type="Sprite" parent="Node2D/pepperStaticBody2D"]
 position = Vector2( 2.69697, 24.6938 )
 scale = Vector2( 0.046333, 0.0379786 )
 texture = ExtResource( 19 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pepperStaticBody2D" index="2"]
-
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pepperStaticBody2D"]
 position = Vector2( -37.9633, 0 )
 scale = Vector2( 2.18635, 1 )
-build_mode = 0
 polygon = PoolVector2Array( 21.2857, 25.9594, 21.1556, 25.9203, 20.0923, 25.9985, 19.0444, 26.0376, 17.7134, 26.0637, 16.9484, 26.0507, 16.0228, 25.9985, 15.6327, 25.8943, 15.7933, 25.2035, 15.7857, 22.3492, 16.4742, 20.556, 16.465, 20.119, 16.6437, 19.6898, 16.7215, 19.5571, 16.7169, 19.4713, 16.7994, 19.3152, 16.9505, 19.2294, 17.0192, 19.2294, 17.0009, 18.9172, 16.9505, 18.7924, 17.0421, 18.5427, 17.1429, 18.7534, 17.152, 19.2138, 17.1749, 19.2216, 17.2162, 19.1591, 17.4726, 19.1825, 17.5047, 19.284, 17.6742, 19.284, 17.7245, 19.4089, 17.7474, 19.4323, 17.9581, 18.9719, 18.1138, 18.9875, 18.1596, 18.8782, 18.3978, 18.8548, 18.4528, 18.9172, 18.4711, 18.9094, 18.4665, 18.488, 18.5902, 18.2695, 18.6818, 18.4646, 18.6131, 18.5973, 18.5856, 18.925, 18.666, 18.9214, 18.7846, 18.982, 18.8424, 19.0527, 18.8705, 19.1309, 18.8972, 19.2269, 19.0424, 19.2471, 19.0898, 19.1385, 19.318, 19.1208, 19.3387, 19.1335, 19.3773, 19.1486, 19.4069, 19.1814, 19.4128, 18.7219, 19.5388, 18.5048, 19.6307, 18.7447, 19.5729, 18.8557, 19.5462, 19.1739, 19.6396, 19.1851, 19.7021, 19.1988, 19.7424, 19.24, 19.7686, 19.2744, 19.8573, 19.4289, 19.8573, 19.5182, 19.8855, 19.5835, 19.9117, 19.6041, 19.9521, 19.5045, 20.0025, 19.4495, 20.0811, 19.4392, 20.0952, 19.4049, 20.1315, 19.4015, 20.1698, 19.4324, 20.1839, 19.4392, 20.1637, 19.3156, 20.1637, 19.2366, 20.1456, 19.1851, 20.1496, 19.0958, 20.1254, 19.0546, 20.0992, 19.003, 20.0891, 18.9687, 20.1274, 18.8622, 20.1758, 18.7661, 20.2585, 18.8657, 20.3008, 18.9447, 20.3008, 19.4118, 20.3613, 19.3705, 20.5407, 19.3465, 20.5991, 19.3465, 20.6475, 19.4186, 20.6515, 19.4701, 20.8027, 19.4564, 20.9338, 19.7346, 21.0708, 19.9888, 21.0969, 20.3917, 21.1161, 20.7, 21.171, 20.7047, 21.1833, 20.7047, 21.2765, 21.3822 )
 
-[node name="appleBox" type="Sprite" parent="Node2D" index="8"]
-
+[node name="appleBox" type="Sprite" parent="Node2D"]
 position = Vector2( -7.35186, 9.45695 )
 scale = Vector2( 0.04917, 0.0386711 )
 texture = ExtResource( 22 )
 
-[node name="cucumberStaticBody2D" type="StaticBody2D" parent="Node2D" index="9"]
-
+[node name="cucumberStaticBody2D" type="StaticBody2D" parent="Node2D"]
 editor/display_folded = true
 position = Vector2( -0.0200202, 2.55449 )
 scale = Vector2( 0.868158, 0.929477 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 script = ExtResource( 23 )
-_sections_unfolded = [ "Pickable" ]
 
-[node name="cucumberBox" type="Sprite" parent="Node2D/cucumberStaticBody2D" index="0"]
-
+[node name="cucumberBox" type="Sprite" parent="Node2D/cucumberStaticBody2D"]
 position = Vector2( -5.78775, 19.7026 )
 scale = Vector2( 0.0496437, 0.0308059 )
 texture = ExtResource( 24 )
 
-[node name="options" type="Sprite" parent="Node2D/cucumberStaticBody2D" index="1"]
-
+[node name="options" type="Sprite" parent="Node2D/cucumberStaticBody2D"]
 position = Vector2( -5.85773, 24.015 )
 scale = Vector2( 0.0637455, 0.0437209 )
 texture = ExtResource( 25 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/cucumberStaticBody2D" index="2"]
-
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/cucumberStaticBody2D"]
 position = Vector2( -37.8055, -2.48221 )
 scale = Vector2( 2.46406, 1.07757 )
-build_mode = 0
 polygon = PoolVector2Array( 15.6273, 25.9195, 12.3949, 25.7889, 10.0441, 25.593, 10.023, 24.405, 10.0315, 23.7263, 10.0654, 20.1015, 10.3197, 19.7405, 10.2828, 19.6067, 10.2491, 19.3658, 10.0841, 19.274, 10.074, 19.1879, 10.202, 19.2051, 10.2877, 19.2312, 10.4205, 19.0518, 10.6037, 19.0439, 10.6358, 19.0674, 10.8281, 19.0752, 10.819, 19.1454, 10.9564, 19.122, 11.0571, 19.1298, 11.4235, 19.3483, 11.3777, 19.1766, 11.1991, 19.1688, 11.1487, 19.0596, 11.3823, 19.0361, 11.4648, 18.802, 12.0281, 18.6148, 13.0723, 18.7474, 13.3197, 18.802, 13.9197, 18.1153, 14.1716, 17.9593, 14.3319, 18.0529, 14.4006, 18.0295, 14.4968, 17.889, 14.5471, 17.9046, 14.5059, 18.0763, 14.4372, 18.1778, 14.5013, 18.4197, 14.254, 19.0518, 14.3914, 19.0908, 14.5884, 19.1688, 14.7716, 19.2624, 14.9456, 19.3639, 14.9731, 19.4341, 15.2571, 19.278, 15.3349, 19.2156, 15.6006, 19.1766, 15.77, 19.3249, 15.8341, 19.3249, 15.9257, 19.2078, 15.9532, 19.2078, 15.9899, 19.2624, 15.8296, 19.4497, 15.825, 19.7619, 15.6372, 19.996, 15.7883, 20.2847, 15.8079, 22.2379, 15.7706, 22.3767, 15.7875, 25.1106, 15.7451, 25.4572 )
 
-[node name="watermelonBox" type="Sprite" parent="Node2D" index="10"]
-
+[node name="watermelonBox" type="Sprite" parent="Node2D"]
 position = Vector2( 18.6518, 20.9414 )
 scale = Vector2( 0.0413117, 0.037392 )
 texture = ExtResource( 26 )
 
-[node name="wheel" type="Sprite" parent="Node2D" index="11"]
-
+[node name="wheel" type="Sprite" parent="Node2D"]
 position = Vector2( 21.443, 27.3267 )
 rotation = 25.1327
 scale = Vector2( 0.035547, 0.035547 )
 texture = ExtResource( 27 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="4"]
-
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0.13489, -0.0114831 )
 scale = Vector2( 0.470304, 0.442917 )
-anchor_mode = 1
 rotating = true
 current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
 smoothing_enabled = true
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="player_info" parent="." index="5" instance=ExtResource( 28 )]
-
+[node name="player_info" parent="." instance=ExtResource( 28 )]
 visible = false
 position = Vector2( -0.822302, -1.13641 )
 scale = Vector2( 0.677113, 0.771483 )
 
-[node name="options" parent="." index="6" instance=ExtResource( 29 )]
-
+[node name="options" parent="." instance=ExtResource( 29 )]
 visible = false
 position = Vector2( -0.822302, -1.13641 )
 scale = Vector2( 0.677113, 0.771483 )
 
-[node name="credits" parent="." index="7" instance=ExtResource( 30 )]
-
+[node name="credits" parent="." instance=ExtResource( 30 )]
 visible = false
 position = Vector2( 0.0786915, 0.16617 )
 scale = Vector2( 1.0001, 1.00523 )
-_sections_unfolded = [ "Pause", "Theme", "Transform" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/car_intro = SubResource( 1 )
 anims/car_leaving = SubResource( 2 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="9"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 anims/clouds = SubResource( 3 )
 anims/clouds_moving = SubResource( 4 )
-blend_times = [  ]
 
 [connection signal="input_event" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_input_event"]
-
 [connection signal="mouse_entered" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_entered"]
-
 [connection signal="mouse_exited" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_exited"]
-
 [connection signal="input_event" from="Node2D/bananaStaticBody2D" to="Node2D/bananaStaticBody2D" method="_on_bananaStaticBody2D_input_event"]
-
 [connection signal="mouse_entered" from="Node2D/bananaStaticBody2D" to="Node2D/bananaStaticBody2D" method="_on_bananaStaticBody2D_mouse_entered"]
-
 [connection signal="mouse_exited" from="Node2D/bananaStaticBody2D" to="Node2D/bananaStaticBody2D" method="_on_bananaStaticBody2D_mouse_exited"]
-
 [connection signal="input_event" from="Node2D/tomatoStaticBody2D" to="Node2D/tomatoStaticBody2D" method="_on_tomatoStaticBody2D_input_event"]
-
 [connection signal="mouse_entered" from="Node2D/tomatoStaticBody2D" to="Node2D/tomatoStaticBody2D" method="_on_tomatoStaticBody2D_mouse_entered"]
-
 [connection signal="mouse_exited" from="Node2D/tomatoStaticBody2D" to="Node2D/tomatoStaticBody2D" method="_on_tomatoStaticBody2D_mouse_exited"]
-
 [connection signal="input_event" from="Node2D/pepperStaticBody2D" to="Node2D/pepperStaticBody2D" method="_on_pepperStaticBody2D_input_event"]
-
 [connection signal="mouse_entered" from="Node2D/pepperStaticBody2D" to="Node2D/pepperStaticBody2D" method="_on_pepperStaticBody2D_mouse_entered"]
-
 [connection signal="mouse_exited" from="Node2D/pepperStaticBody2D" to="Node2D/pepperStaticBody2D" method="_on_pepperStaticBody2D_mouse_exited"]
-
 [connection signal="input_event" from="Node2D/cucumberStaticBody2D" to="Node2D/cucumberStaticBody2D" method="_on_cucumberStaticBody2D_input_event"]
-
 [connection signal="mouse_entered" from="Node2D/cucumberStaticBody2D" to="Node2D/cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_entered"]
-
 [connection signal="mouse_exited" from="Node2D/cucumberStaticBody2D" to="Node2D/cucumberStaticBody2D" method="_on_cucumberStaticBody2D_mouse_exited"]
-
-

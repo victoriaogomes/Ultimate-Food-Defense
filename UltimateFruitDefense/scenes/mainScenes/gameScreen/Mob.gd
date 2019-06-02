@@ -8,6 +8,7 @@ var shot
 
 func _ready():
 	shot = false
+	#warning-ignore:return_value_discarded
 	$Timer.connect("timeout", self, "on_TimeOut")
 	$AnimationPlayer.play("walk")
 	self.set_physics_process(true)
@@ -42,6 +43,7 @@ func _physics_process(delta):
 				$AnimationPlayer.play("atack")
 				$Timer.start()
 			else:
+				#warning-ignore:return_value_discarded
 				move_and_slide(velocity*delta)
 	else:
 		game_control.beatedEnemies +=1

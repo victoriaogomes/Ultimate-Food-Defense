@@ -4,16 +4,15 @@
 [ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/gameScreen/shotingDown2.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/gameScreen/soldierDown2.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/gameScreen/shotingUp2.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/gameScreen/soldierUp2.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/shotingDown1.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/soldierDown1.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/gameScreen/soldierUp1.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/gameScreen/shotingUp1.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/gameScreen/soldierDown1.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/gameScreen/shotingDown1.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/shotingUp2.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/soldierUp2.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/shotingUp1.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/gameScreen/shotingCenter.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
-
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
@@ -27,7 +26,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "shootUp2",
+"name": "shootDown1",
 "speed": 1.0
 }, {
 "frames": [ ExtResource( 7 ) ],
@@ -35,24 +34,9 @@ animations = [ {
 "name": "lookUp1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "shootUp1",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "lookDown1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "lookup2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "shootDown1",
+"name": "shootUp2",
 "speed": 1.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -60,42 +44,43 @@ animations = [ {
 "name": "lookDown2",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "lookup2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "shootUp1",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "lookDown1",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 11 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "shootCenter",
 "speed": 1.0
 } ]
-_sections_unfolded = [ "Resource" ]
 
 [node name="Glob" type="Node2D"]
-
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
-
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 3.34393, -2.48639 )
 scale = Vector2( 0.0726616, 0.063358 )
 frames = SubResource( 1 )
 animation = "shootUp1"
 frame = 1
 
-[node name="gameControl" type="Node2D" parent="." index="1"]
+[node name="gameControl" type="Node2D" parent="."]
 
-[node name="timer" type="Timer" parent="." index="2"]
-
+[node name="timer" type="Timer" parent="."]
 process_mode = 0
 wait_time = 2.0
-one_shot = false
-autostart = false
 
-[node name="tempo" type="Timer" parent="." index="3"]
-
-process_mode = 1
+[node name="tempo" type="Timer" parent="."]
 wait_time = 15.0
-one_shot = false
-autostart = false
-
-[connection signal="timeout" from="tempo" to="." method="_on_tempo_timeout"]
-
 

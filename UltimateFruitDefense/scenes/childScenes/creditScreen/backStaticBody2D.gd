@@ -28,6 +28,9 @@ func language():
 
 
 #Mouse clicando no botão "back"/"voltar"
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
 func _on_backStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
 		animation.play_backwards("showing_credits", -1)

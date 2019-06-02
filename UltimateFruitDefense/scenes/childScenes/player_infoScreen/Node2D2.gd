@@ -12,14 +12,19 @@ var base_engli_beforeStart = preload("res://assets/sprites/player_infoScreen/Tex
 var base_engli_myName = preload("res://assets/sprites/player_infoScreen/Texts/English/My name is.png")
 var base_engli_iAm = preload("res://assets/sprites/player_infoScreen/Texts/English/I am a.png")
 
+#warning-ignore:unused_class_variable
 var base_english_sprite = preload("res://assets/sprites/player_infoScreen/Texts/English/Start.png")
+#warning-ignore:unused_class_variable
 var hover_english_sprite = preload("res://assets/sprites/player_infoScreen/Texts/English/Start(v2).png")
+#warning-ignore:unused_class_variable
 var base_port_sprite = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Iniciar.png")
+#warning-ignore:unused_class_variable
 var hover_port_sprite = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Iniciar(v2).png")
 var next_scene = preload("res://scenes/mainScenes/gameScreen/game.tscn")
 
 func _ready():
 	language()
+#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	$"my name is/TextEdit".cursor_set_blink_enabled(true)
 
@@ -51,4 +56,5 @@ func _on_start_pressed():
 		yield($AnimationPlayer, "animation_finished")
 		get_node("/root/Node2D/AnimationPlayer").play("car_leaving", -1, 1.0, false)
 		yield(get_node("/root/Node2D/AnimationPlayer"), "animation_finished")
+#warning-ignore:return_value_discarded
 		get_tree().change_scene_to(next_scene)

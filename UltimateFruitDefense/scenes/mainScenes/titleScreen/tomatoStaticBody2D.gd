@@ -15,6 +15,7 @@ var pos_new_text
 
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	pos_origin_sprite = $tomatoBox.get_position()
 	pos_origin_text = $instructions.get_position()
@@ -33,8 +34,12 @@ func language():
 
 
 #Mouse clicando no sprite "tomatoBox"
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
 func _on_tomatoStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
+		#warning-ignore:return_value_discarded
 		get_tree().change_scene("res://scenes/childScenes/instructions/instructions.tscn")
 
 

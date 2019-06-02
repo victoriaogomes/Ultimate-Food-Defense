@@ -12,6 +12,9 @@ var base_maleInative_sprite = preload("res://assets/sprites/player_infoScreen/pl
 var hover_maleInative_sprite = preload("res://assets/sprites/player_infoScreen/player_sex/boy(v2).png")
 
 
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
 func _on_femaleStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
 		configuration.player_sex = "m"
@@ -34,7 +37,9 @@ func _on_femaleStaticBody2D_mouse_exited():
 	else:
 		female_sprite.set_texture(base_femaleInative_sprite)
 
-
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
+#warning-ignore:unused_argument
 func _on_maleStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
 		configuration.player_sex = "h"

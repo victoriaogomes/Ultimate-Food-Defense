@@ -1,9 +1,11 @@
 extends Node2D
 
 onready var enemies_types = [preload("res://scenes/mainScenes/gameScreen/pizza.tscn"), preload("res://scenes/mainScenes/gameScreen/soda.tscn"), preload("res://scenes/mainScenes/gameScreen/hamburguer.tscn")]
+#warning-ignore:unused_class_variable
 onready var glob = preload("res://scenes/mainScenes/gameScreen/Glob.tscn")
 var mob
 var waitTime = 1
+#warning-ignore:unused_class_variable
 var select
 var type
 var qnt
@@ -13,9 +15,11 @@ func _ready():
 	self.set_physics_process(true)
 	randomize()
 	$MobTimer.start()
+	#warning-ignore:return_value_discarded
 	$MobTimer.connect("timeout", self, "on_Mob_TimeOut")
 
 
+#warning-ignore:unused_argument
 func _process(delta):
 	#Pra efeitos de teste, tá passando de fase após matar poucos inimigos. Mudo isso dps que já tiver tudo shows
 	aux = 20 + (game_control.level*2)

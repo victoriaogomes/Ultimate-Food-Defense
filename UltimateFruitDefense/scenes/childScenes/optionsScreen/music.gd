@@ -30,6 +30,7 @@ onready var music_portuguese_position = self.get_position()
 
 #Chama função para ver em qual idioma os sprites devem ser exibido
 func _ready():
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	music_portuguese_position.x +=0.6
 

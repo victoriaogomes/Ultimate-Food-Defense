@@ -31,6 +31,7 @@ onready var soundEffects_portuguese_position = self.get_position()
 #Chama função para ver em qual idioma os sprites devem ser exibidos
 func _ready():
 	language()
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	soundEffects_portuguese_position.x +=0.9
 

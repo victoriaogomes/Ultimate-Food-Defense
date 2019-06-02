@@ -6,6 +6,7 @@ var english_title = preload("res://assets/sprites/titleScreen/texts/English/Ulti
 
 #Verifica se o idioma definido no sistema é português e, caso seja, troca o label para português
 func _ready():
+	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
 	language()
 
