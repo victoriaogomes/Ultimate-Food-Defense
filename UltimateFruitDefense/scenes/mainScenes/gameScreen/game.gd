@@ -6,12 +6,13 @@ onready var fruit2 = preload("res://scenes/mainScenes/gameScreen/strawberry.tscn
 onready var fruit3 = preload("res://scenes/mainScenes/gameScreen/grape.tscn")
 var vitamins = 180
 
-#Conecta ao sinal que é emitido quando o nível de açúcar no 
-#sangue altera
+#Conecta ao sinal que é emitido quando o nível de açúcar no sangue altera
 func _ready():
+	configuration.player.volume_db = -23
 	self.set_physics_process(true)
 	#warning-ignore:return_value_discarded
 	game_control.connect("sugarLevelChange", self, "changeLabel")
+
 
 func _process(delta):
 	if vitamins >=100:
@@ -21,6 +22,7 @@ func _process(delta):
 	vitamins = vitamins + delta*2
 	#print(vitamins)
 	$Label2.text = str(int(vitamins))
+
 
 #Função chamada para modificar o valor da glicemia mostrado
 func changeLabel():
@@ -82,8 +84,8 @@ func enable_fruits():
 	$lemon.disabled = false
 	$strawberry.disabled = false
 	$grape.disabled = false
-	
-	
+
+
 func disable_fruits():
 	$lemon.disabled = true
 	$strawberry.disabled = true

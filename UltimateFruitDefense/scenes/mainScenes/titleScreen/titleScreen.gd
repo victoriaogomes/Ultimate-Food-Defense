@@ -2,6 +2,8 @@ extends Node2D
 
 
 func _ready():
+	configuration.player.volume_db = -20
+	get_tree().set_pause(false)
 	if(configuration.music):
 		if(!configuration.player.playing):
 			configuration.player.play()

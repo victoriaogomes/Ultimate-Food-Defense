@@ -389,6 +389,7 @@ scale = Vector2( 0.0386396, 0.037769 )
 texture = ExtResource( 16 )
 
 [node name="tomatoStaticBody2D" type="StaticBody2D" parent="Node2D"]
+editor/display_folded = true
 position = Vector2( 3.29589, 0.247337 )
 scale = Vector2( 1.00991, 1.00158 )
 input_pickable = true

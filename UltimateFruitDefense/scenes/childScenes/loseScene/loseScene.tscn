@@ -10,11 +10,7 @@
 [ext_resource path="res://assets/sprites/loseScreen/texts/english/Try level again(v2).png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "lose"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("black_background:self_modulate")
 tracks/0/interp = 1
@@ -76,7 +72,7 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("mainMenu:self_modulate")
+tracks/5/path = NodePath("tryAgain:self_modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -88,144 +84,67 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Node2D" type="Node2D" index="0"]
-
+[node name="Node2D" type="Node2D"]
 pause_mode = 2
 position = Vector2( 511.906, 299.98 )
 scale = Vector2( 15.9827, 9.38549 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
-[node name="black_background" type="ColorRect" parent="." index="0"]
-
+[node name="black_background" type="ColorRect" parent="."]
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0, 0, 0, 0.558 )
-_sections_unfolded = [ "Focus", "Pause", "Visibility" ]
 
-[node name="white_background" type="ColorRect" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="white_background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -32.0
 margin_top = -32.0
 margin_right = -32.0
 margin_bottom = -32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 1, 1, 1, 0.259647 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
-
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 pause_mode = 2
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/lose = SubResource( 1 )
-blend_times = [  ]
-_sections_unfolded = [ "Pause" ]
 
-[node name="youLose" type="Sprite" parent="." index="3"]
-
+[node name="youLose" type="Sprite" parent="."]
 position = Vector2( 0.689831, 21.3546 )
 scale = Vector2( 0.0601006, 0.108436 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="ohNo" type="Sprite" parent="." index="4"]
-
+[node name="ohNo" type="Sprite" parent="."]
 position = Vector2( 0.404354, -24.3521 )
 scale = Vector2( 0.0704831, 0.115203 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="sick" type="Sprite" parent="." index="5"]
-
+[node name="sick" type="Sprite" parent="."]
 position = Vector2( 0.608654, -4.36091 )
 scale = Vector2( 0.0168771, 0.0250635 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="mainMenu" type="TextureButton" parent="." index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="mainMenu" type="TextureButton" parent="."]
 margin_left = 22.0
 margin_top = 23.0
 margin_right = 32.0
 margin_bottom = 27.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 expand = true
-_sections_unfolded = [ "Textures", "Visibility" ]
 
-[node name="tryAgain" type="TextureButton" parent="." index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="tryAgain" type="TextureButton" parent="."]
 margin_left = 21.0
 margin_top = 27.0
 margin_right = 34.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
 expand = true
-_sections_unfolded = [ "Textures" ]
 
-[connection signal="mouse_entered" from="mainMenu" to="." method="_on_mainMenu_mouse_entered"]
-
+[connection signal="mouse_entered" from="mainMenu" to="." method="mouse_entered"]
 [connection signal="pressed" from="mainMenu" to="." method="_on_mainMenu_pressed"]
-
-[connection signal="mouse_entered" from="tryAgain" to="." method="_on_tryAgain_mouse_entered"]
-
+[connection signal="mouse_entered" from="tryAgain" to="." method="mouse_entered"]
 [connection signal="pressed" from="tryAgain" to="." method="_on_tryAgain_pressed"]
-
-

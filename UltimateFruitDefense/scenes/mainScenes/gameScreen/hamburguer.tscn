@@ -9,9 +9,7 @@
 [ext_resource path="res://scenes/mainScenes/gameScreen/hamburguer.tres" type="Animation" id=7]
 [ext_resource path="res://assets/sounds/breaking.ogg" type="AudioStream" id=8]
 
-
 [sub_resource type="Animation" id=1]
-
 resource_name = "atack"
 length = 2.8
 loop = true
@@ -126,107 +124,67 @@ tracks/8/keys = {
 }
 
 [node name="Mob" type="KinematicBody2D"]
-
 scale = Vector2( 0.00936485, 0.00936485 )
-input_pickable = false
 collision_layer = 0
-collision_mask = 1
-collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="0"]
-
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 position = Vector2( 11.0306, -17.9559 )
 scale = Vector2( 23.4424, 19.0956 )
-rect = Rect2( -10, -10, 20, 20 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="leftArm" type="Sprite" parent="." index="1" groups=[
+[node name="leftArm" type="Sprite" parent="." groups=[
 "member",
 ]]
-
 position = Vector2( -62, 94 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="leftLeg" type="Sprite" parent="." index="2"]
-
+[node name="leftLeg" type="Sprite" parent="."]
 position = Vector2( -38, 258 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="corpo" type="Sprite" parent="." index="3"]
-
+[node name="corpo" type="Sprite" parent="."]
 editor/display_folded = true
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="rightArm" type="Sprite" parent="corpo" index="0" groups=[
+[node name="rightArm" type="Sprite" parent="corpo" groups=[
 "member",
 ]]
-
 position = Vector2( 740, 366.667 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="rightLeg" type="Sprite" parent="corpo" index="1"]
-
+[node name="rightLeg" type="Sprite" parent="corpo"]
 position = Vector2( 286.667, 906.667 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_bone_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="4"]
-
-build_mode = 0
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -163.585, -132.887, -158.708, -138.306, -153.288, -143.996, -147.056, -149.687, -142.449, -153.751, -137.301, -158.629, -134.049, -159.983, -137.03, -164.048, -142.178, -169.196, -147.327, -172.177, -151.933, -172.177, -154.914, -169.467, -157.624, -165.132, -160.062, -160.525, -161.417, -155.377, -160.333, -154.022, -161.417, -151.854, -163.314, -150.5, -162.23, -144.267, -166.837, -151.313, -170.088, -159.171, -172.256, -165.945, -172.798, -171.364, -172.798, -178.409, -172.798, -178.409, -175.237, -181.39, -173.34, -185.454, -171.172, -193.042, -169.004, -194.396, -164.669, -198.461, -162.23, -201.442, -158.166, -203.338, -156.811, -202.796, -152.746, -203.88, -148.14, -203.88, -140.553, -201.713, -135.404, -198.461, -131.069, -193.584, -127.275, -186.809, -123.211, -180.306, -119.688, -175.7, -115.624, -168.654, -114.54, -170.822, -111.83, -173.261, -104.514, -174.887, -93.1332, -175.7, -84.4622, -176.784, -75.5203, -178.951, -71.1848, -178.951, -65.4945, -179.764, -54.3848, -179.764, -48.1525, -179.764, -38.6686, -179.493, -29.7267, -179.493, -25.1202, -178.951, -22.9525, -180.035, -16.4492, -185.725, -14.5524, -185.725, -8.37157, -192.771, -0.513498, -197.919, 8.97039, -203.338, 17.6414, -204.151, 24.6866, -201.442, 30.9188, -197.648, 36.8801, -191.958, 40.4027, -185.454, 40.4027, -180.577, 42.2995, -176.513, 42.5705, -173.261, 52.5963, -171.364, 59.0995, -170.28, 65.6028, -169.196, 71.0221, -168.113, 75.6286, -165.945, 81.5899, -165.132, 87.0092, -164.319, 94.3254, -161.067, 101.1, -159.713, 107.332, -158.629, 110.583, -157.274, 128.362, -153.442, 138.117, -149.92, 149.769, -145.313, 156.272, -141.791, 162.775, -138.268, 171.717, -133.662, 178.492, -131.223, 187.975, -124.449, 199.085, -112.526, 205.859, -103.855, 212.363, -90.8487, 217.511, -74.3197, 221.034, -56.4358, 221.576, -48.3067, 220.492, -44.5132, 216.698, -42.0745, 218.053, -39.1321, 219.679, -38.0483, 225.098, -40.7579, 230.788, -46.9902, 235.124, -52.6805, 238.105, -50.2418, 240.001, -51.5967, 243.253, -48.0741, 244.066, -41.8418, 244.337, -33.9837, 236.479, -23.145, 232.414, -16.9127, 235.395, -13.1192, 236.75, -5.80305, 233.498, -0.112715, 229.163, 3.68084, 231.601, 9.10021, 231.33, 16.9583, 231.33, 21.5647, 222.388, 28.068, 229.705, 34.3003, 231.33, 39.1777, 230.788, 46.4938, 230.517, 55.9777, 228.079, 67.0874, 224.285, 80.0939, 209.111, 104.443, 189.601, 122.869, 160.066, 142.921, 145.433, 148.882, 130.259, 153.488, 118.879, 157.553, 102.35, 161.617, 92.8656, 162.972, 72.814, 165.411, 46.801, 167.85, 25.3945, 168.121, 4.90776, 166.766, -15.4148, 166.495, -31.131, 164.869, -50.6407, 162.43, -71.2343, 160.263, -97.2473, 155.927, -110.796, 151.321, -123.26, 148.069, -130.305, 143.463, -140.873, 140.211, -151.441, 133.979, -157.131, 128.288, -161.196, 126.121, -166.073, 122.869, -173.389, 111.217, -178.267, 102.546, -188.022, 83.8496, -193.441, 68.9463, -198.047, 58.1076, -196.422, 52.7266, -196.422, 50.5588, -194.525, 45.9524, -194.254, 44.3266, -200.757, 43.5137, -204.551, 39.9911, -207.802, 33.4878, -207.802, 29.1523, -206.989, 25.3588, -205.635, 24.2749, -210.241, 21.5652, -216.744, 16.1459, -220.809, 8.01682, -221.622, -1.1961, -218.912, -5.26062, -216.473, -9.05418, -213.764, -11.7639, -206.989, -15.0155, -211.596, -17.4542, -215.389, -21.5187, -219.454, -27.751, -221.08, -32.6284, -219.996, -35.6091, -219.454, -38.8607, -218.37, -42.6542, -216.744, -44.551, -212.68, -44.822, -208.615, -46.9897, -201.299, -46.1768, -194.525, -46.1768, -189.376, -45.6349, -186.396, -45.6349, -188.293, -50.7833, -188.835, -58.3704, -188.835, -59.9962, -189.376, -62.4349, -186.938, -69.2091, -185.312, -75.7124, -183.144, -81.4027, -177.454, -98.4359, -171.222, -115.778, -165.802, -128.513 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/atack = SubResource( 1 )
 anims/walk = ExtResource( 7 )
-blend_times = [  ]
 
-[node name="Timer" type="Timer" parent="." index="6"]
-
-process_mode = 1
-wait_time = 2.6
-one_shot = false
-autostart = false
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
-
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -35.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
-
 

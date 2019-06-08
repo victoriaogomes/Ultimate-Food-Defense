@@ -42,6 +42,7 @@ func _on_mainMenu_pressed():
 	yield($AnimationPlayer, "animation_finished")
 	#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
+	get_tree().set_pause(false)
 
 
 func _on_mainMenu_mouse_entered():

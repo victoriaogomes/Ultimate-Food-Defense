@@ -12,7 +12,7 @@ onready var tomato = get_node("/root/Node2D/Node2D/tomatoStaticBody2D")
 onready var pepper = get_node("/root/Node2D/Node2D/pepperStaticBody2D")
 onready var pineapple = get_node("/root/Node2D/Node2D/pineappleStaticBody2D")
 
-#Carregando a tela qde opções do jogo
+#Carregando a tela de opções do jogo
 onready var optionsScreen = get_node("/root/Node2D/options")
 
 #Variáveis para controlar a posição do texto "Opções"/"Options" e do sprite "cucumberBox"

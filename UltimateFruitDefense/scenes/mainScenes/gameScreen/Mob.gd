@@ -3,13 +3,15 @@ extends KinematicBody2D
 var select
 var velocity = Vector2(-50, 0)
 var collision_info
-var life = 15
+var life = 8
 var shot
+var startBeating
 
 func _ready():
 	shot = false
+	startBeating = 0
 	#warning-ignore:return_value_discarded
-	$Timer.connect("timeout", self, "on_TimeOut")
+	$AnimationPlayer.connect("animation_finished", self, "_endAnimation")
 	$AnimationPlayer.play("walk")
 	self.set_physics_process(true)
 	select = randi()%5+1
@@ -39,9 +41,12 @@ func _physics_process(delta):
 		collision_info = move_and_collide(velocity*delta)
 		if collision_info:
 			if(collision_info.get_collider().is_in_group("wall")):
+				if(startBeating == 0):
+					startBeating = 1
+					$AnimationPlayer.stop()
 				velocity = Vector2(0,0)
-				$AnimationPlayer.play("atack")
-				$Timer.start()
+				if(!$AnimationPlayer.is_playing()):
+					$AnimationPlayer.play("atack")
 			else:
 				#warning-ignore:return_value_discarded
 				move_and_slide(velocity*delta)
@@ -51,12 +56,13 @@ func _physics_process(delta):
 			game_control.target = null
 		queue_free()
 
-func on_TimeOut():
-	game_control.aumentarSugarLevel()
-
 
 func _on_VisibilityNotifier2D_screen_exited():
 	self.remove_from_group("enemies")
 	queue_free()
-	#print("Sobraram ", get_tree().get_nodes_in_group("enemies").size(), "inimigos")
-	#print("excluido")
+
+
+func _endAnimation(anim_name):
+	print(anim_name)
+	if(anim_name == "atack"):
+		game_control.aumentarSugarLevel()

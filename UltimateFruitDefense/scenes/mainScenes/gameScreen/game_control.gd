@@ -18,11 +18,12 @@ signal sugarLevelChange
 
 func aumentarSugarLevel():
 	sugarLevel += dano
+	print("chegueeei")
 	emit_signal("sugarLevelChange")
 
 
 func diminuirSugarLevel():
-	if(sugarLevel>50):
+	if(sugarLevel>=52):
 		print("toqui")
 		sugarLevel -=2
 		emit_signal("sugarLevelChange")

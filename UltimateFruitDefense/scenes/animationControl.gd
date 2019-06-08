@@ -7,4 +7,3 @@ var firstTitleScreen_run
 
 func _ready():
 	firstTitleScreen_run = true
-
