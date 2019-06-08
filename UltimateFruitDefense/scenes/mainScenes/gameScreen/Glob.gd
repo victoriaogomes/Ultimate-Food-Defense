@@ -49,9 +49,12 @@ func set_wait_time(time):
 		game_control.avaliable = false
 	
 #warning-ignore:unused_argument
+
+#Função Que troca a animação do Glóbulo baseada na posição do inimigo
 func swap_animation(delta):
-	if game_control.target != null:
-		target_position = game_control.target.position
+	if game_control.target != null: #Se houver um inimigo
+		target_position = game_control.target.position #Captura a posicação do inimigo
+		#Verifica qual são as coordenadas do inimigo para decidir qual o melhor ângulo de sprite para atirar
 		if target_position.y < -111:
 			if target_position.x <-91:
 				anim = "shootUp2"
@@ -84,10 +87,10 @@ func swap_animation(delta):
 				anim = "shootDown1"
 				pos = get_node("/root/Node2D/PositionDown1")
 		$AnimatedSprite.play(anim)
-	else:
+	else: #Se não houver inimigos ele mantém o sprite principal
 		$AnimatedSprite.play("idle")
 
-
+#Função que cria o objeto bullet (projétil do jogo)
 func spwan_bullet(pos):
 	var clone_bullet = bullet.instance()
 	get_parent().add_child(clone_bullet)
