@@ -6,6 +6,7 @@ var numberEnemies = 0
 var anim
 var pos
 var target_position
+var motion = Vector2()
 
 onready var bullet = preload("res://scenes/mainScenes/gameScreen/bullet.tscn")
 
@@ -30,6 +31,12 @@ func _process(delta):
 	choose_and_lock()
 	swap_animation(delta)
 
+func _physics_process(delta):
+	if Input.is_action_pressed("ui_down"):
+		motion.y = -100
+	elif Input.is_action_pressed("ui_up"):
+		motion.y = 100
+	$globBody.move_and_slide(motion)
 
 #acha o melhor inimigo e passa a instâcia dele para um variável no outro script
 func choose_and_lock():

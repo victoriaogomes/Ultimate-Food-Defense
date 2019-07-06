@@ -176,7 +176,6 @@ scale = Vector2( 1.0001, 1.00097 )
 visible = false
 position = Vector2( 0.000859, -0.038001 )
 scale = Vector2( 1.0001, 1.00097 )
-
 [connection signal="mouse_entered" from="pauseButton" to="." method="_on_pauseButton_mouse_entered"]
 [connection signal="pressed" from="pauseButton" to="." method="_on_pauseButton_pressed"]
 [connection signal="mouse_entered" from="lemon" to="." method="_on_lemon_mouse_entered"]
