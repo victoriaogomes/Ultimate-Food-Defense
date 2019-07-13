@@ -40,7 +40,6 @@ texture = ExtResource( 2 )
 [node name="Node2D" type="Node2D" parent="." groups=[
 "wall",
 ]]
-editor/display_folded = true
 position = Vector2( 0.00972712, -0.0615809 )
 scale = Vector2( 1.00129, 1.0044 )
 script = ExtResource( 3 )
@@ -138,24 +137,24 @@ text = "50 mg/dL"
 align = 1
 autowrap = true
 
-[node name="PositionUp2" type="Position2D" parent="."]
-position = Vector2( -19.6055, -22.3522 )
-scale = Vector2( 0.0662609, 0.120058 )
-
 [node name="PositionUp1" type="Position2D" parent="."]
+visible = false
 position = Vector2( -18.8975, -20.0648 )
 scale = Vector2( 0.0662609, 0.120058 )
 
-[node name="PositionCenter" type="Position2D" parent="."]
-position = Vector2( -17.1148, -15.9952 )
-scale = Vector2( 0.0662609, 0.120058 )
-
 [node name="PositionDown1" type="Position2D" parent="."]
+visible = false
 position = Vector2( -18.8959, -14.4931 )
 scale = Vector2( 0.0662609, 0.120058 )
 
 [node name="PositionDown2" type="Position2D" parent="."]
+visible = false
 position = Vector2( -20.4114, -13.3426 )
+scale = Vector2( 0.0662609, 0.120058 )
+
+[node name="PositionUp2" type="Position2D" parent="."]
+visible = false
+position = Vector2( -19.6055, -22.3522 )
 scale = Vector2( 0.0662609, 0.120058 )
 
 [node name="loseScreen" parent="." instance=ExtResource( 15 )]
@@ -166,6 +165,14 @@ scale = Vector2( 1.0001, 1.00097 )
 [node name="Glob" parent="." instance=ExtResource( 16 )]
 position = Vector2( -22.6796, -19.5332 )
 scale = Vector2( 0.0735134, 0.120278 )
+
+[node name="edge" type="Position2D" parent="Glob"]
+position = Vector2( 63.0727, 30.708 )
+scale = Vector2( 0.901344, 0.998171 )
+
+[node name="PositionCenter" type="Position2D" parent="."]
+position = Vector2( -18.24, -15.9952 )
+scale = Vector2( 0.0662609, 0.120058 )
 
 [node name="pause" parent="." instance=ExtResource( 17 )]
 visible = false

@@ -23,7 +23,10 @@ func _ready():
 
 func on_TimeOut():
 	if(game_control.target!=null):
+		pos = get_node("/root/Node2D/Glob")
+		#pos = get_node("/root/Node2D/Glob/edge") #Dentro do Glob
 		spwan_bullet(pos)
+		
 
 
 func _process(delta):
@@ -67,34 +70,34 @@ func swap_animation(delta):
 		if target_position.y < -111:
 			if target_position.x <-91:
 				anim = "shootUp2"
-				pos = get_node("/root/Node2D/PositionUp2")
+				#pos = get_node("/root/Node2D/PositionUp2")
 			else:
 				anim = "shootUp1"
-				pos = get_node("/root/Node2D/PositionUp1")
+				#pos = get_node("/root/Node2D/PositionUp1")
 		elif target_position.y < -48 && target_position.y > -91:
 			anim = "shootCenter"
-			pos = get_node("/root/Node2D/PositionCenter")
+			#pos = get_node("/root/Node2D/PositionCenter")
 		elif target_position.y < 1.8 && target_position.y > -48:
 			if target_position.x < -94:
 				anim = "shootDown1"
-				pos = get_node("/root/Node2D/PositionDown1")
+				#pos = get_node("/root/Node2D/PositionDown1")
 			else:
 				anim = "shootCenter"
-				pos = get_node("/root/Node2D/PositionCenter")
+				#pos = get_node("/root/Node2D/PositionCenter")
 		elif target_position.y < 60 && target_position.y > 1.8:
 			if target_position.x < -170:
 				anim = "shootDown2"
-				pos = get_node("/root/Node2D/PositionDown2")
+				#pos = get_node("/root/Node2D/PositionDown2")
 			else:
 				anim = "shootDown1"
-				pos = get_node("/root/Node2D/PositionDown1")
+				#pos = get_node("/root/Node2D/PositionDown1")
 		elif target_position.y > 60:
 			if target_position.x < -58:
 				anim = "shootDown2"
-				pos = get_node("/root/Node2D/PositionDown2")
+				#pos = get_node("/root/Node2D/PositionDown2")
 			else:
 				anim = "shootDown1"
-				pos = get_node("/root/Node2D/PositionDown1")
+				#pos = get_node("/root/Node2D/PositionDown1")
 		$AnimatedSprite.play(anim)
 	else: #Se não houver inimigos ele mantém o sprite principal
 		$AnimatedSprite.play("idle")
@@ -104,7 +107,8 @@ func spwan_bullet(pos):
 	var clone_bullet = bullet.instance()
 	get_parent().add_child(clone_bullet)
 	clone_bullet.add_to_group("bullet")
-	clone_bullet.position = pos.position
+	clone_bullet.position.x = pos.position.x + 4.44
+	clone_bullet.position.y = pos.position.y + 4.462
 	if(configuration.sound_effects):
 		configuration.gun_sound.play()
 

@@ -4,38 +4,21 @@
 [ext_resource path="res://assets/sprites/gameScreen/SoldierShot.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-
-custom_solver_bias = 0.0
 radius = 5.99124
 height = 14.7659
 
 [node name="bullet" type="Area2D"]
-
 scale = Vector2( 0.102429, 0.102429 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 SPEED = 0.2
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
-
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, 2 )
 scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.625, -0.375 )
 rotation = 1.57207
 shape = SubResource( 1 )
-
 [connection signal="body_entered" from="." to="." method="_on_bullet_body_entered"]
-
-

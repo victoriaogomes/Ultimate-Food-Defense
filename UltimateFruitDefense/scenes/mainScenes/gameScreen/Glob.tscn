@@ -77,9 +77,6 @@ scale = Vector2( 0.0726616, 0.063358 )
 frames = SubResource( 1 )
 animation = "idle"
 
-[node name="edge" type="Position2D" parent="AnimatedSprite"]
-position = Vector2( 831.573, 500.693 )
-
 [node name="gameControl" type="Node2D" parent="."]
 
 [node name="timer" type="Timer" parent="."]
@@ -88,3 +85,6 @@ wait_time = 2.0
 
 [node name="tempo" type="Timer" parent="."]
 wait_time = 15.0
+
+[node name="point" type="Position2D" parent="."]
+position = Vector2( 63.4458, 30.0081 )
