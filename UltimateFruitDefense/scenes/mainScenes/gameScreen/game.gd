@@ -4,6 +4,7 @@ extends Node2D
 onready var fruit1 = preload("res://scenes/mainScenes/gameScreen/Lemon.tscn")
 onready var fruit2 = preload("res://scenes/mainScenes/gameScreen/strawberry.tscn")
 onready var fruit3 = preload("res://scenes/mainScenes/gameScreen/grape.tscn")
+onready var PowerUp = preload("res://scenes/mainScenes/gameScreen/PowerUp.tscn")
 var vitamins = 180
 
 #Conecta ao sinal que é emitido quando o nível de açúcar no sangue altera
@@ -49,6 +50,9 @@ func _on_lemon_pressed():
 		var lemon = fruit1.instance()
 		add_child(lemon)
 		game_control.dano = 1
+		powerUp(Vector2(320.532, 410.79), "+ Aumento da Pectina")
+		powerUp(Vector2(320.532, 430.79), "+ Absorção de açúcar reduzida")
+		powerUp(Vector2(320.532, 450.79), "+ INIMIGOS ESTÃO MAIS LENTOS!")
 
 
 #Função chamada quando o mouse entra no sprite do limão
@@ -64,6 +68,9 @@ func _on_strawberry_pressed():
 		var sberry = fruit2.instance()
 		add_child(sberry)
 		game_control.diminuirSugarLevel()
+		powerUp(Vector2(420.532, 410.79), "+ Aumento da Antocianina")
+		powerUp(Vector2(420.532, 430.79), "+ Aumento de insulina no sangue")
+		powerUp(Vector2(420.532, 450.79), "- NÍVEL DE GLICOSE REDUZIDO!")
 
 
 #Função chamada quando o mouse entra no sprite do morango
@@ -79,6 +86,9 @@ func _on_grape_pressed():
 		var grape =  fruit3.instance()
 		add_child(grape)
 		game_control.wait_time = 1
+		powerUp(Vector2(520.532, 410.79), "+ Aumento de Resveratrol")
+		powerUp(Vector2(520.532, 430.79), "+ Células mais sensíveis a insulina")
+		powerUp(Vector2(520.532, 450.79), "+ VELOCIDADE DE ATAQUE AUMENTADA!")
 
 func enable_fruits():
 	$lemon.disabled = false
@@ -96,3 +106,11 @@ func disable_fruits():
 func _on_grape_mouse_entered():
 	if(configuration.sound_effects):
 		configuration.mouseHover_sound.play()
+
+func powerUp(position, text):
+	var power = PowerUp.instance()
+	get_parent().add_child(power)
+	power.prepar(position, text)
+	game_control.wait_time = 1
+
+
