@@ -22,15 +22,16 @@ func _ready():
 
 
 func on_TimeOut():
-	if(game_control.target!=null):
-		pos = get_node("/root/Node2D/Glob") #Pega a posição atual do Glóbulo
-		spwan_bullet(pos) # Essa posição é usada como referência para o spawn do projétil
+	#if(game_control.target!=null):
+	pos = get_node("/root/Node2D/Glob") #Pega a posição atual do Glóbulo
+	spwan_bullet(pos) # Essa posição é usada como referência para o spawn do projétil
 
 
 func _process(delta):
-	set_wait_time(game_control.wait_time)
-	choose_and_lock()
-	swap_animation(delta)
+	if Input.is_action_pressed("Space"):
+		set_wait_time(game_control.wait_time)
+		choose_and_lock()
+		swap_animation(delta)
 
 func _physics_process(delta): #a todo frame essa função fica esperando os comandos para fazer o personagem se mecher
 	var temp = get_node("/root/Node2D/Glob")
@@ -69,43 +70,10 @@ func set_wait_time(time):
 
 #Função Que troca a animação do Glóbulo baseada na posição do inimigo
 func swap_animation(delta):
-	#if game_control.target != null: #Se houver um inimigo
-		#target_position = game_control.target.position #Captura a posicação do inimigo
-		#Verifica qual são as coordenadas do inimigo para decidir qual o melhor ângulo de sprite para atirar
-		#if target_position.y < -111:
-			#if target_position.x <-91:
-				#anim = "shootUp2"
-				#pos = get_node("/root/Node2D/PositionUp2")
-			#else:
-				#anim = "shootUp1"
-				#pos = get_node("/root/Node2D/PositionUp1")
-		#elif target_position.y < -48 && target_position.y > -91:
-			#anim = "shootCenter"
-			#pos = get_node("/root/Node2D/PositionCenter")
-		#elif target_position.y < 1.8 && target_position.y > -48:
-			#if target_position.x < -94:
-				#anim = "shootDown1"
-				#pos = get_node("/root/Node2D/PositionDown1")
-			#else:
-				#anim = "shootCenter"
-				#pos = get_node("/root/Node2D/PositionCenter")
-		#elif target_position.y < 60 && target_position.y > 1.8:
-			#if target_position.x < -170:
-				#anim = "shootDown2"
-				#pos = get_node("/root/Node2D/PositionDown2")
-			#else:
-				#anim = "shootDown1"
-				#pos = get_node("/root/Node2D/PositionDown1")
-		#elif target_position.y > 60:
-			#if target_position.x < -58:
-				#anim = "shootDown2"
-				#pos = get_node("/root/Node2D/PositionDown2")
-			#else:
-				#anim = "shootDown1"
-				#pos = get_node("/root/Node2D/PositionDown1")
-		#$AnimatedSprite.play(anim)
-	#else: #Se não houver inimigos ele mantém o sprite principal
-		#$AnimatedSprite.play("idle")
+	if game_control.target != null: #Se houver um inimigo
+		anim = "shootCenter"
+	else: #Se não houver inimigos ele mantém o sprite principal
+		$AnimatedSprite.play("idle")
 	pass
 
 #Função que cria o objeto bullet (projétil do jogo)
