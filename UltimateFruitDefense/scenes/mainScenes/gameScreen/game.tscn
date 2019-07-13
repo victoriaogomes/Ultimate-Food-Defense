@@ -161,7 +161,7 @@ position = Vector2( 0.000859, -0.038001 )
 scale = Vector2( 1.0001, 1.00097 )
 
 [node name="Referência" type="Position2D" parent="."]
-position = Vector2( -12.6146, -24.4294 )
+position = Vector2( 14.6995, -20.7995 )
 scale = Vector2( 0.0662609, 0.120058 )
 [connection signal="mouse_entered" from="pauseButton" to="." method="_on_pauseButton_mouse_entered"]
 [connection signal="pressed" from="pauseButton" to="." method="_on_pauseButton_pressed"]

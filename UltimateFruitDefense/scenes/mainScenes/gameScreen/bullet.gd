@@ -16,14 +16,18 @@ func _ready():
 
 func _physics_process(delta):
 	move_bullet(delta)
+	if self.position.x >32:
+		queue_free()
 
 #warning-ignore:unused_argument
 func move_bullet(delta):
-	if (game_control.target != null):
-		if(eu.get_ref()):
-			look_at(game_control.target.position)
-			direction = (game_control.target.position - self.position).normalized()
-			position += direction
+	#if (game_control.target != null):
+		#if(eu.get_ref()):
+			#look_at(game_control.target.position)
+			#direction = (game_control.target.position - self.position).normalized()
+			#position += direction
+	var motion = Vector2(cos(self.rotation), sin(self.rotation)) * 100
+	position += motion * delta
 
 
 func _on_bullet_body_entered(body):
