@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 var enemies
 #warning-ignore:unused_class_variable
@@ -31,12 +31,14 @@ func _process(delta):
 	choose_and_lock()
 	swap_animation(delta)
 
-func _physics_process(delta):
-	if Input.is_action_pressed("ui_down"):
-		motion.y = -100
-	elif Input.is_action_pressed("ui_up"):
-		motion.y = 100
-	$globBody.move_and_slide(motion)
+func _physics_process(delta): #a todo frame essa função fica esperando os comandos para fazer o personagem se mecher
+	if Input.is_action_pressed("ui_down"): # Se precionar seta direcionar para baixo
+		motion.y = 100 # Vetor movimento do globulo recebe 100 para ele descer no plano
+	elif Input.is_action_pressed("ui_up"): # Se precionar seta direcionar para cima
+		motion.y = -100 # Vetor movimento do glóbulo recebe -100 e sobe no plano
+	else: # Caso contrário
+		motion.y = 0 # Vetor movimento é igual a zero, Glóbulo parado
+	move_and_slide(motion*(delta*40)) # Função nativa do godot para movimentar
 
 #acha o melhor inimigo e passa a instâcia dele para um variável no outro script
 func choose_and_lock():
