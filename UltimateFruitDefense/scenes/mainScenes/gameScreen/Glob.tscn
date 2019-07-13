@@ -12,6 +12,26 @@
 [ext_resource path="res://assets/sprites/gameScreen/shotingUp1.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/gameScreen/soldierUp1.png" type="Texture" id=11]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],

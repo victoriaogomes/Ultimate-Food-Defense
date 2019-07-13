@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 #Carregando assets para mexer no sprites "newGame" e "pineappleBox"
-var base_english_text = preload("res://assets/sprites/titleScreen/texts/English/New game.png")
-var hover_english_text = preload("res://assets/sprites/titleScreen/texts/English/New game(v2).png")
-var base_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Novo jogo.png")
-var hover_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Novo jogo(v2).png")
+var base_english_text = preload("res://assets/sprites/titleScreen/texts/English/NewGame.png")
+var hover_english_text = preload("res://assets/sprites/titleScreen/texts/English/NewGame(v2).png")
+var base_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/NovoJogo.png")
+var hover_portuguese_text = preload("res://assets/sprites/titleScreen/texts/Pt-Br/NovoJogo(v2).png")
 
 #Carregando os respectivos staticBody2D das caixas de frutas
 onready var banana = get_node("/root/Node2D/Node2D/bananaStaticBody2D")

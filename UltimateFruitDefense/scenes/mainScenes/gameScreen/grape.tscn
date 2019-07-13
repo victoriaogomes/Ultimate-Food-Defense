@@ -17,6 +17,37 @@
 [ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed13.png" type="Texture" id=15]
 [ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed14.png" type="Texture" id=16]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {

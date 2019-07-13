@@ -1,13 +1,27 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/childScenes/loseScene/loseScene.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/loseScreen/texts/english/you lose.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/loseScreen/texts/english/oh no.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/loseScreen/texts/english/youLose.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/loseScreen/texts/english/ohNo.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/loseScreen/sickGirl.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/pause/texts/english/mainMenu.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/pause/texts/english/mainMenu(v2).png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/loseScreen/texts/english/Try level again.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/loseScreen/texts/english/Try level again(v2).png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/loseScreen/texts/english/TryLevelAgain.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/loseScreen/texts/english/TryLevelAgain(v2).png" type="Texture" id=8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "lose"

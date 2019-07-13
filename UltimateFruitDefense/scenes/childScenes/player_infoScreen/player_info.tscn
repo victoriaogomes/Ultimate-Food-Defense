@@ -3,16 +3,36 @@
 [ext_resource path="res://scenes/childScenes/player_infoScreen/Node2D2.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/player_infoScreen/shadow.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Before we start.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/BeforeWeStart.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/player_infoScreen/field.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/My name is.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/MyNameIs.png" type="Texture" id=6]
 [ext_resource path="res://textEditTheme.tres" type="Theme" id=7]
-[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/I am a.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/IAmA.png" type="Texture" id=8]
 [ext_resource path="res://scenes/childScenes/player_infoScreen/femaleStaticBody2D.gd" type="Script" id=9]
 [ext_resource path="res://assets/sprites/player_infoScreen/player_sex/girl.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/player_infoScreen/player_sex/boy.png" type="Texture" id=11]
 [ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start.png" type="Texture" id=12]
 [ext_resource path="res://assets/sprites/player_infoScreen/Texts/English/Start(v2).png" type="Texture" id=13]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [sub_resource type="CircleShape2D" id=1]
 

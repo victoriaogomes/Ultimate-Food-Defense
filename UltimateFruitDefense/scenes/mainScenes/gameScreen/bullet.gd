@@ -2,9 +2,11 @@ extends Area2D
 
 #warning-ignore:unused_class_variable
 export (float) var SPEED
+#warning-ignore:unused_class_variable
 var direction
 #warning-ignore:unused_class_variable
 var motion
+#warning-ignore:unused_class_variable
 var eu = weakref(self)
 #warning-ignore:unused_class_variable
 var collision_info

@@ -1,10 +1,12 @@
 extends KinematicBody2D
 
+#warning-ignore:unused_class_variable
 var enemies
 #warning-ignore:unused_class_variable
 var numberEnemies = 0
 var anim
 var pos
+#warning-ignore:unused_class_variable
 var target_position
 var motion = Vector2()
 

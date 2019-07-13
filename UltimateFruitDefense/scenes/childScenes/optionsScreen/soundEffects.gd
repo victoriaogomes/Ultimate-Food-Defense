@@ -21,8 +21,8 @@ var hover_english_off_text_on = preload("res://assets/sprites/optionsScreen/text
 var hover_english_off_text_off = preload("res://assets/sprites/optionsScreen/texts/English/Off(v4).png")
 
 #Carregando assets para mexer no sprite "Sound Effects"
-var sound_effects_english = preload("res://assets/sprites/optionsScreen/texts/English/Sound effects.png")
-var sound_effects_port = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/Efeitos sonoros.png")
+var sound_effects_english = preload("res://assets/sprites/optionsScreen/texts/English/SoundEffects.png")
+var sound_effects_port = preload("res://assets/sprites/optionsScreen/texts/Pt-Br/EfeitosSonoros.png")
 
 onready var soundEffects_english_position = self.get_position()
 onready var soundEffects_portuguese_position = self.get_position()

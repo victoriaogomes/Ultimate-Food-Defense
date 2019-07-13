@@ -1,20 +1,20 @@
 extends Node2D
 
-var portuguese_credits = preload("res://assets/sprites/creditScreen/texts/pt-Br/Créditos.png")
-var portuguese_gameCoding = preload("res://assets/sprites/creditScreen/texts/pt-Br/Codificação do jogo.png")
-var portuguese_charactersDrawing = preload("res://assets/sprites/creditScreen/texts/pt-Br/Desenho dos personagens.png")
-var portuguese_fenceDrawing = preload("res://assets/sprites/creditScreen/texts/pt-Br/Desenho da cerca.png")
-var portuguese_fruitCarDrawing = preload("res://assets/sprites/creditScreen/texts/pt-Br/Desenho do carrinho de frutas.png")
-var portuguese_titleScreenScenario = preload("res://assets/sprites/creditScreen/texts/pt-Br/Cenário da tela inicial, desenho da menina e do menino, placa de madeira.png")
-var portuguese_titleScreenSong = preload("res://assets/sprites/creditScreen/texts/pt-Br/Música da tela inicial.png")
+var portuguese_credits = preload("res://assets/sprites/creditScreen/texts/pt-Br/Creditos.png")
+var portuguese_gameCoding = preload("res://assets/sprites/creditScreen/texts/pt-Br/Codificacao_do_jogo.png")
+var portuguese_charactersDrawing = preload("res://assets/sprites/creditScreen/texts/pt-Br/DesenhoDosPersonagens.png")
+var portuguese_fenceDrawing = preload("res://assets/sprites/creditScreen/texts/pt-Br/DesenhodaCerca.png")
+var portuguese_fruitCarDrawing = preload("res://assets/sprites/creditScreen/texts/pt-Br/DesenhoDoCarrinhoDeFrutas.png")
+var portuguese_titleScreenScenario = preload("res://assets/sprites/creditScreen/texts/pt-Br/Cenario_da_tela_inicial_Desenho_da_menina_e_do_menino_placa_de_madeira.png")
+var portuguese_titleScreenSong = preload("res://assets/sprites/creditScreen/texts/pt-Br/MusicaDaTelaInicial.png")
 
 var english_credits = preload("res://assets/sprites/creditScreen/texts/english/Credits.png")
-var english_gameCoding = preload("res://assets/sprites/creditScreen/texts/english/Game coding.png")
-var english_charactersDrawing = preload("res://assets/sprites/creditScreen/texts/english/Characters drawing.png")
-var english_fenceDrawing = preload("res://assets/sprites/creditScreen/texts/english/Fence drawing.png")
-var english_fruitCarDrawing = preload("res://assets/sprites/creditScreen/texts/english/Fruit car drawing.png")
-var english_titleScreenScenario = preload("res://assets/sprites/creditScreen/texts/english/Title Screen Scenario, boy and girl drawing, wooden plaque.png")
-var english_titleScreenSong = preload("res://assets/sprites/creditScreen/texts/english/Title Screen Song.png")
+var english_gameCoding = preload("res://assets/sprites/creditScreen/texts/english/GameCoding.png")
+var english_charactersDrawing = preload("res://assets/sprites/creditScreen/texts/english/CharactersDrawing.png")
+var english_fenceDrawing = preload("res://assets/sprites/creditScreen/texts/english/FenceDrawing.png")
+var english_fruitCarDrawing = preload("res://assets/sprites/creditScreen/texts/english/FruitCarDrawing.png")
+var english_titleScreenScenario = preload("res://assets/sprites/creditScreen/texts/english/TitleScreenScenario_boy_and_girl_drawing_wooden_plaque.png")
+var english_titleScreenSong = preload("res://assets/sprites/creditScreen/texts/english/TitleScreenSong.png")
 
 var gameCodingPortuguese_Pos
 var gameCodingEnglish_Pos

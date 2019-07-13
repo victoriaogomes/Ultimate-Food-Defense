@@ -9,6 +9,20 @@
 [ext_resource path="res://assets/sprites/instructions/english/MainMenu.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/instructions/english/MainMenu(v2).png" type="Texture" id=8]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [node name="Node2DInstructions" type="Node2D" index="0"]
 
 position = Vector2( 509.787, 303.802 )

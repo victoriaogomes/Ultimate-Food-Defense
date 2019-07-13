@@ -4,21 +4,56 @@
 [ext_resource path="res://assets/sprites/player_infoScreen/shadow.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/creditScreen/texts/english/Credits.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/Game coding.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/Bruno Claudino e Victória Gomes.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/GameCoding.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/BrunoClaudino_e_VictoriaGomes.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/creditScreen/horizontalLine.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/Characters drawing.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/Igor Garcia.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/Fence drawing.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/CharactersDrawing.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/IgorGarcia.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/FenceDrawing.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/creditScreen/texts/names/fenceDrawer.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/Fruit car drawing.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/FruitCarDrawing.png" type="Texture" id=12]
 [ext_resource path="res://assets/sprites/creditScreen/texts/names/fruitCarDrawer.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/Title Screen Scenario, boy and girl drawing, wooden plaque.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/TitleScreenScenario_boy_and_girl_drawing_wooden_plaque.png" type="Texture" id=14]
 [ext_resource path="res://assets/sprites/creditScreen/texts/names/titleScreenScenarioDrawer.png" type="Texture" id=15]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/Title Screen Song.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/TitleScreenSong.png" type="Texture" id=16]
 [ext_resource path="res://assets/sprites/creditScreen/texts/names/TitleScreenMusicCreator.png" type="Texture" id=17]
 [ext_resource path="res://scenes/childScenes/creditScreen/backStaticBody2D.gd" type="Script" id=18]
 [ext_resource path="res://assets/sprites/optionsScreen/texts/English/Back.png" type="Texture" id=19]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

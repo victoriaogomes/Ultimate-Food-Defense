@@ -2,15 +2,15 @@ extends Node2D
 
 var base_port_start = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Iniciar.png")
 var hover_port_start = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Iniciar(v2).png")
-var base_port_beforeStart = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Antes de começarmos.png")
-var base_port_myName = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Meu nome é.png")
-var base_port_iAm = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/Eu sou.png")
+var base_port_beforeStart = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/AntesDeComecarmos.png")
+var base_port_myName = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/MeuNomeE.png")
+var base_port_iAm = preload("res://assets/sprites/player_infoScreen/Texts/Pt-Br/EuSou.png")
 
 var base_engli_start = preload("res://assets/sprites/player_infoScreen/Texts/English/Start.png")
 var hover_engli_start = preload("res://assets/sprites/player_infoScreen/Texts/English/Start(v2).png")
-var base_engli_beforeStart = preload("res://assets/sprites/player_infoScreen/Texts/English/Before we start.png")
-var base_engli_myName = preload("res://assets/sprites/player_infoScreen/Texts/English/My name is.png")
-var base_engli_iAm = preload("res://assets/sprites/player_infoScreen/Texts/English/I am a.png")
+var base_engli_beforeStart = preload("res://assets/sprites/player_infoScreen/Texts/English/BeforeWeStart.png")
+var base_engli_myName = preload("res://assets/sprites/player_infoScreen/Texts/English/MyNameIs.png")
+var base_engli_iAm = preload("res://assets/sprites/player_infoScreen/Texts/English/IAmA.png")
 
 #warning-ignore:unused_class_variable
 var base_english_sprite = preload("res://assets/sprites/player_infoScreen/Texts/English/Start.png")

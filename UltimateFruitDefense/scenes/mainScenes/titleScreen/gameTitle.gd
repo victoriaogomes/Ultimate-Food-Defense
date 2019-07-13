@@ -1,8 +1,8 @@
 extends Sprite
 
 #Pega o asset necessário para trocar o label desse sprite para português
-var port_title = preload("res://assets/sprites/titleScreen/texts/Pt-Br/Defesa final dos alimentos.png")
-var english_title = preload("res://assets/sprites/titleScreen/texts/English/Ultimate fruit defense.png")
+var port_title = preload("res://assets/sprites/titleScreen/texts/Pt-Br/DefesaFinalDosAlimentos.png")
+var english_title = preload("res://assets/sprites/titleScreen/texts/English/UltimateFruitDefense.png")
 
 #Verifica se o idioma definido no sistema é português e, caso seja, troca o label para português
 func _ready():

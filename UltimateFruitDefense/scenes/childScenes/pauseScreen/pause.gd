@@ -2,8 +2,8 @@ extends Node2D
 
 var base_options_english = preload("res://assets/sprites/pause/texts/english/Options.png")
 var hover_options_english = preload("res://assets/sprites/pause/texts/english/Options(v2).png")
-var base_options_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/Opções.png")
-var hover_options_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/Opções(v2).png")
+var base_options_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/Opcoes.png")
+var hover_options_portuguese = preload("res://assets/sprites/pause/texts/pt-Br/Opcoes(v2).png")
 
 var base_mainMenu_english = preload("res://assets/sprites/pause/texts/english/mainMenu.png")
 var hover_mainMenu_english = preload("res://assets/sprites/pause/texts/english/mainMenu(v2).png")

@@ -1,15 +1,15 @@
 extends Node2D
 
 var youLose_port = preload("res://assets/sprites/loseScreen/texts/pt-Br/vocePerdeu.png")
-var youLose_english = preload("res://assets/sprites/loseScreen/texts/english/you lose.png")
+var youLose_english = preload("res://assets/sprites/loseScreen/texts/english/youLose.png")
 
-var ohNo_port = preload("res://assets/sprites/loseScreen/texts/pt-Br/ah nao.png")
-var ohNo_english = preload("res://assets/sprites/loseScreen/texts/english/oh no.png")
+var ohNo_port = preload("res://assets/sprites/loseScreen/texts/pt-Br/ahNao.png")
+var ohNo_english = preload("res://assets/sprites/loseScreen/texts/english/ohNo.png")
 
 var tryAgainBase_port = preload("res://assets/sprites/loseScreen/texts/pt-Br/tentarDnv.png")
 var tryAgainhover_port = preload("res://assets/sprites/loseScreen/texts/pt-Br/tentarDnv(v2).png")
-var tryAgainBase_english = preload("res://assets/sprites/loseScreen/texts/english/Try level again.png")
-var tryAgainhover_english = preload("res://assets/sprites/loseScreen/texts/english/Try level again(v2).png")
+var tryAgainBase_english = preload("res://assets/sprites/loseScreen/texts/english/TryLevelAgain.png")
+var tryAgainhover_english = preload("res://assets/sprites/loseScreen/texts/english/TryLevelAgain(v2).png")
 
 var mainMenuBase_english = preload("res://assets/sprites/pause/texts/english/mainMenu.png")
 #warning-ignore:unused_class_variable

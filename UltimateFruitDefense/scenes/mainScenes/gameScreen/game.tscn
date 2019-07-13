@@ -19,6 +19,28 @@
 [ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=18]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [sub_resource type="DynamicFont" id=1]
 size = 25
 font_data = ExtResource( 7 )
