@@ -12,6 +12,8 @@ var pos_new_sprite
 var pos_origin_text
 var pos_new_text
 
+var instructionsScene = preload("res://scenes/childScenes/instructions/instructions.tscn")
+
 
 #Coloca os sprites com labels para o idioma definido nas configurações e armazena em certas variáveis a posição dos sprites
 func _ready():
@@ -40,7 +42,7 @@ func language():
 func _on_tomatoStaticBody2D_input_event(viewport, event, shape_idx):
 	if(Input.is_mouse_button_pressed(BUTTON_LEFT)):
 		#warning-ignore:return_value_discarded
-		get_tree().change_scene("res://scenes/childScenes/instructions/instructions.tscn")
+		get_tree().change_scene_to(instructionsScene)
 
 
 #Mouse entrando no sprite "tomatoBox"

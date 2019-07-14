@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/mainScenes/titleScreen/titleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/titleScreen/Background.png" type="Texture" id=2]
@@ -15,21 +15,22 @@
 [ext_resource path="res://assets/sprites/titleScreen/texts/English/NewGame.png" type="Texture" id=13]
 [ext_resource path="res://scenes/mainScenes/titleScreen/bananaStaticBody2D.gd" type="Script" id=14]
 [ext_resource path="res://assets/sprites/titleScreen/scenario/BananaBox.png" type="Texture" id=15]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/OrangeBox.png" type="Texture" id=16]
-[ext_resource path="res://scenes/mainScenes/titleScreen/tomatoStaticBody2D.gd" type="Script" id=17]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/TomatoBox.png" type="Texture" id=18]
-[ext_resource path="res://assets/sprites/titleScreen/texts/English/Instructions.png" type="Texture" id=19]
-[ext_resource path="res://scenes/mainScenes/titleScreen/pepperStaticBody2D.gd" type="Script" id=20]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/PepperBox.png" type="Texture" id=21]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/AppleBox.png" type="Texture" id=22]
-[ext_resource path="res://scenes/mainScenes/titleScreen/cucumberStaticBody2D.gd" type="Script" id=23]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/CucumberBox.png" type="Texture" id=24]
-[ext_resource path="res://assets/sprites/titleScreen/texts/English/Options.png" type="Texture" id=25]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/WatermelonBox.png" type="Texture" id=26]
-[ext_resource path="res://assets/sprites/titleScreen/scenario/Wheel.png" type="Texture" id=27]
-[ext_resource path="res://scenes/childScenes/player_infoScreen/player_info.tscn" type="PackedScene" id=28]
-[ext_resource path="res://scenes/childScenes/optionsScreen/options.tscn" type="PackedScene" id=29]
-[ext_resource path="res://scenes/childScenes/creditScreen/credit.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/sprites/titleScreen/texts/English/LoadGame.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/OrangeBox.png" type="Texture" id=17]
+[ext_resource path="res://scenes/mainScenes/titleScreen/tomatoStaticBody2D.gd" type="Script" id=18]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/TomatoBox.png" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/titleScreen/texts/English/Instructions.png" type="Texture" id=20]
+[ext_resource path="res://scenes/mainScenes/titleScreen/pepperStaticBody2D.gd" type="Script" id=21]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/PepperBox.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/AppleBox.png" type="Texture" id=23]
+[ext_resource path="res://scenes/mainScenes/titleScreen/cucumberStaticBody2D.gd" type="Script" id=24]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/CucumberBox.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/titleScreen/texts/English/Options.png" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/WatermelonBox.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/titleScreen/scenario/Wheel.png" type="Texture" id=28]
+[ext_resource path="res://scenes/childScenes/player_infoScreen/player_info.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/childScenes/optionsScreen/options.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/childScenes/creditScreen/credit.tscn" type="PackedScene" id=31]
 
 [sub_resource type="Animation" id=1]
 length = 3.5
@@ -362,7 +363,6 @@ scale = Vector2( 0.231831, 0.165502 )
 texture = ExtResource( 13 )
 
 [node name="bananaStaticBody2D" type="StaticBody2D" parent="Node2D"]
-editor/display_folded = true
 position = Vector2( 2.98078, 0.247337 )
 scale = Vector2( 1.04489, 1.00158 )
 input_pickable = true
@@ -381,29 +381,28 @@ polygon = PoolVector2Array( 24.9794, 15.7253, 24.3751, 15.9208, 22.0573, 15.6471
 [node name="loadGame" type="Sprite" parent="Node2D/bananaStaticBody2D"]
 position = Vector2( 12.1707, 14.2241 )
 scale = Vector2( 0.0468723, 0.0423534 )
-texture = ExtResource( 13 )
+texture = ExtResource( 16 )
 
 [node name="orangeBox" type="Sprite" parent="Node2D"]
 position = Vector2( 3.54071, 10.2166 )
 scale = Vector2( 0.0386396, 0.037769 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 
 [node name="tomatoStaticBody2D" type="StaticBody2D" parent="Node2D"]
-editor/display_folded = true
 position = Vector2( 3.29589, 0.247337 )
 scale = Vector2( 1.00991, 1.00158 )
 input_pickable = true
-script = ExtResource( 17 )
+script = ExtResource( 18 )
 
 [node name="tomatoBox" type="Sprite" parent="Node2D/tomatoStaticBody2D"]
 position = Vector2( -20.7228, 21.1594 )
 scale = Vector2( 0.0448707, 0.0360012 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
 [node name="instructions" type="Sprite" parent="Node2D/tomatoStaticBody2D"]
 position = Vector2( -20.9696, 24.0544 )
 scale = Vector2( 0.0519686, 0.0437396 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/tomatoStaticBody2D"]
 position = Vector2( -35.7824, 0 )
@@ -415,17 +414,17 @@ editor/display_folded = true
 position = Vector2( 4.30326, 0.247337 )
 scale = Vector2( 0.97843, 1.00158 )
 input_pickable = true
-script = ExtResource( 20 )
+script = ExtResource( 21 )
 
 [node name="pepperBox" type="Sprite" parent="Node2D/pepperStaticBody2D"]
 position = Vector2( 2.54655, 20.4891 )
 scale = Vector2( 0.0421092, 0.0347177 )
-texture = ExtResource( 21 )
+texture = ExtResource( 22 )
 
 [node name="credits" type="Sprite" parent="Node2D/pepperStaticBody2D"]
 position = Vector2( 2.69697, 24.6938 )
 scale = Vector2( 0.046333, 0.0379786 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/pepperStaticBody2D"]
 position = Vector2( -37.9633, 0 )
@@ -435,24 +434,24 @@ polygon = PoolVector2Array( 21.2857, 25.9594, 21.1556, 25.9203, 20.0923, 25.9985
 [node name="appleBox" type="Sprite" parent="Node2D"]
 position = Vector2( -7.35186, 9.45695 )
 scale = Vector2( 0.04917, 0.0386711 )
-texture = ExtResource( 22 )
+texture = ExtResource( 23 )
 
 [node name="cucumberStaticBody2D" type="StaticBody2D" parent="Node2D"]
 editor/display_folded = true
 position = Vector2( -0.0200202, 2.55449 )
 scale = Vector2( 0.868158, 0.929477 )
 input_pickable = true
-script = ExtResource( 23 )
+script = ExtResource( 24 )
 
 [node name="cucumberBox" type="Sprite" parent="Node2D/cucumberStaticBody2D"]
 position = Vector2( -5.78775, 19.7026 )
 scale = Vector2( 0.0496437, 0.0308059 )
-texture = ExtResource( 24 )
+texture = ExtResource( 25 )
 
 [node name="options" type="Sprite" parent="Node2D/cucumberStaticBody2D"]
 position = Vector2( -5.85773, 24.015 )
 scale = Vector2( 0.0637455, 0.0437209 )
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/cucumberStaticBody2D"]
 position = Vector2( -37.8055, -2.48221 )
@@ -462,13 +461,13 @@ polygon = PoolVector2Array( 15.6273, 25.9195, 12.3949, 25.7889, 10.0441, 25.593,
 [node name="watermelonBox" type="Sprite" parent="Node2D"]
 position = Vector2( 18.6518, 20.9414 )
 scale = Vector2( 0.0413117, 0.037392 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 
 [node name="wheel" type="Sprite" parent="Node2D"]
 position = Vector2( 21.443, 27.3267 )
 rotation = 25.1327
 scale = Vector2( 0.035547, 0.035547 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0.13489, -0.0114831 )
@@ -477,17 +476,17 @@ rotating = true
 current = true
 smoothing_enabled = true
 
-[node name="player_info" parent="." instance=ExtResource( 28 )]
+[node name="player_info" parent="." instance=ExtResource( 29 )]
 visible = false
 position = Vector2( -0.822302, -1.13641 )
 scale = Vector2( 0.677113, 0.771483 )
 
-[node name="options" parent="." instance=ExtResource( 29 )]
+[node name="options" parent="." instance=ExtResource( 30 )]
 visible = false
 position = Vector2( -0.822302, -1.13641 )
 scale = Vector2( 0.677113, 0.771483 )
 
-[node name="credits" parent="." instance=ExtResource( 30 )]
+[node name="credits" parent="." instance=ExtResource( 31 )]
 visible = false
 position = Vector2( 0.0786915, 0.16617 )
 scale = Vector2( 1.0001, 1.00523 )
