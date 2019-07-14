@@ -30,12 +30,12 @@ func _ready():
 
 func _physics_process(delta): #a todo frame essa função fica esperando os comandos para fazer o personagem se mecher
 	var temp = get_node("/root/Node2D/Glob")
-	if Input.is_action_pressed("ui_down"): # Se precionar seta direcionar para baixo
+	if Input.is_action_pressed("ui_down") || get_node("/root/Node2D/down").is_pressed(): # Se precionar seta direcionar para baixo
 		if temp.position.y < 5.87 :
 			motion.y = 100 # Vetor movimento do globulo recebe 100 para ele descer no plano
 		else: # Caso contrário
 			motion.y = 0 # Vetor movimento é igual a zero, Glóbulo parado
-	elif Input.is_action_pressed("ui_up"): # Se precionar seta direcionar para cima
+	elif Input.is_action_pressed("ui_up") || get_node("/root/Node2D/up").is_pressed(): # Se precionar seta direcionar para cima
 		if temp.position.y > -24.429:
 			motion.y = -100 # Vetor movimento do glóbulo recebe -100 e sobe no plano
 		else: # Caso contrário
@@ -44,12 +44,7 @@ func _physics_process(delta): #a todo frame essa função fica esperando os coma
 		motion.y = 0
 	move_and_slide(motion*(delta*40)) # Função nativa do godot para movimentar
 	if Input.is_action_pressed("Space"):
-		#choose_and_lock()
-		if(game_control.avaliable == true):
-			set_wait_time(game_control.wait_time)
-			swap_animation(delta)
-			pos = get_node("/root/Node2D/Glob") #Pega a posição atual do Glóbulo
-			spwan_bullet(pos) # Essa posição é usada como referência para o spawn do projétil
+		_on_shot_pressed()
 
 #acha o melhor inimigo e passa a instâcia dele para um variável no outro script
 #func choose_and_lock():
@@ -72,7 +67,7 @@ func set_wait_time(time):
 
 #warning-ignore:unused_argument
 #Função Que troca a animação do Glóbulo baseada na posição do inimigo
-func swap_animation(delta):
+func swap_animation():
 	if game_control.target != null: #Se houver um inimigo
 		anim = "shootCenter"
 	else: #Se não houver inimigos ele mantém o sprite principal
@@ -93,3 +88,11 @@ func spwan_bullet(pos):
 func _on_tempo_timeout():
 	#game_control.wait_time = 2
 	game_control.avaliable = true
+
+func _on_shot_pressed():
+	#choose_and_lock()
+	if(game_control.avaliable == true):
+		set_wait_time(game_control.wait_time)
+		swap_animation()
+		pos = get_node("/root/Node2D/Glob") #Pega a posição atual do Glóbulo
+		spwan_bullet(pos) # Essa posição é usada como referência para o spawn do projétil

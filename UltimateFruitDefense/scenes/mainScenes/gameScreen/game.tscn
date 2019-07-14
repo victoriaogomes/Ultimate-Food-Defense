@@ -1,53 +1,34 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/mainScenes/gameScreen/game.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/gameScreen/newMap.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/gameScreen/NewMap.png" type="Texture" id=2]
 [ext_resource path="res://scenes/mainScenes/gameScreen/Node2D.gd" type="Script" id=3]
-[ext_resource path="res://assets/sprites/gameScreen/wallet.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/gameScreen/vitamins.png" type="Texture" id=6]
-[ext_resource path="res://KGSecondChancesSketch.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://assets/sprites/gameScreen/pause.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon (v2).png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry(v2).png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/gameScreen/grape/grape(v2).png" type="Texture" id=14]
-[ext_resource path="res://scenes/childScenes/loseScene/loseScene.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=18]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=4]
+[ext_resource path="res://KGSecondChancesSketch.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/pause.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/lemon/lemon (v2).png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/strawberry/strawberry(v2).png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grape.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/gameScreen/grape/grape(v2).png" type="Texture" id=12]
+[ext_resource path="res://scenes/mainScenes/gameScreen/Glob.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/sprites/gameScreen/shot.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/gameScreen/down.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/gameScreen/up.png" type="Texture" id=16]
+[ext_resource path="res://scenes/childScenes/loseScene/loseScene.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/childScenes/pauseScreen/pause.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/childScenes/nextLevel/nextLevelScreen.tscn" type="PackedScene" id=19]
 
 [sub_resource type="DynamicFont" id=1]
-size = 25
-font_data = ExtResource( 7 )
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 13
-font_data = ExtResource( 7 )
+size = 18
+outline_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 512.001, 300.365 )
@@ -55,8 +36,8 @@ scale = Vector2( 15.9991, 9.36664 )
 script = ExtResource( 1 )
 
 [node name="game_map" type="Sprite" parent="."]
-position = Vector2( 0.105037, 0.103096 )
-scale = Vector2( 0.0638807, 0.0911153 )
+position = Vector2( 0.0187689, -0.0964801 )
+scale = Vector2( 0.0640071, 0.0915549 )
 texture = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D" parent="." groups=[
@@ -74,6 +55,7 @@ wait_time = 5.0
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D" groups=[
 "wall",
 ]]
+editor/display_folded = true
 position = Vector2( -17.4555, -6.30489 )
 scale = Vector2( 0.147844, 0.723776 )
 
@@ -83,89 +65,77 @@ scale = Vector2( 0.147844, 0.723776 )
 position = Vector2( 2.46229, 2.74065 )
 polygon = PoolVector2Array( 4.53254, 30.6587, 5.31183, 29.9855, 6.09113, 29.1023, 6.89555, 27.9394, 7.19722, 26.9251, 7.09666, 25.8758, 6.6693, 24.7916, 8.25615, 24.8796, 9.79678, 24.5644, 10.7937, 23.997, 10.9749, 23.3035, 10.1593, 23.1144, 7.53115, 23.335, 5.17488, 23.7763, 3.72489, 23.4611, 5.35614, 23.1459, 7.62177, 22.547, 8.07489, 22.2948, 9.1624, 22.7991, 9.43428, 22.1687, 10.4312, 21.7589, 11.428, 21.1285, 12.0624, 20.1828, 12.878, 19.2372, 13.3312, 18.2915, 13.5124, 17.2198, 13.4218, 16.3371, 13.4218, 15.2969, 12.878, 14.7926, 13.2405, 14.3828, 14.8718, 14.1306, 16.3218, 13.5002, 16.5937, 12.9643, 15.5062, 12.5545, 14.1468, 12.3023, 10.6124, 12.9958, 12.6061, 12.4266, 14.9624, 11.7646, 15.8687, 11.0711, 17.1374, 10.4092, 17.4093, 9.9994, 18.2249, 9.33744, 18.4062, 8.707, 19.1312, 7.79286, 19.3124, 6.75264, 18.5874, 5.46023, 20.5812, 5.05045, 22.6656, 4.57762, 23.2093, 3.63196, 22.2124, 3.03304, 21.0343, 2.87543, 19.2218, 3.12761, 16.8655, 3.85262, 16.2312, 3.94718, 15.2343, 3.66348, 14.9624, 2.90696, 17.5905, 2.56021, 19.3124, 2.30713, 20.5812, 1.70821, 19.3124, 1.01472, 17.7718, 0.76255, 18.0437, 0.132107, 18.3156, -0.939636, 18.4968, -1.97986, 18.4062, -2.57878, 17.953, -3.24074, 16.9562, -3.39835, 17.0468, -3.99727, 17.953, -4.34401, 20.1281, -4.72227, 21.1249, -5.44728, 20.3093, -6.14076, 18.2249, -6.18287, 17.953, -6.65571, 18.4968, -7.03397, 19.3124, -7.94811, 20.7624, -8.64159, 21.2155, -9.27203, 21.4874, -10.1231, 21.3062, -10.8166, 21.4874, -11.4786, 21.2155, -12.2981, 20.7624, -12.834, 20.4905, -13.4645, 23.0281, -13.9058, 23.2093, -14.7569, 21.6687, -15.0406, 19.8562, -15.4188, 21.2155, -15.6079, 22.0075, -16.6172, 22.2124, -17.7471, 22.4843, -18.6613, 21.4874, -19.2287, 22.7104, -19.5162, 23.9154, -19.6908, 24.8191, -20.0052, 24.0158, -21.1927, 22.4091, -21.6118, 20.6017, -21.1927, 19.6979, -20.9482, 18.8946, -21.4372, 19.6979, -21.6118, 21.6058, -22.3453, 21.1037, -23.1137, 19.5975, -23.3582, 16.4846, -23.0439, 15.0788, -22.6247, 12.7692, -22.9041, 8.85301, -23.3582, 5.23804, -23.5328, 2.82806, -23.463, -1.3894, -23.3233, -3.49812, -22.9391, -5.50644, -23.917, -8.11725, -24.0568, -9.82432, -23.5678, -9.72391, -22.7295, -7.51476, -22.031, -8.31808, -21.1578, -9.22182, -19.9353, -9.52308, -18.7129, -8.82016, -17.3856, -10.7281, -17.5253, -12.3347, -17.211, -12.9372, -16.6172, -12.7364, -16.1632, -11.3306, -15.8488, -10.9289, -15.1503, -11.3306, -14.312, -11.7322, -13.2642, -12.2343, -12.4958, -12.9372, -11.7274, -12.9372, -10.3652, -12.2343, -9.64201, -12.4351, -8.8736, -12.8368, -8.31477, -13.841, -7.65114, -14.5439, -7.16216, -14.343, -6.67318, -12.5355, -6.28897, -13.7405, -5.73014, -14.9455, -4.85695, -15.7488, -3.49478, -16.6526, -2.2374, -17.3555, -0.59581, -16.8534, 0.591522, -17.6568, 1.11544, -18.3597, 1.60442, -16.4518, 2.89673, -17.0543, 3.70006, -17.4559, 4.81774, -18.9024, 6.07524, -19.7057, 7.43741, -19.8062, 8.8345, -19.0028, 9.77754, -21.9149, 10.1967, -24.124, 10.8952, -23.8228, 11.6287, -21.5132, 11.8383, -19.8062, 11.5588, -18.1276, 10.811, -18.1276, 11.2679, -18.5845, 11.5063, -18.9272, 12.0229, -19.6698, 12.7381, -20.8121, 13.2745, -21.6688, 14.2877, -23.0195, 15.5755, -23.5215, 16.5185, -23.7224, 17.3219, -23.5215, 18.5094, -23.4211, 18.8936, -23.1199, 19.0682, -23.7224, 19.0333, -23.2681, 19.3338, -24.1248, 19.6716, -23.8964, 20.3669, -23.0967, 20.7046, -25.5299, 20.3256, -25.9315, 20.9892, -24.7265, 21.6179, -23.0967, 21.9562, -24.696, 22.9297, -25.9526, 23.8038, -28.0403, 24.5464, -28.6427, 25.1401, -29.0444, 26.5023, -29.6469, 27.7248, -29.7473, 28.7726, -29.4461, 29.4013, -28.6427, 29.7505, -28.3415, 30.1347, -28.8436, 30.3443, -29.5465, 30.8333, -31.1531, 31.1826, -27.7803, 31.1943, -26.5237, 31.2141, -25.1529, 31.1943, -23.3252, 31.0353, -20.2409, 30.9161, -16.4712, 30.5387, -15.8429, 30.7969, -15.2147, 30.7969, -15.2147, 30.4791, -14.3008, 30.4989, -13.5012, 30.3996, -13.2727, 30.2208, -12.4731, 30.2208, -12.0161, 30.3797, -10.6453, 30.3797, -7.50391, 30.34, -7.4468, 30.4791, -6.59005, 30.5188, -5.90465, 30.3003, -4.81944, 30.3996, -2.9917, 30.3996, -0.707031, 30.3797, 0.778, 30.4195, 2.71996, 30.5188 )
 
-[node name="wallet" type="Sprite" parent="."]
-self_modulate = Color( 1, 1, 1, 0.889529 )
-position = Vector2( -16.5106, 26.3704 )
-scale = Vector2( 0.0114722, 0.0170314 )
-texture = ExtResource( 4 )
-
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
 position = Vector2( -22.5249, -18.1113 )
 scale = Vector2( 0.00510444, 0.00624129 )
-texture = ExtResource( 5 )
-
-[node name="vitamins" type="Sprite" parent="."]
-position = Vector2( -18.2192, 23.2051 )
-scale = Vector2( 0.00923652, 0.0112269 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = -20.0
-margin_top = 26.0
-margin_right = 24.0
-margin_bottom = 65.0
+margin_left = -7.0
+margin_top = -30.0
+margin_right = 57.0
+margin_bottom = 4.0
 rect_scale = Vector2( 0.14, 0.14 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "0"
+text = "000"
 align = 1
+valign = 1
 autowrap = true
+clip_text = true
 
 [node name="pauseButton" type="TextureButton" parent="."]
 margin_left = 28.0
 margin_top = -32.0
 margin_right = 31.0
 margin_bottom = -27.0
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 6 )
 expand = true
 
 [node name="lemon" type="TextureButton" parent="."]
 light_mask = 0
-margin_left = -12.0
-margin_top = 23.0
-margin_right = -4.0
-margin_bottom = 31.0
+margin_left = -3.54796
+margin_top = 20.5471
+margin_right = 4.45204
+margin_bottom = 28.5471
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+expand = true
+
+[node name="strawberry" type="TextureButton" parent="."]
+margin_left = 3.01607
+margin_top = 19.6859
+margin_right = 10.0161
+margin_bottom = 28.6859
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 10 )
 expand = true
 
-[node name="strawberry" type="TextureButton" parent="."]
-margin_left = -5.0
-margin_top = 22.0
-margin_right = 2.0
-margin_bottom = 31.0
+[node name="grape" type="TextureButton" parent="."]
+margin_left = 10.4614
+margin_top = 21.3238
+margin_right = 18.4614
+margin_bottom = 29.3238
 texture_normal = ExtResource( 11 )
 texture_hover = ExtResource( 12 )
 expand = true
 
-[node name="grape" type="TextureButton" parent="."]
-margin_left = 2.0
-margin_top = 23.0
-margin_right = 10.0
-margin_bottom = 31.0
-texture_normal = ExtResource( 13 )
-texture_hover = ExtResource( 14 )
-expand = true
-
 [node name="Label" type="Label" parent="."]
-margin_left = -30.0
-margin_top = 18.0
-margin_right = 34.0
-margin_bottom = 76.0
+margin_left = 4.77014
+margin_top = -30.7429
+margin_right = 84.7701
+margin_bottom = 27.2571
 rect_scale = Vector2( 0.11, 0.11 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "50 mg/dL"
 align = 1
+valign = 1
 autowrap = true
 
-[node name="loseScreen" parent="." instance=ExtResource( 15 )]
-visible = false
-position = Vector2( 0.000858307, -0.0379982 )
-scale = Vector2( 1.0001, 1.00097 )
-
-[node name="Glob" parent="." instance=ExtResource( 16 )]
+[node name="Glob" parent="." instance=ExtResource( 13 )]
+editor/display_folded = true
 position = Vector2( -22.6796, -19.5332 )
 scale = Vector2( 0.0735134, 0.120278 )
 
@@ -173,12 +143,35 @@ scale = Vector2( 0.0735134, 0.120278 )
 position = Vector2( 63.0727, 30.708 )
 scale = Vector2( 0.901344, 0.998171 )
 
-[node name="pause" parent="." instance=ExtResource( 17 )]
+[node name="shot" type="TouchScreenButton" parent="."]
+position = Vector2( -30.6099, 19.0582 )
+scale = Vector2( 0.0631694, 0.102183 )
+normal = ExtResource( 14 )
+visibility_mode = 1
+
+[node name="down" type="TouchScreenButton" parent="."]
+position = Vector2( 27.2093, 22.0518 )
+scale = Vector2( 0.0548784, 0.0887716 )
+normal = ExtResource( 15 )
+visibility_mode = 1
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2( 27.2093, 15.2191 )
+scale = Vector2( 0.0548784, 0.0887716 )
+normal = ExtResource( 16 )
+visibility_mode = 1
+
+[node name="loseScreen" parent="." instance=ExtResource( 17 )]
+visible = false
+position = Vector2( 0.000858307, -0.0379982 )
+scale = Vector2( 1.0001, 1.00097 )
+
+[node name="pause" parent="." instance=ExtResource( 18 )]
 visible = false
 position = Vector2( 0.000859295, -0.0380006 )
 scale = Vector2( 1.0001, 1.00097 )
 
-[node name="nextLevel" parent="." instance=ExtResource( 18 )]
+[node name="nextLevel" parent="." instance=ExtResource( 19 )]
 visible = false
 position = Vector2( 0.000859, -0.038001 )
 scale = Vector2( 1.0001, 1.00097 )
@@ -186,6 +179,7 @@ scale = Vector2( 1.0001, 1.00097 )
 [node name="Referência" type="Position2D" parent="."]
 position = Vector2( 22.5323, 11.7896 )
 scale = Vector2( 0.0662609, 0.120058 )
+
 [connection signal="mouse_entered" from="pauseButton" to="." method="_on_pauseButton_mouse_entered"]
 [connection signal="pressed" from="pauseButton" to="." method="_on_pauseButton_pressed"]
 [connection signal="mouse_entered" from="lemon" to="." method="_on_lemon_mouse_entered"]
@@ -194,3 +188,4 @@ scale = Vector2( 0.0662609, 0.120058 )
 [connection signal="pressed" from="strawberry" to="." method="_on_strawberry_pressed"]
 [connection signal="mouse_entered" from="grape" to="." method="_on_grape_mouse_entered"]
 [connection signal="pressed" from="grape" to="." method="_on_grape_pressed"]
+[connection signal="pressed" from="shot" to="Glob" method="_on_shot_pressed"]
