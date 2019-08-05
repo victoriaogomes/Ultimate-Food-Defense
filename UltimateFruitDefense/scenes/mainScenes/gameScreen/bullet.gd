@@ -35,4 +35,5 @@ func move_bullet(delta):
 func _on_bullet_body_entered(body):
 	if(body.is_in_group("enemies")):
 		body.shot = true
+		game_control._shot()
 		queue_free()

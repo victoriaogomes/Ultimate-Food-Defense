@@ -9,20 +9,6 @@
 [ext_resource path="res://assets/sprites/loseScreen/texts/english/TryLevelAgain.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/loseScreen/texts/english/TryLevelAgain(v2).png" type="Texture" id=8]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "lose"
 tracks/0/type = "value"

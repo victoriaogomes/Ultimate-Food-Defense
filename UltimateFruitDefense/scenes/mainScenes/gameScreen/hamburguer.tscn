@@ -9,16 +9,6 @@
 [ext_resource path="res://scenes/mainScenes/gameScreen/hamburguer.tres" type="Animation" id=7]
 [ext_resource path="res://assets/sounds/breaking.ogg" type="AudioStream" id=8]
 
-
-
-
-
-
-
-
-
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "atack"
 length = 2.8

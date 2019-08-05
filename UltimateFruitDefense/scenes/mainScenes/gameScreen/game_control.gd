@@ -15,6 +15,7 @@ var wait_time = 0.5
 #warning-ignore:unused_class_variable
 var avaliable = true
 signal sugarLevelChange #Sinal que indica mudança no nível de açúcar do corpo do jogador
+signal shotSomeone
 
 #Função para aumentar o nível de açúcar no sangue do jogador
 func aumentarSugarLevel():
@@ -26,3 +27,7 @@ func diminuirSugarLevel():
 	if(sugarLevel>=52):
 		sugarLevel -=2#Substrai 2 do nível de açúcar
 		emit_signal("sugarLevelChange")#Emite um sinal informando que o nível de açúcar mudou
+
+
+func _shot():
+	emit_signal("shotSomeone")

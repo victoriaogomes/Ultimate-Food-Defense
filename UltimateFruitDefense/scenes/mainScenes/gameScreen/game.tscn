@@ -44,6 +44,7 @@ texture = ExtResource( 2 )
 [node name="Node2D" type="Node2D" parent="." groups=[
 "wall",
 ]]
+editor/display_folded = true
 position = Vector2( 0.00972712, -0.0615809 )
 scale = Vector2( 1.00129, 1.0044 )
 script = ExtResource( 3 )

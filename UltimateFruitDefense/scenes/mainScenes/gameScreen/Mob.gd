@@ -9,6 +9,7 @@ var startBeating
 
 func _ready():
 	shot = false
+	game_control.connect("shotSomeone", self, "shotSomebody")
 	startBeating = 0
 	#warning-ignore:return_value_discarded
 	$AnimationPlayer.connect("animation_finished", self, "_endAnimation")
@@ -32,11 +33,17 @@ func _ready():
 			var pos = Vector2(32, 7.538473)
 			self.set_position(pos)
 
-
-func _physics_process(delta):
+func shotSomebody():
 	if(shot):
 		life-=1
 		shot = false
+	if(life<=0):
+		game_control.beatedEnemies +=1
+		if(game_control.target == self):
+			game_control.target = null
+		queue_free()
+
+func _physics_process(delta):
 	if(life>0):
 		collision_info = move_and_collide(velocity*delta)
 		if collision_info:
@@ -47,14 +54,10 @@ func _physics_process(delta):
 				velocity = Vector2(0,0)
 				if(!$AnimationPlayer.is_playing()):
 					$AnimationPlayer.play("atack")
+					#self.set_physics_process(false)
 			else:
 				#warning-ignore:return_value_discarded
 				move_and_slide(velocity*delta)
-	else:
-		game_control.beatedEnemies +=1
-		if(game_control.target == self):
-			game_control.target = null
-		queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_exited():

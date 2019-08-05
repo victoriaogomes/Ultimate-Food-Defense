@@ -27,6 +27,7 @@ func _process(delta):
 		$MobTimer.stop()
 		game_control.level = game_control.level+1
 		game_control.beatedEnemies = 0
+		game_control.avaliable = true
 		get_node("../nextLevel").set_visible(true)
 		get_node("../nextLevel/AnimationPlayer").play("nextLevel", -1, 1.0, false)
 		get_tree().set_pause(true)
@@ -34,6 +35,7 @@ func _process(delta):
 		for i in range(0, get_child_count()):
     		get_child(i).queue_free()
 		get_node("../loseScreen").set_visible(true)
+		game_control.avaliable = true
 		get_node("../loseScreen/AnimationPlayer").play("lose", -1, 1.0, false)
 		get_tree().set_pause(true)
 	else:
