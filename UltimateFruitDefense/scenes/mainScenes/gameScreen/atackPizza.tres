@@ -3,7 +3,6 @@
 [resource]
 resource_name = "atack"
 length = 2.8
-loop = true
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("leftArm:position")
@@ -51,7 +50,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 1.7, 1.8, 1.9, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 1.2068e-005, 32.635, 65.2254, 97.7451, 130.121, 97.6771, 65.1942, 32.5299, 1.2068e-005 ]
+"values": [ 1.2068e-05, 32.635, 65.2254, 97.7451, 130.121, 97.6771, 65.1942, 32.5299, 1.2068e-05 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("leftLeg:position")
@@ -75,7 +74,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1.09047e-005 ]
+"values": [ 1.09047e-05 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("corpo/rightLeg:position")
@@ -99,7 +98,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ -1.11013e-005 ]
+"values": [ -1.11013e-05 ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("AudioStreamPlayer:playing")
@@ -113,4 +112,3 @@ tracks/8/keys = {
 "update": 1,
 "values": [ false, true ]
 }
-

@@ -3,7 +3,6 @@
 [resource]
 resource_name = "atack"
 length = 2.8
-loop = true
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("leftArm:position")
@@ -113,4 +112,3 @@ tracks/8/keys = {
 "update": 1,
 "values": [ false, true ]
 }
-

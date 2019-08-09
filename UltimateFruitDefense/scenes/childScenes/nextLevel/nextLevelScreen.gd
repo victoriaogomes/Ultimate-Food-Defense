@@ -11,7 +11,7 @@ func _ready():
 	language()
 	#warning-ignore:return_value_discarded
 	configuration.connect("language_changed", self, "language")
-	if(configuration.player_sex == "m"):
+	if(configuration.player_sex == "h"):
 		$avatar.set_texture(boy)
 	else:
 		$avatar.set_texture(girl)

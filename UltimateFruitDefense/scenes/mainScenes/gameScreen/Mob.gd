@@ -54,7 +54,6 @@ func _physics_process(delta):
 				velocity = Vector2(0,0)
 				if(!$AnimationPlayer.is_playing()):
 					$AnimationPlayer.play("atack")
-					#self.set_physics_process(false)
 			else:
 				#warning-ignore:return_value_discarded
 				move_and_slide(velocity*delta)

@@ -17,39 +17,7 @@
 [ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed13.png" type="Texture" id=15]
 [ext_resource path="res://assets/sprites/gameScreen/grape/grapeUsed14.png" type="Texture" id=16]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [sub_resource type="SpriteFrames" id=1]
-
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
@@ -62,40 +30,24 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 601.321, 682.14 )
+[sub_resource type="CircleShape2D" id=2]
+radius = 725.788
 
 [node name="fruit" type="KinematicBody2D"]
-
 scale = Vector2( 0.01, 0.01 )
-input_pickable = false
 collision_layer = 0
 collision_mask = 0
-collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
-
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
 playing = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
-position = Vector2( -79.5209, -37.5202 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -55.2222, -69.918 )
 rotation = -0.184173
 scale = Vector2( 1.11112, 1.16677 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="Timer" type="Timer" parent="." index="2"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
-
-
+[node name="Timer" type="Timer" parent="."]

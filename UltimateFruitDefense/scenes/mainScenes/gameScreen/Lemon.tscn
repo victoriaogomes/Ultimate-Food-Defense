@@ -27,8 +27,8 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 573.551, 644.43 )
+[sub_resource type="CircleShape2D" id=2]
+radius = 656.325
 
 [node name="fruit" type="KinematicBody2D"]
 scale = Vector2( 0.01, 0.01 )

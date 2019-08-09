@@ -16,16 +16,7 @@ onready var bullet = preload("res://scenes/mainScenes/gameScreen/bullet.tscn")
 func _ready():
 	self.set_physics_process(true)
 	#warning-ignore:return_value_discarded
-	#$timer.connect("timeout", self, "on_TimeOut")
-	#warning-ignore:return_value_discarded
 	$tempo.connect("timeout", self, "_on_tempo_timeout")
-
-
-
-#func on_TimeOut():
-	#if(game_control.target!=null):
-	#pos = get_node("/root/Node2D/Glob") #Pega a posição atual do Glóbulo
-	#spwan_bullet(pos) # Essa posição é usada como referência para o spawn do projétil
 
 
 func _physics_process(delta): #a todo frame essa função fica esperando os comandos para fazer o personagem se mecher
@@ -45,17 +36,6 @@ func _physics_process(delta): #a todo frame essa função fica esperando os coma
 	move_and_slide(motion*(delta*40)) # Função nativa do godot para movimentar
 	if Input.is_action_pressed("Space"):
 		_on_shot_pressed()
-
-#acha o melhor inimigo e passa a instâcia dele para um variável no outro script
-#func choose_and_lock():
-#	if(get_tree().get_nodes_in_group("enemies").size()>0):
-#		enemies = get_tree().get_nodes_in_group("enemies")
-#		game_control.target = enemies[0]
-#		var i = 1
-#		while i < enemies.size():
-#			if game_control.target.position.x > enemies[i].position.x:
-#				game_control.target = enemies[1]
-#			i+=1
 
 
 func set_wait_time(time):
@@ -86,11 +66,9 @@ func spwan_bullet(pos):
 
 
 func _on_tempo_timeout():
-	#game_control.wait_time = 2
 	game_control.avaliable = true
 
 func _on_shot_pressed():
-	#choose_and_lock()
 	if(game_control.avaliable == true):
 		set_wait_time(game_control.wait_time)
 		swap_animation()

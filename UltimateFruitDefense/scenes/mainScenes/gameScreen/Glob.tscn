@@ -12,26 +12,6 @@
 [ext_resource path="res://assets/sprites/gameScreen/shotingUp1.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/gameScreen/soldierUp1.png" type="Texture" id=11]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
@@ -100,8 +80,7 @@ animation = "idle"
 [node name="gameControl" type="Node2D" parent="."]
 
 [node name="tempo" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.3
 
 [node name="point" type="Position2D" parent="."]
 position = Vector2( 63.4458, 30.0081 )
-

@@ -498,7 +498,6 @@ anims/car_leaving = SubResource( 2 )
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 anims/clouds = SubResource( 3 )
 anims/clouds_moving = SubResource( 4 )
-
 [connection signal="input_event" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_input_event"]
 [connection signal="mouse_entered" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_entered"]
 [connection signal="mouse_exited" from="Node2D/pineappleStaticBody2D" to="Node2D/pineappleStaticBody2D" method="_on_pineappleStaticBody2D_mouse_exited"]

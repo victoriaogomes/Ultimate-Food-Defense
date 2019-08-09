@@ -5,7 +5,13 @@ onready var fruit1 = preload("res://scenes/mainScenes/gameScreen/Lemon.tscn")
 onready var fruit2 = preload("res://scenes/mainScenes/gameScreen/strawberry.tscn")
 onready var fruit3 = preload("res://scenes/mainScenes/gameScreen/grape.tscn")
 onready var PowerUp = preload("res://scenes/mainScenes/gameScreen/PowerUp.tscn")
-var vitamins = 180
+onready var strawberryDisable = preload("res://assets/sprites/gameScreen/strawberry/strawberryGrey1.png")
+onready var strawberryEnable = preload("res://assets/sprites/gameScreen/strawberry/strawberry.png")
+onready var lemonDisable = preload("res://assets/sprites/gameScreen/lemon/lemonGrey1.png")
+onready var lemonEnable = preload("res://assets/sprites/gameScreen/lemon/lemon.png")
+onready var grapeDisable = preload("res://assets/sprites/gameScreen/grape/grapeGrey1.png")
+onready var grapeEnable = preload("res://assets/sprites/gameScreen/grape/grape.png")
+var vitamins = 50
 
 #Conecta ao sinal que é emitido quando o nível de açúcar no sangue altera
 func _ready():
@@ -21,7 +27,6 @@ func _process(delta):
 	else:
 		disable_fruits()
 	vitamins = vitamins + delta*2
-	#print(vitamins)
 	$Label2.text = str(int(vitamins))
 
 
@@ -90,27 +95,32 @@ func _on_grape_pressed():
 		powerUp(Vector2(520.532, 430.79), "+ Células mais sensíveis a insulina")
 		powerUp(Vector2(520.532, 450.79), "+ VELOCIDADE DE ATAQUE AUMENTADA!")
 
+#Todas as frutas custam 100 vitaminas
 func enable_fruits():
 	$lemon.disabled = false
+	$lemon.set_normal_texture(lemonEnable)
 	$strawberry.disabled = false
+	$strawberry.set_normal_texture(strawberryEnable)
 	$grape.disabled = false
+	$grape.set_normal_texture(grapeEnable)
 
 
 func disable_fruits():
 	$lemon.disabled = true
+	$lemon.set_normal_texture(lemonDisable)
 	$strawberry.disabled = true
+	$strawberry.set_normal_texture(strawberryDisable)
 	$grape.disabled = true
-	
+	$grape.set_normal_texture(grapeDisable)
 
 #Função chamada quando o mouse entra no sprite da uva
 func _on_grape_mouse_entered():
 	if(configuration.sound_effects):
 		configuration.mouseHover_sound.play()
 
+
 func powerUp(position, text):
 	var power = PowerUp.instance()
 	get_parent().add_child(power)
 	power.prepar(position, text)
 	game_control.wait_time = 1
-
-
