@@ -11,7 +11,7 @@ var vitamins = 0 #Variável que armazena quantas vitaminas o jogador tem
 var sugarLevel = 50 #Variável que armazena o nível de açúcar do jogador
 var dano = 2
 #warning-ignore:unused_class_variable
-var wait_time = 0.9 #Tempo que deve ser esperado para permitir que o glob atire novamente
+var wait_time = 0.6 #Tempo que deve ser esperado para permitir que o glob atire novamente
 #warning-ignore:unused_class_variable
 var avaliable = true
 signal sugarLevelChange #Sinal que indica mudança no nível de açúcar do corpo do jogador

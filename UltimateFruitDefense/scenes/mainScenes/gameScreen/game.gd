@@ -26,7 +26,7 @@ func _process(delta):
 	if grapeTime > 0:
 		grapeTime = grapeTime - delta
 	else:
-		game_control.wait_time = 0.9
+		game_control.wait_time = 0.6
 	if vitamins >=100:
 		enable_fruits()
 	else:
