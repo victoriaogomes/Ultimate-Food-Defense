@@ -99,19 +99,25 @@ func _on_grape_pressed():
 func enable_fruits():
 	$lemon.disabled = false
 	$lemon.set_normal_texture(lemonEnable)
+	$lemon/lemonSprites.play("unlock")
 	$strawberry.disabled = false
 	$strawberry.set_normal_texture(strawberryEnable)
+	$strawberry/strawberrySprites.play("unlock")
 	$grape.disabled = false
 	$grape.set_normal_texture(grapeEnable)
+	$grape/grapeSprites.play("unlock")
 
 
 func disable_fruits():
 	$lemon.disabled = true
 	$lemon.set_normal_texture(lemonDisable)
+	$lemon/lemonSprites.play("locked")
 	$strawberry.disabled = true
 	$strawberry.set_normal_texture(strawberryDisable)
+	$strawberry/strawberrySprites.play("locked")
 	$grape.disabled = true
 	$grape.set_normal_texture(grapeDisable)
+	$grape/grapeSprites.play("locked")
 
 #Função chamada quando o mouse entra no sprite da uva
 func _on_grape_mouse_entered():
