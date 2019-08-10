@@ -4,13 +4,13 @@
 [ext_resource path="res://assets/sprites/gameScreen/soldierCenter.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/gameScreen/shotingDown2.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/gameScreen/soldierDown2.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/gameScreen/shotingUp2.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/gameScreen/soldierUp2.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/gameScreen/shotingCenter.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/gameScreen/shotingDown1.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/gameScreen/soldierDown1.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/gameScreen/shotingUp1.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/gameScreen/soldierUp1.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/gameScreen/soldierUp2.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/gameScreen/soldierDown1.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/gameScreen/shotingDown1.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/gameScreen/soldierUp1.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/gameScreen/shotingCenter.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/gameScreen/shotingUp2.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/gameScreen/shotingUp1.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -29,40 +29,40 @@ animations = [ {
 "name": "lookDown2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "shootUp2",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "lookup2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "shootCenter",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "shootDown1",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "shootUp1",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "lookDown1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "shootDown1",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "lookUp1",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "shootCenter",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "shootUp2",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "shootUp1",
+"speed": 1.0
 } ]
 
 [node name="Glob" type="KinematicBody2D"]

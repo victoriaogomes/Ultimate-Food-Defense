@@ -12,6 +12,7 @@ onready var lemonEnable = preload("res://assets/sprites/gameScreen/lemon/lemon.p
 onready var grapeDisable = preload("res://assets/sprites/gameScreen/grape/grapeGrey1.png")
 onready var grapeEnable = preload("res://assets/sprites/gameScreen/grape/grape.png")
 var vitamins = 50
+var grapeTime = 0
 
 #Conecta ao sinal que é emitido quando o nível de açúcar no sangue altera
 func _ready():
@@ -22,6 +23,10 @@ func _ready():
 
 
 func _process(delta):
+	if grapeTime > 0:
+		grapeTime = grapeTime - delta
+	else:
+		game_control.wait_time = 0.9
 	if vitamins >=100:
 		enable_fruits()
 	else:
@@ -57,7 +62,7 @@ func _on_lemon_pressed():
 		game_control.dano = 1
 		powerUp(Vector2(320.532, 410.79), "+ Aumento da Pectina")
 		powerUp(Vector2(320.532, 430.79), "+ Absorção de açúcar reduzida")
-		powerUp(Vector2(320.532, 450.79), "+ INIMIGOS ESTÃO MAIS LENTOS!")
+		powerUp(Vector2(320.532, 450.79), "+ INIMIGOS ESTÃO COM O ATAQUE MAIS LENTO!")
 
 
 #Função chamada quando o mouse entra no sprite do limão
@@ -90,7 +95,8 @@ func _on_grape_pressed():
 		vitamins-=100
 		var grape =  fruit3.instance()
 		add_child(grape)
-		game_control.wait_time = 1
+		game_control.wait_time = 0.2
+		grapeTime = 15
 		powerUp(Vector2(520.532, 410.79), "+ Aumento de Resveratrol")
 		powerUp(Vector2(520.532, 430.79), "+ Células mais sensíveis a insulina")
 		powerUp(Vector2(520.532, 450.79), "+ VELOCIDADE DE ATAQUE AUMENTADA!")
@@ -129,4 +135,4 @@ func powerUp(position, text):
 	var power = PowerUp.instance()
 	get_parent().add_child(power)
 	power.prepar(position, text)
-	game_control.wait_time = 1
+	#game_control.wait_time = 1

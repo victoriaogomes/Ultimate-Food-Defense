@@ -23,12 +23,12 @@ func _physics_process(delta): #a todo frame essa função fica esperando os coma
 	var temp = get_node("/root/Node2D/Glob")
 	if Input.is_action_pressed("ui_down") || get_node("/root/Node2D/down").is_pressed(): # Se precionar seta direcionar para baixo
 		if temp.position.y < 5.87 :
-			motion.y = 100 # Vetor movimento do globulo recebe 100 para ele descer no plano
+			motion.y = 150 # Vetor movimento do globulo recebe 100 para ele descer no plano
 		else: # Caso contrário
 			motion.y = 0 # Vetor movimento é igual a zero, Glóbulo parado
 	elif Input.is_action_pressed("ui_up") || get_node("/root/Node2D/up").is_pressed(): # Se precionar seta direcionar para cima
 		if temp.position.y > -24.429:
-			motion.y = -100 # Vetor movimento do glóbulo recebe -100 e sobe no plano
+			motion.y = -150 # Vetor movimento do glóbulo recebe -100 e sobe no plano
 		else: # Caso contrário
 			motion.y = 0 # Vetor movimento é igual a zero, Glóbulo parado
 	else:
@@ -71,6 +71,9 @@ func _on_tempo_timeout():
 func _on_shot_pressed():
 	if(game_control.avaliable == true):
 		set_wait_time(game_control.wait_time)
-		swap_animation()
+		#swap_animation()
+		$AnimatedSprite.play("shootCenter")
 		pos = get_node("/root/Node2D/Glob") #Pega a posição atual do Glóbulo
 		spwan_bullet(pos) # Essa posição é usada como referência para o spawn do projétil
+	else:
+		$AnimatedSprite.play("idle")
