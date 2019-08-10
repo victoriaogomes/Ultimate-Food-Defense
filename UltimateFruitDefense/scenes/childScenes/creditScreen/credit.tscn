@@ -1,68 +1,29 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/childScenes/creditScreen/credit.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/player_infoScreen/shadow.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/player_infoScreen/box1.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/creditScreen/texts/english/Credits.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/GameCoding.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/BrunoClaudino_e_VictoriaGomes.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/mastermind.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/Sarinho.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/creditScreen/horizontalLine.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/CharactersDrawing.png" type="Texture" id=8]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/IgorGarcia.png" type="Texture" id=9]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/FenceDrawing.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/fenceDrawer.png" type="Texture" id=11]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/FruitCarDrawing.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/fruitCarDrawer.png" type="Texture" id=13]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/TitleScreenScenario_boy_and_girl_drawing_wooden_plaque.png" type="Texture" id=14]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/titleScreenScenarioDrawer.png" type="Texture" id=15]
-[ext_resource path="res://assets/sprites/creditScreen/texts/english/TitleScreenSong.png" type="Texture" id=16]
-[ext_resource path="res://assets/sprites/creditScreen/texts/names/TitleScreenMusicCreator.png" type="Texture" id=17]
-[ext_resource path="res://scenes/childScenes/creditScreen/backStaticBody2D.gd" type="Script" id=18]
-[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Back.png" type="Texture" id=19]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/GameCoding.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/BrunoClaudino_e_VictoriaGomes.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/CharactersDrawing.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/IgorGarcia.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/FenceDrawing.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/fenceDrawer.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/FruitCarDrawing.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/fruitCarDrawer.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/TitleScreenScenario_boy_and_girl_drawing_wooden_plaque.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/titleScreenScenarioDrawer.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/creditScreen/texts/english/TitleScreenSong.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/creditScreen/texts/names/TitleScreenMusicCreator.png" type="Texture" id=19]
+[ext_resource path="res://scenes/childScenes/creditScreen/backStaticBody2D.gd" type="Script" id=20]
+[ext_resource path="res://assets/sprites/optionsScreen/texts/English/Back.png" type="Texture" id=21]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "showing_credits"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("white_background:self_modulate")
 tracks/0/interp = 1
@@ -315,202 +276,210 @@ tracks/20/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("mastermind:self_modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("mastermind_line:self_modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("mastermind_name:self_modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
-[node name="Node2D" type="Node2D" index="0"]
-
+[node name="Node2D" type="Node2D"]
 position = Vector2( 509.787, 303.129 )
 scale = Vector2( 16.0003, 9.36731 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause", "Theme" ]
 
-[node name="black_background" type="Sprite" parent="." index="0"]
-
-self_modulate = Color( 1, 1, 1, 0.558 )
+[node name="black_background" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.0574265, -0.333141 )
 scale = Vector2( 0.0530666, 0.10747 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="white_background" type="Sprite" parent="." index="1"]
-
-self_modulate = Color( 1, 1, 1, 0.259647 )
+[node name="white_background" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.0574303, -0.333141 )
 scale = Vector2( 0.0530666, 0.10747 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="credits" type="Sprite" parent="." index="2"]
-
+[node name="credits" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -0.117046, -29.0107 )
 scale = Vector2( 0.0590294, 0.102045 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="gameCoding" type="Sprite" parent="." index="3"]
-
-position = Vector2( -24.2986, -21.9756 )
+[node name="mastermind" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -23.8816, -7.90906 )
 scale = Vector2( 0.0394279, 0.0701569 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="gameCoding_names" type="Sprite" parent="." index="4"]
-
-position = Vector2( -23.3914, -14.4916 )
-scale = Vector2( 0.039428, 0.0833478 )
+[node name="mastermind_name" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -22.2974, -2.24774 )
+scale = Vector2( 0.0394279, 0.0701569 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="gameCoding_line" type="Sprite" parent="." index="5"]
-
-position = Vector2( -19.2232, -20.0554 )
+[node name="mastermind_line" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -18.6396, -5.92612 )
 scale = Vector2( 0.0425145, 0.0614995 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="charactersDrawing" type="Sprite" parent="." index="6"]
-
-position = Vector2( 13.9155, -22.4482 )
-scale = Vector2( 0.039428, 0.0783985 )
+[node name="gameCoding" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -23.8817, -24.2526 )
+scale = Vector2( 0.0394279, 0.0701569 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="charactersDrawing_line" type="Sprite" parent="." index="7"]
-
-position = Vector2( 16.5968, -20.0554 )
-scale = Vector2( 0.0425145, 0.0614995 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="charactersDrawing_name" type="Sprite" parent="." index="8"]
-
-position = Vector2( 10.9079, -16.6446 )
-scale = Vector2( 0.039428, 0.0783985 )
+[node name="gameCoding_names" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -22.9745, -16.7686 )
+scale = Vector2( 0.039428, 0.0833478 )
 texture = ExtResource( 9 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="fenceDrawing" type="Sprite" parent="." index="9"]
-
-position = Vector2( -23.6543, -4.71693 )
-scale = Vector2( 0.039428, 0.0745081 )
-texture = ExtResource( 10 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="fenceDrawing_line" type="Sprite" parent="." index="10"]
-
-position = Vector2( -19.2232, -2.48573 )
+[node name="gameCoding_line" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -18.8063, -22.3324 )
 scale = Vector2( 0.0425145, 0.0614995 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="fenceDrawing_name" type="Sprite" parent="." index="11"]
+[node name="charactersDrawing" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 13.9155, -24.8676 )
+scale = Vector2( 0.039428, 0.0783985 )
+texture = ExtResource( 10 )
 
-position = Vector2( -21.9896, 1.46358 )
-scale = Vector2( 0.039428, 0.0745081 )
+[node name="charactersDrawing_line" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 16.5968, -22.4749 )
+scale = Vector2( 0.0425145, 0.0614995 )
+texture = ExtResource( 7 )
+
+[node name="charactersDrawing_name" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 10.908, -19.0641 )
+scale = Vector2( 0.039428, 0.0783985 )
 texture = ExtResource( 11 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="fruitCarDrawing" type="Sprite" parent="." index="12"]
-
-position = Vector2( -22.5575, 10.4733 )
+[node name="fenceDrawing" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 11.6979, -12.1255 )
 scale = Vector2( 0.039428, 0.0745081 )
 texture = ExtResource( 12 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="fruitCarDrawing_line" type="Sprite" parent="." index="13"]
-
-position = Vector2( -19.2232, 12.4351 )
+[node name="fenceDrawing_line" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 16.129, -9.89435 )
 scale = Vector2( 0.0425145, 0.0614995 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="fruitCarDrawing_name" type="Sprite" parent="." index="14"]
-
-position = Vector2( -19.0028, 16.429 )
+[node name="fenceDrawing_name" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 13.3627, -5.94501 )
 scale = Vector2( 0.039428, 0.0745081 )
 texture = ExtResource( 13 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="titleScreenScenario" type="Sprite" parent="." index="15"]
-
-position = Vector2( -6.85719, 23.2633 )
+[node name="fruitCarDrawing" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -21.9737, 6.59396 )
 scale = Vector2( 0.039428, 0.0745081 )
 texture = ExtResource( 14 )
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="titleScreenScenario_line" type="Sprite" parent="." index="16"]
+[node name="fruitCarDrawing_line" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -18.6394, 8.55573 )
+scale = Vector2( 0.0425145, 0.0614995 )
+texture = ExtResource( 7 )
 
+[node name="fruitCarDrawing_name" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -18.419, 12.4429 )
+scale = Vector2( 0.039428, 0.0745081 )
+texture = ExtResource( 15 )
+
+[node name="titleScreenScenario" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -6.85719, 23.2633 )
+scale = Vector2( 0.039428, 0.0745081 )
+texture = ExtResource( 16 )
+
+[node name="titleScreenScenario_line" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.918524, 25.4808 )
 scale = Vector2( 0.12448, 0.0627395 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="titleScreenScenario_name" type="Sprite" parent="." index="17"]
-
+[node name="titleScreenScenario_name" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -20.9557, 28.9457 )
 scale = Vector2( 0.039428, 0.0745081 )
-texture = ExtResource( 15 )
-_sections_unfolded = [ "Visibility" ]
+texture = ExtResource( 17 )
 
-[node name="titleScreenSong" type="Sprite" parent="." index="18"]
-
-position = Vector2( 12.7894, -6.34207 )
+[node name="titleScreenSong" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 12.1224, 0.239471 )
 scale = Vector2( 0.039428, 0.0745081 )
-texture = ExtResource( 16 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+texture = ExtResource( 18 )
 
-[node name="titleScreenSong_line" type="Sprite" parent="." index="19"]
-
-position = Vector2( 16.2857, -4.18026 )
+[node name="titleScreenSong_line" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 15.952, 2.40125 )
 scale = Vector2( 0.0425145, 0.0614995 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="titleScreenSong_name" type="Sprite" parent="." index="20"]
-
-position = Vector2( 18.3111, 5.10432 )
+[node name="titleScreenSong_name" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 17.7692, 11.6858 )
 scale = Vector2( 0.0320264, 0.0631482 )
-texture = ExtResource( 17 )
-_sections_unfolded = [ "Visibility" ]
+texture = ExtResource( 19 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="21"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/showing_credits = SubResource( 1 )
-blend_times = [  ]
 
-[node name="backStaticBody2D" type="StaticBody2D" parent="." index="22"]
-
+[node name="backStaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 29.2612, -29.1252 )
 scale = Vector2( 0.0568648, 0.0361171 )
 input_pickable = true
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-script = ExtResource( 18 )
-_sections_unfolded = [ "Pickable" ]
+script = ExtResource( 20 )
 
-[node name="back" type="Sprite" parent="backStaticBody2D" index="0"]
-
+[node name="back" type="Sprite" parent="backStaticBody2D"]
 position = Vector2( 0.50293, -1.88895 )
 scale = Vector2( 0.529961, 1.46586 )
-texture = ExtResource( 19 )
+texture = ExtResource( 21 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="backStaticBody2D" index="1"]
-
-build_mode = 0
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="backStaticBody2D"]
 polygon = PoolVector2Array( -23.2549, 19.2134, -23.1482, -22.2116, -22.0289, -22.9283, -20.3767, -23.0716, -18.6711, -23.0716, -17.3918, -22.785, -16.1127, -22.0683, -15.1533, -20.7782, -14.4604, -18.7715, -13.8208, -15.7613, -13.8208, -11.6045, -10.8361, -9.88443, -10.09, -12.8946, -9.07715, -14.1846, -7.63818, -14.328, -5.98584, -14.758, -4.86658, -14.4713, -4.17371, -12.7512, -4.12036, -15.3313, -0.229492, -15.188, -0.17627, -12.3212, 1.84912, -9.59776, 2.48865, -12.6079, 3.55469, -14.0413, 4.62073, -14.9013, 5.8999, -15.3313, 7.55212, -15.3313, 9.6842, -15.3313, 10.3237, -14.4713, 10.8035, -13.4679, 11.5496, -11.8912, 12.1892, -10.3144, 12.5624, -9.88443, 13.3618, -11.7478, 13.1486, -23.7883, 17.3593, -23.645, 17.4658, -6.73097, 20.3973, -14.758, 22.5825, -15.188, 23.6486, -15.188, 23.915, -13.4679, 24.8744, -13.4679, 24.821, -11.0311, 20.1841, 1.00936, 24.8744, 15.1999, 24.7145, 17.4934, 20.9836, 20.3602, 17.5724, 8.03299, 17.8389, 19.3568, 13.415, 20.2168, 13.415, 13.6232, 12.7755, 12.9065, 11.6029, 16.3467, 10.6436, 18.2101, 9.0979, 20.0735, 6.43286, 19.7868, 4.83386, 18.4967, 3.76794, 16.7767, 1.74255, 13.0499, -0.336182, 15.1999, -0.229492, 19.5001, -4.12036, 19.2134, -4.22693, 16.6333, -4.81323, 16.6333, -4.86658, 18.0667, -6.99854, 19.2134, -8.17114, 18.6401, -9.29041, 17.6367, -10.3563, 16.3467, -11.0493, 15.0566, -11.9021, 12.7632, -12.3818, 10.8998, -13.2345, 10.4697, -13.7142, 13.0499, -14.0341, 16.6333, -15.6331, 18.9268, -16.6456, 20.0735, -18.8843, 20.2168, -21.5493, 19.7868 )
 
 [connection signal="input_event" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_input_event"]
-
 [connection signal="mouse_entered" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_mouse_entered"]
-
 [connection signal="mouse_exited" from="backStaticBody2D" to="backStaticBody2D" method="_on_backStaticBody2D_mouse_exited"]
-
-

@@ -16,7 +16,7 @@ var mainMenuBase_english = preload("res://assets/sprites/pause/texts/english/mai
 var mainMenuhover_english = preload("res://assets/sprites/pause/texts/english/mainMenu(v2).png")
 var mainMenuBase_port = preload("res://assets/sprites/pause/texts/pt-Br/menuInicial.png")
 var mainMenuhover_port = preload("res://assets/sprites/pause/texts/pt-Br/menuInicial(v2).png")
-
+var titleScreen = load("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
 
 func _ready():
 	language()
@@ -53,7 +53,7 @@ func _on_mainMenu_pressed():
 	$AnimationPlayer.play_backwards("lose", -1)
 	yield($AnimationPlayer, "animation_finished")
 	#warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/mainScenes/titleScreen/titleScreen.tscn")
+	get_tree().change_scene_to(titleScreen)
 
 
 func _on_tryAgain_pressed():

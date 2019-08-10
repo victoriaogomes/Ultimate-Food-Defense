@@ -7,6 +7,7 @@ var portuguese_fenceDrawing = preload("res://assets/sprites/creditScreen/texts/p
 var portuguese_fruitCarDrawing = preload("res://assets/sprites/creditScreen/texts/pt-Br/DesenhoDoCarrinhoDeFrutas.png")
 var portuguese_titleScreenScenario = preload("res://assets/sprites/creditScreen/texts/pt-Br/Cenario_da_tela_inicial_Desenho_da_menina_e_do_menino_placa_de_madeira.png")
 var portuguese_titleScreenSong = preload("res://assets/sprites/creditScreen/texts/pt-Br/MusicaDaTelaInicial.png")
+var portuguese_mastermind = preload("res://assets/sprites/creditScreen/texts/pt-Br/Orientacao.png")
 
 var english_credits = preload("res://assets/sprites/creditScreen/texts/english/Credits.png")
 var english_gameCoding = preload("res://assets/sprites/creditScreen/texts/english/GameCoding.png")
@@ -15,6 +16,7 @@ var english_fenceDrawing = preload("res://assets/sprites/creditScreen/texts/engl
 var english_fruitCarDrawing = preload("res://assets/sprites/creditScreen/texts/english/FruitCarDrawing.png")
 var english_titleScreenScenario = preload("res://assets/sprites/creditScreen/texts/english/TitleScreenScenario_boy_and_girl_drawing_wooden_plaque.png")
 var english_titleScreenSong = preload("res://assets/sprites/creditScreen/texts/english/TitleScreenSong.png")
+var english_mastermind = preload("res://assets/sprites/creditScreen/texts/english/mastermind.png")
 
 var gameCodingPortuguese_Pos
 var gameCodingEnglish_Pos
@@ -73,6 +75,7 @@ func language():
 		$titleScreenScenario.set_position(titleScreenScenarioPortuguese_Pos)
 		$titleScreenSong.set_texture(portuguese_titleScreenSong)
 		$titleScreenSong.set_position(titleScreenSongPortuguese_Pos)
+		$mastermind.set_texture(portuguese_mastermind)
 	else:
 		$credits.set_texture(english_credits)
 		$gameCoding.set_texture(english_gameCoding)
@@ -87,3 +90,4 @@ func language():
 		$titleScreenScenario.set_position(titleScreenScenarioEnglish_Pos)
 		$titleScreenSong.set_texture(english_titleScreenSong)
 		$titleScreenSong.set_position(titleScreenSongEnglish_Pos)
+		$mastermind.set_texture(english_mastermind)
