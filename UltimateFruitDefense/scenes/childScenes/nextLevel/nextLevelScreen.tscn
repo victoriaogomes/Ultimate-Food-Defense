@@ -7,22 +7,8 @@
 [ext_resource path="res://assets/sprites/nextLevel/texts/english/nextLevel.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/nextLevel/texts/english/nextLevel(v2).png" type="Texture" id=6]
 
-
-
-
-
-
-
-
-
-
-
 [sub_resource type="Animation" id=1]
-
 resource_name = "nextLevel"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("black_background:self_modulate")
 tracks/0/interp = 1
@@ -97,113 +83,55 @@ tracks/5/keys = {
 }
 
 [node name="Node2D" type="Node2D"]
-
 pause_mode = 2
 position = Vector2( 511.906, 299.98 )
 scale = Vector2( 15.9827, 9.38549 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
 
-[node name="black_background" type="ColorRect" parent="." index="0"]
-
+[node name="black_background" type="ColorRect" parent="."]
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0, 0, 0, 0.558 )
-_sections_unfolded = [ "Focus", "Pause", "Visibility" ]
 
-[node name="white_background" type="ColorRect" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="white_background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -32.0
 margin_top = -32.0
 margin_right = -32.0
 margin_bottom = -32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 1, 1, 1, 0.259647 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="avatar" type="Sprite" parent="." index="2"]
-
+[node name="avatar" type="Sprite" parent="."]
 position = Vector2( 0.346897, -4.92777 )
 scale = Vector2( 0.0724754, 0.119585 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="congratulations" type="Sprite" parent="." index="3"]
-
+[node name="congratulations" type="Sprite" parent="."]
 position = Vector2( -0.282921, -26.3859 )
 scale = Vector2( 0.0550411, 0.106023 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="health" type="Sprite" parent="." index="4"]
-
+[node name="health" type="Sprite" parent="."]
 position = Vector2( 0.645145, 15.3599 )
 scale = Vector2( 0.0528381, 0.102051 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="nextLevel" type="TextureButton" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="nextLevel" type="TextureButton" parent="."]
 margin_left = -5.0
 margin_top = 27.0
 margin_right = 5.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 expand = true
-_sections_unfolded = [ "Textures", "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
-
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 pause_mode = 2
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/nextLevel = SubResource( 1 )
-blend_times = [  ]
-_sections_unfolded = [ "Pause" ]
 
 [connection signal="mouse_entered" from="nextLevel" to="." method="_on_nextLevel_mouse_entered"]
-
 [connection signal="pressed" from="nextLevel" to="." method="_on_nextLevel_pressed"]
-
-

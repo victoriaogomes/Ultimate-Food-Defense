@@ -20,6 +20,7 @@ func _ready():
 	self.set_physics_process(true)
 	#warning-ignore:return_value_discarded
 	game_control.connect("sugarLevelChange", self, "changeLabel")
+	$aux.connect("timeout", self, "_on_aux_timeout")
 
 
 func _process(delta):
@@ -101,6 +102,7 @@ func _on_grape_pressed():
 		powerUp(Vector2(520.532, 430.79), "+ Células mais sensíveis a insulina")
 		powerUp(Vector2(520.532, 450.79), "+ VELOCIDADE DE ATAQUE AUMENTADA!")
 
+
 #Todas as frutas custam 100 vitaminas
 func enable_fruits():
 	$lemon.disabled = false
@@ -112,6 +114,7 @@ func enable_fruits():
 	$grape.disabled = false
 	$grape.set_normal_texture(grapeEnable)
 	$grape/grapeSprites.play("unlock")
+	#$aux.start()
 
 
 func disable_fruits():
@@ -124,6 +127,13 @@ func disable_fruits():
 	$grape.disabled = true
 	$grape.set_normal_texture(grapeDisable)
 	$grape/grapeSprites.play("locked")
+
+
+func _on_aux_timeout():
+	$lemon/lemonSprites.play("idle")
+	$grape/grapeSprites.play("idle")
+	$strawberry/strawberrySprites.play("idle")
+	
 
 #Função chamada quando o mouse entra no sprite da uva
 func _on_grape_mouse_entered():
